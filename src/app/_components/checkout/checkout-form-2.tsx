@@ -7,11 +7,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { ProductInfoType } from "@/interfaces/productInfo";
 import { CustomerInfoType } from "@/interfaces/customerInfo";
-import DiscountBar from "./checkout-discount-bar";
-import QuantitySelector from "./checkout-quantity-selector";
-import CustomerInfo from "./checkout-customer-info";
-import PaymentOptions from "./checkout-payment-options";
-import MobilePaymentOptions from "./checkout-mobile-payment-options";
+import DiscountBar2 from "./checkout-discount-bar-2";
+import QuantitySelector2 from "./checkout-quantity-selector-2";
+import CustomerInfo2 from "./checkout-customer-info-2";
+import PaymentOptions2 from "./checkout-payment-options-2";
+import MobilePaymentOptions2 from "./checkout-mobile-payment-options-2";
 import CheckoutCouponPop from "./checkout-coupon-pop";
 import PaypalPop from "./checkout-paypal-pop";
 import { delay } from "@/app/_utils/delay";
@@ -436,44 +436,38 @@ const CheckoutForm = ({ info }: Props) => {
       />
       <div className="flex  w-full relative flex-col items-center bg-[#f1f4f8]">
         <div id="payment-container" />
-        <div className="flex w-full max-w-[1100px] sm:px-4 pb-12 flex-wrap">
-          <div className="flex flex-col w-full  lg:w-1/2 px-2 lg:py-8 pt-4 sm:pt-8 pb-4">
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] flex">
-              <DiscountBar
+        <div className="flex w-full max-w-[1340px] flex-wrap">
+          <div className="flex flex-col w-full lg:w-1/2 p-4 lg:p-8 xl:p-12 bg-[#fff]">
+            <DiscountBar2
                 product={product.product}
                 info={info}
                 couponActive={customerInfo.couponActive}
                 country={country}
               />
-            </div>
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
-              <QuantitySelector
+
+            <QuantitySelector2
                 product={product}
                 info={info}
                 setProduct={setProduct}
                 couponActive={customerInfo.couponActive}
                 country={country}
-              />
+            />
+
+            <div className="lg:hidden">
+              <MobilePaymentOptions2 firePaypal={firePaypal} loading={loading} />
             </div>
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4 lg:hidden">
-              <MobilePaymentOptions firePaypal={firePaypal} loading={loading} />
-            </div>
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
-              <CustomerInfo formik={formik} />
-            </div>
-          </div>
-          <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
-              <PaymentOptions
-                info={info}
-                product={product}
-                formik={formik}
-                loading={loading}
-                firePaypal={firePaypal}
-                country={country}
-                setCountry={setCountry}
-              />
-            </div>
+
+            <CustomerInfo2 formik={formik} />
+
+            <PaymentOptions2
+              info={info}
+              product={product}
+              formik={formik}
+              loading={loading}
+              firePaypal={firePaypal}
+              country={country}
+              setCountry={setCountry}
+            />
           </div>
         </div>
         <CheckoutCouponPop
@@ -499,3 +493,4 @@ const CheckoutForm = ({ info }: Props) => {
 };
 
 export default CheckoutForm;
+
