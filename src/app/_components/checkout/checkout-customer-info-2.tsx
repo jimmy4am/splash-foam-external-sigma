@@ -1,4 +1,3 @@
-import React from "react";
 import { UserIcon } from "@heroicons/react/24/solid";
 import useCheckoutCustomerInfo from "./hooks/useCheckoutCustomerInfo";
 
@@ -6,24 +5,24 @@ type CustomerInfoProps = {
   formik: any;
 };
 
-const CustomerInfo = ({ formik }: CustomerInfoProps) => {
+const CustomerInfo2 = ({ formik }: CustomerInfoProps) => {
   const { handleChange, formattedPhone} = useCheckoutCustomerInfo({ formik });
 
   return (
     <>
-      <div className="flex w-full justify-start items-center pb-6">
-        <UserIcon className="h-[16px] w-[16px] mr-2" />
-        <h3 className="font-bold text-[16px] hidden lg:block">
-          Step 2: Customer Information
-        </h3>
-        <h3 className="font-bold text-[16px] lg:hidden">
-          Step 3: Customer Information
-        </h3>
+      <div className="flex items-center pb-6">
+        <UserIcon className="w-[50px]"/>
+        <div className="pl-[10px] text-left">
+          <h3 className="text-[28px] leading-[28px] text-black font-bold">Customer Information</h3>
+          <p className="text-[15px] leading-[21px] text-black tracking-[0.3px] mt-[5px]">
+            Order Confirmation Details Will Be Sent Here
+          </p>
+        </div>
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className="flex w-full space-x-4">
           <div className="flex w-1/2 flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">First Name</label>
+            <label className="text-[14px] pb-2">First Name</label>
             <input
               type="text"
               name="firstName"
@@ -42,7 +41,7 @@ const CustomerInfo = ({ formik }: CustomerInfoProps) => {
             ) : null}
           </div>
           <div className="flex w-1/2 flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Last Name</label>
+            <label className="text-[14px] pb-2">Last Name</label>
             <input
               type="text"
               name="lastName"
@@ -63,7 +62,7 @@ const CustomerInfo = ({ formik }: CustomerInfoProps) => {
         </div>
         <div className="flex w-full space-x-4 mt-6">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Email Address</label>
+            <label className="text-[14px] pb-2">Email Address</label>
             <input
               type="email"
               name="email"
@@ -82,7 +81,7 @@ const CustomerInfo = ({ formik }: CustomerInfoProps) => {
         </div>
         <div className="flex w-full space-x-4 mt-6 mb-6">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Phone Number</label>
+            <label className="text-[14px] pb-2">Phone Number</label>
             <input
               type="text"
               name="phone"
@@ -103,4 +102,4 @@ const CustomerInfo = ({ formik }: CustomerInfoProps) => {
   );
 };
 
-export default CustomerInfo;
+export default CustomerInfo2;

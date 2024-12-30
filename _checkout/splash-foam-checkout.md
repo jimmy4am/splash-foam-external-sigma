@@ -1,6 +1,6 @@
 ---
 slug: "checkout"
-template: "1"
+template: "2"
 funnelFlux: 'var fluxDefaults = {
   p: "2psk5ffK2Q4T",
   f: "2nKLCwO4hgIO"
@@ -16,6 +16,9 @@ header:
   logo: /images/foam/foam-logo.png
   badge: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8be12a65-34a9-4cfa-bafd-4c9320366700/public
   background: /images/splash-foam/checkout-head-bkg.jpg
+  safeCheckout: /images/safe-checkout.png
+footer:
+  card: /images/footer-card.png
 
 blurbs:
   icon1: /images/splash-foam/foam-cloud.svg
