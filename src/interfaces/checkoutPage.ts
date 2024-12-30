@@ -12,6 +12,10 @@ export type CheckoutPageType = {
     logo: string;
     badge: string;
     background: string;
+    safeCheckout: string;
+  };
+  footer: {
+    card: string;
   };
 
   blurbs: {

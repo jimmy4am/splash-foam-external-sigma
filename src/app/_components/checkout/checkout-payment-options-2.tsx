@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import {
-  GlobeAmericasIcon,
-  LockClosedIcon,
   ChevronDownIcon,
-} from "@heroicons/react/24/solid";
+  CreditCardIcon,
+  ArrowRightIcon,
+  TruckIcon
+} from '@heroicons/react/24/solid';
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { ProductInfoType } from "@/interfaces/productInfo";
 import StateProvinceSelect from "./checkout-state-selector";
@@ -16,7 +17,6 @@ type PaymentProps = {
   product: ProductInfoType;
   formik: any;
   loading: string;
-  firePaypal: () => void;
   country: string;
   setCountry: (country: string) => void;
 };
@@ -30,12 +30,11 @@ interface AddressComponents {
   country?: string;
 }
 
-const PaymentOptions = ({
+const PaymentOptions2 = ({
   info,
   product,
   formik,
   loading,
-  firePaypal,
   country,
   setCountry,
 }: PaymentProps) => {
@@ -131,81 +130,19 @@ const PaymentOptions = ({
         </div>
       )}
 
-      <div className="hidden lg:flex w-full justify-start items-center pb-4">
-        <GlobeAmericasIcon className="h-[16px] w-[16px] mr-2" />
-        <h3 className="font-bold text-[16px]">Step 3: Payment Options</h3>
-      </div>
       <form onSubmit={formik.handleSubmit}>
-        <div className="hidden lg:flex w-full justify-start">
-          <input
-            type="radio"
-            checked
-            className="mr-2 cursor-pointer"
-            readOnly
-          />{" "}
-          <div className="flex w-[278px] border-[1px] border-[#1ac70e] rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-[#ddd]">
-            <Image
-              src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/60ac8520-9b26-4b76-8cf0-4d4fd5d52800/public"
-              width={50}
-              height={20}
-              alt="Visa"
-              className="object-scale-down w-1/3"
-            />
-
-            <Image
-              src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e95314d5-1adc-477b-1631-38162b91ad00/public"
-              width={50}
-              height={20}
-              alt="Mastercard"
-              className="object-scale-down  w-1/3 border-r-[1px] border-l-[1px] px-2 border-[#ccc]"
-            />
-
-            <Image
-              src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5e7d79a8-f00e-4ea8-7aac-3484c20e7e00/public"
-              width={50}
-              height={20}
-              alt="American Express"
-              className="object-scale-down  w-1/3"
-            />
+        <div className="flex items-center pb-6">
+          <TruckIcon className="w-[50px]"/>
+          <div className="pl-[10px] text-left">
+            <h3 className="text-[28px] leading-[28px] text-black font-bold">Shipping Information</h3>
+            <p className="text-[15px] leading-[21px] text-black tracking-[0.3px] mt-[5px]">
+              Where do we send your {info.product.name}?
+            </p>
           </div>
         </div>
-        <div className="hidden lg:flex w-full justify-start mt-2 mb-4">
-          <input
-            type="radio"
-            checked={false}
-            className="mr-2 cursor-pointer  "
-            readOnly
-            onClick={() => {
-              if (loading === "") {
-                firePaypal();
-              }
-            }}
-          />{" "}
-          <div
-            className="flex w-[278px] border-[1px] border-[#ffc439] bg-[#ffc439] rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-[#ffde3a] hover:border-[#ffde3a]"
-            onClick={() => {
-              if (loading === "") {
-                firePaypal();
-              }
-            }}
-          >
-            <Image
-              src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1397951e-7288-4b95-8ef1-b1f423b56c00/public"
-              width={278}
-              height={44}
-              alt="Paypal"
-              className="cursor-pointer hover:brightness-110 object-scale-down "
-            />
-          </div>
-        </div>
-        <div className="hidden lg:block h-[1px] w-full bg-[#ddd] mt-2 mb-4" />
-        <div className="flex w-full justify-start items-center">
-          <LockClosedIcon className="h-[16px] w-[16px] mr-2" />
-          <h3 className="font-bold text-[16px]">Step 4: Delivery Address</h3>
-        </div>
-        <div className="flex w-full space-x-4 mt-4">
+        <div className="flex w-full space-x-4">
           <div className="flex w-full flex-col items-start justify-start relative">
-            <label className="font-bold text-[14px] pb-2">Country</label>
+            <label className="text-[14px] pb-2">Country</label>
             <div className="relative w-full">
               <select
                 onChange={handleCountryChange}
@@ -228,14 +165,14 @@ const PaymentOptions = ({
                 <option value="GB">United Kingdom</option>
               </select>
               <span className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <ChevronDownIcon className="w-4 h-4 text-[#555] " />
+                <ChevronDownIcon className="w-4 h-4 text-[#555] "/>
               </span>
             </div>
           </div>
         </div>
         <div className="flex w-full space-x-4 mt-6">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">
+            <label className="text-[14px] pb-2">
               Delivery Address
             </label>
             <input
@@ -266,7 +203,7 @@ const PaymentOptions = ({
         </div>
         <div className="flex w-full space-x-4 mt-6">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">City</label>
+            <label className="text-[14px] pb-2">City</label>
             <input
               type="text"
               name="city"
@@ -283,14 +220,15 @@ const PaymentOptions = ({
         </div>
         <div className="flex w-full space-x-4 mt-4">
           <div className="flex w-1/2 flex-col items-start justify-start relative">
-            <StateProvinceSelect formik={formik} country={country} />
+            <StateProvinceSelect formik={formik} country={country}/>
             {formik.touched.state && formik.errors.state ? (
               <div className="text-red-500 text-xs">{formik.errors.state}</div>
             ) : null}
-          </div>{" "}
+          </div>
+          {' '}
           <div className="flex w-1/2 flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">
-              {(country === "US" && "Zip Code") || "Postal Code"}
+            <label className="text-[14px] pb-2">
+              {(country === 'US' && 'Zip Code') || 'Postal Code'}
             </label>
             <input
               type="text"
@@ -299,7 +237,7 @@ const PaymentOptions = ({
               onBlur={formik.handleBlur}
               value={formik.values.zip}
               className="w-full border-[1px] border-[#333] px-4 py-2 text-[16px] sm:text-[14px] rounded-md"
-              placeholder={(country === "US" && "Zip Code") || "Postal Code"}
+              placeholder={(country === 'US' && 'Zip Code') || 'Postal Code'}
             />
             {formik.touched.zip && formik.errors.zip ? (
               <div className="text-red-500 text-xs">{formik.errors.zip}</div>
@@ -308,17 +246,17 @@ const PaymentOptions = ({
         </div>
         <div className="flex w-full space-x-4 mt-6">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Shipping</label>
+            <label className="text-[14px] pb-2">Shipping</label>
             <div className="flex">
               <input
                 type="radio"
                 name="shipping"
                 defaultChecked
-                value={"1"}
+                value={'1'}
                 className="mr-2"
               />
               <label className="text-[14px]">
-                Standard{" "}
+                Standard{' '}
                 <PriceDisplaySimple
                   priceUSD={parseFloat(product.productShipping)}
                   countryCode={country}
@@ -328,9 +266,18 @@ const PaymentOptions = ({
             </div>
           </div>
         </div>
-        <div className="flex w-full space-x-4 mt-6">
+        <div className="flex items-center pb-6 mt-[35px]">
+          <CreditCardIcon className="w-[50px]"/>
+          <div className="pl-[10px] text-left">
+            <h3 className="text-[28px] leading-[28px] text-black font-bold">Payment Information</h3>
+            <p className="text-[15px] leading-[21px] text-black tracking-[0.3px] mt-[5px]">
+              Safe & Secure Checkout
+            </p>
+          </div>
+        </div>
+        <div className="flex w-full space-x-4">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Card Number</label>
+            <label className="text-[14px] pb-2">Card Number</label>
             <input
               type="text"
               name="card"
@@ -349,7 +296,7 @@ const PaymentOptions = ({
         </div>
         <div className="flex w-full space-x-4 mt-4">
           <div className="flex w-1/2 flex-col items-start justify-start relative">
-            <label className="font-bold text-[14px] pb-2">Expiry Month</label>
+            <label className="text-[14px] pb-2">Expiry Month</label>
             <div className="relative w-full">
               <select
                 name="month"
@@ -375,7 +322,7 @@ const PaymentOptions = ({
                 <option value="12">(12) December</option>
               </select>
               <span className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <ChevronDownIcon className="w-4 h-4 text-[#555] " />
+                <ChevronDownIcon className="w-4 h-4 text-[#555] "/>
               </span>
             </div>
             {formik.touched.month && formik.errors.month ? (
@@ -383,7 +330,7 @@ const PaymentOptions = ({
             ) : null}
           </div>
           <div className="flex w-1/2 flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Expiry Year</label>
+            <label className="text-[14px] pb-2">Expiry Year</label>
             <div className="relative w-full">
               <select
                 name="year"
@@ -419,7 +366,7 @@ const PaymentOptions = ({
                 <option value="2045">2045</option>
               </select>
               <span className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <ChevronDownIcon className="w-4 h-4 text-[#555]" />
+                <ChevronDownIcon className="w-4 h-4 text-[#555]"/>
               </span>
             </div>
             {formik.touched.year && formik.errors.year ? (
@@ -429,7 +376,7 @@ const PaymentOptions = ({
         </div>
         <div className="flex w-full space-x-4 mt-6 mb-6">
           <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">CVV</label>
+            <label className="text-[14px] pb-2">CVV</label>
             <input
               type="text"
               name="cvv"
@@ -447,15 +394,15 @@ const PaymentOptions = ({
           </div>
         </div>
         <p className="text-[14px] text-[#a1a1a1]">
-          By placing this order you agree to {info.product.name}{" "}
+          By placing this order you agree to {info.product.name}{' '}
           <a
             href="/terms-conditions"
             className="text-blue-300 underline cursor-pointer hover:text-blue-500"
             tabIndex={1}
           >
             terms and conditions
-          </a>{" "}
-          and{" "}
+          </a>{' '}
+          and{' '}
           <a
             href="/privacy-policy"
             className="text-blue-300 underline cursor-pointer hover:text-blue-500"
@@ -465,62 +412,25 @@ const PaymentOptions = ({
           </a>
           .
         </p>
-        <input
+        <button
           type="submit"
-          value={info.buttonCta}
-          className="text-[18px] uppercase bg-[#29af5c] w-full py-8 mt-4 rounded-lg text-white font-bold green-text-shadow border-b-[3px] border-[#128e41] cursor-pointer hover:bg-[#0ebf52]"
-        />
+          className="inline-block w-full h-[75px] text-[20px] md:text-[28px] text-white border font-bold mt-[20px] rounded-[5px] border-solid border-[#77d496] bg-[#00af3a]"
+        >
+          {info.buttonCta}
+          <ArrowRightIcon
+            className="inline-block w-[18px] ml-[17px]"/>
+        </button>
       </form>
-      {/* <div className="flex full flex-col items-start justify-start">
-        <div className="flex pt-6 pb-2">
-          <p className="font-bold text-[14px] ">
-            <span className="text-blue-800 font-bold mr-[5px] text-[18px]">
-              ✓
-            </span>{" "}
-            {info.blurbs.final1}
-          </p>
-        </div>
-        <div className="flex  pb-2">
-          <p className="font-bold text-[14px] ">
-            <span className="text-blue-800 font-bold mr-[5px] text-[18px]">
-              ✓
-            </span>{" "}
-            {info.blurbs.final2}
-          </p>
-        </div>
-        <div className="flex  pb-2">
-          <p className="font-bold text-[14px] ">
-            <span className="text-blue-800 font-bold mr-[5px] text-[18px]">
-              ✓
-            </span>{" "}
-            {info.blurbs.final3}
-          </p>
-        </div>
-      </div> */}
-      {/* <div className="h-[1px] w-full bg-[#ddd] mt-2 mb-4" /> */}
-      <div className="flex w-full items-center mt-4">
+      <div className="flex mt-8 justify-center">
         <Image
-          src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8ff78d00-d526-4377-2537-257830592600/public"
+          src="/images/guaranty-seal.jpg"
           width={505}
           height={37}
           alt="Secure Checkout"
         />
       </div>
-      <div className="h-[1px] w-full bg-[#ddd] mt-2 mb-4" />
-      <div className="flex flex-col w-full items-center">
-        <div className="flex pt-2 pb-2">
-          <LockClosedIcon className="h-[24px] w-[24px] mr-2 text-[#008900] text-shadow" />
-          <p className="text-[14px] sm:text-[18px] uppercase text-center">
-            <span className="text-[#008900] font-bold ">SSL</span> Secured
-            Payment
-          </p>
-        </div>
-        <p className="text-[12px] sm:text-[14px] text-center">
-          Your information is protected by 256-bit SSL encryption.
-        </p>
-      </div>
     </>
   );
 };
 
-export default PaymentOptions;
+export default PaymentOptions2;
