@@ -1,16 +1,10 @@
-import React from "react";
-import CheckoutPage from "./_components/checkout-page";
-import { Montserrat } from "next/font/google";
+import { getSalesBySlug } from "@/app/_utils/api";
+import SalesPage from "@/app/_components/sales-page";
+import { baseSales } from "@/lib/site-info";
 import type { Metadata } from "next";
-import { getCheckoutBySlug } from "@/app/_utils/api";
-// import { baseCheckout } from "@/lib/site-info";
 
-const baseCheckout = "splash-foam-checkout";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
-
-export function generateMetadata(): Metadata {
-  const info = getCheckoutBySlug(baseCheckout);
+export async function generateMetadata(): Promise<Metadata> {
+  const info = await getSalesBySlug(baseSales);
 
   return {
     title: info.metaTitle,
@@ -18,14 +12,8 @@ export function generateMetadata(): Metadata {
   };
 }
 
-const Page = () => {
-  const checkoutInfo = getCheckoutBySlug(baseCheckout);
+export default async function Page() {
+  const info = await getSalesBySlug(baseSales);
 
-  return (
-    <div className={montserrat.className}>
-      <CheckoutPage info={checkoutInfo} />
-    </div>
-  );
-};
-
-export default Page;
+  return <SalesPage info={info} />;
+}

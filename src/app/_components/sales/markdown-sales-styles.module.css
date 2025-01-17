@@ -1,0 +1,7 @@
+.markdown {
+  @apply leading-relaxed;
+}
+
+.markdown p {
+  @apply my-4 text-[17px] lg:text-[20px];
+}

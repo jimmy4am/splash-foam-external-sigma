@@ -1,18 +1,16 @@
 # 4am Media - External Project
 
-The goal for this project is to create a "Template 2" for our checkout portal.
+The goal for this project is to create a "Template 3" for our sales page.
 
-**Current Template 1** - [https://clean.buysplashcleaner.com/checkout](https://clean.buysplashcleaner.com/checkout)
+**Current Template 1** - [https://clean.buysplashcleaner.com/](https://clean.buysplashcleaner.com/)
 
-**_Desired Template 2_** - [https://www.oriclehearing.com/hear/checkout.php](https://www.oriclehearing.com/hear/checkout.php)
-
-To speed up this project, do not worry about the sidebar or embedded upsells. **Refer to [this screenshot](https://i.imgur.com/P7OQBn6.jpeg).**
+**_Desired Template 3_** - [https://splash-foam-sales-7-1.vercel.app/](https://splash-foam-sales-7-1.vercel.app/)
 
 ## This is a Next.js + Typescript + Tailwind CSS project refrencing Markdown files.
 
 This build is designed to work across multiple funnels.
 
-Dynamic content (product specific content..) and image links are stored in markdown files at the root - `/_checkout/splash-foam-checkout.md`.
+Dynamic content (product specific content..) and image links are stored in markdown files at the root - `/_sales/sales-splash-foam.md`.
 
 Home page `/src/app/page.tsx` reads markdown content and passes it to the `CheckoutPage` component - `/src/app/_components/checkout-page.tsx`.
 
