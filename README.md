@@ -1,10 +1,12 @@
-# 4am Media - External Project
+# 4am Media + Sigma
 
-The goal for this project is to create a "Template 3" for our sales page.
+The goal for this project is to create a "Template 3" for our sales page from a static page design
 
 **Current Template 1** - [https://clean.buysplashcleaner.com/](https://clean.buysplashcleaner.com/)
 
 **_Desired Template 3_** - [https://splash-foam-sales-7-1.vercel.app/](https://splash-foam-sales-7-1.vercel.app/)
+
+Public Repo for static template 7.1 - [https://github.com/jimmy4am/splash-foam-sales-7.1](https://github.com/jimmy4am/splash-foam-sales-7.1)
 
 ## This is a Next.js + Typescript + Tailwind CSS project refrencing Markdown files.
 
@@ -12,25 +14,27 @@ This build is designed to work across multiple funnels.
 
 Dynamic content (product specific content..) and image links are stored in markdown files at the root - `/_sales/sales-splash-foam.md`.
 
-Home page `/src/app/page.tsx` reads markdown content and passes it to the `CheckoutPage` component - `/src/app/_components/checkout-page.tsx`.
+Home page `/src/app/page.tsx` reads markdown content and passes it to the `SalesPage` component - `/src/app/_components/sales-page.tsx`.
 
-`CheckoutPage` renders the correct template based on the `info.template` field.
+`SalesPage` renders the correct template based on the `info.template` field.
 
 ## Goals
 
-Create a templatized version of the Oricle Hearing Checkout page but refrencing the content from `splash-foam-checkout.md`
+Create a templatized version of the 7.1 sales page but refrencing the content from `sales-splash-foam.md`
 
-I should be able to swtich from template 1 to template 2 by updating the `template` field in the markdown file and refreshing the page.
+I should be able to swtich from template 1 to template 3 by updating the `template` field in the markdown file and refreshing the page.
 
 ## Bonus Goals
 
-Stick as closely as possible to my current style.
+Mobile friendly responsive layout
 
-Keep file structure organized
+Stick as closely as possible to my current style using tailwind as much as possible and keeping custom classes to a minimum
 
-Keep types organized if modifying or adding fields
+Keep file structure organized - put new components in the `/_components/sales/sales-3` folder.
 
-**For any questions or concerns, please email jimmy@fourammedia.com**
+Keep types organized if modifying or adding fields.
+
+**For any questions or concerns, please email jimmy@fourammedia.com or message on internal Slack Channel**
 
 ## To Get Started
 
