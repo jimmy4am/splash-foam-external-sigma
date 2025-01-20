@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import {Inter} from "next/font/google";
 import { siteProduct } from "@/lib/site-info";
 
 import { SalesPageType } from "@/interfaces/salesPage";
@@ -8,13 +9,15 @@ import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
 import SalesHeroList from "@/app/_components/sales/sales-3/sales-hero/sales-hero-list";
 import SalesHeroReview from "@/app/_components/sales/sales-3/sales-hero/sales-hero-review";
 
+const inter = Inter({ subsets: ["latin"] });
+
 type Props = {
     info: SalesPageType;
 };
 
 const SalesHero = ({ info }: Props) => {
     return (
-        <div className="w-full mt-[103px] md:mt-[127px] pt-[15px] pb-[35px] md:pt-[40px] md:pb-[40px] lg:pt-[45px] lg:pb-[50px] bg-[linear-gradient(180deg,_#fff_30%,_#f4f7f9_50%)] md:bg-none md:bg-[#f4f7f9]">
+        <section className={`w-full mt-[103px] md:mt-[127px] pt-[15px] pb-[35px] md:pt-[40px] md:pb-[40px] lg:pt-[45px] lg:pb-[50px] bg-[linear-gradient(180deg,_#fff_30%,_#f4f7f9_50%)] md:bg-none md:bg-[#f4f7f9] ${inter.className}`}>
             <div className="w-full max-w-[1200px] mx-[auto] px-4">
                 <div className="hidden md:flex w-full md:mb-[20px]">
                     <SalesHeroRating />
@@ -38,7 +41,7 @@ const SalesHero = ({ info }: Props) => {
                         <div className="order-5 md:order-none max-w-[326px] md:max-w-[365px] mt-[15px]">
                             <SalesHeroList info={info} />
                         </div>
-                        <div className="max-w-[410px] mt-[30px] md:mt-[40px]">
+                        <div className="w-full max-w-[366px] md:max-w-[410px] mt-[30px] md:mt-[40px]">
                             <BuyButton info={info} />
                         </div>
                         <div className="md:hidden order-10 w-full mt-[25px]">
@@ -50,7 +53,7 @@ const SalesHero = ({ info }: Props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

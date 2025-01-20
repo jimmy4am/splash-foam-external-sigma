@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import {SalesPageType} from "@/interfaces/salesPage";
 
-type SalesHeroListProps = {
+type Props = {
     info: SalesPageType,
 };
 
@@ -15,7 +15,7 @@ const SalesHeroListItem = ({ text }: {text: string}) => {
     );
 };
 
-const SalesHeroList = ({ info }: SalesHeroListProps) => {
+const SalesHeroList = ({ info }: Props) => {
     return (
         <ul className="">
             <SalesHeroListItem text={info.header.pro1} />

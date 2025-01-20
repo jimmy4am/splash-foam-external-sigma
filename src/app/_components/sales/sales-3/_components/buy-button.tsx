@@ -5,11 +5,11 @@ import {SalesPageType} from "@/interfaces/salesPage";
 import {getFormattedDayOfTheWeek} from "@/app/_utils/dateUtils";
 import AppButton from "@/app/_components/sales/sales-3/_components/app-button";
 
-type BuyButtonProps = {
+type Props = {
     info: SalesPageType,
 };
 
-const BuyButton = ({ info }: BuyButtonProps) => {
+const BuyButton = ({ info }: Props) => {
     return (
         <div className="text-center">
             <p className="inline-flex items-center gap-[10px] mb-[10px] text-[13px] md:text-[15px] leading-[13px] md:leading-[15px] tracking-[0.5px]">
@@ -18,7 +18,7 @@ const BuyButton = ({ info }: BuyButtonProps) => {
             </p>
             <AppButton url={info.cta}>
                 Claim 50% OFF Today
-                <Image src="/images/template-3/btn-hand.png" width={43} height={28} alt="Hand icon" />
+                <Image className="w-[35px] md:w-[43px]" src="/images/template-3/btn-hand.png" width={43} height={28} alt="Hand icon" />
             </AppButton>
             <p className="inline-flex items-center gap-[10px] mt-[10px] text-[13px] md:text-[15px] leading-[13px] md:leading-[15px] tracking-[0.5px]">
                 <Image src="/images/template-3/dollar-icn.png" width={19} height={19}  alt="Money back icon" />

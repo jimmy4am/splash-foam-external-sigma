@@ -6,11 +6,11 @@ import {SalesPageType} from "@/interfaces/salesPage";
 
 const outfit = Outfit({ subsets: ["latin-ext"] });
 
-type SalesHeroReviewProps = {
+type Props = {
     info: SalesPageType,
 };
 
-const SalesHeroReview = ({ info }: SalesHeroReviewProps) => {
+const SalesHeroReview = ({ info }: Props) => {
     return (
         <div className="relative w-full bg-[#fff] max-w-[350px] mx-[auto] border-[1px] border-[#0f85d3] rounded-[8px] p-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.1)]">
             <span className={`absolute right-[20px] -top-[12px] w-[25px] h-[25px] bg-[#fff] border-[1px] border-[#0f85d3] rounded-[50%] text-center ${outfit.className} text-[34px] leading-[38px] font-semibold`}>"</span>
