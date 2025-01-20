@@ -5,6 +5,7 @@ import SalesHeader from "./sales/sales-header";
 import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
 import Footer from "./sales/sales-footer";
 import SalesHero from "./sales/sales-hero";
+import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
 import ThreeHighlighs from "./sales/sales-threehighlights";
 import InfoBox from "./sales/sales-infobox";
 import ImageStrip from "./sales/sales-imagestrip";
@@ -58,6 +59,7 @@ const SalesPage = ({ info }: Props) => {
       {info.template === "3" && (
           <>
               <SalesHeader3 info={info} />
+              <SalesHero3 info={info} />
           </>
       )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
