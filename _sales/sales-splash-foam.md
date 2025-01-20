@@ -1,6 +1,6 @@
 ---
 slug: "sales-splash-foam"
-template: "7"
+template: "3"
 metaTitle: "Splash Foam Toilet Cleaner - Flush Away Stains & Odors"
 metaDescription: "Say goodbye to stubborn stains and bad odors with Splash Foam Toilet Cleaner."
 funnelFlux: 'var fluxDefaults = {

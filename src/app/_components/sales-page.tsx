@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import SalesHeader from "./sales/sales-header";
+import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
 import Footer from "./sales/sales-footer";
 import SalesHero from "./sales/sales-hero";
 import ThreeHighlighs from "./sales/sales-threehighlights";
@@ -54,7 +55,11 @@ const SalesPage = ({ info }: Props) => {
           <Footer info={info} />
         </>
       )}
-      {info.template === "3" && <>{/* Build This Template Here */}</>}
+      {info.template === "3" && (
+          <>
+              <SalesHeader3 info={info} />
+          </>
+      )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>
   );
