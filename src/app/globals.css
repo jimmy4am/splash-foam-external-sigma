@@ -220,7 +220,7 @@
   stroke: #fff;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  box-shadow: inset 0px 0px 0px #fff;
+  box-shadow: inset 0 0 0 #fff;
   animation: fillUp 2s ease-in-out forwards;
 }
 .checkmark_red {
@@ -232,7 +232,7 @@
   stroke: #fff;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  box-shadow: inset 0px 0px 0px #fff;
+  box-shadow: inset 0 0 0 #fff;
   animation: fillUpRed 2s ease-in-out forwards;
 }
 .checkmark__circle_red {
