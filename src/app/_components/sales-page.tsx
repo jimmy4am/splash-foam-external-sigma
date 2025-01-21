@@ -2,10 +2,8 @@
 
 import React, { useRef } from "react";
 import SalesHeader from "./sales/sales-header";
-import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
 import Footer from "./sales/sales-footer";
 import SalesHero from "./sales/sales-hero";
-import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
 import ThreeHighlighs from "./sales/sales-threehighlights";
 import InfoBox from "./sales/sales-infobox";
 import ImageStrip from "./sales/sales-imagestrip";
@@ -14,15 +12,20 @@ import SplitCompare from "./sales/sales-splitcompare";
 import FiveImageSplit from "./sales/sales-fiveimagesplit";
 import SpecGrid from "./sales/sales-specgrid";
 import Reviews from "./sales/sales-reviews";
-import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
 import Faqs from "./sales/sales-faqs";
-import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
 import StickyCta from "./sales/sales-stickycta";
 import { SalesPageType } from "@/interfaces/salesPage";
 import SalesClickId from "./sales/sales-click-id";
 import FunnelFluxScripts from "@/lib/funnel-flux-scripts";
 import SalesSimple from "./sales/sales-simple";
 import PassUtmParams from "../_utils/passUtmParams";
+
+// Template 3
+import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
+import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
+import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
+import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
+import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
 
 type Props = {
   info: SalesPageType;
@@ -64,6 +67,7 @@ const SalesPage = ({ info }: Props) => {
               <SalesHero3 info={info} />
               <SalesReviews3 info={info} />
               <SalesFaqs3 info={info} />
+              <SalesFooter3 info={info} />
           </>
       )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
