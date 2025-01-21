@@ -33,7 +33,7 @@ const SalesHeader = ({ info }: Props) => {
   }, [headerHeight]);
 
   return (
-    <div className="fixed z-50 w-full">
+    <header className="fixed z-50 w-full">
         <div
             className={`h-[48px] md:h-[42px] flex items-center bg-[#ffe56e] overflow-hidden`}
             style={{height: `${headerHeight}px`}}
@@ -49,7 +49,7 @@ const SalesHeader = ({ info }: Props) => {
                 </AppButton>
             </div>
         </div>
-    </div>
+    </header>
   );
 };
 

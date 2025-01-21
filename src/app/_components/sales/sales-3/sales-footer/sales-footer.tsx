@@ -11,7 +11,7 @@ type Props = {
 const SalesFooter = ({ info }: Props) => {
     return (
         <footer className="w-full py-[25px] md:py-[40px] bg-[#fff] border-t-[1px] border-t-[#c8c8c8]">
-            <div className="w-full max-w-[1200px] px-4 flex flex-col items-center">
+            <div className="w-full max-w-[1200px] mx-[auto] px-4 flex flex-col items-center">
                 <Link href="/" className="flex w-[120px] md:w-[142px] mb-[20px] md:mb-[25px]">
                     <Image src={info.logo} width={160} height={160} alt={siteProduct} />
                 </Link>

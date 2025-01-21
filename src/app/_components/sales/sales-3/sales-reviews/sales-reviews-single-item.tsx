@@ -7,7 +7,7 @@ type Props = {
     text: string;
 };
 
-const SalesReviewsSingleReview = ({ title, author, text }: Props) => {
+const SalesReviewsSingleItem = ({ title, author, text }: Props) => {
     return (
         <li className="w-full p-[20px_20px_25px] bg-[#eef4f7] border-[1px] border-[#2079ba] rounded-[10px]">
             <h3 className="mb-[10px] text-[18px] leading-[24px] font-bold">{title}</h3>
@@ -27,4 +27,4 @@ const SalesReviewsSingleReview = ({ title, author, text }: Props) => {
     );
 };
 
-export default SalesReviewsSingleReview;
+export default SalesReviewsSingleItem;

@@ -4,7 +4,7 @@ import { Outfit } from "next/font/google";
 
 import { SalesPageType } from "@/interfaces/salesPage";
 
-const outfit = Outfit({ subsets: ["latin-ext"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 type Props = {
     info: SalesPageType,

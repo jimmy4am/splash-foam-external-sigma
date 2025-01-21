@@ -3,7 +3,7 @@ import React from "react";
 import { SalesPageType } from "@/interfaces/salesPage";
 import Image from "next/image";
 import { Outfit, Inter } from "next/font/google";
-import SalesReviewsSingleReview from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-single-review";
+import SalesReviewsSingleItem from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-single-item";
 import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
 import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
 
@@ -30,10 +30,10 @@ const SalesReviews = ({ info }: Props) => {
                 </div>
 
                 <ul className="w-full max-w-[970px] flex flex-col gap-[20px] mt-[30px] md:mt-[50px] mx-[auto]">
-                    <SalesReviewsSingleReview title={info.reviews.title1} author={info.reviews.name1} text={info.reviews.text1} />
-                    <SalesReviewsSingleReview title={info.reviews.title2} author={info.reviews.name2} text={info.reviews.text2} />
-                    <SalesReviewsSingleReview title={info.reviews.title3} author={info.reviews.name3} text={info.reviews.text3} />
-                    <SalesReviewsSingleReview title={info.reviews.title4} author={info.reviews.name4} text={info.reviews.text4} />
+                    <SalesReviewsSingleItem title={info.reviews.title1} author={info.reviews.name1} text={info.reviews.text1} />
+                    <SalesReviewsSingleItem title={info.reviews.title2} author={info.reviews.name2} text={info.reviews.text2} />
+                    <SalesReviewsSingleItem title={info.reviews.title3} author={info.reviews.name3} text={info.reviews.text3} />
+                    <SalesReviewsSingleItem title={info.reviews.title4} author={info.reviews.name4} text={info.reviews.text4} />
                 </ul>
 
                 <div className="w-full max-w-[366px] md:max-w-[410px] mx-[auto]  mt-[30px] md:mt-[40px]">
