@@ -1,5 +1,6 @@
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { siteProduct } from "@/lib/site-info";
 import { SalesPageType } from "@/interfaces/salesPage";
@@ -7,6 +8,12 @@ import { SalesPageType } from "@/interfaces/salesPage";
 type Props = {
     info: SalesPageType;
 };
+
+const FooterLink = ({ url, children }: { url: string, children: React.ReactNode }) => (
+    <Link className="hover:text-[#0073b7] transition-all duration-250 ease-in-out" href={url} target="_blank">
+        {children}
+    </Link>
+)
 
 const SalesFooter = ({ info }: Props) => {
     return (
@@ -18,11 +25,11 @@ const SalesFooter = ({ info }: Props) => {
                 <div className="text-[14px] md:text-[16px] leading-[22px] md:leading-[24px] text-[#000] tracking-[0.5px]">
                     <nav>
                         <ul className="flex flex-wrap justify-center gap-x-[12px]">
-                            <li><Link href="/contact-us" target="_blank">Contact Us</Link></li>
-                            <li><Link href="/terms-conditions" target="_blank">Terms of Service</Link></li>
-                            <li><Link href="/privacy-policy" target="_blank">Privacy Policy</Link></li>
-                            <li><Link href="/shipping-returns" target="_blank">Shipping & Returns</Link></li>
-                            <li><Link href="/mobile-terms-conditions" target="_blank">Mobile Terms</Link></li>
+                            <li><FooterLink url="/contact-us">Contact Us</FooterLink></li>
+                            <li><FooterLink url="/terms-conditions">Terms of Service</FooterLink></li>
+                            <li><FooterLink url="/privacy-policy">Privacy Policy</FooterLink></li>
+                            <li><FooterLink url="/shipping-returns">Shipping & Returns</FooterLink></li>
+                            <li><FooterLink url="/mobile-terms-conditions">Mobile Terms</FooterLink></li>
                         </ul>
                     </nav>
                     <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center mt-[16px] md:mt-[12px]">

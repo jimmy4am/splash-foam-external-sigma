@@ -15,7 +15,7 @@ const SalesStepsSingleItem = ({ step, img, title, text }: Props) => {
     return (
         <div className="md:flex-[1] flex items-start md:flex-col-reverse p-[10px] bg-[#fff] rounded-[10px]">
             <div className="flex-[1_1_auto] p-[0_5px] md:flex md:items-start md:p-[0]">
-                <div className={`md:flex-[0_0_48px] xl:flex-[0_0_53px] mb-[10px] md:mb-[0] text-[40px] leading-[40px] text-[#b7d2ed] font-medium ${outfit.className}`}>{step}</div>
+                <div className={`md:flex-[0_0_48px] xl:flex-[0_0_53px] mb-[10px] md:mb-[0] md:text-center text-[40px] leading-[40px] text-[#b7d2ed] font-medium ${outfit.className}`}>{step}</div>
                 <div className="md:flex-[1_1_auto]">
                     <h3 className={`mb-[5px] md:mb-[10px] text-[24px] leading-[24px] text-[#0073b7] font-extrabold uppercase ${outfit.className}`}>{title}</h3>
                     <p className="text-[16px] leading-[24px] tracking-[0.2px]">{text}</p>

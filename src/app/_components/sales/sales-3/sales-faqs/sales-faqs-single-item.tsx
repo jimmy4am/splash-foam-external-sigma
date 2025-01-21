@@ -24,7 +24,7 @@ const SalesFaqsSingleItem = ({ q, a, index, active, setActive, isLastItem }: Pro
     return (
         <div className={`flex w-full flex-col  ${!isLastItem ? 'border-b-[1px] border-[#c2c2c2]' : undefined}`}>
             <div
-                className={`flex w-full justify-between items-center p-[18px_0] md:p-[25px_0] cursor-pointer`}
+                className={`flex w-full justify-between items-center p-[18px_0] md:p-[25px_0] cursor-pointer hover:text-[#0073b7] transition-all duration-250 ease-in-out`}
                 onClick={() => {
                     setOpen(!open);
                     setActive(index);
