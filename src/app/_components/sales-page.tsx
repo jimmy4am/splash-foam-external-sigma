@@ -16,6 +16,7 @@ import SpecGrid from "./sales/sales-specgrid";
 import Reviews from "./sales/sales-reviews";
 import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
 import Faqs from "./sales/sales-faqs";
+import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
 import StickyCta from "./sales/sales-stickycta";
 import { SalesPageType } from "@/interfaces/salesPage";
 import SalesClickId from "./sales/sales-click-id";
@@ -62,6 +63,7 @@ const SalesPage = ({ info }: Props) => {
               <SalesHeader3 info={info} />
               <SalesHero3 info={info} />
               <SalesReviews3 info={info} />
+              <SalesFaqs3 info={info} />
           </>
       )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />

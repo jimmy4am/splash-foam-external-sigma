@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import {Outfit} from "next/font/google";
+import { Outfit } from "next/font/google";
 
-import {CountDownKeysType, CountDownMessages, CountDownType} from "@/app/_components/sales/sales-3/sales-header/types";
-import {extraTimeLimit, initialTimeLimit} from "@/app/_components/sales/sales-3/sales-header/constants";
+import { CountDownKeysType, CountDownMessages, CountDownType } from "@/app/_components/sales/sales-3/sales-header/types";
+import { extraTimeLimit, initialTimeLimit } from "@/app/_components/sales/sales-3/sales-header/constants";
 
 const outfit = Outfit({ subsets: ["latin"] });
 

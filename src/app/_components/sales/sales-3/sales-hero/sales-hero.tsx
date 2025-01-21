@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import { siteProduct } from "@/lib/site-info";
 
 import { SalesPageType } from "@/interfaces/salesPage";

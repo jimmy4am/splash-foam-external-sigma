@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import {SalesPageType} from "@/interfaces/salesPage";
-import {getFormattedDayOfTheWeek} from "@/app/_utils/dateUtils";
+import { SalesPageType } from "@/interfaces/salesPage";
+import { getFormattedDayOfTheWeek } from "@/app/_utils/dateUtils";
 import AppButton from "@/app/_components/sales/sales-3/_components/app-button";
 
 type Props = {

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import {SalesPageType} from "@/interfaces/salesPage";
+
+import { SalesPageType } from "@/interfaces/salesPage";
 
 type Props = {
     info: SalesPageType,

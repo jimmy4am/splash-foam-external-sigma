@@ -2,9 +2,10 @@ import React from "react";
 
 import { SalesPageType } from "@/interfaces/salesPage";
 import Image from "next/image";
-import {Outfit, Inter} from "next/font/google";
+import { Outfit, Inter } from "next/font/google";
 import SalesReviewsSingleReview from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-single-review";
 import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
+import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
 
 
 const outfit = Outfit({ subsets: ["latin"] });
@@ -20,7 +21,7 @@ const SalesReviews = ({ info }: Props) => {
             <div className="w-full max-w-[1200px] mx-[auto] px-4">
                 <div className="text-center">
                     <p className="mb-[20px] text-[22px] md:text-[25px] leading-[22px] md:leading-[25px] font-bold">Customer Reviews</p>
-                    <h2 className={`mb-[25px] md:mb-[20px] bg-[#0262b4] bg-[linear-gradient(90deg,_#0262b4_5%,_#1b96d3_30%,_#1b96d3_60%,_#0262b4_95%)] text-[transparent] text-[37px] lg:text-[45px] leading-[45px] lg:leading-[53px] font-extrabold ${outfit.className} bg-clip-text`}>What Daily Users Have To Say</h2>
+                    <SectionTitle>What Daily Users Have To Say</SectionTitle>
                     <p className="flex flex-col md:flex-row items-center md:items-end justify-center">
                         <span className={`text-[40px] md:text-[50px] leading-[16px] md:leading-[18px] font-bold  ${outfit.className}`}>4.9</span>
                         <Image className="w-[110px] md:w-[138px] m-[20px_0_10px] md:m-[0_15px]" src="/images/template-3/star.svg" alt="rating stars" width={82} height={14} />

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import {Outfit} from "next/font/google";
+import { Outfit } from "next/font/google";
 
-import {SalesPageType} from "@/interfaces/salesPage";
+import { SalesPageType } from "@/interfaces/salesPage";
 
 const outfit = Outfit({ subsets: ["latin-ext"] });
 
