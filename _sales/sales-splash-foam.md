@@ -40,11 +40,17 @@ highlights:
 info: 
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8398e75c-6c92-4165-4e93-76a5cab21e00/public
   heading: Say Goodbye To Stubborn Toilet Stains And Odors!
+  headingLabel: Smarter Cleaner
   text: "Why Splash?
   
   
   If you're like most people, you probably hate spending half an hour on your knees scrubbing your toilet — and then having to do it all over again if you don't get it clean enough the first time."
   textBottom: "Splash's fast-acting, no-scrubbing foaming powder makes cleaning your toilet a breeze. It's everything you could possibly want in a toilet cleaner, and more! The secret to its effectiveness is in its NanoTech formula. It is powerful enough to bond with stains and lift them from surfaces, yet safe for your tank system and also your skin. The result is a clean and fresh toilet that looks brand new with absolutely no scrubbing on your part. Just sit back and watch all the calcium deposits, limestone, and rust spiral down the drain!"
+  feature1: "Foam Expands To Cover Toilet"
+  feature2: "Septic Tank Safe"
+  feature3: "Advanced Fast Acting Formula"
+  feature4: "Fresh Clean Scent"
+  feature5: "Hands-Free Foaming Formula"
 
 strip_images: 
   img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e0e49e1-a5f1-4599-75ac-2698984ab000/public
@@ -62,6 +68,7 @@ strip_images:
 
 slideshow: 
   heading: Still Cleaning Your Toilet The Hard Way?
+  headingLabel: No Toxic Nasties
   subheading: Switch to Splash to save yourself time, money, energy and most importantly — your toilet!
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6fc208f3-29d7-4f67-1a04-648762b3a900/public
   title1: 100% Safe
@@ -83,6 +90,7 @@ slideshow:
 splitcompare: 
   background: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/baad7b34-eda2-4340-9f12-967b9e0e0a00/public 
   heading: Why is Splash Better Than the Standard Toilet Cleaners?
+  headingLabel: Ease To Get
   subheading: "**Cleaning the Toilet is a Nightmare and You Know it!**
 
 
@@ -143,6 +151,7 @@ fiveimagesplit:
 specgrid:
   heading: Splash
   headingend: Vs The Rest
+  headingLabel: Compare & See
   productImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/777e451e-711f-45e6-fce1-611133de4100/public
   otherImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e0705729-3e39-446d-1218-4f05530f2000/public
   text1: Scrub-Free Formula

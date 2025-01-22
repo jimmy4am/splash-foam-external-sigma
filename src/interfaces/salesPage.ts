@@ -35,8 +35,14 @@ export type SalesPageType = {
   info: {
     image: string;
     heading: string;
+    headingLabel: string;
     text: string;
     textBottom: string;
+    feature1: string;
+    feature2: string;
+    feature3: string;
+    feature4: string;
+    feature5: string;
   };
   strip_images: {
     img1: string;
@@ -54,6 +60,7 @@ export type SalesPageType = {
   };
   slideshow: {
     heading: string;
+    headingLabel: string;
     subheading: string;
     icon1: string;
     title1: string;
@@ -123,6 +130,7 @@ export type SalesPageType = {
   specgrid: {
     heading: string;
     headingend: string;
+    headingLabel: string;
     productImg: string;
     otherImg: string;
     text1: string;

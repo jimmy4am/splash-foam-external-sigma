@@ -54,7 +54,7 @@ const SalesUsage = ({ info }: Props) => {
                 <p className="w-full max-w-[740px] mx-[auto] mb-[30px] md:mb-[40px] text-center text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px] tracking-[0.2px] md:tracking-[0.3px]">{info.fiveimagesplit.subheading}</p>
 
                 <div className="-mx-4 md:mx-0">
-                    <Slider className="usage-slider" {...settings}>
+                    <Slider className="usage-slider slider" {...settings}>
                         <SalesUsageSingleItem image={info.fiveimagesplit.img1} title={info.fiveimagesplit.text1} />
                         <SalesUsageSingleItem image={info.fiveimagesplit.img2} title={info.fiveimagesplit.text2} />
                         <SalesUsageSingleItem image={info.fiveimagesplit.img3} title={info.fiveimagesplit.text3} />

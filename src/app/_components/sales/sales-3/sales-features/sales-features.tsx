@@ -18,7 +18,7 @@ const SalesFeatures = ({ info }: Props) => {
                     <SectionTitle>
                         <span className="relative">
                             <span className="absolute -left-[50px] md:-left-[60px] -top-[30px] md:-top-[37px] lg:-top-[45px] flex flex-col items-start text-[14px] md:text-[15px] lg:text-[18px] leading-[16px] md:leading-[20px] lg:leading-[24px] text-[#000] font-bold">
-                                <span className="mb-[12px] whitespace-nowrap">No Toxic Nasties</span>
+                                <span className="mb-[12px] whitespace-nowrap">{info.slideshow.headingLabel}</span>
                                 <Image
                                     className="w-[26px] md:w-[33px] lg:w-[40px] ml-[15px]"
                                     src="/images/template-3/common-heading-arw.png" width={40} height={40} alt="Arrow icon"

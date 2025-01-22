@@ -18,7 +18,7 @@ const SalesSteps = ({ info }: Props) => {
                     <SectionTitle>
                         {info.splitcompare.heading2top}
                         <span className="absolute right-[20px] md:-right-[10px] lg:-right-[0] -top-[30px] md:-top-[37px] lg:-top-[45px] flex flex-col items-end text-[14px] md:text-[15px] lg:text-[18px] leading-[16px] md:leading-[20px] lg:leading-[24px] text-[#000] font-bold">
-                            <span className="mb-[12px]">Ease To Get</span>
+                            <span className="mb-[12px]">{info.splitcompare.headingLabel}</span>
                             <Image
                                 style={{ transform: 'rotateY(190deg)'}}
                                 className="w-[26px] md:w-[33px] lg:w-[40px] mr-[15px] md:mr-[55px] lg:mr-[45px]"

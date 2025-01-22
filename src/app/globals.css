@@ -6,19 +6,19 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 
-/* Usage Slider */
-/*============dots=======*/
-.usage-slider .slick-dots {
+/* Slider */
+/*========dots=======*/
+.slider .slick-dots {
   position: static;
   margin-top: 30px;
 }
 
-.usage-slider ul.slick-dots li {
+.slider ul.slick-dots li {
   width: 14px;
   height: 14px;
 }
 
-.usage-slider ul.slick-dots li button {
+.slider ul.slick-dots li button {
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -26,18 +26,18 @@
   border: 1px solid #acacac;
 }
 
-.usage-slider ul.slick-dots li button:before {
+.slider ul.slick-dots li button:before {
   display: none;
 }
 
-.usage-slider ul.slick-dots li.slick-active button {
+.slider ul.slick-dots li.slick-active button {
   background: #000;
   border: 1px solid #000;
 }
 
-/*============buttons=======*/
-.usage-slider .slick-prev,
-.usage-slider .slick-next {
+/*=========buttons=======*/
+.slider .slick-prev,
+.slider .slick-next {
   top: auto;
   bottom: 0;
   display: flex !important;
@@ -51,11 +51,12 @@
   z-index: 10;
 }
 
-.usage-slider .slick-prev:before,
-.usage-slider .slick-next:before {
+.slider .slick-prev:before,
+.slider .slick-next:before {
   display: none;
 }
 
+/* Usage Slider */
 .usage-slider .slick-prev {
   left: 10px;
 }
@@ -91,6 +92,15 @@
   .usage-slider .slick-next {
     right: -45px;
   }
+}
+
+/* Comparison Highlight Slider */
+.comparison-highlight-slider .slick-prev {
+  left: 54px;
+}
+
+.comparison-highlight-slider .slick-next {
+  right: 54px;
 }
 
 .green-text-shadow {
