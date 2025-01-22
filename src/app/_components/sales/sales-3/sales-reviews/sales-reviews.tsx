@@ -48,7 +48,8 @@ const SalesReviews = ({ info }: Props) => {
                     </p>
                 </div>
             </div>
-
+            {/*
+                // @ts-ignore */}
             <Slider className="image-slider slider grid md:block grid-cols-3 gap-[10px] mt-[30px] md:mt-[50px] px-4 md:px-[0]" {...settings}>
                 <SalesReviewsImageItem image={info.strip_images.img1}/>
                 <SalesReviewsImageItem image={info.strip_images.img2}/>

@@ -21,6 +21,23 @@ export type SalesPageType = {
     background: string;
     productImage: string;
   };
+  characteristics: {
+    heading: string;
+    icon1: string;
+    text1: string;
+    icon2: string;
+    text2: string;
+    icon3: string;
+    text3: string;
+    icon4: string;
+    text4: string;
+    icon5: string;
+    text5: string;
+    icon6: string;
+    text6: string;
+    icon7: string;
+    text7: string;
+  };
   highlights: {
     icon1: string;
     head1: string;

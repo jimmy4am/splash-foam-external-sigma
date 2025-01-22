@@ -109,6 +109,10 @@
   border-color: #1b96d3;
 }
 
+.sale-characteristics .rfm-initial-child-container {
+  align-items: flex-start ;
+}
+
 .green-text-shadow {
   text-shadow: 0 1px 1px #02672c;
 }

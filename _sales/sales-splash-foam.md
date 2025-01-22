@@ -25,6 +25,23 @@ header:
   pro5: "Receive up to 60% OFF your order when you purchase today!"
   background: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1d94074e-c032-44eb-4193-8a321399df00/public"
   productImage: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5af4697d-41c7-4352-8f75-15ca33170200/public"
+  
+characteristics:
+  heading: Splash Foam Characteristics
+  icon1: /images/template-3/strip-sec-icn1.png
+  text1: Eco Friendly
+  icon2: /images/template-3/strip-sec-icn2.png
+  text2: Non Toxic
+  icon3: /images/template-3/strip-sec-icn3.png
+  text3: Plant Based Products
+  icon4: /images/template-3/strip-sec-icn4.png
+  text4: Recyclable Plastic
+  icon5: /images/template-3/strip-sec-icn5.png
+  text5: Cruelty Free
+  icon6: /images/template-3/strip-sec-icn6.png
+  text6: Dye Free
+  icon7: /images/template-3/strip-sec-icn7.png
+  text7: Formulated HE & Standard
 
 highlights:
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/acd5a7af-3f72-45ad-27ba-7f5bcd829f00/public

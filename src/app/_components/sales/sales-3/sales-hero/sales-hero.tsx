@@ -26,8 +26,8 @@ const SalesHero = ({ info }: Props) => {
                 <div className="flex flex-col md:flex-row md:justify-between">
                     <div className="md:w-[58%] lg:w-[55%] xl:w-[51%] flex flex-col items-center md:items-start">
                         <h1 className="text-center md:text-left text-[34px] leading-[38px] md:text-[43px] md:leading-[52px] lg:text-[55px] lg:leading-[65px] xl:text-[60px] xl:leading-[62px] font-extrabold">
-                            <span className="bg-[linear-gradient(180deg,_transparent_51%,_#ffe400_51%,_#ffe400_85%,_transparent_20%)]">{info.h1_top}</span>
-                            <span className="inline-flex">{info.h1_bot}</span>
+                            <span className="inline-flex">{info.h1_top}</span>
+                            <span className="bg-[linear-gradient(180deg,_transparent_51%,_#ffe400_51%,_#ffe400_85%,_transparent_20%)]">{info.h1_bot}</span>
                         </h1>
                         <div className="md:hidden mt-[15px]">
                             <SalesHeroRating />
