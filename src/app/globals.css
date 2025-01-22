@@ -103,6 +103,12 @@
   right: 54px;
 }
 
+/* Video Reviews Slider */
+.video-reviews-slider ul.slick-dots li.slick-active button {
+  background: #1b96d3;
+  border-color: #1b96d3;
+}
+
 .green-text-shadow {
   text-shadow: 0 1px 1px #02672c;
 }

@@ -23,6 +23,7 @@ import PassUtmParams from "../_utils/passUtmParams";
 // Template 3
 import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
 import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
+import SalesVideoReviews3 from "./sales/sales-3/sales-video-reviews/sales-video-reviews";
 import SalesInfo3 from "./sales/sales-3/sales-info/sales-info";
 import SalesFeatures3 from "./sales/sales-3/sales-features/sales-features";
 import SalesSteps3 from "./sales/sales-3/sales-steps/sales-steps";
@@ -70,6 +71,7 @@ const SalesPage = ({ info }: Props) => {
           <>
               <SalesHeader3 info={info} />
               <SalesHero3 info={info} />
+              <SalesVideoReviews3 info={info} />
               <SalesInfo3 info={info} />
               <SalesFeatures3 info={info} />
               <SalesSteps3 info={info} />

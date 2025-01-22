@@ -37,6 +37,23 @@ highlights:
   head3: Quick Results
   text3: "Simply pour the foaming powder in your sink or toilet, let it sit for 20 minutes and see the results for yourself."
 
+video_reviews: 
+  heading: Over 500,000+ Satisfied Families Trust Splash Everyday
+  headingLabel: Tested & Trusted
+  text1: Shreha J
+  image1: /images/template-3/ugc-poster1.jpg
+  video1: /images/template-3/ugc-vdo1.mp4
+  text2: Eleena K
+  image2: /images/template-3/ugc-poster2.jpg
+  video2: /images/template-3/ugc-vdo2.mp4
+  text3: Rachel P
+  image3: /images/template-3/ugc-poster3.jpg
+  video3: /images/template-3/ugc-vdo3.mp4
+  text4: Suzan E
+  image4: /images/template-3/ugc-poster4.jpg
+  video4: /images/template-3/ugc-vdo3.mp4
+
+
 info: 
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8398e75c-6c92-4165-4e93-76a5cab21e00/public
   heading: Say Goodbye To Stubborn Toilet Stains And Odors!

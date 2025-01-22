@@ -32,6 +32,22 @@ export type SalesPageType = {
     head3: string;
     text3: string;
   };
+  video_reviews: {
+    heading: string;
+    headingLabel: string;
+    text1: string;
+    image1: string;
+    video1: string;
+    text2: string;
+    image2: string;
+    video2: string;
+    text3: string;
+    image3: string;
+    video3: string;
+    text4: string;
+    image4: string;
+    video4: string;
+  };
   info: {
     image: string;
     heading: string;
@@ -82,6 +98,7 @@ export type SalesPageType = {
   splitcompare: {
     background: string;
     heading: string;
+    headingLabel: string;
     subheading: string;
     beforeImg: string;
     beforeText: string;
@@ -163,7 +180,6 @@ export type SalesPageType = {
     title4: string;
     text4: string;
   };
-
   faqs: {
     q1: string;
     a1: string;
