@@ -28,19 +28,19 @@ header:
   
 characteristics:
   heading: Splash Foam Characteristics
-  icon1: /images/template-3/strip-sec-icn1.png
+  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8e657ca3-c4dd-49e4-b600-a3a85df97b00/public
   text1: Eco Friendly
-  icon2: /images/template-3/strip-sec-icn2.png
+  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/70a1a488-02b9-4577-f507-6be8b12d9b00/public
   text2: Non Toxic
-  icon3: /images/template-3/strip-sec-icn3.png
+  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d967fef8-2682-41ea-37a9-ab326f63e300/public
   text3: Plant Based Products
-  icon4: /images/template-3/strip-sec-icn4.png
+  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/649b397e-25e0-49d5-c465-5499f50ef700/public
   text4: Recyclable Plastic
-  icon5: /images/template-3/strip-sec-icn5.png
+  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/74f7e799-e5ed-4a4a-c9e3-0ced90d83600/public
   text5: Cruelty Free
-  icon6: /images/template-3/strip-sec-icn6.png
+  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/bca86de4-8d46-413a-8d06-d95d8fec3e00/public
   text6: Dye Free
-  icon7: /images/template-3/strip-sec-icn7.png
+  icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/37db93ed-b5b4-4139-252e-cb9a790cbb00/public
   text7: Formulated HE & Standard
 
 highlights:
@@ -58,16 +58,16 @@ video_reviews:
   heading: Over 500,000+ Satisfied Families Trust Splash Everyday
   headingLabel: Tested & Trusted
   text1: Shreha J
-  image1: /images/template-3/ugc-poster1.jpg
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/980dd4c3-be56-41cf-4eda-a763e33ce000/public
   video1: /images/template-3/ugc-vdo1.mp4
   text2: Eleena K
-  image2: /images/template-3/ugc-poster2.jpg
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d85b9f42-c60b-47aa-abf2-1d765863ec00/public
   video2: /images/template-3/ugc-vdo2.mp4
   text3: Rachel P
-  image3: /images/template-3/ugc-poster3.jpg
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e4b6d467-4e37-45b8-2409-beb9de567b00/public
   video3: /images/template-3/ugc-vdo3.mp4
   text4: Suzan E
-  image4: /images/template-3/ugc-poster4.jpg
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5c5c07d1-7d47-4547-12be-158cbb5fe400/public
   video4: /images/template-3/ugc-vdo3.mp4
 
 

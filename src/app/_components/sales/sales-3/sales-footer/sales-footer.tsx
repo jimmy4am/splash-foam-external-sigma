@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 import { siteProduct } from "@/lib/site-info";
@@ -10,18 +9,18 @@ type Props = {
 };
 
 const FooterLink = ({ url, children }: { url: string, children: React.ReactNode }) => (
-    <Link className="hover:text-[#0073b7] transition-all duration-250 ease-in-out" href={url} target="_blank">
+    <a className="hover:text-[#0073b7] transition-all duration-250 ease-in-out" href={url} target="_blank">
         {children}
-    </Link>
+    </a>
 )
 
 const SalesFooter = ({ info }: Props) => {
     return (
         <footer className="w-full py-[25px] md:py-[40px] bg-[#fff] border-t-[1px] border-t-[#c8c8c8]">
             <div className="w-full max-w-[1200px] mx-[auto] px-4 flex flex-col items-center">
-                <Link href="/" className="flex w-[120px] md:w-[142px] mb-[20px] md:mb-[25px]">
+                <a href="/" className="flex w-[120px] md:w-[142px] mb-[20px] md:mb-[25px]">
                     <Image src={info.logo} width={160} height={160} alt={siteProduct} />
-                </Link>
+                </a>
                 <div className="text-[14px] md:text-[16px] leading-[22px] md:leading-[24px] text-[#000] tracking-[0.5px]">
                     <nav>
                         <ul className="flex flex-wrap justify-center gap-x-[12px]">

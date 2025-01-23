@@ -43,7 +43,7 @@ const SalesReviews = ({ info }: Props) => {
                         <span className={`text-[40px] md:text-[50px] leading-[16px] md:leading-[18px] font-bold  ${outfit.className}`}>4.9</span>
                         <Image
                             className="w-[110px] md:w-[138px] m-[20px_0_10px] md:m-[0_15px]"
-                            src="/images/template-3/star.svg" alt="rating stars" width={82} height={14}/>
+                            src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/49253e46-369e-4742-d9f4-c870b1722100/public" alt="rating stars" width={82} height={14}/>
                         <span className="text-[16px] md:text-[18px] leading-[16px] md:leading-[18px] font-bold">Verified Reviews</span>
                     </p>
                 </div>

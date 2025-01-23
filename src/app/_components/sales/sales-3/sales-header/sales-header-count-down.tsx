@@ -51,7 +51,7 @@ const SalesHeaderCountDown = () => {
     return (
         <div className="max-w-[380px] sm:max-w-[330px] md:max-w-[none] mx-[auto] flex justify-center items-center gap-6">
             <p className="flex items-center gap-2 text-[12px] leading-[16px] md:text-[14px] md:leading-[14px] tracking-[0.5px] font-bold text-[#000] uppercase">
-                <Image src="/images/template-3/top-tag.png" alt="Sale icon" width={23} height={23} />
+                <Image src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e33c6bf4-cdfd-4ba5-53dd-5ab7d33dd500/public" alt="Sale icon" width={23} height={23} />
                 <span>Limited Time Offer <br className="md:hidden" /> Save Up To 60% Off</span>
             </p>
 

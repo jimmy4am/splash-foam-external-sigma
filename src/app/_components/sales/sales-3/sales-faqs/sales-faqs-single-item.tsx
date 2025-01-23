@@ -33,7 +33,7 @@ const SalesFaqsSingleItem = ({ q, a, index, active, setActive, isLastItem }: Pro
                 <Image
                     className="transition-all duration-500 ease-in-out"
                     style={{ transform: `rotateX(${open ? '-180deg' : '0deg'})`}}
-                    src="/images/template-3/close-btn.png"
+                    src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/aa61d5ee-cfc5-411e-229c-c320d3251f00/public"
                     width={14}
                     height={12}
                     alt="Chevron icon" />
