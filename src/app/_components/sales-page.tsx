@@ -34,6 +34,10 @@ import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
 import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
 import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
 
+// Template 4
+import SalesFaqs4 from "./sales/sales-4/sales-faqs/sales-faqs";
+import SalesFooter4 from "./sales/sales-4/sales-footer/sales-footer";
+
 type Props = {
   info: SalesPageType;
 };
@@ -84,6 +88,12 @@ const SalesPage = ({ info }: Props) => {
               <SalesFooter3 info={info} />
           </>
       )}
+        {info.template === "4" && (
+            <>
+                <SalesFaqs4 info={info} />
+                <SalesFooter4 info={info} />
+            </>
+        )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>
   );

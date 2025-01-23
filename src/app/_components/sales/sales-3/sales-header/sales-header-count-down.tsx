@@ -1,52 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { Outfit } from "next/font/google";
 
-import { CountDownKeysType, CountDownMessages, CountDownType } from "@/app/_components/sales/sales-3/sales-header/types";
-import { extraTimeLimit, initialTimeLimit } from "@/app/_components/sales/sales-3/sales-header/constants";
+import { CountDownKeysType } from "@/app/_components/sales/CountDown/types";
+import useCountDown from "@/app/_components/sales/CountDown/useCountDown";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
 const SalesHeaderCountDown = () => {
-    const [data, setData] = useState<CountDownType>(initialTimeLimit)
-    const [message, setMessage] = useState<CountDownMessages | null>(null);
-    const [isExpired, setIsExpired] = useState(false);
-
-    useEffect(() => {
-        let timer: NodeJS.Timeout;
-
-        if (isExpired) {
-            if (!message) {
-                // Wait 2 seconds at 00:00 before showing the expiration message
-                timer = setTimeout(() => setMessage(CountDownMessages.Expired), 1000);
-            } else if (message === CountDownMessages.Expired) {
-                // Show extension message after 3 seconds
-                timer = setTimeout(() => setMessage(CountDownMessages.Granted), 3000);
-            } else {
-                // Clear message and reset timer after 3 more seconds
-                timer = setTimeout(() => {
-                    setMessage(null);
-                    setData(extraTimeLimit)
-                    setIsExpired(false);
-                }, 3000);
-            }
-        } else {
-            timer = setInterval(() => {
-                if (data.seconds > 0) {
-                    setData(prev => ({...prev, seconds: prev.seconds -1}))
-                } else if (data.minutes > 0) {
-                    setData(prev => ({...prev, minutes: prev.minutes - 1, seconds: 59}))
-                } else if (data.hours > 0) {
-                    setData(prev => ({...prev, hours: prev.hours - 1, minutes: 59, seconds: 59}))
-                } else {
-                    setIsExpired(true);
-                }
-            }, 1000);
-        }
-
-        return () => clearTimeout(timer);
-    }, [data, isExpired, message]);
-
+    const { data, message } = useCountDown();
 
     return (
         <div className="max-w-[380px] sm:max-w-[330px] md:max-w-[none] mx-[auto] flex justify-center items-center gap-6">
