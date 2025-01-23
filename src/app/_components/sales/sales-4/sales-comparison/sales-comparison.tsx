@@ -7,9 +7,9 @@ import Slider from "react-slick";
 import { SalesPageType } from "@/interfaces/salesPage";
 import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
 import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
-import SalesComparisonItem from "@/app/_components/sales/sales-3/sales-comparison/sales-comparison-item";
 import SalesComparisonHighlight from "@/app/_components/sales/sales-3/sales-comparison/sales-comparison-highlight";
 import AppSection from "@/app/_components/sales/sales-3/_components/app-section";
+import SalesComparisonTable from "@/app/_components/sales/sales-4/sales-comparison/sales-comparison-table";
 
 type Props = {
     info: SalesPageType;
@@ -39,10 +39,9 @@ const SalesComparison = ({ info }: Props) => {
                     {info.specgrid.headingend}
                 </SectionTitle>
             </div>
-            <div className="relative w-full max-w-[770px] flex gap-[1px] mx-[auto] mb-[35px] md:mb-[45px] bg-[#dbdddd] border-[1px] border-[#dbdddd] rounded-[20px] overflow-hidden">
-                <span className="absolute top-[19%] md:top-[20%] left-[50%] -translate-x-[50%] w-[38px] md:w-[40px] h-[38px] md:h-[40px] bg-[#211f62] rounded-[50%] text-center text-[16px] leading-[38px] md:leading-[40px] text-[#fff] uppercase font-medium">vs</span>
-                <SalesComparisonItem info={info} img={info.specgrid.productImg} label="Splash Foam" classes="bg-[#fff]" icon="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/738b4f29-190a-4a22-09f6-619319149200/public" />
-                <SalesComparisonItem info={info} img={info.specgrid.otherImg} label="Other Brands" classes="bg-[#eef4f7]" icon="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/dbb11297-76a2-4881-8f30-019d0ab93c00/public" />
+
+            <div className="w-full max-w-[830px] mx-[auto] mb-[35px] md:mb-[45px] md:mt-[20px]">
+                <SalesComparisonTable info={info} />
             </div>
 
             { window.innerWidth >= 768 ? (
