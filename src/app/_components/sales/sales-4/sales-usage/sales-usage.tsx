@@ -6,10 +6,10 @@ import Slider from "react-slick";
 import { Inter } from "next/font/google";
 
 import { SalesPageType } from "@/interfaces/salesPage";
-import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
-import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
-import SalesUsageSingleItem from "@/app/_components/sales/sales-3/sales-usage/sales-usage-single-item";
-import AppSection from "@/app/_components/sales/sales-3/_components/app-section";
+import SectionTitle from "@/app/_components/sales/sales-4/_components/section-title";
+import BuyButton from "@/app/_components/sales/sales-4/_components/buy-button";
+import SalesUsageSingleItem from "@/app/_components/sales/sales-4/sales-usage/sales-usage-single-item";
+import AppSection from "@/app/_components/sales/sales-4/_components/app-section";
 
 const inter = Inter({ subsets: ["latin"] });
 
