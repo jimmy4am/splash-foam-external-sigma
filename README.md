@@ -4,9 +4,21 @@ The goal for this project is to create a "Template 4" for our sales page from a 
 
 **Current Template 1** - [https://clean.buysplashcleaner.com/](https://clean.buysplashcleaner.com/)
 
+**Task A**
+
 **_Desired Template 4_** - [https://splash-foam-sales-7-2.vercel.app/](https://splash-foam-sales-7-2.vercel.app/)
 
 Public Repo for static template 7.2 - [https://github.com/jimmy4am/splash-foam-sales-7.2](https://github.com/jimmy4am/splash-foam-sales-7.2)
+
+**Task B**
+
+Template 3 - Editable Version
+
+**Task C**
+
+Template 4 - Editable Version
+
+## Complete Tasks (History)
 
 ✅**_Desired Template 3_** - [https://splash-foam-sales-7-1.vercel.app/](https://splash-foam-sales-7-1.vercel.app/)
 
