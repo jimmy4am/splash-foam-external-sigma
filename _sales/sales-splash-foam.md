@@ -25,6 +25,21 @@ header:
   pro5: "Receive up to 60% OFF your order when you purchase today!"
   background: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1d94074e-c032-44eb-4193-8a321399df00/public"
   productImage: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5af4697d-41c7-4352-8f75-15ca33170200/public"
+  stepTitle: Shining in 3 Steps
+  stepImage1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f46024d3-bcbf-4d2c-638f-bee91677f700/public
+  stepText1: Remove Tough Stains
+  stepImage2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e1dbf4ae-d683-4145-ad44-3c5b3872a600/public
+  stepText2: Kills Germs & Bacteria
+  stepImage3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/99e60445-5ecf-43da-8206-dcb3b01aea00/public
+  stepText3: Deodorizes Nasty Smells  
+  beforeImage1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4a0ba715-c6a5-49dc-e6cf-b55095dd2400/public
+  afterImage1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/64233ea4-8547-401f-628e-086c50921500/public
+  beforeImage2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42a88095-a09e-4be9-2e01-0076e9b0da00/public
+  afterImage2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1ab8a781-d7b5-4437-6cb6-1d411a35b900/public
+  beforeImage3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/467540eb-710e-43a4-6f28-4149c69a6500/public
+  afterImage3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7133b8b6-b0c8-4b70-eca3-7c510a332e00/public
+  beforeImageSm1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/29038e59-fadc-4e1c-66f3-0907aff66f00/public
+  afterImageSm1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/719dea2a-51cc-4f2b-6f22-46376f464400/public
   
 characteristics:
   heading: Splash Foam Characteristics

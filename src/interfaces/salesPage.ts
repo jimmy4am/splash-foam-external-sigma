@@ -20,6 +20,21 @@ export type SalesPageType = {
     pro5: string;
     background: string;
     productImage: string;
+    stepTitle: string;
+    stepImage1: string;
+    stepText1: string;
+    stepImage2: string;
+    stepText2: string;
+    stepImage3: string;
+    stepText3: string;
+    beforeImage1: string;
+    afterImage1: string;
+    beforeImage2: string;
+    afterImage2: string;
+    beforeImage3: string;
+    afterImage3: string;
+    beforeImageSm1: string;
+    afterImageSm1: string;
   };
   characteristics: {
     heading: string;

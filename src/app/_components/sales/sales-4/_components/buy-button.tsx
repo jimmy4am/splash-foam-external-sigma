@@ -9,9 +9,10 @@ import AppButton from "@/app/_components/sales/sales-4/_components/app-button";
 
 type Props = {
     info: SalesPageType,
+    classes?: string;
 };
 
-const BuyButton = ({ info }: Props) => {
+const BuyButton = ({ info, classes }: Props) => {
     const { data, message } = useCountDown();
 
     return (
@@ -24,7 +25,7 @@ const BuyButton = ({ info }: Props) => {
                     </>
                 )}
             </p>
-            <AppButton url={info.cta}>
+            <AppButton url={info.cta} classes={classes}>
                 Claim 50% OFF Today
                 <Image className="w-[35px] md:w-[43px]" src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0d81b7dc-c351-4a98-db70-45ae040c3700/public" width={43} height={28} alt="Hand icon" />
             </AppButton>
