@@ -9,6 +9,7 @@ const workSans = Work_Sans({ subsets: ["latin"] });
 
 type Props2 = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
 type ReviewProps = {
@@ -16,9 +17,20 @@ type ReviewProps = {
   title: string;
   text: string;
   first: boolean;
+  num: number;
+  info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
-const IndividualReview = ({ name, title, text, first }: ReviewProps) => {
+const IndividualReview = ({
+  name,
+  title,
+  text,
+  first,
+  num,
+  info,
+  setCurrentPost,
+}: ReviewProps) => {
   return (
     <div
       className={`flex flex-col lg:flex-row w-full items-start px-4 lg:px-0 pb-4 pt-8 ${
@@ -26,11 +38,26 @@ const IndividualReview = ({ name, title, text, first }: ReviewProps) => {
       }`}
     >
       <div className="flex w-full lg:w-[30%]">
-        <div className="h-[60px] w-[60px] rounded-full bg-[#005279] flex justify-center items-center text-white text-[24px] font-bold mr-2">
+        <div className="h-[60px] w-[60px] rounded-full bg-[#005279] flex justify-center items-center text-white text-[24px] font-bold mr-2 aspect-square">
           {name.charAt(0).toUpperCase()}
         </div>
         <div className="flex flex-col items-start justify-start flex1 px-2">
-          <h6 className="font-bold text-[18px]">{name}</h6>
+          <textarea
+            className=" font-bold text-[18px] px-2 border-2 border-yellow-500 border-dashed text-left"
+            onChange={(e) => {
+              setCurrentPost({
+                ...info,
+                reviews: {
+                  ...info.reviews,
+                  [`name${num}`]: e.target.value,
+                },
+              });
+            }}
+            value={name}
+            placeholder="Reviewer Name"
+            rows={1}
+          />
+          {/* <h6 className="font-bold text-[18px]">{name}</h6> */}
           <div className="flex items-center justify-start text-[#0bba34] font-bold text-[14px] mt-2">
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/094c3017-312a-453f-27fb-b5d1ed73d800/public"
@@ -52,22 +79,52 @@ const IndividualReview = ({ name, title, text, first }: ReviewProps) => {
           className="mr-4 min-w-[25px]
             "
         />
-        <div className="flex flex-col flex1 items-start justify-start text-left">
-          <h6 className="font-bold">{title}</h6>
+        <div className="flex flex-col flex1 items-start justify-start text-left w-full">
+          <textarea
+            className=" font-bold text-[18px] px-2 border-2 border-yellow-500 border-dashed text-left w-full"
+            onChange={(e) => {
+              setCurrentPost({
+                ...info,
+                reviews: {
+                  ...info.reviews,
+                  [`title${num}`]: e.target.value,
+                },
+              });
+            }}
+            value={title}
+            placeholder={`Review Title ${num}`}
+            rows={2}
+          />
+          <textarea
+            className="mt-4 text-[18px] px-2 border-2 border-yellow-500 border-dashed text-left w-full"
+            onChange={(e) => {
+              setCurrentPost({
+                ...info,
+                reviews: {
+                  ...info.reviews,
+                  [`text${num}`]: e.target.value,
+                },
+              });
+            }}
+            value={text}
+            placeholder={`Review Text ${num}`}
+            rows={6}
+          />
+          {/* <h6 className="font-bold">{title}</h6>
           <p
             className={`text-[17px] lg:text-[20px] 
               
               py-4 ${workSans.className}`}
           >
             {text}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
   );
 };
 
-const Reviews = ({ info }: Props2) => {
+const Reviews = ({ info, setCurrentPost }: Props2) => {
   return (
     <div className="flex flex-col items-center w-full pb-6 bg-blue-100 mt-[-120px] lg:mt-[-250px]">
       <svg
@@ -88,7 +145,18 @@ const Reviews = ({ info }: Props2) => {
       >
         <h5 className="w-full text-[26px] lg:text-[50px] font-bold   text-[#005279] mt-8 px-6 md:px-12  mb-10">
           We&apos;ve Got{" "}
-          <span className="text-[#0082c0]">{info.reviews.reviewcount}</span>{" "}
+          {/* <span className="text-[#0082c0]">{info.reviews.reviewcount}</span>{" "} */}
+          <input
+            type="text"
+            value={info.reviews.reviewcount}
+            className="text-[#0082c0] font-bold text-[26px] lg:text-[50px]  text-center border-2 border-yellow-500 border-dashed"
+            onChange={(e) => {
+              setCurrentPost({
+                ...info,
+                reviews: { ...info.reviews, reviewcount: e.target.value },
+              });
+            }}
+          />
           Raving Customers And Still Counting!
         </h5>
         <IndividualReview
@@ -96,12 +164,18 @@ const Reviews = ({ info }: Props2) => {
           title={info.reviews.title1}
           text={info.reviews.text1}
           first={true}
+          num={1}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <IndividualReview
           name={info.reviews.name2}
           title={info.reviews.title2}
           text={info.reviews.text2}
           first={false}
+          num={2}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
 
         <IndividualReview
@@ -109,12 +183,18 @@ const Reviews = ({ info }: Props2) => {
           title={info.reviews.title3}
           text={info.reviews.text3}
           first={false}
+          num={3}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <IndividualReview
           name={info.reviews.name4}
           title={info.reviews.title4}
           text={info.reviews.text4}
           first={false}
+          num={4}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <div className="flex w-full justify-center mb-12">
           <BuyButton info={info} />

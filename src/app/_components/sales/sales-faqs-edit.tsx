@@ -10,6 +10,7 @@ const workSans = Work_Sans({ subsets: ["latin"] });
 
 type Props2 = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
 type FaqProps = {
@@ -18,24 +19,49 @@ type FaqProps = {
   index: number;
   active: number;
   setActive: (index: number) => void;
+  info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
-const IndivFaq = ({ q, a, index, active, setActive }: FaqProps) => {
-  const [open, setOpen] = useState(index === active);
+const IndivFaq = ({
+  q,
+  a,
+  index,
+  active,
+  setActive,
+  info,
+  setCurrentPost,
+}: FaqProps) => {
+  const [open, setOpen] = useState(true);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (index === active) {
-      setOpen(true);
-    } else {
-      setOpen(false);
-    }
-  }, [index, active]);
+  // useEffect(() => {
+  //   if (index === active) {
+  //     setOpen(true);
+  //   } else {
+  //     setOpen(false);
+  //   }
+  // }, [index, active]);
 
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col mb-6">
       <div className="flex w-full justify-between border-b-[1px] border-[#dcdcdc] py-4">
-        <h6 className="text-[18px] lg:text-[20px] font-bold">{q}</h6>
+        <textarea
+          className="mt-4 text-[18px] lg:text-[20px] font-bold px-2 border-2 border-yellow-500 border-dashed text-left w-full"
+          onChange={(e) => {
+            setCurrentPost({
+              ...info,
+              faqs: {
+                ...info.faqs,
+                [`q${index + 1}`]: e.target.value,
+              },
+            });
+          }}
+          value={q}
+          placeholder={`Review Question ${index + 1}`}
+          rows={2}
+        />
+        {/* <h6 className="text-[18px] lg:text-[20px] font-bold">{q}</h6> */}
 
         <PlusIcon
           className={`h-6 w-6 text-[#005279] transform ${
@@ -54,17 +80,32 @@ const IndivFaq = ({ q, a, index, active, setActive }: FaqProps) => {
           height: open ? contentRef.current?.scrollHeight : 0,
         }}
       >
-        <p
+        <textarea
+          className="mt-4 text-[18px] lg:text-[20px] px-2 border-2 border-yellow-500 border-dashed text-left w-full"
+          onChange={(e) => {
+            setCurrentPost({
+              ...info,
+              faqs: {
+                ...info.faqs,
+                [`a${index + 1}`]: e.target.value,
+              },
+            });
+          }}
+          value={a}
+          placeholder={`Review Answer ${index + 1}`}
+          rows={5}
+        />
+        {/* <p
           className={`text-[17px] lg:text-[20px] py-4 text-left ${workSans.className}`}
         >
           {a}
-        </p>
+        </p> */}
       </div>
     </div>
   );
 };
 
-const Faqs = ({ info }: Props2) => {
+const Faqs = ({ info, setCurrentPost }: Props2) => {
   const [active, setActive] = useState(0);
 
   return (
@@ -74,7 +115,7 @@ const Faqs = ({ info }: Props2) => {
       >
         <h5 className="w-full text-[26px] lg:text-[50px] font-bold text-[#0082c0] mt-8 px-6 md:px-12 mb-10 leading-tight">
           Frequently Asked Questions <br />
-          <span className="text-[#005279]">We&apos;ve All The Answers</span>
+          <span className="text-[#005279]">We Have All The Answers</span>
         </h5>
         <IndivFaq
           q={info.faqs.q1}
@@ -82,6 +123,8 @@ const Faqs = ({ info }: Props2) => {
           index={0}
           active={active}
           setActive={setActive}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <IndivFaq
           q={info.faqs.q2}
@@ -89,6 +132,8 @@ const Faqs = ({ info }: Props2) => {
           index={1}
           active={active}
           setActive={setActive}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <IndivFaq
           q={info.faqs.q3}
@@ -96,6 +141,8 @@ const Faqs = ({ info }: Props2) => {
           index={2}
           active={active}
           setActive={setActive}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <IndivFaq
           q={info.faqs.q4}
@@ -103,6 +150,8 @@ const Faqs = ({ info }: Props2) => {
           index={3}
           active={active}
           setActive={setActive}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <IndivFaq
           q={info.faqs.q5}
@@ -110,6 +159,8 @@ const Faqs = ({ info }: Props2) => {
           index={4}
           active={active}
           setActive={setActive}
+          info={info}
+          setCurrentPost={setCurrentPost}
         />
         <div className="flex w-full justify-center mt-8 mb-12">
           <BuyButton info={info} />

@@ -41,6 +41,7 @@ const SalesSimple = ({ info }: Props) => {
         </div>
       </div>
       <div className="mt-16 flex w-full flex-col items-center min-h-screen">
+        {/* Header Hero Section */}
         <div className="flex w-full bg-blue-600 text-white overflow-hidden relative items-center justify-center">
           <div className="flex flex-col items-center justify-center relative w-full">
             <div className="block absolute inset-0 z-0 ">
@@ -71,6 +72,11 @@ const SalesSimple = ({ info }: Props) => {
                     width={320}
                     height={320}
                   />
+                  {/* <img
+                  src="./index2.php_files/Discount-Bubble-Group.svg"
+                  alt="Discount Bubble Group"
+                  className="absolute top-0 right-0"
+                /> */}
                 </div>
 
                 <h1 className="text-xl md:text-2xl font-bold mb-4 text-center">
@@ -161,9 +167,10 @@ const SalesSimple = ({ info }: Props) => {
                 </h3>
                 <p>
                   Who likes getting up and personal with a toilet? No one. The
-                  filth that carries diseases, the germs, the smell... It's no
-                  wonder that cleaning the toilet makes 32% of people gag and is
-                  almost 100% of people's least favorite bathroom cleaning task.
+                  filth that carries diseases, the germs, the smell... It&apos;s
+                  no wonder that cleaning the toilet makes 32% of people gag and
+                  is almost 100% of people&apos;s least favorite bathroom
+                  cleaning task.
                 </p>
               </div>
             </div>
@@ -234,7 +241,7 @@ const SalesSimple = ({ info }: Props) => {
                   <div className="hidden md:flex flex-col items-start justify-evenly w-1/4 h-full space-y-12">
                     <div className="flex flex-col">
                       <h5 className="font-bold">Easy to Use</h5>
-                      <p>Simply pour and let it foam, it's that easy!</p>
+                      <p>Simply pour and let it foam, it&apos;s that easy!</p>
                     </div>
                     <div className="flex flex-col">
                       <h5 className="font-bold">Long Lasting Supply</h5>
@@ -275,7 +282,7 @@ const SalesSimple = ({ info }: Props) => {
                 <div className="flex flex-col mt-8 md:hidden text-black px-4 space-y-6">
                   <div className="flex flex-col">
                     <h5 className="font-bold text-xl">Easy to Use</h5>
-                    <p>Simply pour and let it foam, it's that easy!</p>
+                    <p>Simply pour and let it foam, it&apos;s that easy!</p>
                   </div>
                   <div className="flex flex-col">
                     <h5 className="font-bold text-xl">Long Lasting Supply</h5>
@@ -475,6 +482,11 @@ const SalesSimple = ({ info }: Props) => {
                 </p>
               </div>
             </div>
+            {/* <div className="text-center mt-8 w-full justify-center flex">
+              <button className="bg-[#0fd13d] border-b-[2px] border-b-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded w-full flex justify-center items-center max-w-[400px] text-[18px]">
+                GET 50% DISCOUNT NOW
+              </button>
+            </div> */}
           </div>
         </div>
         <div className="flex w-full bg-white text-white overflow-hidden relative items-center justify-center">
@@ -514,8 +526,22 @@ const SalesSimple = ({ info }: Props) => {
                   >
                     GET SPLASH NOW
                   </a>
+                  {/* <Image
+                    src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8be12a65-34a9-4cfa-bafd-4c9320366700/public"
+                    alt="Quality Badge"
+                    width={130}
+                    height={130}
+                  /> */}
                 </div>
-                <div className="hidden md:flex w-full md:w-1/2 justify-center items-center"></div>
+                <div className="hidden md:flex w-full md:w-1/2 justify-center items-center">
+                  {/* <Image
+                    src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d3b8766b-f39b-470e-3b14-742c855e4a00/public"
+                    alt="Foamy Cleaner product"
+                    className="object-scale-down mt-6"
+                    width={450}
+                    height={450}
+                  /> */}
+                </div>
               </div>
             </div>
           </div>

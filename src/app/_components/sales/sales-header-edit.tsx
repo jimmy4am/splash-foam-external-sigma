@@ -5,11 +5,13 @@ import { siteProduct } from "@/lib/site-info";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Raleway } from "next/font/google";
 import { SalesPageType } from "@/interfaces/salesPage";
+import EditImage from "../edit-image";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
 type Props = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
 interface ScrollButtonProps {
@@ -17,7 +19,7 @@ interface ScrollButtonProps {
   children: React.ReactNode;
 }
 
-const SalesHeader = ({ info }: Props) => {
+const SalesHeaderEdit = ({ info, setCurrentPost }: Props) => {
   const [showMenu, setShowMenu] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(32); // Initial height of the header bar
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -81,7 +83,7 @@ const SalesHeader = ({ info }: Props) => {
 
   const cta = info.cta;
   return (
-    <div className="fixed z-50 shadow flex flex-col w-full">
+    <div className="z-50 shadow flex flex-col w-full">
       {headerHeight > 0 && (
         <div
           className={`bg-[#ff0000] pt-2 flex justify-center text-center font-bold text-white ${raleway.className}`}
@@ -100,10 +102,18 @@ const SalesHeader = ({ info }: Props) => {
           </p>
         </div>
       )}
-      <div className="sticky top-0 z-50 bg-white shadow-lg flex justify-center h-[75px]">
+      <div className=" z-50 bg-white shadow-lg flex justify-center h-[75px]">
         <div className="flex w-full max-w-[1260px] justify-between items-center px-4">
           <div className="flex py-2">
-            <Image src={info.logo} alt={siteProduct} width={160} height={160} />
+            <EditImage
+              src={info.logo}
+              alt={siteProduct}
+              width={160}
+              height={160}
+              post={info}
+              setPost={setCurrentPost}
+              field="logo"
+            />
           </div>
           <div className={`hidden lg:flex items-center ${raleway.className}`}>
             <button
@@ -133,11 +143,11 @@ const SalesHeader = ({ info }: Props) => {
             >
               Reviews
             </button>
-            <a href={cta}>
-              <button className="bg-[#00c04e] green-text-shadow text-[18px] font-bold text-white px-6 py-2 rounded-md hover:bg-green-600 ml-2">
-                Order Now
-              </button>
-            </a>
+            {/* <a href={cta}> */}
+            <button className="bg-[#00c04e] green-text-shadow text-[18px] font-bold text-white px-6 py-2 rounded-md hover:bg-green-600 ml-2">
+              Order Now
+            </button>
+            {/* </a> */}
           </div>
           <div className="flex lg:hidden">
             {!showMenu ? (
@@ -194,4 +204,4 @@ const SalesHeader = ({ info }: Props) => {
   );
 };
 
-export default SalesHeader;
+export default SalesHeaderEdit;
