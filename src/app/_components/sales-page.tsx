@@ -35,6 +35,7 @@ import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
 import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
 
 // Template 4
+import SalesFeatures4 from "./sales/sales-4/sales-features/sales-features";
 import SalesSteps4 from "./sales/sales-4/sales-steps/sales-steps";
 import SalesUsage4 from "./sales/sales-4/sales-usage/sales-usage";
 import SalesComparison4 from "./sales/sales-4/sales-comparison/sales-comparison";
@@ -94,6 +95,7 @@ const SalesPage = ({ info }: Props) => {
       )}
         {info.template === "4" && (
             <>
+                <SalesFeatures4 info={info} />
                 <SalesSteps4 info={info} />
                 <SalesUsage4 info={info} />
                 <SalesComparison4 info={info} />

@@ -210,4 +210,21 @@ export type SalesPageType = {
     a5: string;
   };
   content: string;
+  features: {
+    heading: string;
+    headingLabel: string;
+    subheading: string;
+    image1: string;
+    icon1: string;
+    title1: string;
+    text1: string;
+    image2: string;
+    icon2: string;
+    title2: string;
+    text2: string;
+    image3: string;
+    icon3: string;
+    title3: string;
+    text3: string;
+  };
 };

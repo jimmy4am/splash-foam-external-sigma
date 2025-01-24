@@ -14,7 +14,7 @@ type Props = {
 const SalesStepsSingleItem = ({ step, img, title, text }: Props) => {
     return (
         <div className="flex-1 flex items-start md:flex-col md:items-stretch gap-[20px] md:p-[10px_10px_35px_] md:bg-[#fff] md:rounded-[10px]">
-            <div className="flex-[0_0_150px] md:flex-[1_1_auto] flex p-[3px] md:p-[0] bg-[#fff] md:bg-[transparent] border-[1px] md:border-[0] border-[#168ccd] rounded-[10px] overflow-hidden">
+            <div className="flex-[0_0_150px] md:flex-[0_1_auto] flex p-[3px] md:p-[0] bg-[#fff] md:bg-[transparent] border-[1px] md:border-[0] border-[#168ccd] rounded-[10px] overflow-hidden">
                 <Image className="md:w-full md:h-[310px] rounded-[8px] object-cover" src={img} alt={`Step ${step}`} width={213} height={213} />
             </div>
 

@@ -231,8 +231,22 @@ faqs:
   q5: Is this product really worth it?
   a5: Over 10 million Splash Foam units have been sold to date. Every time a fresh stock was released, it was quickly sold out even without being offered in stores.
 
-
-
+features:
+  heading: Advanced Cleaning Action You'll Every Buy
+  headingLabel: No Toxic Nasties
+  subheading: Switch to Splash to save yourself time, money, energy & most importantly your toilet!
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/71bdea13-8533-4616-5785-4510838d6d00/public
+  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ef7e0fe-731d-4e3a-5c7a-e83ff2346300/public
+  title1: Tough Cleaning Power
+  text1:
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/da4c6214-7737-4324-570a-a39a7ce82500/public
+  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f8b7857a-449c-4371-7e08-94db29a36300/public
+  title2: Hygienic Clean
+  text2:
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7cd4e23a-86de-4311-7f9f-603b80e69700/public
+  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/57cfc8bc-0a42-4a37-4146-395bf8010700/public
+  title3: Removes Nasty Smells
+  text3:
 
 
 ---
