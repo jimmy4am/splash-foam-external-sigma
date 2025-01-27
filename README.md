@@ -6,23 +6,49 @@ The goal for this project is to create a "Template 4" for our sales page from a 
 
 **Task A**
 
-**_Desired Template 4_** - [https://splash-foam-sales-7-2.vercel.app/](https://splash-foam-sales-7-2.vercel.app/)
+Review Page Temalate 5 -
 
-Public Repo for static template 7.2 - [https://github.com/jimmy4am/splash-foam-sales-7.2](https://github.com/jimmy4am/splash-foam-sales-7.2)
+Take a look at the `[slug]/page.tsx` and see how it's setup to handle multiple post types. You've done sales and checkout pages. Now we want to do a new template for "reviewPosts" - please reference fields from the `reviwPosts` type
+
+Current Review Template -> [https://clean.buysplashcleaner.com/review-top-5-toilet-cleaners](https://clean.buysplashcleaner.com/review-top-5-toilet-cleaners)
+
+Desired Template 5 (short versions) -> [https://hitsdesignclients.com/GLP-Comparaision/Short_Page/V1/](https://hitsdesignclients.com/GLP-Comparaision/Short_Page/V1/)
+
+Desired Template 5 (long article version) -> [https://hitsdesignclients.com/GLP-Comparaision/Full_Page/v1/](https://hitsdesignclients.com/GLP-Comparaision/Full_Page/v1/)
+
+Please reference the fields in the reviewPost when possible. Aslo include a new field called `showFullArticle` of type Boolean which when true shows the long form version of the template.
 
 **Task B**
 
-Template 3 - Editable Version
+Review Page Template 6 - Deisred Output
+
+Very similar task to Template 5 - just with a different design.
+
+Desired Template 6 (short versions) -> [https://hitsdesignclients.com/GLP-Comparaision/Short_Page/V2/](https://hitsdesignclients.com/GLP-Comparaision/Short_Page/V2/)
+
+Desired Template 6 (long article version) -> [https://hitsdesignclients.com/GLP-Comparaision/Full_Page/v2/](https://hitsdesignclients.com/GLP-Comparaision/Full_Page/v2/)
+
+Please reference the fields in the reviewPost when possible. Put a new field into reviewPost called `showFullArticle` of type Boolean which when true shows the long form version of the template so we don't need duplicates.
 
 **Task C**
+
+Template 3 - Editable Version
+
+- will provide additional details + keys for this task later this week
+
+**Task D**
 
 Template 4 - Editable Version
 
 ## Complete Tasks (History)
 
-✅**_Desired Template 3_** - [https://splash-foam-sales-7-1.vercel.app/](https://splash-foam-sales-7-1.vercel.app/)
+✅ **_Desired Template 3_** - [https://splash-foam-sales-7-1.vercel.app/](https://splash-foam-sales-7-1.vercel.app/)
 
 Public Repo for static template 7.1 - [https://github.com/jimmy4am/splash-foam-sales-7.1](https://github.com/jimmy4am/splash-foam-sales-7.1)
+
+✅ **_Desired Template 4_** - [https://splash-foam-sales-7-2.vercel.app/](https://splash-foam-sales-7-2.vercel.app/)
+
+Public Repo for static template 7.2 - [https://github.com/jimmy4am/splash-foam-sales-7.2](https://github.com/jimmy4am/splash-foam-sales-7.2)
 
 ## This is a Next.js + Typescript + Tailwind CSS project refrencing Markdown files.
 
