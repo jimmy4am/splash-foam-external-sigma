@@ -21,6 +21,23 @@ export type SalesPageType = {
     background: string;
     productImage: string;
   };
+  characteristics: {
+    heading: string;
+    icon1: string;
+    text1: string;
+    icon2: string;
+    text2: string;
+    icon3: string;
+    text3: string;
+    icon4: string;
+    text4: string;
+    icon5: string;
+    text5: string;
+    icon6: string;
+    text6: string;
+    icon7: string;
+    text7: string;
+  };
   highlights: {
     icon1: string;
     head1: string;
@@ -32,11 +49,33 @@ export type SalesPageType = {
     head3: string;
     text3: string;
   };
+  video_reviews: {
+    heading: string;
+    headingLabel: string;
+    text1: string;
+    image1: string;
+    video1: string;
+    text2: string;
+    image2: string;
+    video2: string;
+    text3: string;
+    image3: string;
+    video3: string;
+    text4: string;
+    image4: string;
+    video4: string;
+  };
   info: {
     image: string;
     heading: string;
+    headingLabel: string;
     text: string;
     textBottom: string;
+    feature1: string;
+    feature2: string;
+    feature3: string;
+    feature4: string;
+    feature5: string;
   };
   strip_images: {
     img1: string;
@@ -54,6 +93,7 @@ export type SalesPageType = {
   };
   slideshow: {
     heading: string;
+    headingLabel: string;
     subheading: string;
     icon1: string;
     title1: string;
@@ -75,6 +115,7 @@ export type SalesPageType = {
   splitcompare: {
     background: string;
     heading: string;
+    headingLabel: string;
     subheading: string;
     beforeImg: string;
     beforeText: string;
@@ -123,6 +164,7 @@ export type SalesPageType = {
   specgrid: {
     heading: string;
     headingend: string;
+    headingLabel: string;
     productImg: string;
     otherImg: string;
     text1: string;
@@ -155,7 +197,6 @@ export type SalesPageType = {
     title4: string;
     text4: string;
   };
-
   faqs: {
     q1: string;
     a1: string;

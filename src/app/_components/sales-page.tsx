@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import SalesHeader from "./sales/sales-header";
 import Footer from "./sales/sales-footer";
 import SalesHero from "./sales/sales-hero";
@@ -19,6 +19,20 @@ import SalesClickId from "./sales/sales-click-id";
 import FunnelFluxScripts from "@/lib/funnel-flux-scripts";
 import SalesSimple from "./sales/sales-simple";
 import PassUtmParams from "../_utils/passUtmParams";
+
+// Template 3
+import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
+import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
+import SalesCharacteristics3 from "./sales/sales-3/sales-characteristics/sales-characteristics";
+import SalesVideoReviews3 from "./sales/sales-3/sales-video-reviews/sales-video-reviews";
+import SalesInfo3 from "./sales/sales-3/sales-info/sales-info";
+import SalesFeatures3 from "./sales/sales-3/sales-features/sales-features";
+import SalesSteps3 from "./sales/sales-3/sales-steps/sales-steps";
+import SalesUsage3 from "./sales/sales-3/sales-usage/sales-usage";
+import SalesComparison3 from "./sales/sales-3/sales-comparison/sales-comparison";
+import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
+import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
+import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
 
 type Props = {
   info: SalesPageType;
@@ -54,7 +68,22 @@ const SalesPage = ({ info }: Props) => {
           <Footer info={info} />
         </>
       )}
-      {info.template === "3" && <>{/* Build This Template Here */}</>}
+      {info.template === "3" && (
+          <>
+              <SalesHeader3 info={info} />
+              <SalesHero3 info={info} />
+              <SalesCharacteristics3 info={info} />
+              <SalesVideoReviews3 info={info} />
+              <SalesInfo3 info={info} />
+              <SalesFeatures3 info={info} />
+              <SalesSteps3 info={info} />
+              <SalesUsage3 info={info} />
+              <SalesComparison3 info={info} />
+              <SalesReviews3 info={info} />
+              <SalesFaqs3 info={info} />
+              <SalesFooter3 info={info} />
+          </>
+      )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>
   );

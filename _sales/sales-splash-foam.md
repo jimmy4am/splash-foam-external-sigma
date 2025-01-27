@@ -1,6 +1,6 @@
 ---
 slug: "sales-splash-foam"
-template: "7"
+template: "3"
 metaTitle: "Splash Foam Toilet Cleaner - Flush Away Stains & Odors"
 metaDescription: "Say goodbye to stubborn stains and bad odors with Splash Foam Toilet Cleaner."
 funnelFlux: 'var fluxDefaults = {
@@ -25,6 +25,23 @@ header:
   pro5: "Receive up to 60% OFF your order when you purchase today!"
   background: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1d94074e-c032-44eb-4193-8a321399df00/public"
   productImage: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5af4697d-41c7-4352-8f75-15ca33170200/public"
+  
+characteristics:
+  heading: Splash Foam Characteristics
+  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8e657ca3-c4dd-49e4-b600-a3a85df97b00/public
+  text1: Eco Friendly
+  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/70a1a488-02b9-4577-f507-6be8b12d9b00/public
+  text2: Non Toxic
+  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d967fef8-2682-41ea-37a9-ab326f63e300/public
+  text3: Plant Based Products
+  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/649b397e-25e0-49d5-c465-5499f50ef700/public
+  text4: Recyclable Plastic
+  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/74f7e799-e5ed-4a4a-c9e3-0ced90d83600/public
+  text5: Cruelty Free
+  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/bca86de4-8d46-413a-8d06-d95d8fec3e00/public
+  text6: Dye Free
+  icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/37db93ed-b5b4-4139-252e-cb9a790cbb00/public
+  text7: Formulated HE & Standard
 
 highlights:
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/acd5a7af-3f72-45ad-27ba-7f5bcd829f00/public
@@ -37,14 +54,37 @@ highlights:
   head3: Quick Results
   text3: "Simply pour the foaming powder in your sink or toilet, let it sit for 20 minutes and see the results for yourself."
 
+video_reviews: 
+  heading: Over 500,000+ Satisfied Families Trust Splash Everyday
+  headingLabel: Tested & Trusted
+  text1: Shreha J
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/980dd4c3-be56-41cf-4eda-a763e33ce000/public
+  video1: /images/template-3/ugc-vdo1.mp4
+  text2: Eleena K
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d85b9f42-c60b-47aa-abf2-1d765863ec00/public
+  video2: /images/template-3/ugc-vdo2.mp4
+  text3: Rachel P
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e4b6d467-4e37-45b8-2409-beb9de567b00/public
+  video3: /images/template-3/ugc-vdo3.mp4
+  text4: Suzan E
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5c5c07d1-7d47-4547-12be-158cbb5fe400/public
+  video4: /images/template-3/ugc-vdo3.mp4
+
+
 info: 
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8398e75c-6c92-4165-4e93-76a5cab21e00/public
   heading: Say Goodbye To Stubborn Toilet Stains And Odors!
+  headingLabel: Smarter Cleaner
   text: "Why Splash?
   
   
   If you're like most people, you probably hate spending half an hour on your knees scrubbing your toilet — and then having to do it all over again if you don't get it clean enough the first time."
   textBottom: "Splash's fast-acting, no-scrubbing foaming powder makes cleaning your toilet a breeze. It's everything you could possibly want in a toilet cleaner, and more! The secret to its effectiveness is in its NanoTech formula. It is powerful enough to bond with stains and lift them from surfaces, yet safe for your tank system and also your skin. The result is a clean and fresh toilet that looks brand new with absolutely no scrubbing on your part. Just sit back and watch all the calcium deposits, limestone, and rust spiral down the drain!"
+  feature1: "Foam Expands To Cover Toilet"
+  feature2: "Septic Tank Safe"
+  feature3: "Advanced Fast Acting Formula"
+  feature4: "Fresh Clean Scent"
+  feature5: "Hands-Free Foaming Formula"
 
 strip_images: 
   img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e0e49e1-a5f1-4599-75ac-2698984ab000/public
@@ -62,6 +102,7 @@ strip_images:
 
 slideshow: 
   heading: Still Cleaning Your Toilet The Hard Way?
+  headingLabel: No Toxic Nasties
   subheading: Switch to Splash to save yourself time, money, energy and most importantly — your toilet!
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6fc208f3-29d7-4f67-1a04-648762b3a900/public
   title1: 100% Safe
@@ -83,6 +124,7 @@ slideshow:
 splitcompare: 
   background: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/baad7b34-eda2-4340-9f12-967b9e0e0a00/public 
   heading: Why is Splash Better Than the Standard Toilet Cleaners?
+  headingLabel: Ease To Get
   subheading: "**Cleaning the Toilet is a Nightmare and You Know it!**
 
 
@@ -143,6 +185,7 @@ fiveimagesplit:
 specgrid:
   heading: Splash
   headingend: Vs The Rest
+  headingLabel: Compare & See
   productImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/777e451e-711f-45e6-fce1-611133de4100/public
   otherImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e0705729-3e39-446d-1218-4f05530f2000/public
   text1: Scrub-Free Formula
