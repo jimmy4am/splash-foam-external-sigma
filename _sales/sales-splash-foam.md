@@ -100,6 +100,7 @@ info:
   feature3: "Advanced Fast Acting Formula"
   feature4: "Fresh Clean Scent"
   feature5: "Hands-Free Foaming Formula"
+  feature5subtitle: 
 
 strip_images: 
   img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e0e49e1-a5f1-4599-75ac-2698984ab000/public

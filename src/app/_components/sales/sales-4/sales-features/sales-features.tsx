@@ -34,9 +34,9 @@ const SalesFeatures = ({ info }: Props) => {
             <p className={`w-full max-w-[500px] mx-[auto] mb-[30px] md:mb-[40px] text-center text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px] tracking-[0.2px] md:tracking-[0.3px] ${inter.className}`}>{info.slideshow.subheading}</p>
 
             <ul className="w-full max-w-[345px] md:max-w-[1080px] mx-[auto] grid grid-cols-1 md:grid-cols-3 gap-[20px] lg:gap-[30px] xl:gap-[40px] mb-[10px]">
-                <SalesFeaturesSingleItem icon={info.features.icon1} title={info.features.title1} image={info.features.image1} />
-                <SalesFeaturesSingleItem icon={info.features.icon2} title={info.features.title2} image={info.features.image2} />
-                <SalesFeaturesSingleItem icon={info.features.icon3} title={info.features.title3} image={info.features.image3} />
+                <SalesFeaturesSingleItem icon={info.features.icon1} title={info.features.title1} text={info.features.text1} image={info.features.image1} />
+                <SalesFeaturesSingleItem icon={info.features.icon2} title={info.features.title2} text={info.features.text2} image={info.features.image2} />
+                <SalesFeaturesSingleItem icon={info.features.icon3} title={info.features.title3} text={info.features.text3} image={info.features.image3} />
             </ul>
 
             <div className="w-full max-w-[366px] md:max-w-[410px] mx-[auto]  mt-[30px] md:mt-[40px]">

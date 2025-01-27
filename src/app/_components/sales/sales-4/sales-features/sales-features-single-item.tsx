@@ -7,10 +7,11 @@ const outfit = Outfit({ subsets: ["latin"] });
 type Props = {
     icon: string;
     title: string;
+    text?: string;
     image: string;
 };
 
-const SalesFeaturesSingleItem = ({ icon, title, image }: Props) => {
+const SalesFeaturesSingleItem = ({ icon, title, text, image }: Props) => {
     return (
         <li className="w-full p-[10px] md:p-[10px_15px] bg-[#dcf6ff] rounded-[10px]">
             <div className="relative flex rounded-[10px] shadow-[0px_5px_8px_2px_#d4d4d4]">
@@ -21,6 +22,7 @@ const SalesFeaturesSingleItem = ({ icon, title, image }: Props) => {
             </div>
             <div className="p-[20px_15px_10px] md:p-[27px_0px_15px] lg:p-[27px_10px_15px]">
                 <h3 className={`text-[24px] md:text-[20px] lg:text-[24px] leading-[30px] md:leading-[26px] lg:leading-[30px] text-[#0064a9] font-bold ${outfit.className}`}>{title}</h3>
+                {text ? (<p className="mt-[6px] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px]">{text}</p>) : null}
             </div>
         </li>
     );

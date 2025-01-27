@@ -57,7 +57,10 @@ const SalesInfo = ({ info }: Props) => {
                         <div className="flex-[0_0_55px] md:flex-[0_0_65px] mr-[12px]">
                             <Image  src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b7bb802c-965f-412e-de59-7c81131f1800/public" width={50} height={50} alt="Image" />
                         </div>
-                        <p className="flex-[1_1_auto] text-[18px] leading-[22px] font-bold">{info.info.feature5}</p>
+                        <div>
+                            <p className="flex-[1_1_auto] text-[18px] md:text-[20px] leading-[22px] md:leading-[24px] font-bold">{info.info.feature5}</p>
+                            {info.info.feature5subtitle && <p className="mt-[10px] pt-[9px] border-t-[1px] border-[#e7e7ea] text-[15px] md:text-[16px] lg:text-[18px] leading-[22px] md:leading-[24px] lg:leading-[26px]">{info.info.feature5subtitle}</p>}
+                        </div>
                     </div>
 
                     <div className="w-full max-w-[366px] md:max-w-[410px] mx-[auto] md:mx-[0]  mt-[30px] md:mt-[40px]">

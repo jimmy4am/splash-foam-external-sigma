@@ -91,6 +91,7 @@ export type SalesPageType = {
     feature3: string;
     feature4: string;
     feature5: string;
+    feature5subtitle: string;
   };
   strip_images: {
     img1: string;
