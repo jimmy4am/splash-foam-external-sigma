@@ -15,6 +15,9 @@ import CoverImage3 from "@/app/_components/review/cover-image3";
 import PostBody3 from "@/app/_components/review/post-body3";
 import PostBody4 from "@/app/_components/review/post-body4";
 
+// Template 5
+import ReviewBody5 from "@/app/_components/review/review-5/review-body/review-body";
+
 type Props = {
   post: ReviewPostType;
 };
@@ -71,7 +74,11 @@ const ReviewArticlePage = ({ post }: Props) => {
             <PostBody4 content={post} />
           </>
         )}
-        {post.template === "5" && <>{/* Build template 5 here  */}</>}
+        {post.template === "5" && (
+            <>
+                <ReviewBody5 post={post} />
+            </>
+        )}
         {post.template === "5" && <>{/* Build template 6 here  */}</>}
       </div>
       <FunnelFluxScripts funnelFlux={post.funnelFlux || ""} />
