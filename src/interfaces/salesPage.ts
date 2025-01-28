@@ -20,6 +20,21 @@ export type SalesPageType = {
     pro5: string;
     background: string;
     productImage: string;
+    stepTitle: string;
+    stepImage1: string;
+    stepText1: string;
+    stepImage2: string;
+    stepText2: string;
+    stepImage3: string;
+    stepText3: string;
+    beforeImage1: string;
+    afterImage1: string;
+    beforeImage2: string;
+    afterImage2: string;
+    beforeImage3: string;
+    afterImage3: string;
+    beforeImageSm1: string;
+    afterImageSm1: string;
   };
   characteristics: {
     heading: string;
@@ -76,6 +91,7 @@ export type SalesPageType = {
     feature3: string;
     feature4: string;
     feature5: string;
+    feature5subtitle: string;
   };
   strip_images: {
     img1: string;
@@ -210,4 +226,21 @@ export type SalesPageType = {
     a5: string;
   };
   content: string;
+  features: {
+    heading: string;
+    headingLabel: string;
+    subheading: string;
+    image1: string;
+    icon1: string;
+    title1: string;
+    text1: string;
+    image2: string;
+    icon2: string;
+    title2: string;
+    text2: string;
+    image3: string;
+    icon3: string;
+    title3: string;
+    text3: string;
+  };
 };

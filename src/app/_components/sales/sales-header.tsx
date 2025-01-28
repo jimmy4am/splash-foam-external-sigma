@@ -95,7 +95,7 @@ const SalesHeader = ({ info }: Props) => {
             className="ticker-text lg:animate-none"
             style={{ animationDuration }}
           >
-            <span className="text-[#fff000]">Congratulations!</span> You've
+            <span className="text-[#fff000]">Congratulations!</span> You&apos;ve
             Pre-Qualified For a 60% Discount!
           </p>
         </div>

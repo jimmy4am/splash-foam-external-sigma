@@ -26,7 +26,7 @@ const SalesComparison = ({ info }: Props) => {
         <AppSection classes="bg-[#e7f4f9]">
             <div className="flex justify-center text-center pt-[28px]">
                 <SectionTitle>
-                    {info.specgrid.heading}??
+                    {info.specgrid.heading}
                     <span className="absolute -right-[30px] md:-right-[100px] -top-[30px] md:-top-[37px] lg:-top-[45px] flex flex-col items-end text-[14px] md:text-[15px] lg:text-[18px] leading-[16px] md:leading-[20px] lg:leading-[24px] text-[#000] font-bold">
                         <span className="mb-[12px]">{info.specgrid.headingLabel}</span>
                         <Image

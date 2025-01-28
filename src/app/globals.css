@@ -109,6 +109,25 @@
   border-color: #1b96d3;
 }
 
+/* Hero Slider */
+.sales-hero-slider {
+  margin: 0 -16px;
+}
+
+.sales-hero-slider .slick-prev,
+.sales-hero-slider .slick-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sales-hero-slider .slick-prev {
+  left: 0;
+}
+
+.sales-hero-slider .slick-next {
+  right: 0;
+}
+
 .sale-characteristics .rfm-initial-child-container {
   align-items: flex-start ;
 }

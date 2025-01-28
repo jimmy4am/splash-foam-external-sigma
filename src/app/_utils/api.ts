@@ -1,4 +1,5 @@
 import { Post } from "@/interfaces/post";
+import { ReviewPostType } from "@/interfaces/reviewPost";
 import { SalesPageType } from "@/interfaces/salesPage";
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { UpsellPageType } from "@/interfaces/upsellPage";
@@ -80,6 +81,7 @@ export async function getSalesBySlug(slug: string): Promise<SalesPageType> {
     content: await markdownToHtml(content),
   } as SalesPageType;
 }
+
 const checkoutDirectory = join(process.cwd(), "_checkout");
 
 export function getCheckoutSlugs() {
@@ -104,4 +106,27 @@ export function getUpsellBySlug(slug: string) {
   const { data, content } = matter(fileContents);
 
   return { ...data, slug: realSlug, content } as UpsellPageType;
+}
+
+const reviewDirectory = join(process.cwd(), "_reviews");
+
+export function getReviewSlugs() {
+  return fs.readdirSync(reviewDirectory);
+}
+
+export async function getReviewBySlug(slug: string) {
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(reviewDirectory, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  const processedData = {
+    ...data,
+    intro: await markdownToHtml(data.intro || ""),
+    story: await markdownToHtml(data.story || ""),
+    content: await markdownToHtml(content || ""),
+    slug: realSlug,
+  };
+
+  return processedData as ReviewPostType;
 }

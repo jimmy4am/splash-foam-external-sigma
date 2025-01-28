@@ -1,6 +1,6 @@
 ---
 slug: "sales-splash-foam"
-template: "3"
+template: "4"
 metaTitle: "Splash Foam Toilet Cleaner - Flush Away Stains & Odors"
 metaDescription: "Say goodbye to stubborn stains and bad odors with Splash Foam Toilet Cleaner."
 funnelFlux: 'var fluxDefaults = {
@@ -25,6 +25,21 @@ header:
   pro5: "Receive up to 60% OFF your order when you purchase today!"
   background: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1d94074e-c032-44eb-4193-8a321399df00/public"
   productImage: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5af4697d-41c7-4352-8f75-15ca33170200/public"
+  stepTitle: Shining in 3 Steps
+  stepImage1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f46024d3-bcbf-4d2c-638f-bee91677f700/public
+  stepText1: Remove Tough Stains
+  stepImage2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e1dbf4ae-d683-4145-ad44-3c5b3872a600/public
+  stepText2: Kills Germs & Bacteria
+  stepImage3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/99e60445-5ecf-43da-8206-dcb3b01aea00/public
+  stepText3: Deodorizes Nasty Smells  
+  beforeImage1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4a0ba715-c6a5-49dc-e6cf-b55095dd2400/public
+  afterImage1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/64233ea4-8547-401f-628e-086c50921500/public
+  beforeImage2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42a88095-a09e-4be9-2e01-0076e9b0da00/public
+  afterImage2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1ab8a781-d7b5-4437-6cb6-1d411a35b900/public
+  beforeImage3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/467540eb-710e-43a4-6f28-4149c69a6500/public
+  afterImage3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7133b8b6-b0c8-4b70-eca3-7c510a332e00/public
+  beforeImageSm1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/29038e59-fadc-4e1c-66f3-0907aff66f00/public
+  afterImageSm1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/719dea2a-51cc-4f2b-6f22-46376f464400/public
   
 characteristics:
   heading: Splash Foam Characteristics
@@ -85,6 +100,7 @@ info:
   feature3: "Advanced Fast Acting Formula"
   feature4: "Fresh Clean Scent"
   feature5: "Hands-Free Foaming Formula"
+  feature5subtitle: 
 
 strip_images: 
   img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e0e49e1-a5f1-4599-75ac-2698984ab000/public
@@ -231,8 +247,22 @@ faqs:
   q5: Is this product really worth it?
   a5: Over 10 million Splash Foam units have been sold to date. Every time a fresh stock was released, it was quickly sold out even without being offered in stores.
 
-
-
+features:
+  heading: Advanced Cleaning Action You'll Every Buy
+  headingLabel: No Toxic Nasties
+  subheading: Switch to Splash to save yourself time, money, energy & most importantly your toilet!
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/71bdea13-8533-4616-5785-4510838d6d00/public
+  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ef7e0fe-731d-4e3a-5c7a-e83ff2346300/public
+  title1: Tough Cleaning Power
+  text1:
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/da4c6214-7737-4324-570a-a39a7ce82500/public
+  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f8b7857a-449c-4371-7e08-94db29a36300/public
+  title2: Hygienic Clean
+  text2:
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7cd4e23a-86de-4311-7f9f-603b80e69700/public
+  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/57cfc8bc-0a42-4a37-4146-395bf8010700/public
+  title3: Removes Nasty Smells
+  text3:
 
 
 ---

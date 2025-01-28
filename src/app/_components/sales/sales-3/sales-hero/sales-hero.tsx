@@ -17,7 +17,7 @@ type Props = {
 
 const SalesHero = ({ info }: Props) => {
     return (
-        <section className={`w-full mt-[103px] md:mt-[127px] pt-[15px] pb-[35px] md:pt-[40px] md:pb-[40px] lg:pt-[45px] lg:pb-[50px] bg-[linear-gradient(180deg,_#fff_30%,_#f4f7f9_50%)] md:bg-none md:bg-[#f4f7f9] ${inter.className}`}>
+        <section className={`w-full pt-[15px] pb-[35px] md:pt-[40px] md:pb-[40px] lg:pt-[45px] lg:pb-[50px] bg-[linear-gradient(180deg,_#fff_30%,_#f4f7f9_50%)] md:bg-none md:bg-[#f4f7f9] ${inter.className}`}>
             <div className="w-full max-w-[1200px] mx-[auto] px-4">
                 <div className="hidden md:flex w-full md:mb-[20px]">
                     <SalesHeroRating />

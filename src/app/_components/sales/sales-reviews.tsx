@@ -87,7 +87,7 @@ const Reviews = ({ info }: Props2) => {
         id="reviews"
       >
         <h5 className="w-full text-[26px] lg:text-[50px] font-bold   text-[#005279] mt-8 px-6 md:px-12  mb-10">
-          We've Got{" "}
+          We&apos;ve Got{" "}
           <span className="text-[#0082c0]">{info.reviews.reviewcount}</span>{" "}
           Raving Customers And Still Counting!
         </h5>

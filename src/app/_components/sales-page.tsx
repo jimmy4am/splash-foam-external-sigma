@@ -34,6 +34,20 @@ import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
 import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
 import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
 
+// Template 4
+import SalesHeader4 from "./sales/sales-4/sales-header/sales-header";
+import SalesHero4 from "./sales/sales-4/sales-hero/sales-hero";
+import SalesCharacteristics4 from "./sales/sales-4/sales-characteristics/sales-characteristics";
+import SalesVideoReviews4 from "./sales/sales-4/sales-video-reviews/sales-video-reviews";
+import SalesInfo4 from "./sales/sales-4/sales-info/sales-info";
+import SalesFeatures4 from "./sales/sales-4/sales-features/sales-features";
+import SalesSteps4 from "./sales/sales-4/sales-steps/sales-steps";
+import SalesUsage4 from "./sales/sales-4/sales-usage/sales-usage";
+import SalesComparison4 from "./sales/sales-4/sales-comparison/sales-comparison";
+import SalesReviews4 from "./sales/sales-4/sales-reviews/sales-reviews";
+import SalesFaqs4 from "./sales/sales-4/sales-faqs/sales-faqs";
+import SalesFooter4 from "./sales/sales-4/sales-footer/sales-footer";
+
 type Props = {
   info: SalesPageType;
 };
@@ -84,6 +98,22 @@ const SalesPage = ({ info }: Props) => {
               <SalesFooter3 info={info} />
           </>
       )}
+        {info.template === "4" && (
+            <>
+                <SalesHeader4 info={info} />
+                <SalesHero4 info={info} />
+                <SalesCharacteristics4 info={info} />
+                <SalesVideoReviews4 info={info} />
+                <SalesInfo4 info={info} />
+                <SalesFeatures4 info={info} />
+                <SalesSteps4 info={info} />
+                <SalesUsage4 info={info} />
+                <SalesComparison4 info={info} />
+                <SalesReviews4 info={info} />
+                <SalesFaqs4 info={info} />
+                <SalesFooter4 info={info} />
+            </>
+        )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>
   );

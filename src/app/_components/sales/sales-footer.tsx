@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Author } from "../../../interfaces/author";
+import { Author } from "@/interfaces/author";
 import { siteProduct } from "@/lib/site-info";
 import { Raleway } from "next/font/google";
 import { SalesPageType } from "@/interfaces/salesPage";
@@ -86,6 +86,8 @@ const Footer2 = ({ info }: Props2) => {
         </div>
         <div className="flex flex-col  items-center justify-center mt-6 mb-12 font-bold text-[16px]">
           <p>© 2024 {siteProduct}. All Rights Reserved.</p>
+          {/* <br />
+          <p>Owned by 4am Media LLC</p> */}
         </div>
       </div>
     </footer>

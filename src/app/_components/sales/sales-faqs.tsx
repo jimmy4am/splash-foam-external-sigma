@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { SalesPageType } from "../../../interfaces/salesPage";
+import { SalesPageType } from "@/interfaces/salesPage";
 import { Raleway, Work_Sans } from "next/font/google";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import BuyButton from "./buy-button";
@@ -74,7 +74,7 @@ const Faqs = ({ info }: Props2) => {
       >
         <h5 className="w-full text-[26px] lg:text-[50px] font-bold text-[#0082c0] mt-8 px-6 md:px-12 mb-10 leading-tight">
           Frequently Asked Questions <br />
-          <span className="text-[#005279]">We've All The Answers</span>
+          <span className="text-[#005279]">We&apos;ve All The Answers</span>
         </h5>
         <IndivFaq
           q={info.faqs.q1}
