@@ -17,7 +17,10 @@ import PostBody4 from "@/app/_components/review/post-body4";
 
 // Template 5
 import ReviewHeader5 from "@/app/_components/review/review-5/review-header/review-header";
+import ReviewHero5 from "@/app/_components/review/review-5/review-hero/review-hero";
 import ReviewBody5 from "@/app/_components/review/review-5/review-body/review-body";
+import ReviewWinningProduct5 from "@/app/_components/review/review-5/review-winning-product/review-winning-product";
+import ReviewFooter5 from "@/app/_components/review/review-5/review-footer/review-footer";
 
 type Props = {
   post: ReviewPostType;
@@ -78,7 +81,10 @@ const ReviewArticlePage = ({ post }: Props) => {
         {post.template === "5" && (
             <>
                 <ReviewHeader5 />
+                <ReviewHero5 post={post} />
                 <ReviewBody5 post={post} />
+                <ReviewWinningProduct5 post={post} />
+                <ReviewFooter5 />
             </>
         )}
         {post.template === "5" && <>{/* Build template 6 here  */}</>}

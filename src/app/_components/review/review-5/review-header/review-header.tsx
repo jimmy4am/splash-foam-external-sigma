@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -7,9 +9,24 @@ const ReviewHeader = () => {
   const [ isMenuActive, setIsMenuActive ] = useState(false);
 
   return (
-    <>
-    <div className="w-full sticky -top-[1px] z-50 h-[60px] md:h-[70px] flex justify-center items-center bg-[#fff] shadow-[0_3px_4px_0px_rgba(0,0,0,0.1)]">
-      <div className="w-full max-w-[1200px] px-4 py-2 flex justify-between items-center ">
+  <>
+    <div className="relative z-[60] py-[10px] bg-[#f4f4f4]">
+      <div className="w-full max-w-[1200px] mx-[auto] px-4">
+        <p className="relative max-w-[830px] mx-[auto] text-[#484848] md:text-center text-[11px] md:text-[12px] lg:text-[13px] leading-[16px] tracking-[0.2px">
+          We earn commissions from brands listed on this site, which influences how listings are presented.
+          <span className="relative font-semibold underline cursor-pointer [&:hover>*]:opacity-100 [&:hover>*]:visible [&:hover~*]:opacity-100 [&:hover~*]:visible">
+            Advertiser Disclosure.
+            <span className="absolute left-[50%] -translate-x-[50%] top-[100%] z-[70] border-b-[10px] border-b-[#fff] border-l-[10px] border-l-[transparent] border-r-[10px] border-r-[transparent] opacity-0 invisible transition-all duration-500 ease-in-out"></span>
+          </span>
+          <span className="absolute w-full left-0 top-[calc(100%+8px)] z-[60] p-[15px] bg-[#fff] shadow-[0_0_9px_0_rgba(0,0,0,0.2)] opacity-0 invisible transition-all duration-500 ease-in-out">
+            Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis antesit amet orci egetMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis antesit amet orci eget
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div className="w-full sticky top-[0px] z-50 h-[60px] md:h-[70px] flex justify-center items-center bg-[#fff] shadow-[0_3px_4px_0px_rgba(0,0,0,0.1)]">
+      <div className="w-full max-w-[1200px] px-4 flex justify-between items-center">
         <a href="/" className="relative z-10">
           <Image
             src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/392612fc-a13b-43dc-369d-38a0a0648300/public"
@@ -44,7 +61,7 @@ const ReviewHeader = () => {
         </button>
       </div>
     </div>
-    </>
+  </>
   );
 };
 
