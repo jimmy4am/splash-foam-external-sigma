@@ -34,7 +34,7 @@ const ReviewCard = ({ number, name, image, text, rating, cta, specialCta }: Prop
               width={160}
               height={160}
               alt={name}
-              className="w-[auto] h-[40px] md:mb-[15px]"
+              className="w-[auto] md:mb-[15px]"
             />
             {specialCta && (
               <a href={cta} className="text-center text-[14px] md:text-[18px] leading-[14px] md:leading-[18px] text-[#107fdc] underline hover:no-underline">
@@ -42,8 +42,14 @@ const ReviewCard = ({ number, name, image, text, rating, cta, specialCta }: Prop
               </a>
             )}
           </div>
-          <div className="md:hidden flex items-center justify-center flex-[0_0_85px] w-[85px] aspect-square border-[1px] ml-[auto]">
-            NEW ICON
+          {/*TODO: match the image */}
+          <div className="md:hidden flex items-center justify-center flex-[0_0_85px] w-[85px] ml-[auto]">
+            <Image
+              src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c1f91173-6b64-439e-18d0-1ec18ba45e00/public"
+              width={160}
+              height={160}
+              alt="Image"
+            />
           </div>
         </div>
 
@@ -64,8 +70,14 @@ const ReviewCard = ({ number, name, image, text, rating, cta, specialCta }: Prop
                 </li>
               ))}
             </ul>
-            <div className="hidden md:flex md:items-center justify-center md:flex-[0_0_85px] lg:flex-[0_0_115px] aspect-square border-[1px]">
-              NEW ICON
+            {/*TODO: match the image */}
+            <div className="hidden md:flex md:items-center justify-center md:flex-[0_0_85px] lg:flex-[0_0_115px]">
+              <Image
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c1f91173-6b64-439e-18d0-1ec18ba45e00/public"
+                width={160}
+                height={160}
+                alt="Image"
+              />
             </div>
           </div>
         </div>
