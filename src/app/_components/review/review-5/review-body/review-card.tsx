@@ -108,7 +108,7 @@ const ReviewCard = ({ number, name, image, text, rating, cta, specialCta, number
               </span>
             </div>
           </div>
-          <AppButton classes="w-full" type={topProduct ? 'filled' : 'outlined'} url={cta} target="_blank">Visit</AppButton>
+          <AppButton classes="w-full" type={topProduct ? 'success' : 'info'} url={cta} target="_blank">Visit</AppButton>
         </div>
       </div>
     </div>

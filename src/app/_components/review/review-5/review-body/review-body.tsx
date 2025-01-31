@@ -124,7 +124,7 @@ const ReviewBody = ({ post, showFullArticle = false }: Props) => {
                       </li>
                     ))}
                   </ul>
-                  <AppButton classes="w-full max-w-[196px]" type="filled" url={post.product1.cta} target="_blank">Visit</AppButton>
+                  <AppButton classes="w-full max-w-[196px]" url={post.product1.cta} target="_blank">Visit</AppButton>
                 </div>
               </div>
             </div>
