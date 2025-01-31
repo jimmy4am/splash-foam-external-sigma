@@ -1,0 +1,47 @@
+.markdown {
+  @apply leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply mt-[10px] md:mt-[20px] text-[16px] leading-[24px] md:text-[17px] md:leading-[25px];
+}
+
+.markdown h1 {
+  @apply text-4xl mt-6 mb-4 leading-snug font-bold;
+}
+
+.markdown h2 {
+  @apply text-[#1a5d95] text-[28px] md:text-[30px] lg:text-[35px] xl:text-[38px] leading-[34px] md:leading-[38px] lg:leading-[42px] xl:leading-[46px] font-black;
+}
+
+.markdown h2:not(:first-child) {
+  @apply mt-[30px];
+}
+
+.markdown h3 {
+  @apply mt-[25px] text-[18px] md:text-[19px] leading-[24px] md:leading-[25px] font-bold tracking-[0.3px];
+}
+
+.markdown img {
+  @apply w-full mt-[15px] md:mt-[20px] object-contain p-[3px] rounded-[10px] border-[1px] border-[#348cd6];
+}
+
+.markdown a {
+  @apply text-[#197dd0] underline font-bold;
+}
+
+.markdown a:hover {
+  @apply text-[#1a5d95];
+}
+
+.markdown ul li {
+  @apply mt-[10px] pl-[25px] tracking-[0.3px] bg-[transparent] bg-[url('https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42fc9570-58bf-4996-8f1f-05992315fc00/public')] bg-no-repeat bg-[0_4px];
+  background-size: 15px;
+}
+
+.markdown blockquote {
+  @apply border-l-2 border-[#333] p-4 bg-gray-100;
+}

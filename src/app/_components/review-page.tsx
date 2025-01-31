@@ -22,6 +22,13 @@ import ReviewBody5 from "@/app/_components/review/review-5/review-body/review-bo
 import ReviewWinningProduct5 from "@/app/_components/review/review-5/review-winning-product/review-winning-product";
 import ReviewFooter5 from "@/app/_components/review/review-5/review-footer/review-footer";
 
+// Template 6
+import ReviewHeader6 from "@/app/_components/review/review-6/review-header/review-header";
+import ReviewHero6 from "@/app/_components/review/review-6/review-hero/review-hero";
+import ReviewBody6 from "@/app/_components/review/review-6/review-body/review-body";
+import ReviewWinningProduct6 from "@/app/_components/review/review-6/review-winning-product/review-winning-product";
+import ReviewFooter6 from "@/app/_components/review/review-6/review-footer/review-footer";
+
 type Props = {
   post: ReviewPostType;
 };
@@ -87,7 +94,15 @@ const ReviewArticlePage = ({ post }: Props) => {
                 <ReviewFooter5 />
             </>
         )}
-        {post.template === "5" && <>{/* Build template 6 here  */}</>}
+        {post.template === "6" && (
+          <>
+            <ReviewHeader6 />
+            <ReviewHero6 post={post} />
+            <ReviewBody6 post={post} showFullArticle />
+            <ReviewWinningProduct6 post={post} />
+            <ReviewFooter6 />
+          </>
+        )}
       </div>
       <FunnelFluxScripts funnelFlux={post.funnelFlux || ""} />
       <ArticleClickId />

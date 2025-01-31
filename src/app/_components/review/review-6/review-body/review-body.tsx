@@ -7,11 +7,11 @@ import remarkBreaks from "remark-breaks";
 import remarkHtml from "remark-html";
 
 import { ReviewPostType } from "@/interfaces/reviewPost";
-import ReviewCard from "@/app/_components/review/review-5/review-body/review-card";
-import { getPoints, getReviewsData } from "@/app/_components/review/review-5/review-body/utils";
-import { ReviewCardType } from "@/app/_components/review/review-5/review-body/types";
-import markdownStyles from "@/app/_components/review/review-5/markdown-styles.module.css";
-import AppButton from "@/app/_components/review/review-5/_components/app-button";
+import ReviewCard from "@/app/_components/review/review-6/review-body/review-card";
+import { getPoints, getReviewsData } from "@/app/_components/review/review-6/review-body/utils";
+import { ReviewCardType } from "@/app/_components/review/review-6/review-body/types";
+import markdownStyles from "@/app/_components/review/review-6/markdown-styles.module.css";
+import AppButton from "@/app/_components/review/review-6/_components/app-button";
 
 const redHatDisplay = Red_Hat_Display({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
@@ -48,11 +48,11 @@ const ReviewBody = ({ post, showFullArticle = false }: Props) => {
   }, [post.intro]); // Dependency array for the effect
 
   return (
-    <section className={`p-[30px_0_35px] md:p-[40px_0_70px] ${inter.className}`}>
+    <section className={`p-[25px_0_35px] md:p-[40px_0_70px] ${inter.className}`}>
       <div className="w-full max-w-[1200px] mx-[auto] px-4">
-        <h2 className={`mb-[12px] lg:mb-[18px] text-[30px] lg:text-[38px] leading-[36px] lg:leading-[46px] font-black text-[#1a5d95] ${redHatDisplay.className}`}>Here Is Our Top GLP Providers Listed</h2>
+        <h2 className={`mb-[12px] lg:mb-[18px] text-[26px] md:text-[30px] lg:text-[38px] leading-[34px] md:leading-[36px] lg:leading-[46px] font-black text-[#1a5d95] ${redHatDisplay.className}`}>Here Is Our Top GLP Providers Listed</h2>
         <p className="text-[16px] lg:text-[17px] leading-[24px] lg:leading-[25px]">Maecenas nec odio et ante tincidunt tempus donec vitae sapien ut libero </p>
-        <div className="flex flex-col gap-[30px] mt-[60px] md:mt-[80px]">
+        <div className="flex flex-col gap-[30px] mt-[40px] md:mt-[50px]">
           {data.map((item: ReviewCardType, idx: number) => (
             <ReviewCard
               key={item.cta}
