@@ -52,22 +52,34 @@ const ReviewCard = ({ number, name, image, text, rating, cta, specialCta, number
           </div>
         </div>
 
-        <ul className="md:self-center md:flex-[0_0_33%] lg:flex-[0_0_32%] flex flex-col gap-[7px] lg:gap-[6px] mb-[20px] md:mb-[0] md:pl-[15px] lg:pl-[30px]">
+        <div className="md:self-center md:flex-[0_0_33%] lg:flex-[0_0_32%]">
           {specialCta && (
-            <li className="flex items-start gap-[10px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px]">{specialCta}</li>)}
-          {text.map((el) => (
-            <li key={el} className="flex items-start gap-[10px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px]">
+            <p className="flex items-start mb-[15px] gap-[8px] md:pl-[15px] lg:pl-[30px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px] text-[#d91821]">
               <Image
-                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42fc9570-58bf-4996-8f1f-05992315fc00/public"
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e2c927d5-af0b-4b86-ec32-6cd7b6714f00/public"
                 width={30}
                 height={30}
-                alt="Check icon"
+                alt="Tag icon"
                 className="w-[14px] md:w-[12px] lg:w-[17px] mt-[2px] md:mt-[3px] lg:mt-[4px]"
               />
-              {el}
-            </li>
-          ))}
-        </ul>
+              {specialCta}
+            </p>
+          )}
+          <ul className="flex flex-col gap-[7px] lg:gap-[6px] mb-[20px] md:mb-[0] md:pl-[15px] lg:pl-[30px]">
+            {text.map((el) => (
+              <li key={el} className="flex items-start gap-[10px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px]">
+                <Image
+                  src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42fc9570-58bf-4996-8f1f-05992315fc00/public"
+                  width={30}
+                  height={30}
+                  alt="Check icon"
+                  className="w-[14px] md:w-[12px] lg:w-[17px] mt-[2px] md:mt-[3px] lg:mt-[4px]"
+                />
+                {el}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="hidden md:block md:self-center md:flex-[0_0_20%] md:px-[15px] lg:px-[30px]">
           <ReviewCardRating rating={rating} topProduct={topProduct} />
