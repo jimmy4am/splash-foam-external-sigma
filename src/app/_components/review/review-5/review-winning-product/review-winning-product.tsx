@@ -48,7 +48,7 @@ const ReviewWinningProduct = ({ post }: Props) => {
             <div className="flex flex-col items-center p-[20px_20px_30px] bg-[#f9f9f9] rounded-[0_0_10px_10px]">
               <ul className="flex flex-col gap-[8px] mb-[20px]">
                 {getPoints(post.product1).map((el) => (
-                  <li className="flex items-start gap-[10px] text-[15px] lg:text-[16px] leading-[20px]">
+                  <li key={el} className="flex items-start gap-[10px] text-[15px] lg:text-[16px] leading-[20px]">
                     <Image
                       src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42fc9570-58bf-4996-8f1f-05992315fc00/public"
                       width={30}

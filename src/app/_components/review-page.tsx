@@ -82,7 +82,7 @@ const ReviewArticlePage = ({ post }: Props) => {
             <>
                 <ReviewHeader5 />
                 <ReviewHero5 post={post} />
-                <ReviewBody5 post={post} />
+                <ReviewBody5 post={post} showFullArticle />
                 <ReviewWinningProduct5 post={post} />
                 <ReviewFooter5 />
             </>

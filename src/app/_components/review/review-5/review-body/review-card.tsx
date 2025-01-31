@@ -56,7 +56,7 @@ const ReviewCard = ({ number, name, image, text, rating, cta, specialCta, number
           {specialCta && (
             <li className="flex items-start gap-[10px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px]">{specialCta}</li>)}
           {text.map((el) => (
-            <li className="flex items-start gap-[10px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px]">
+            <li key={el} className="flex items-start gap-[10px] text-[15px] md:text-[12px] lg:text-[16px] leading-[17px] lg:leading-[24px]">
               <Image
                 src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/42fc9570-58bf-4996-8f1f-05992315fc00/public"
                 width={30}
