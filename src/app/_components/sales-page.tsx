@@ -25,7 +25,8 @@ import PassUtmParams from "../_utils/passUtmParams";
 import SalesHeaderEdit3 from "./sales/sales-3/sales-header/sales-header-edit";
 // import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
 import SalesHeroEdit3 from "./sales/sales-3/sales-hero/sales-hero-edit";
-import SalesCharacteristics3 from "./sales/sales-3/sales-characteristics/sales-characteristics";
+// import SalesCharacteristics3 from "./sales/sales-3/sales-characteristics/sales-characteristics";
+import SalesCharacteristicsEdit3 from "./sales/sales-3/sales-characteristics/sales-characteristics-edit";
 import SalesVideoReviews3 from "./sales/sales-3/sales-video-reviews/sales-video-reviews";
 import SalesInfo3 from "./sales/sales-3/sales-info/sales-info";
 import SalesFeatures3 from "./sales/sales-3/sales-features/sales-features";
@@ -92,7 +93,8 @@ const SalesPage = ({ info }: Props) => {
               <SalesHeaderEdit3 info={info} setCurrentPost={setCurrentPost} />
               {/*<SalesHero3 info={info} />*/}
               <SalesHeroEdit3 info={info} setCurrentPost={setCurrentPost} />
-              <SalesCharacteristics3 info={info} />
+              {/*<SalesCharacteristics3 info={info} />*/}
+              <SalesCharacteristicsEdit3 info={info} setCurrentPost={setCurrentPost} />
               <SalesVideoReviews3 info={info} />
               <SalesInfo3 info={info} />
               <SalesFeatures3 info={info} />
