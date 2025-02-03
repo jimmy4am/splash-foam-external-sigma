@@ -269,11 +269,11 @@ const EditImage = <T extends Record<string, any>>({
             )}
           </div>
         </FileUploader>
-        <MediaLibraryPop
-          isOpen={showMediaLibrary}
-          onClose={() => setShowMediaLibrary(false)}
-          onSelect={handleMediaLibrarySelect}
-        />
+        {/*<MediaLibraryPop*/}
+        {/*  isOpen={showMediaLibrary}*/}
+        {/*  onClose={() => setShowMediaLibrary(false)}*/}
+        {/*  onSelect={handleMediaLibrarySelect}*/}
+        {/*/>*/}
       </div>
     </div>
   );

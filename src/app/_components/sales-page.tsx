@@ -21,8 +21,10 @@ import SalesSimple from "./sales/sales-simple";
 import PassUtmParams from "../_utils/passUtmParams";
 
 // Template 3
-import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
-import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
+// import SalesHeader3 from "./sales/sales-3/sales-header/sales-header";
+import SalesHeaderEdit3 from "./sales/sales-3/sales-header/sales-header-edit";
+// import SalesHero3 from "./sales/sales-3/sales-hero/sales-hero";
+import SalesHeroEdit3 from "./sales/sales-3/sales-hero/sales-hero-edit";
 import SalesCharacteristics3 from "./sales/sales-3/sales-characteristics/sales-characteristics";
 import SalesVideoReviews3 from "./sales/sales-3/sales-video-reviews/sales-video-reviews";
 import SalesInfo3 from "./sales/sales-3/sales-info/sales-info";
@@ -56,6 +58,8 @@ const SalesPage = ({ info }: Props) => {
   const contentRef = useRef<HTMLDivElement>(null);
   PassUtmParams(contentRef, info.cta);
 
+  const setCurrentPost = (post: SalesPageType) => console.log('post', post);
+
   return (
     <div className="flex flex-col items-center relative" ref={contentRef}>
       <SalesClickId />
@@ -84,8 +88,10 @@ const SalesPage = ({ info }: Props) => {
       )}
       {info.template === "3" && (
           <>
-              <SalesHeader3 info={info} />
-              <SalesHero3 info={info} />
+              {/*<SalesHeader3 info={info} />*/}
+              <SalesHeaderEdit3 info={info} setCurrentPost={setCurrentPost} />
+              {/*<SalesHero3 info={info} />*/}
+              <SalesHeroEdit3 info={info} setCurrentPost={setCurrentPost} />
               <SalesCharacteristics3 info={info} />
               <SalesVideoReviews3 info={info} />
               <SalesInfo3 info={info} />
