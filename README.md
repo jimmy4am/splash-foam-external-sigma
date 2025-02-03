@@ -32,9 +32,27 @@ Please reference the fields in the reviewPost when possible. Put a new field int
 
 **Task C**
 
-Template 3 - Editable Version
+Sales Page Template 3 - Editable Version
 
-- will provide additional details + keys for this task later this week
+Create an editable version of the template. This involves switching all outputs to inputs that `setCurrentPost` with an updated value.
+
+Please try and match text size and color, but outline inputs with a dashed yellow border to alert users that they can be changed.
+
+So an example would be...
+
+`<p className="text-[17px] italic text-blue-500">{info.text1}</p>`
+
+Becomes..
+
+`<input className="border-2 border-yellow-500 border-dashed px-2 text-[17px] italic text-blue-500" value={info.text1} onChange={(e)=>setCurrentPost({...info,
+text1: e.target.value,
+})}>`
+
+The same format would follow for all text outputs, just match text size and color and use your best judgement if colors need to be changes or sizes need to be changed. Take a look at the examples provided.
+
+For image inputs, please swith <Image> components to custom built "EditImage" component. For settings, keept the exact same as the <Image> getting replaces, then add post={info}, setPost={setCurrentPost}, field={fiedName}
+
+Feel free to hit me up on slack if there are any questions
 
 **Task D**
 
