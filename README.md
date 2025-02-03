@@ -58,6 +58,12 @@ Feel free to hit me up on slack if there are any questions
 
 Template 4 - Editable Version
 
+**Task E**
+
+Sub n' Save Checkout Template
+
+- will provide more details on this shortly
+
 ## Complete Tasks (History)
 
 ✅ **_Desired Template 3_** - [https://splash-foam-sales-7-1.vercel.app/](https://splash-foam-sales-7-1.vercel.app/)
