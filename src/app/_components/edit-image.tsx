@@ -9,7 +9,7 @@ import { auth } from "../../../firebase";
 import { FileUploader } from "react-drag-drop-files";
 import { ImageProps } from "next/image";
 import { Post } from "@/interfaces/post";
-import MediaLibraryPop from "./article/media-library-pop";
+// import MediaLibraryPop from "./article/media-library-pop";
 
 const fileTypes = ["jpeg", "jpg", "png", "gif", "webp"] as const;
 type FileType = (typeof fileTypes)[number];

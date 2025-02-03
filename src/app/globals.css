@@ -6,7 +6,7 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 .editable-input {
-  @apply border-2 border-yellow-500 border-dashed px-2 w-[100%]
+  @apply border-2 border-yellow-500 border-dashed px-2 text-[#000]
 }
 
 
