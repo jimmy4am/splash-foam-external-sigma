@@ -49,7 +49,8 @@ import SalesFooterEdit3 from "./sales/sales-3/sales-footer/sales-footer-edit";
 // Template 4
 // import SalesHeader4 from "./sales/sales-4/sales-header/sales-header";
 import SalesHeaderEdit4 from "./sales/sales-4/sales-header/sales-header-edit";
-import SalesHero4 from "./sales/sales-4/sales-hero/sales-hero";
+// import SalesHero4 from "./sales/sales-4/sales-hero/sales-hero";
+import SalesHeroEdit4 from "./sales/sales-4/sales-hero/sales-hero-edit";
 import SalesCharacteristics4 from "./sales/sales-4/sales-characteristics/sales-characteristics";
 import SalesVideoReviews4 from "./sales/sales-4/sales-video-reviews/sales-video-reviews";
 import SalesInfo4 from "./sales/sales-4/sales-info/sales-info";
@@ -129,7 +130,8 @@ const SalesPage = ({ info }: Props) => {
           <>
             {/*<SalesHeader4 info={info} />*/}
             <SalesHeaderEdit4 info={info} setCurrentPost={setCurrentPost} />
-            <SalesHero4 info={info} />
+            {/*<SalesHero4 info={info} />*/}
+            <SalesHeroEdit4 info={info} setCurrentPost={setCurrentPost} />
             <SalesCharacteristics4 info={info} />
             <SalesVideoReviews4 info={info} />
             <SalesInfo4 info={info} />
