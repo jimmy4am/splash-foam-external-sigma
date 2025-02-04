@@ -33,7 +33,8 @@ import SalesVideoReviewsEdit3 from "./sales/sales-3/sales-video-reviews/sales-vi
 import SalesInfoEdit3 from "./sales/sales-3/sales-info/sales-info-edit";
 // import SalesFeatures3 from "./sales/sales-3/sales-features/sales-features";
 import SalesFeaturesEdit3 from "./sales/sales-3/sales-features/sales-features-edit";
-import SalesSteps3 from "./sales/sales-3/sales-steps/sales-steps";
+// import SalesSteps3 from "./sales/sales-3/sales-steps/sales-steps";
+import SalesStepsEdit3 from "./sales/sales-3/sales-steps/sales-steps-edit";
 import SalesUsage3 from "./sales/sales-3/sales-usage/sales-usage";
 import SalesComparison3 from "./sales/sales-3/sales-comparison/sales-comparison";
 import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
@@ -104,7 +105,8 @@ const SalesPage = ({ info }: Props) => {
               <SalesInfoEdit3 info={info} setCurrentPost={setCurrentPost} />
               {/*<SalesFeatures3 info={info} />*/}
               <SalesFeaturesEdit3 info={info} setCurrentPost={setCurrentPost} />
-              <SalesSteps3 info={info} />
+              {/*<SalesSteps3 info={info} />*/}
+              <SalesStepsEdit3 info={info} setCurrentPost={setCurrentPost} />
               <SalesUsage3 info={info} />
               <SalesComparison3 info={info} />
               <SalesReviews3 info={info} />
