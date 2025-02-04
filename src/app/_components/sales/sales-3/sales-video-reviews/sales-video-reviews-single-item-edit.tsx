@@ -76,7 +76,7 @@ const SalesVideoReviewsSingleItemEdit = ({ info, image, imageField, title, title
           value={title}
           placeholder="Review author"
         />
-          <Image className="w-[94px] md:w-[105px]" src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/49253e46-369e-4742-d9f4-c870b1722100/public" alt="rating stars" width={82} height={14} />
+        <Image className="w-[94px] md:w-[105px]" src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/49253e46-369e-4742-d9f4-c870b1722100/public" alt="rating stars" width={82} height={14} />
       </h3>
     </>
   );

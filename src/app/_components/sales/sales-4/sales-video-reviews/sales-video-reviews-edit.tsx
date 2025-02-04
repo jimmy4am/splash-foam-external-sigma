@@ -5,19 +5,18 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 import { SalesPageType } from "@/interfaces/salesPage";
-import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
-import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
-import AppModal from "@/app/_components/sales/sales-3/_components/app-modal";
-import AppSection from "@/app/_components/sales/sales-3/_components/app-section";
-import SalesVideoReviewsSingleItemEdit
-  from "@/app/_components/sales/sales-3/sales-video-reviews/sales-video-reviews-single-item-edit";
+import SectionTitle from "@/app/_components/sales/sales-4/_components/section-title";
+import BuyButton from "@/app/_components/sales/sales-4/_components/buy-button";
+import AppModal from "@/app/_components/sales/sales-4/_components/app-modal";
+import SalesVideoReviewsSingleItemEdit from "@/app/_components/sales/sales-4/sales-video-reviews/sales-video-reviews-single-item-edit";
+import AppSection from "@/app/_components/sales/sales-4/_components/app-section";
 
 type Props = {
   info: SalesPageType;
   setCurrentPost: (post: SalesPageType) => void;
 };
 
-const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
+const SalesVideoReviews = ({ info, setCurrentPost }: Props) => {
   const [ activeVideo, setActiveVideo ] = useState<string | null>(null);
 
   const onModalClose = () => {
@@ -80,7 +79,7 @@ const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
             </span>
           </span>
           <input
-            className="editable-input"
+            className="editable-input w-full"
             onChange={(e) => {
               setCurrentPost({
                 ...info,
@@ -166,4 +165,4 @@ const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
   );
 };
 
-export default SalesVideoReviewsEdit;
+export default SalesVideoReviews;
