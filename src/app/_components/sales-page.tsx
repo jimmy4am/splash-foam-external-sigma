@@ -51,7 +51,8 @@ import SalesFooterEdit3 from "./sales/sales-3/sales-footer/sales-footer-edit";
 import SalesHeaderEdit4 from "./sales/sales-4/sales-header/sales-header-edit";
 // import SalesHero4 from "./sales/sales-4/sales-hero/sales-hero";
 import SalesHeroEdit4 from "./sales/sales-4/sales-hero/sales-hero-edit";
-import SalesCharacteristics4 from "./sales/sales-4/sales-characteristics/sales-characteristics";
+// import SalesCharacteristics4 from "./sales/sales-4/sales-characteristics/sales-characteristics";
+import SalesCharacteristicsEdit4 from "./sales/sales-4/sales-characteristics/sales-characteristics-edit";
 import SalesVideoReviews4 from "./sales/sales-4/sales-video-reviews/sales-video-reviews";
 import SalesInfo4 from "./sales/sales-4/sales-info/sales-info";
 import SalesFeatures4 from "./sales/sales-4/sales-features/sales-features";
@@ -132,7 +133,8 @@ const SalesPage = ({ info }: Props) => {
             <SalesHeaderEdit4 info={info} setCurrentPost={setCurrentPost} />
             {/*<SalesHero4 info={info} />*/}
             <SalesHeroEdit4 info={info} setCurrentPost={setCurrentPost} />
-            <SalesCharacteristics4 info={info} />
+            {/*<SalesCharacteristics4 info={info} />*/}
+            <SalesCharacteristicsEdit4 info={info} setCurrentPost={setCurrentPost} />
             <SalesVideoReviews4 info={info} />
             <SalesInfo4 info={info} />
             <SalesFeatures4 info={info} />
