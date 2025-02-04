@@ -206,7 +206,7 @@ const EditImage = <T extends Record<string, any>>({
             setIsDragActive(dragging)
           }
         >
-          <div className={`relative ${isUsingFallback ? "bg-gray-200" : ""}`}>
+          <div className={`relative border-2 border-yellow-500 border-dashed ${isUsingFallback ? "bg-gray-200" : ""}`}>
             <div className={isUsingFallback ? "aspect-[2/1]" : ""}>
               <Image
                 src={src || fallbackSrc}

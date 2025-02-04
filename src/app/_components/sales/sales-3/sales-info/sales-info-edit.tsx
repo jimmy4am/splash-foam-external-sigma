@@ -7,9 +7,7 @@ import { SalesPageType } from "@/interfaces/salesPage";
 import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
 import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
 import AppSection from "@/app/_components/sales/sales-3/_components/app-section";
-import {siteProduct} from "@/lib/site-info";
 import EditImage from "@/app/_components/edit-image";
-import markdownStyles from "@/app/_components/sales/markdown-sales-styles.module.css";
 
 type Props = {
   info: SalesPageType;
