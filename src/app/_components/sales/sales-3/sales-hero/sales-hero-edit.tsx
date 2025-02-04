@@ -28,7 +28,7 @@ const SalesHeroEdit = ({ info, setCurrentPost }: Props) => {
           <div className="md:w-[58%] lg:w-[55%] xl:w-[51%] flex flex-col items-center md:items-start">
             <h1 className="max-w-[100%] text-center md:text-left text-[34px] leading-[38px] md:text-[43px] md:leading-[52px] lg:text-[55px] lg:leading-[65px] xl:text-[60px] xl:leading-[62px] font-extrabold">
               <textarea
-                className="editable-input"
+                className="editable-input w-full"
                 onChange={(e) => {
                   setCurrentPost({
                     ...info,
@@ -39,7 +39,7 @@ const SalesHeroEdit = ({ info, setCurrentPost }: Props) => {
                 placeholder="Hero title top line"
               />
               <textarea
-                className="editable-input"
+                className="editable-input w-full"
                 onChange={(e) => {
                   setCurrentPost({
                     ...info,

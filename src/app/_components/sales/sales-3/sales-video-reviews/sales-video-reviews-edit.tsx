@@ -8,8 +8,9 @@ import { SalesPageType } from "@/interfaces/salesPage";
 import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
 import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
 import AppModal from "@/app/_components/sales/sales-3/_components/app-modal";
-import SalesVideoReviewsSingleItem from "@/app/_components/sales/sales-3/sales-video-reviews/sales-video-reviews-single-item";
 import AppSection from "@/app/_components/sales/sales-3/_components/app-section";
+import SalesVideoReviewsSingleItemEdit
+  from "@/app/_components/sales/sales-3/sales-video-reviews/sales-video-reviews-single-item-edit";
 
 type Props = {
   info: SalesPageType;
@@ -98,7 +99,7 @@ const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
       <div className="md:w-full -mx-4 md:mx-[auto] mb-[12px] md:mb-[0]">
         <Slider className="video-reviews-slider slider" {...settings}>
           <div className="p-[15px_10px_0]">
-            <SalesVideoReviewsSingleItem
+            <SalesVideoReviewsSingleItemEdit
               info={info}
               setCurrentPost={setCurrentPost}
               image={info.video_reviews.image1}
@@ -109,7 +110,7 @@ const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
               setActiveVideo={setActiveVideo} />
           </div>
           <div className="p-[15px_10px_0]">
-            <SalesVideoReviewsSingleItem
+            <SalesVideoReviewsSingleItemEdit
               info={info}
               setCurrentPost={setCurrentPost}
               image={info.video_reviews.image2}
@@ -120,7 +121,7 @@ const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
               setActiveVideo={setActiveVideo} />
           </div>
           <div className="p-[15px_10px_0]">
-            <SalesVideoReviewsSingleItem
+            <SalesVideoReviewsSingleItemEdit
               info={info}
               setCurrentPost={setCurrentPost}
               image={info.video_reviews.image3}
@@ -131,7 +132,7 @@ const SalesVideoReviewsEdit = ({ info, setCurrentPost }: Props) => {
               setActiveVideo={setActiveVideo} />
           </div>
           <div className="p-[15px_10px_0]">
-            <SalesVideoReviewsSingleItem
+            <SalesVideoReviewsSingleItemEdit
               info={info}
               setCurrentPost={setCurrentPost}
               image={info.video_reviews.image4}
