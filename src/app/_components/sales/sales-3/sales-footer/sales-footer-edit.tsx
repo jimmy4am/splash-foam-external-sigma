@@ -1,11 +1,12 @@
 import React from "react";
-import Image from "next/image";
 
 import { siteProduct } from "@/lib/site-info";
 import { SalesPageType } from "@/interfaces/salesPage";
+import EditImage from "@/app/_components/edit-image";
 
 type Props = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
 const FooterLink = ({ url, children }: { url: string, children: React.ReactNode }) => (
@@ -14,12 +15,20 @@ const FooterLink = ({ url, children }: { url: string, children: React.ReactNode 
   </a>
 )
 
-const SalesFooter = ({ info }: Props) => {
+const SalesFooterEdit = ({ info, setCurrentPost }: Props) => {
   return (
     <footer className="w-full py-[25px] md:py-[40px] bg-[#fff] border-t-[1px] border-t-[#c8c8c8]">
       <div className="w-full max-w-[1200px] mx-[auto] px-4 flex flex-col items-center">
         <a href="/" className="flex w-[120px] md:w-[142px] mb-[20px] md:mb-[25px]">
-          <Image src={info.logo} width={160} height={160} alt={siteProduct} />
+          <EditImage
+            src={info.logo}
+            alt={siteProduct}
+            width={160}
+            height={160}
+            post={info}
+            setPost={setCurrentPost}
+            field="logo"
+          />
         </a>
         <div className="text-[14px] md:text-[16px] leading-[22px] md:leading-[24px] text-[#000] tracking-[0.5px]">
           <nav>
@@ -42,4 +51,4 @@ const SalesFooter = ({ info }: Props) => {
   );
 };
 
-export default SalesFooter;
+export default SalesFooterEdit;

@@ -3,16 +3,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
+import { SalesPageType } from "@/interfaces/salesPage";
+
 type Props = {
+  info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
   q: string;
+  qField: string;
   a: string;
+  aField: string;
   index: number;
   active: number;
   setActive: (index: number) => void;
   isLastItem?: boolean
 };
 
-const SalesFaqsSingleItem = ({ q, a, index, active, setActive, isLastItem }: Props) => {
+const SalesFaqsSingleItemEdit = ({ info, setCurrentPost, q, qField, a, aField, index, active, setActive, isLastItem }: Props) => {
   const [open, setOpen] = useState(index === active);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -28,7 +34,22 @@ const SalesFaqsSingleItem = ({ q, a, index, active, setActive, isLastItem }: Pro
           setOpen(!open);
           setActive(index);
         }}>
-        <h3 className="text-[17px] md:text-[20px] leading-[20px] md:leading-[26px] font-bold">{q}</h3>
+        <h3 className="text-[17px] md:text-[20px] leading-[20px] md:leading-[26px] font-bold">
+          <input
+            className="editable-input w-full"
+            onChange={(e) => {
+              setCurrentPost({
+                ...info,
+                faqs: {
+                  ...info.faqs,
+                  [qField]: e.target.value,
+                },
+              });
+            }}
+            value={q}
+            placeholder="Question"
+          />
+        </h3>
         <Image
           className="transition-all duration-500 ease-in-out"
           style={{ transform: `rotateX(${open ? '-180deg' : '0deg'})`}}
@@ -44,10 +65,26 @@ const SalesFaqsSingleItem = ({ q, a, index, active, setActive, isLastItem }: Pro
           height: open ? contentRef.current?.scrollHeight : 0,
         }}
       >
-        <p className={`mb-[25px] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px]`}>{a}</p>
+        <p className={`mb-[25px] text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px]`}>
+          <textarea
+            rows={3}
+            className="editable-input w-full"
+            onChange={(e) => {
+              setCurrentPost({
+                ...info,
+                faqs: {
+                  ...info.faqs,
+                  [aField]: e.target.value,
+                },
+              });
+            }}
+            value={a}
+            placeholder="QueAnswerstion"
+          />
+        </p>
       </div>
     </div>
   );
 };
 
-export default SalesFaqsSingleItem;
+export default SalesFaqsSingleItemEdit;

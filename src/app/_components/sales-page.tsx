@@ -39,9 +39,12 @@ import SalesStepsEdit3 from "./sales/sales-3/sales-steps/sales-steps-edit";
 import SalesUsageEdit3 from "./sales/sales-3/sales-usage/sales-usage-edit";
 // import SalesComparison3 from "./sales/sales-3/sales-comparison/sales-comparison";
 import SalesComparisonEdit3 from "./sales/sales-3/sales-comparison/sales-comparison-edit";
-import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
-import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
-import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
+// import SalesReviews3 from "./sales/sales-3/sales-reviews/sales-reviews";
+import SalesReviewsEdit3 from "./sales/sales-3/sales-reviews/sales-reviews-edit";
+// import SalesFaqs3 from "./sales/sales-3/sales-faqs/sales-faqs";
+import SalesFaqsEdit3 from "./sales/sales-3/sales-faqs/sales-faqs-edit";
+// import SalesFooter3 from "./sales/sales-3/sales-footer/sales-footer";
+import SalesFooterEdit3 from "./sales/sales-3/sales-footer/sales-footer-edit";
 
 // Template 4
 import SalesHeader4 from "./sales/sales-4/sales-header/sales-header";
@@ -113,9 +116,12 @@ const SalesPage = ({ info }: Props) => {
               <SalesUsageEdit3 info={info} setCurrentPost={setCurrentPost} />
               {/*<SalesComparison3 info={info} />*/}
               <SalesComparisonEdit3 info={info} setCurrentPost={setCurrentPost} />
-              <SalesReviews3 info={info} />
-              <SalesFaqs3 info={info} />
-              <SalesFooter3 info={info} />
+              {/*<SalesReviews3 info={info} />*/}
+              <SalesReviewsEdit3 info={info} setCurrentPost={setCurrentPost} />
+              {/*<SalesFaqs3 info={info} />*/}
+              <SalesFaqsEdit3 info={info} setCurrentPost={setCurrentPost} />
+              {/*<SalesFooter3 info={info} />*/}
+              <SalesFooterEdit3 info={info} setCurrentPost={setCurrentPost} />
           </>
       )}
         {info.template === "4" && (

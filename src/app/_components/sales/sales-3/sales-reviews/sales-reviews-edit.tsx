@@ -4,8 +4,8 @@ import Slider from "react-slick";
 import { Outfit, Inter } from "next/font/google";
 
 import { SalesPageType } from "@/interfaces/salesPage";
-import SalesReviewsSingleItem from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-single-item";
-import SalesReviewsImageItem from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-image-item";
+import SalesReviewsSingleItemEdit from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-single-item-edit";
+import SalesReviewsImageItemEdit from "@/app/_components/sales/sales-3/sales-reviews/sales-reviews-image-item-edit";
 import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
 import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
 
@@ -14,9 +14,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 type Props = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
-const SalesReviews = ({ info }: Props) => {
+const SalesReviewsEdit = ({ info, setCurrentPost }: Props) => {
   const settings = {
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -50,20 +51,20 @@ const SalesReviews = ({ info }: Props) => {
       {/*
           // @ts-ignore */}
       <Slider className="image-slider slider grid md:block grid-cols-3 gap-[10px] mt-[30px] md:mt-[50px] px-4 md:px-[0]" {...settings}>
-        <SalesReviewsImageItem image={info.strip_images.img1}/>
-        <SalesReviewsImageItem image={info.strip_images.img2}/>
-        <SalesReviewsImageItem image={info.strip_images.img3}/>
-        <SalesReviewsImageItem image={info.strip_images.img4}/>
-        <SalesReviewsImageItem image={info.strip_images.img5}/>
-        <SalesReviewsImageItem image={info.strip_images.img6}/>
+        <SalesReviewsImageItemEdit info={info} setCurrentPost={setCurrentPost} image={info.strip_images.img1} imageField="strip_images.img1" />
+        <SalesReviewsImageItemEdit info={info} setCurrentPost={setCurrentPost} image={info.strip_images.img2} imageField="strip_images.img2" />
+        <SalesReviewsImageItemEdit info={info} setCurrentPost={setCurrentPost} image={info.strip_images.img3} imageField="strip_images.img3" />
+        <SalesReviewsImageItemEdit info={info} setCurrentPost={setCurrentPost} image={info.strip_images.img4} imageField="strip_images.img4" />
+        <SalesReviewsImageItemEdit info={info} setCurrentPost={setCurrentPost} image={info.strip_images.img5} imageField="strip_images.img5" />
+        <SalesReviewsImageItemEdit info={info} setCurrentPost={setCurrentPost} image={info.strip_images.img6} imageField="strip_images.img6" />
       </Slider>
 
       <div className="w-full max-w-[1200px] mx-[auto] px-4">
         <ul className="w-full max-w-[970px] flex flex-col gap-[20px] mt-[30px] md:mt-[50px] mx-[auto]">
-          <SalesReviewsSingleItem title={info.reviews.title1} author={info.reviews.name1} text={info.reviews.text1} />
-          <SalesReviewsSingleItem title={info.reviews.title2} author={info.reviews.name2} text={info.reviews.text2} />
-          <SalesReviewsSingleItem title={info.reviews.title3} author={info.reviews.name3} text={info.reviews.text3} />
-          <SalesReviewsSingleItem title={info.reviews.title4} author={info.reviews.name4} text={info.reviews.text4} />
+          <SalesReviewsSingleItemEdit info={info} setCurrentPost={setCurrentPost} title={info.reviews.title1} titleField="title1" author={info.reviews.name1} authorField="name1" text={info.reviews.text1} textField="text1" />
+          <SalesReviewsSingleItemEdit info={info} setCurrentPost={setCurrentPost} title={info.reviews.title2} titleField="title2" author={info.reviews.name2} authorField="name2" text={info.reviews.text2} textField="text2" />
+          <SalesReviewsSingleItemEdit info={info} setCurrentPost={setCurrentPost} title={info.reviews.title3} titleField="title3" author={info.reviews.name3} authorField="name3" text={info.reviews.text3} textField="text3" />
+          <SalesReviewsSingleItemEdit info={info} setCurrentPost={setCurrentPost} title={info.reviews.title4} titleField="title4" author={info.reviews.name4} authorField="name4" text={info.reviews.text4} textField="text4" />
         </ul>
 
         <div className="w-full max-w-[366px] md:max-w-[410px] mx-[auto]  mt-[30px] md:mt-[40px]">
@@ -74,4 +75,4 @@ const SalesReviews = ({ info }: Props) => {
   );
 };
 
-export default SalesReviews;
+export default SalesReviewsEdit;
