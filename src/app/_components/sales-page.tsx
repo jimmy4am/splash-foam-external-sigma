@@ -47,7 +47,8 @@ import SalesFaqsEdit3 from "./sales/sales-3/sales-faqs/sales-faqs-edit";
 import SalesFooterEdit3 from "./sales/sales-3/sales-footer/sales-footer-edit";
 
 // Template 4
-import SalesHeader4 from "./sales/sales-4/sales-header/sales-header";
+// import SalesHeader4 from "./sales/sales-4/sales-header/sales-header";
+import SalesHeaderEdit4 from "./sales/sales-4/sales-header/sales-header-edit";
 import SalesHero4 from "./sales/sales-4/sales-hero/sales-hero";
 import SalesCharacteristics4 from "./sales/sales-4/sales-characteristics/sales-characteristics";
 import SalesVideoReviews4 from "./sales/sales-4/sales-video-reviews/sales-video-reviews";
@@ -97,48 +98,49 @@ const SalesPage = ({ info }: Props) => {
         </>
       )}
       {info.template === "3" && (
-          <>
-              {/*<SalesHeader3 info={info} />*/}
-              <SalesHeaderEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesHero3 info={info} />*/}
-              <SalesHeroEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesCharacteristics3 info={info} />*/}
-              <SalesCharacteristicsEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesVideoReviews3 info={info} />*/}
-              <SalesVideoReviewsEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesInfo3 info={info} />*/}
-              <SalesInfoEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesFeatures3 info={info} />*/}
-              <SalesFeaturesEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesSteps3 info={info} />*/}
-              <SalesStepsEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesUsage3 info={info} />*/}
-              <SalesUsageEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesComparison3 info={info} />*/}
-              <SalesComparisonEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesReviews3 info={info} />*/}
-              <SalesReviewsEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesFaqs3 info={info} />*/}
-              <SalesFaqsEdit3 info={info} setCurrentPost={setCurrentPost} />
-              {/*<SalesFooter3 info={info} />*/}
-              <SalesFooterEdit3 info={info} setCurrentPost={setCurrentPost} />
-          </>
+        <>
+          {/*<SalesHeader3 info={info} />*/}
+          <SalesHeaderEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesHero3 info={info} />*/}
+          <SalesHeroEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesCharacteristics3 info={info} />*/}
+          <SalesCharacteristicsEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesVideoReviews3 info={info} />*/}
+          <SalesVideoReviewsEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesInfo3 info={info} />*/}
+          <SalesInfoEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesFeatures3 info={info} />*/}
+          <SalesFeaturesEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesSteps3 info={info} />*/}
+          <SalesStepsEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesUsage3 info={info} />*/}
+          <SalesUsageEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesComparison3 info={info} />*/}
+          <SalesComparisonEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesReviews3 info={info} />*/}
+          <SalesReviewsEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesFaqs3 info={info} />*/}
+          <SalesFaqsEdit3 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesFooter3 info={info} />*/}
+          <SalesFooterEdit3 info={info} setCurrentPost={setCurrentPost} />
+        </>
       )}
         {info.template === "4" && (
-            <>
-                <SalesHeader4 info={info} />
-                <SalesHero4 info={info} />
-                <SalesCharacteristics4 info={info} />
-                <SalesVideoReviews4 info={info} />
-                <SalesInfo4 info={info} />
-                <SalesFeatures4 info={info} />
-                <SalesSteps4 info={info} />
-                <SalesUsage4 info={info} />
-                <SalesComparison4 info={info} />
-                <SalesReviews4 info={info} />
-                <SalesFaqs4 info={info} />
-                <SalesFooter4 info={info} />
-            </>
+          <>
+            {/*<SalesHeader4 info={info} />*/}
+            <SalesHeaderEdit4 info={info} setCurrentPost={setCurrentPost} />
+            <SalesHero4 info={info} />
+            <SalesCharacteristics4 info={info} />
+            <SalesVideoReviews4 info={info} />
+            <SalesInfo4 info={info} />
+            <SalesFeatures4 info={info} />
+            <SalesSteps4 info={info} />
+            <SalesUsage4 info={info} />
+            <SalesComparison4 info={info} />
+            <SalesReviews4 info={info} />
+            <SalesFaqs4 info={info} />
+            <SalesFooter4 info={info} />
+          </>
         )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>

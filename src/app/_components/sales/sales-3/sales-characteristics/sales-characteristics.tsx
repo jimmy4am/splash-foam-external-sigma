@@ -10,7 +10,7 @@ type Props = {
 
 const SalesCharacteristicsItem = ({ icon, text }: { icon: string, text: string}) => (
   <div className="w-[145px] md:w-[105px] lg:w-[140px] xl:w-[165px] flex flex-col items-center px-[15px] md:px-[2px] xl:px-[15px] text-center">
-  <Image className="w-[55px] mb-[10px]" src={icon} alt={text} width={55} height={45}/>
+    <Image className="w-[55px] mb-[10px]" src={icon} alt={text} width={55} height={45}/>
     <h3 className="text-[13px] lg:text-[15px] leading-[18px] lg:leading-[20px] font-semibold tracking-[0.5px]">{text}</h3>
   </div>
 )
