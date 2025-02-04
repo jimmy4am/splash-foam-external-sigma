@@ -55,7 +55,8 @@ import SalesHeroEdit4 from "./sales/sales-4/sales-hero/sales-hero-edit";
 import SalesCharacteristicsEdit4 from "./sales/sales-4/sales-characteristics/sales-characteristics-edit";
 // import SalesVideoReviews4 from "./sales/sales-4/sales-video-reviews/sales-video-reviews";
 import SalesVideoReviewsEdit4 from "./sales/sales-4/sales-video-reviews/sales-video-reviews-edit";
-import SalesInfo4 from "./sales/sales-4/sales-info/sales-info";
+// import SalesInfo4 from "./sales/sales-4/sales-info/sales-info";
+import SalesInfoEdit4 from "./sales/sales-4/sales-info/sales-info-edit";
 import SalesFeatures4 from "./sales/sales-4/sales-features/sales-features";
 import SalesSteps4 from "./sales/sales-4/sales-steps/sales-steps";
 import SalesUsage4 from "./sales/sales-4/sales-usage/sales-usage";
@@ -138,7 +139,8 @@ const SalesPage = ({ info }: Props) => {
             <SalesCharacteristicsEdit4 info={info} setCurrentPost={setCurrentPost} />
             {/*<SalesVideoReviews4 info={info} />*/}
             <SalesVideoReviewsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            <SalesInfo4 info={info} />
+            {/*<SalesInfo4 info={info} />*/}
+            <SalesInfoEdit4 info={info} setCurrentPost={setCurrentPost} />
             <SalesFeatures4 info={info} />
             <SalesSteps4 info={info} />
             <SalesUsage4 info={info} />

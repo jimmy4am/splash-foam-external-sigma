@@ -197,7 +197,7 @@ const EditImage = <T extends Record<string, any>>({
           Choose from Media Library
         </span>
       </div>
-      <div className="relative group cursor-pointer">
+      <div className="relative group cursor-pointer [&>label>input]:w-[100%]">
         <FileUploader
           handleChange={handleUpload}
           types={fileTypes}
