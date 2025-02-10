@@ -11,39 +11,39 @@ import AppSection from "@/app/_components/sales/sales-4/_components/app-section"
 const inter = Inter({ subsets: ["latin"] });
 
 type Props = {
-    info: SalesPageType;
+  info: SalesPageType;
 };
 
 const SalesFeatures = ({ info }: Props) => {
-    return (
-        <AppSection>
-            <div className="max-w-[280px] md:max-w-[550px] lg:max-w-[650px] mx-[auto] flex justify-center text-center pt-[28px]">
-                <SectionTitle>
-                    <span className="relative">
-                        <span className="absolute -left-[50px] md:-left-[60px] -top-[30px] md:-top-[37px] lg:-top-[45px] flex flex-col items-start text-[14px] md:text-[15px] lg:text-[18px] leading-[16px] md:leading-[20px] lg:leading-[24px] text-[#000] font-bold">
-                            <span className="mb-[12px] whitespace-nowrap">{info.features.headingLabel}</span>
-                            <Image
-                                className="w-[26px] md:w-[33px] lg:w-[40px] ml-[15px]"
-                                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5c716bf6-169f-40ca-0d06-ab8ba04c0a00/public" width={40} height={40} alt="Arrow icon"
-                            />
-                        </span>
-                    </span>
-                    {info.features.heading}
-                </SectionTitle>
-            </div>
-            <p className={`w-full max-w-[500px] mx-[auto] mb-[30px] md:mb-[40px] text-center text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px] tracking-[0.2px] md:tracking-[0.3px] ${inter.className}`}>{info.slideshow.subheading}</p>
+  return (
+    <AppSection>
+      <div className="max-w-[280px] md:max-w-[550px] lg:max-w-[650px] mx-[auto] flex justify-center text-center pt-[28px]">
+        <SectionTitle>
+          <span className="relative">
+            <span className="absolute -left-[50px] md:-left-[60px] -top-[30px] md:-top-[37px] lg:-top-[45px] flex flex-col items-start text-[14px] md:text-[15px] lg:text-[18px] leading-[16px] md:leading-[20px] lg:leading-[24px] text-[#000] font-bold">
+              <span className="mb-[12px] whitespace-nowrap">{info.features.headingLabel}</span>
+              <Image
+                className="w-[26px] md:w-[33px] lg:w-[40px] ml-[15px]"
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5c716bf6-169f-40ca-0d06-ab8ba04c0a00/public" width={40} height={40} alt="Arrow icon"
+              />
+            </span>
+          </span>
+          {info.features.heading}
+        </SectionTitle>
+      </div>
+      <p className={`w-full max-w-[500px] mx-[auto] mb-[30px] md:mb-[40px] text-center text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px] tracking-[0.2px] md:tracking-[0.3px] ${inter.className}`}>{info.features.subheading}</p>
 
-            <ul className="w-full max-w-[345px] md:max-w-[1080px] mx-[auto] grid grid-cols-1 md:grid-cols-3 gap-[20px] lg:gap-[30px] xl:gap-[40px] mb-[10px]">
-                <SalesFeaturesSingleItem icon={info.features.icon1} title={info.features.title1} text={info.features.text1} image={info.features.image1} />
-                <SalesFeaturesSingleItem icon={info.features.icon2} title={info.features.title2} text={info.features.text2} image={info.features.image2} />
-                <SalesFeaturesSingleItem icon={info.features.icon3} title={info.features.title3} text={info.features.text3} image={info.features.image3} />
-            </ul>
+      <ul className="w-full max-w-[345px] md:max-w-[1080px] mx-[auto] grid grid-cols-1 md:grid-cols-3 gap-[20px] lg:gap-[30px] xl:gap-[40px] mb-[10px]">
+        <SalesFeaturesSingleItem icon={info.features.icon1} title={info.features.title1} text={info.features.text1} image={info.features.image1} />
+        <SalesFeaturesSingleItem icon={info.features.icon2} title={info.features.title2} text={info.features.text2} image={info.features.image2} />
+        <SalesFeaturesSingleItem icon={info.features.icon3} title={info.features.title3} text={info.features.text3} image={info.features.image3} />
+      </ul>
 
-            <div className="w-full max-w-[366px] md:max-w-[410px] mx-[auto]  mt-[30px] md:mt-[40px]">
-                <BuyButton info={info} />
-            </div>
-        </AppSection>
-    );
+      <div className="w-full max-w-[366px] md:max-w-[410px] mx-[auto]  mt-[30px] md:mt-[40px]">
+        <BuyButton info={info} />
+      </div>
+    </AppSection>
+  );
 };
 
 export default SalesFeatures;

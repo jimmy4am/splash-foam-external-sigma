@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 import { SalesPageType } from "@/interfaces/salesPage";
@@ -48,6 +48,12 @@ const SalesCharacteristicsItem = ({ info, setCurrentPost, icon, iconField, text,
 )
 
 const SalesCharacteristics = ({ info, setCurrentPost }: Props) => {
+  const [ windowWidth, setWindowWidth ] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   return (
     <section className="w-full p-[20px_0] md:p-[25px_0_20px] bg-[#fff] border-[1px] border-[#dbdbdb]">
       <div className="w-full max-w-[1200px] mx-[auto] px-4">
@@ -68,7 +74,7 @@ const SalesCharacteristics = ({ info, setCurrentPost }: Props) => {
           />
         </h2>
 
-        <Marquee autoFill={true} play={ window.innerWidth < 768 } className="sale-characteristics max-w-[970px] flex gap-[20px] -mx-4 md:mx-[auto] !w-auto">
+        <Marquee autoFill={true} play={ windowWidth < 768 } className="sale-characteristics max-w-[970px] flex gap-[20px] -mx-4 md:mx-[auto] !w-auto">
           <SalesCharacteristicsItem info={info} setCurrentPost={setCurrentPost} icon={info.characteristics.icon1} iconField="characteristics.icon1" text={info.characteristics.text1} textField="text1" />
           <SalesCharacteristicsItem info={info} setCurrentPost={setCurrentPost} icon={info.characteristics.icon2} iconField="characteristics.icon2" text={info.characteristics.text2} textField="text2" />
           <SalesCharacteristicsItem info={info} setCurrentPost={setCurrentPost} icon={info.characteristics.icon3} iconField="characteristics.icon3" text={info.characteristics.text3} textField="text3" />
