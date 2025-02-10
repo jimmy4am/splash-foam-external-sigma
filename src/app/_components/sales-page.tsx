@@ -60,6 +60,7 @@ import SalesInfoEdit4 from "./sales/sales-4/sales-info/sales-info-edit";
 // import SalesFeatures4 from "./sales/sales-4/sales-features/sales-features";
 import SalesFeaturesEdit4 from "./sales/sales-4/sales-features/sales-features-edit";
 import SalesSteps4 from "./sales/sales-4/sales-steps/sales-steps";
+import SalesStepsEdit4 from "./sales/sales-4/sales-steps/sales-steps-edit";
 import SalesUsage4 from "./sales/sales-4/sales-usage/sales-usage";
 import SalesComparison4 from "./sales/sales-4/sales-comparison/sales-comparison";
 import SalesReviews4 from "./sales/sales-4/sales-reviews/sales-reviews";
@@ -144,7 +145,8 @@ const SalesPage = ({ info }: Props) => {
             <SalesInfoEdit4 info={info} setCurrentPost={setCurrentPost} />
             {/*<SalesFeatures4 info={info} />*/}
             <SalesFeaturesEdit4 info={info} setCurrentPost={setCurrentPost} />
-            <SalesSteps4 info={info} />
+            {/*<SalesSteps4 info={info} />*/}
+            <SalesStepsEdit4 info={info} setCurrentPost={setCurrentPost} />
             <SalesUsage4 info={info} />
             <SalesComparison4 info={info} />
             <SalesReviews4 info={info} />
