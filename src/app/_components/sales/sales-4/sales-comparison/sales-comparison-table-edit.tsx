@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-import {SalesPageType} from "@/interfaces/salesPage";
+import { SalesPageType } from "@/interfaces/salesPage";
+import EditImage from "@/app/_components/edit-image";
 
 type Props = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
 const SalesComparisonIcon = ({ icon, label, idx }: { icon: string, label: string, idx: number}) => (
@@ -17,19 +19,41 @@ const SalesComparisonCheckIcon = ({ idx }: { idx: number}) => <SalesComparisonIc
 
 const SalesComparisonCrossIcon = ({ idx }: { idx: number}) => <SalesComparisonIcon icon="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/58c00d25-fc56-4b99-5cba-bfcaca0f0b00/public" label="Cross icon" idx={idx} />
 
-const SalesComparisonItem = ({ text }: { text: string }) => (
+const SalesComparisonItemEdit = ({ info, setCurrentPost, text, textField }: { info: SalesPageType, setCurrentPost: (post: SalesPageType) => void, text: string, textField: string }) => (
   <li className="h-[75px] md:h-[90px] flex items-center justify-center px-[5px] md:px-[10px] text-center text-[16px] md:text-[19px] leading-[20px] sm:leading-[24px] md:leading-[22px] font-medium">
-    {text}
+    <input
+      className="editable-input w-full"
+      onChange={(e) => {
+        setCurrentPost({
+          ...info,
+          specgrid: {
+            ...info.specgrid,
+            [textField]: e.target.value,
+          },
+        });
+      }}
+      value={text}
+      placeholder="Text"
+    />
   </li>
 )
 
-const SalesComparisonTable = ({ info }: Props) => {
+const SalesComparisonTableEdit = ({ info, setCurrentPost }: Props) => {
   return (
     <>
       <div className="flex items-center -mx-4 md:mx-[0]">
         <div className="flex-[0_0_20%] sm:flex-[0_0_25%] flex flex-col items-center">
           <p className="mb-[15px] text-center text-[18px] md:text-[26px] leading-[24px] md:leading-[26px] font-bold">Splash Foam</p>
-          <Image className="h-[86px] sm:h-[122px] lg:h-[162px] w-[auto]" src={info.specgrid.productImg} width={200} height={200} alt="Splash Foam" />
+          <EditImage
+            className="h-[86px] sm:h-[122px] lg:h-[162px] w-[auto]"
+            src={info.specgrid.productImg}
+            alt="Splash Foam"
+            width={200}
+            height={200}
+            post={info}
+            setPost={setCurrentPost}
+            field="specgrid.productImg"
+          />
         </div>
         <div className="flex-[0_0_60%] sm:flex-[0_0_50%] flex items-center gap-[15px]">
           <span className="flex-[1_1_auto] h-[3px] bg-[#0f85d3]"></span>
@@ -38,7 +62,16 @@ const SalesComparisonTable = ({ info }: Props) => {
         </div>
         <div className="flex-[0_0_20%] sm:flex-[0_0_25%] flex flex-col items-center">
           <p className="mb-[15px] text-center text-[18px] md:text-[26px] leading-[24px] md:leading-[26px] font-bold">Other Brands</p>
-          <Image className="h-[86px] sm:h-[122px] lg:h-[162px] w-[auto]" src={info.specgrid.otherImg} width={200} height={200} alt="Other Brands" />
+          <EditImage
+            className="h-[86px] sm:h-[122px] lg:h-[162px] w-[auto]"
+            src={info.specgrid.otherImg}
+            alt="Other Brands"
+            width={200}
+            height={200}
+            post={info}
+            setPost={setCurrentPost}
+            field="specgrid.otherImg"
+          />
         </div>
       </div>
 
@@ -53,13 +86,13 @@ const SalesComparisonTable = ({ info }: Props) => {
           <SalesComparisonCheckIcon idx={6} />
         </div>
         <ul className="flex-[0_0_60%] sm:flex-[0_0_50%] bg-[#fff] border-[3px] border-[#429fdc] rounded-[15px]">
-          <SalesComparisonItem text={info.specgrid.text1} />
-          <SalesComparisonItem text={info.specgrid.text2} />
-          <SalesComparisonItem text={info.specgrid.text3} />
-          <SalesComparisonItem text={info.specgrid.text4} />
-          <SalesComparisonItem text={info.specgrid.text5} />
-          <SalesComparisonItem text={info.specgrid.text6} />
-          <SalesComparisonItem text={info.specgrid.text7} />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text1} textField="text1" />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text2} textField="text2" />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text3} textField="text3" />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text4} textField="text4" />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text5} textField="text5" />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text6} textField="text6" />
+          <SalesComparisonItemEdit info={info} setCurrentPost={setCurrentPost} text={info.specgrid.text7} textField="text7" />
         </ul>
         <div className="flex-[0_0_20%] sm:flex-[0_0_25%]">
           <SalesComparisonCrossIcon idx={0} />
@@ -75,4 +108,4 @@ const SalesComparisonTable = ({ info }: Props) => {
   );
 };
 
-export default SalesComparisonTable;
+export default SalesComparisonTableEdit;

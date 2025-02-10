@@ -5,10 +5,10 @@ import Image from "next/image";
 import Slider from "react-slick";
 
 import { SalesPageType } from "@/interfaces/salesPage";
-import SectionTitle from "@/app/_components/sales/sales-3/_components/section-title";
-import BuyButton from "@/app/_components/sales/sales-3/_components/buy-button";
-import SalesComparisonHighlight from "@/app/_components/sales/sales-3/sales-comparison/sales-comparison-highlight";
-import AppSection from "@/app/_components/sales/sales-3/_components/app-section";
+import SectionTitle from "@/app/_components/sales/sales-4/_components/section-title";
+import BuyButton from "@/app/_components/sales/sales-4/_components/buy-button";
+import SalesComparisonHighlight from "@/app/_components/sales/sales-4/sales-comparison/sales-comparison-highlight";
+import AppSection from "@/app/_components/sales/sales-4/_components/app-section";
 import SalesComparisonTable from "@/app/_components/sales/sales-4/sales-comparison/sales-comparison-table";
 
 type Props = {
