@@ -69,7 +69,8 @@ import SalesComparisonEdit4 from "./sales/sales-4/sales-comparison/sales-compari
 import SalesReviewsEdit4 from "./sales/sales-4/sales-reviews/sales-reviews-edit";
 // import SalesFaqs4 from "./sales/sales-4/sales-faqs/sales-faqs";
 import SalesFaqsEdit4 from "./sales/sales-4/sales-faqs/sales-faqs-edit";
-import SalesFooter4 from "./sales/sales-4/sales-footer/sales-footer";
+// import SalesFooter4 from "./sales/sales-4/sales-footer/sales-footer";
+import SalesFooterEdit4 from "./sales/sales-4/sales-footer/sales-footer-edit";
 
 type Props = {
   info: SalesPageType;
@@ -159,7 +160,8 @@ const SalesPage = ({ info }: Props) => {
             <SalesReviewsEdit4 info={info} setCurrentPost={setCurrentPost} />
             {/*<SalesFaqs4 info={info} />*/}
             <SalesFaqsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            <SalesFooter4 info={info} />
+            {/*<SalesFooter4 info={info} />*/}
+            <SalesFooterEdit4 info={info} setCurrentPost={setCurrentPost} />
           </>
         )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />

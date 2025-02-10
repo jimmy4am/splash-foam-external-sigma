@@ -1,14 +1,15 @@
 import React from "react";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 
 import { siteProduct } from "@/lib/site-info";
 import { SalesPageType } from "@/interfaces/salesPage";
+import EditImage from "@/app/_components/edit-image";
 
 const inter = Inter({ subsets: ["latin"] });
 
 type Props = {
   info: SalesPageType;
+  setCurrentPost: (post: SalesPageType) => void;
 };
 
 const FooterLink = ({ url, children }: { url: string, children: React.ReactNode }) => (
@@ -17,16 +18,24 @@ const FooterLink = ({ url, children }: { url: string, children: React.ReactNode 
   </a>
 )
 
-const SalesFooter = ({ info }: Props) => {
+const SalesFooterEdit = ({ info, setCurrentPost }: Props) => {
   return (
     <footer className={`w-full py-[25px] md:py-[40px] bg-[#fff] border-t-[1px] border-t-[#c8c8c8] ${inter.className}`}>
       <div className="w-full max-w-[1200px] mx-[auto] px-4 flex flex-col items-center">
         <a href="/" className="flex w-[120px] md:w-[142px] mb-[20px] md:mb-[25px]">
-          <Image src={info.logo} width={160} height={160} alt={siteProduct} />
+          <EditImage
+            src={info.logo}
+            alt={siteProduct}
+            width={160}
+            height={160}
+            post={info}
+            setPost={setCurrentPost}
+            field="logo"
+          />
         </a>
         <div className="text-[14px] md:text-[16px] leading-[22px] md:leading-[24px] text-[#000] tracking-[0.5px]">
           <nav>
-            <ul className="flex flex-wrap justify-center gap-x-[10px]">
+            <ul className="flex flex-wrap justify-center gap-x-[12px]">
               <li><FooterLink url="/contact-us">Contact Us</FooterLink></li>
               <li><FooterLink url="/terms-conditions">Terms of Service</FooterLink></li>
               <li><FooterLink url="/privacy-policy">Privacy Policy</FooterLink></li>
@@ -45,4 +54,4 @@ const SalesFooter = ({ info }: Props) => {
   );
 };
 
-export default SalesFooter;
+export default SalesFooterEdit;
