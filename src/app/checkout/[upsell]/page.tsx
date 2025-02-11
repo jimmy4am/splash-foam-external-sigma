@@ -52,7 +52,7 @@ const Page = ({ params }: Props) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "x-jimmy-key": createJimmyKey().encryptedData,
+            // "x-jimmy-key": createJimmyKey().encryptedData,
           },
           body: JSON.stringify({
             requestedUpsell: searchParams.get("show"),
