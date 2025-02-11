@@ -1,6 +1,84 @@
 # 4am Media + Sigma
 
-The goal for this project is to create a "Template 4" for our sales page from a static page design
+The goal for this project is to create all needed upsell templates and markdown files for our currently running sales funnels but in our new dynamic system using typescript, tailwind, and markdown files.
+
+To view a live upsell, go to /chekout/upsell1?show=[upsellName]
+
+I've provided some sample upsells for you to take a look at.
+
+`_upsell/xtc-mega-pack.md` Preview on -> `localhost:3000/checkout/upsell1?show=xtc-mega-pack`
+`_upsell/xtc-xmp-cross.md` Preview on -> `localhost:3000/checkout/upsell1?show=xtc-xmp-cross`
+
+Take a look at the upsell components and follow our current style.
+
+`/_components/upsell-page.tsx`
+
+`/_components/upsell/upsell-template5.tsx`
+
+Your goal is to create a new templates as needed for each of these upsells. Use existing templates whenever possible. Please clone them exactly but put as much content in the markdown file as possible. The `UpsellPage` type in the interfaces folder will show you how the upsells are less structured than our other types of content. Don't bother worrying about the sticky product ids or pricing, simply focus on the front end design that will be shown to the user.
+
+#1 - https://order.x-all.com/xps/upsell2.php?show=me
+
+- please ping me when #1 is done as it's needed right away. We need a full template for this one
+
+For the next funnel, feel free to try and use our existing templates but bring over all the content as closely as possible. Images get uploaded to admin panel and create new markdown files starting with glab-{item} as provided
+
+#2 - https://glabrousskin.com/skin/upsell1.php?show=me [glab-sub]
+#3 - https://glabrousskin.com/skin/upsell2.php?show=me [glab-warranty]
+#4 - https://glabrousskin.com/skin/upsell3.php?show=me [glab-exp-processing]
+#5 - https://glabrousskin.com/skin/upsell4.php?show=me [glab-brush]
+#5 - https://glabrousskin.com/skin/upsell5.php?show=me [glab-gift-quiz] (this one is a super custom template - try out the demo and see if you can create a version yourself - if not send me a message and we will figure out a better solution)
+
+For the next funnel, do the same thing but start markdown files with barks-
+#6 - https://www.barksnomore.com/woof/upsell1.php?show=me [barks-sub]
+#7 - https://www.barksnomore.com/woof/upsell2.php?show=me [barks-warranty]
+#8 - https://www.barksnomore.com/woof/upsell3.php?show=me [barks-exp-processing]
+#9 - https://www.barksnomore.com/woof/upsell4.php?show=me [barks-otp]
+
+For the next funnel, do the same thing but start markdown files with oricle-
+#10 - https://www.oriclehearing.com/hear/upsell1.php?show=me [oricle-warranty]
+#11 - https://www.oriclehearing.com/hear/upsell2.php?show=me [oricle-sub]
+#12 - https://www.oriclehearing.com/hear/upsell3.php?show=me [oricle-exp-processing]
+#13 - https://www.oriclehearing.com/hear/upsell5.php?show=me [oricle-gift-quiz] (this one is a super custom template - try out the demo and see if you can create a version yourself - if not send me a message and we will figure out a better solution)
+
+For the next funnel, do the same thing but start markdown files with pee-
+#14 - https://www.peebuster.com/pet/upsell1.php?show=me [pee-sub]
+#15 - https://www.peebuster.com/pet/upsell2.php?show=me [pee-tablets-otp]
+#16 - https://www.peebuster.com/pet/upsell3.php?show=me [pee-exp-procesing]
+#17 - https://www.peebuster.com/pet/upsell4.php?show=me [pee-barks-otp]
+
+For the next funnel, do the same thing but start markdown files with posture-
+#14 - https://www.posturebenefit.com/back/upsell1.php?show=me [posture-sub]
+#15 - https://www.posturebenefit.com/back/upsell2.php?show=me [posture-exp-processing] (new template please - match whats live)
+#16 - https://www.posturebenefit.com/back/upsell4.php?show=me [posture-gift-quiz]
+
+For the next funnel, do the same thing but start markdown files with breath-
+#17 - https://www.buybbreath.com/upsell1.php?show=me [breath-sub]
+#18 - https://www.buybbreath.com/upsell2.php?show=me [breath-otp]
+#19 - https://www.buybbreath.com/upsell3.php?show=me [breath-exp-processing]
+#20 - https://www.buybbreath.com/upsell4.php?show=me [breath-denta-otp] (otp = one time purchase discount flag - I put this on upsells with a dropdown selector)
+#21 - https://www.buybbreath.com/upsell5.php?show=me [breath-gift-quiz]
+
+For the next funnel, do the same thing but start markdown files with wifi-
+#17 - https://www.blazewifiboost.com/wifi/upsell1.php?show=me [wifi-sub]
+#18 - https://www.blazewifiboost.com/wifi/upsell2.php?show=me [wifi-warranty]
+#19 - https://www.blazewifiboost.com/wifi/upsell3.php?show=me [wifi-exp-processing]
+#20 - https://www.blazewifiboost.com/wifi/upsell4.php?show=me [wifi-otp]
+
+For the next funnel, do the same thing but start markdown files with denta-
+#17 - https://www.dentablast.com/blast/upsell1.php?show=me [denta-sub]
+#18 - https://www.dentablast.com/blast/upsell2.php?show=me [denta-warranty]
+#19 - https://www.dentablast.com/blast/upsell3.php?show=me [denta-otp]
+#20 - https://www.dentablast.com/blast/upsell4.php?show=me [denta-exp-processing]
+#21 - https://www.dentablast.com/blast/upsell5.php?show=me [denta-breath-otp]
+#22 - https://www.dentablast.com/blast/upsell5.php?show=me [denta-gift-quiz]
+
+For the next funnel, do the same thing but start markdown files with jet-
+#23 - https://www.thejetsurge.com/jet/upsell1.php?show=me [jet-sub]
+#24 - https://www.thejetsurge.com/jet/upsell2.php?show=me [jet-warranty]
+#25 - https://www.thejetsurge.com/jet/upsell3.php?show=me [jet-otp]
+#26 - https://www.thejetsurge.com/jet/upsell4.php?show=me [jet-exp-processing]
+#27 - https://www.thejetsurge.com/jet/upsell5.php?show=me [jet-gift-quiz]
 
 **Current Template 1** - [https://clean.buysplashcleaner.com/](https://clean.buysplashcleaner.com/)
 

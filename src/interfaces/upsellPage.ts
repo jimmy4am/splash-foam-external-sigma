@@ -3,7 +3,6 @@ export type UpsellPageType = {
   template: string;
   metaTitle: string;
   metaDescription: string;
-  currentStep: string;
   logo: string;
   product: string;
   offerName: string;
