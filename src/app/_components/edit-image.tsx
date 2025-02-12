@@ -171,58 +171,60 @@ const EditImage = <T extends Record<string, any>>({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div
-        className={`absolute top-0 left-0 right-0 h-10 bg-green-500 opacity-0 ${
-          isHovered && "opacity-80"
-        } transition-opacity z-20 flex justify-center items-center cursor-pointer hover:opacity-100 hover:border-white hover:border-2 hover:font-bold`}
-        onClick={(e) => {
-          e.stopPropagation();
-          setShowMediaLibrary(true);
-        }}
-      >
-        <span className="text-white flex items-center gap-2">
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          Choose from Media Library
-        </span>
+      <div className={`relative border-2 border-yellow-500 border-dashed ${isUsingFallback ? "bg-gray-200" : ""}`}>
+        <div className={isUsingFallback ? "aspect-[2/1]" : ""}>
+          <Image
+            src={src || fallbackSrc}
+            alt={alt}
+            width={width}
+            height={height}
+            className={`${className} ${isDragActive ? "opacity-50" : ""} ${
+              isUsingFallback ? "object-contain" : ""
+            }`}
+            priority={priority}
+            {...props}
+          />
+        </div>
       </div>
-      <div className="relative group cursor-pointer">
-        <FileUploader
-          handleChange={handleUpload}
-          types={fileTypes}
-          multiple={false}
-          onDraggingStateChange={(dragging: boolean) =>
-            setIsDragActive(dragging)
-          }
-        >
-          <div className={`relative ${isUsingFallback ? "bg-gray-200" : ""}`}>
-            <div className={isUsingFallback ? "aspect-[2/1]" : ""}>
-              <Image
-                src={src || fallbackSrc}
-                alt={alt}
-                width={width}
-                height={height}
-                className={`${className} ${isDragActive ? "opacity-50" : ""} ${
-                  isUsingFallback ? "object-contain" : ""
-                }`}
-                priority={priority}
-                {...props}
-              />
-            </div>
 
+      <div className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full h-full min-w-[250px] min-h-[100px] ${isHovered || isDragActive ? "opacity-100 visible" : "invisible  opacity-0"}`}>
+
+        {/*Open media library button*/}
+        <div
+          className="absolute top-0 left-0 right-0 h-10 bg-green-500 opacity-80 transition-opacity z-20 flex justify-center items-center cursor-pointer hover:opacity-100 "
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowMediaLibrary(true);
+          }}
+        >
+          <span className="text-white flex items-center gap-2">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            Choose from Media Library
+          </span>
+        </div>
+
+        {/*File upload layout*/}
+        <div className="group cursor-pointer h-full [&>label]:block [&>label]:w-[100%] [&>label]:h-[100%] [&>label>input]:w-[100%] [&>label>input]:h-[100%]">
+          <FileUploader
+            handleChange={handleUpload}
+            types={fileTypes}
+            multiple={false}
+            onDraggingStateChange={(dragging: boolean) => setIsDragActive(dragging)}
+          >
             {(isHovered || isDragActive) && (
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 z-10">
+              <div className="absolute pt-10 inset-0 bg-black/50 flex items-center justify-center gap-4 z-10">
                 {isUploading ? (
                   <svg
                     className="animate-spin h-6 w-6 text-white"
@@ -267,14 +269,15 @@ const EditImage = <T extends Record<string, any>>({
                 )}
               </div>
             )}
-          </div>
-        </FileUploader>
-        <MediaLibraryPop
-          isOpen={showMediaLibrary}
-          onClose={() => setShowMediaLibrary(false)}
-          onSelect={handleMediaLibrarySelect}
-        />
+          </FileUploader>
+        </div>
       </div>
+
+      <MediaLibraryPop
+        isOpen={showMediaLibrary}
+        onClose={() => setShowMediaLibrary(false)}
+        onSelect={handleMediaLibrarySelect}
+      />
     </div>
   );
 };

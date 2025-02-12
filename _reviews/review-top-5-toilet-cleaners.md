@@ -1,6 +1,6 @@
 ---
 slug: "review-top-5-toilet-cleaners"
-template: "3"
+template: "6"
 funnelFlux: '
 var fluxDefaults = {
   p: "2I08u3uoSSPS",

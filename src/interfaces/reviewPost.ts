@@ -40,6 +40,7 @@ export type ReviewPostType = {
     logo?: string;
     cta: string;
     rating: string;
+    specialCta?: string;
     reviewCta?: string;
     review?: string;
     reviews?: {
