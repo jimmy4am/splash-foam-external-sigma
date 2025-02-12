@@ -132,6 +132,18 @@
   right: 0;
 }
 
+/* Upsell page Slider */
+.upsell-slider .slick-track {
+  display: flex;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .upsell-slider .slick-track {
+    gap: 30px;
+  }
+}
+
 .sale-characteristics .rfm-initial-child-container {
   align-items: flex-start ;
 }
