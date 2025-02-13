@@ -1,23 +1,23 @@
 ---
 template: "9"
-metaTitle: "X-All Power Scrubber"
-metaDescription: "The #1 X-All - Toilet Cleaner Method"
-funnelFluxName: "X-All Toilet Cleaner - Upsell"
-logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/dbad490a-2817-4b4d-8606-080cd29f5a00/public"
-product: 
+metaTitle: "Glabrous skin"
+metaDescription: "Glabrous Skin Protection Pro Lifetime Warranty"
+funnelFluxName: "Glabrous skin - Upsell"
+logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/51cc3c3d-63a2-4a6c-c06d-2815136d4b00/public"
+product: GLABROUS SKIN
 offerName: 
 offerPrice: "19.98"
-title1: X-All Power Scrubber Protection Pro Lifetime Warranty
-title2: Protect all your X-All purchases with the iron-clad
+title1: Glabrous Skin Protection Pro Lifetime Warranty
+title2: Protect all your Glabrous purchases with the iron-clad
 title3: Protection Pro Lifetime Warranty for just
 title4: Special discount price, today, today only!
-title5: If anything goes wrong with any of your X-All products, Just return it to us for an instant replacement, 100% hassle-free, no questions asked.
+title5: If anything goes wrong with any of your Glabrous products, Just return it to us for an instant replacement, 100% hassle-free, no questions asked.
 title6: Get total peace of mind with the best protection plan available!
 title7: With Warranty
 title8: Without Warranty
 title9: Plus
 title10: However
-image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ee7abdb3-2fe8-48b0-174d-4d775968ef00/public
+image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b28aafe4-042f-4616-85f7-5c658f5f9400/public
 image2: 
 image3: 
 image4:
