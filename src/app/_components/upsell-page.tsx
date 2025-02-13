@@ -13,6 +13,7 @@ import UpsellTemplate6 from "./upsell/upsell-template6";
 import UpsellTemplate7 from "./upsell/upsell-template7";
 import UpsellTemplate8 from "./upsell/upsell-template8";
 import UpsellTemplate9 from "./upsell/upsell-template9";
+import UpsellTemplate10 from "./upsell/upsell-template10";
 
 type Props = {
   info: UpsellPageType;
@@ -91,6 +92,14 @@ const UpsellPage = ({ info }: Props) => {
       case "9":
         return (
           <UpsellTemplate9
+            info={info}
+            nextStep={nextStep}
+            sessionData={sessionData}
+          />
+        );
+      case "10":
+        return (
+          <UpsellTemplate10
             info={info}
             nextStep={nextStep}
             sessionData={sessionData}
