@@ -231,7 +231,7 @@ const UpsellTemplate9 = ({ info, nextStep, sessionData }: Props) => {
 
         <footer className="flex flex-col justify-center items-center gap-[10px] p-[25px_15px] text-center text-[12px] leading-[15px] text-[#222]">
           <p className="flex">
-            Copyright 2025 - X-All
+            Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
               width={12}

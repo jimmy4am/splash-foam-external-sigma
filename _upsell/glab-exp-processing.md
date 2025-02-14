@@ -4,7 +4,7 @@ metaTitle: "Expedited Processing - Get Your Glabrous skin First"
 metaDescription: "Move your order to the front of our line with expedited processing."
 funnelFluxName: "Glabrous skin - Upsell - Expedited Shipping w/ Discounted Downsell"
 logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/51cc3c3d-63a2-4a6c-c06d-2815136d4b00/public"
-product: Expedited Processing
+product: Glabrous
 offerName: Expedited Processing
 offerPrice: "9.99"
 title1: Expedited Processing

@@ -4,8 +4,8 @@ metaTitle: "X-All Power Scrubber"
 metaDescription: "The #1 X-All - Toilet Cleaner Method"
 funnelFluxName: "X-All Toilet Cleaner - Upsell"
 logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/dbad490a-2817-4b4d-8606-080cd29f5a00/public"
-product: 
-offerName: 
+product: X-All
+offerName:  
 offerPrice: "19.98"
 title1: X-All Power Scrubber Protection Pro Lifetime Warranty
 title2: Protect all your X-All purchases with the iron-clad

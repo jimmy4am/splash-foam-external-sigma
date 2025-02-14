@@ -4,7 +4,7 @@ metaTitle: "Glabrous skin"
 metaDescription: "Glabrous Skin Protection Pro Lifetime Warranty"
 funnelFluxName: "Glabrous skin - Upsell"
 logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/51cc3c3d-63a2-4a6c-c06d-2815136d4b00/public"
-product: GLABROUS SKIN
+product: Glabrous skin
 offerName: 
 offerPrice: "19.98"
 title1: Glabrous Skin Protection Pro Lifetime Warranty

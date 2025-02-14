@@ -3,8 +3,8 @@ template: "10"
 metaTitle: "Extra Bonus - Glabrous skin Discount Offer"
 metaDescription: "Take advantage of this bonus offer - enjoy a discounted Glabrous skin and future savings."
 funnelFluxName: "Glabrous skin - Upsell"
-logo: 
-product: GLABROUS SKIN
+logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/51cc3c3d-63a2-4a6c-c06d-2815136d4b00/public"
+product: Glabrous Skin
 offerName: 
 offerPrice: 
 title1: THIS IS THE LAST CHANCE! GET ANOTHER GLABROUS SKIN FOR

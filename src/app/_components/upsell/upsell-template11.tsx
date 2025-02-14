@@ -5,7 +5,6 @@ import Image from "next/image";
 import { sendGAEvent } from "@next/third-parties/google";
 import { Lato, Roboto, Roboto_Condensed, Anton } from "next/font/google";
 
-import { siteProduct } from "@/lib/site-info";
 import { UpsellPageType } from "@/interfaces/upsellPage";
 import { useSession } from "@/app/_context/SessionContext";
 import { SessionDataType } from "@/interfaces/sessionData";
@@ -240,7 +239,7 @@ const UpsellTemplate11 = ({ info, nextStep, sessionData }: Props) => {
 
         <div className="flex flex-col gap-[10px] py-[2vw] md:py-[20px] text-[3vw] md:text-[12px] text-center">
           <p className="flex items-center md:flex-row">
-            Copyright {new Date().getFullYear()} - {siteProduct}{" "}
+            Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
               width={12}
