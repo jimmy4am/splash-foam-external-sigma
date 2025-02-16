@@ -1,6 +1,6 @@
 "use client";
 
-import React, {ReactNode, useEffect, useState} from "react";
+import React, { ReactNode, useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Lato } from "next/font/google";
 
@@ -20,7 +20,12 @@ type Props = {
 };
 
 type UpsellQuizModalProps = {
-  onQuizComplete: (value: UserAnswerType[]) => void;
+  info: UpsellPageType;
+  onQuizComplete: () => void;
+}
+
+type UpsellQuizCompletedModalProps = {
+  info: UpsellPageType;
 }
 
 type UpsellGiftsModalProps = {
@@ -34,38 +39,28 @@ type QuizItemType = {
   answers: string[];
 }
 
-type UserAnswerType = {
-  question :string;
-  answer: string;
-}
-
-const UpsellQuizModal = ({onQuizComplete}: UpsellQuizModalProps) => {
+const UpsellQuizModal = ({ info, onQuizComplete }: UpsellQuizModalProps) => {
   const questions: QuizItemType[] = [
     {
-      question: 'How easy to use was the Glabrous Checkout Process?',
+      question: `How easy to use was the ${info.product} Checkout Process?`,
       answers: ['Hard', 'Average', 'Ease']
     },{
-      question: 'Where did you first hear about Glabrous?',
+      question: `Where did you first hear about ${info.product}?`,
       answers: ['Friend/Family', 'Internet', 'Other']
     },{
-      question: 'Would you be willing to refer Glabrous to your family and friends?',
+      question: `Would you be willing to refer ${info.product} to your family and friends?`,
       answers: ['Very Likely', 'Somewhat Likely', 'Not Likely']
     }
   ]
   const [step, setStep] = useState(1);
   const [currentQuestion, setCurrentQuestion] = useState<QuizItemType>(questions[0]);
-  const [answers, setAnswers] = useState<UserAnswerType[]>([])
 
-  const handleClick = ({question, answer, isLastQuestion}: {question: string, answer: string, isLastQuestion: boolean}): void => {
+  const handleClick = ({isLastQuestion}: {isLastQuestion: boolean}): void => {
     setCurrentQuestion(questions[step])
     setStep(prev => prev + 1)
-    setAnswers(prev => {
-      const newAnswers = [...prev, {question, answer }]
-      if (isLastQuestion) {
-        onQuizComplete(newAnswers)
-      }
-      return newAnswers
-    })
+    if (isLastQuestion) {
+      onQuizComplete()
+    }
   }
 
   return (
@@ -93,7 +88,7 @@ const UpsellQuizModal = ({onQuizComplete}: UpsellQuizModalProps) => {
                 <li key={answer} className="">
                   <button
                     className="w-full p-[12px_0] bg-[#4ac27e] shadow-[0px_1px_5px_rgba(58,84,214,0.4)] uppercase hover:bg-[#39AC6A] active:bg-[#39AC6A]"
-                    onClick={() => handleClick({question: currentQuestion?.question, answer, isLastQuestion: (step === questions.length)})}>{answer}</button>
+                    onClick={() => handleClick({ isLastQuestion: (step === questions.length) })}>{answer}</button>
                 </li>
               ))
             }
@@ -104,14 +99,14 @@ const UpsellQuizModal = ({onQuizComplete}: UpsellQuizModalProps) => {
   )
 };
 
-
-const UpsellQuizCompletedModal = () => {
+const UpsellQuizCompletedModal = ({ info }: UpsellQuizCompletedModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(true);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setIsSubmitting(false),3700);
+    const timer = setTimeout(() => setIsSubmitting(false),3700);
+
     return () => {
-      clearTimeout(timer1);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -127,7 +122,7 @@ const UpsellQuizCompletedModal = () => {
           </>
           ) : (
             <>
-              <p className="max-w-[450px] mx-auto text-[26px]">Congrats! We have 6 available gifts for you today!</p>
+              <p className="max-w-[450px] mx-auto text-[26px]">Congrats! We have {info.giftsNumber} available gifts for you today!</p>
               <div className="w-[150px]">
                 <Image
                   src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3059931c-ae40-4161-941c-77290dc1f800/public"
@@ -145,68 +140,68 @@ const UpsellQuizCompletedModal = () => {
 }
 
 const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalProps) => {
-  const gifts = [
+  const gifts = useMemo(() =>([
     {
-      availability: true,
-      image: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/085df793-e20c-4ce8-211a-597d97facb00/public',
-      name: 'Ear Wax Cleaner',
-      text: 'Clean and massage your ears with the #1 best selling ear cleaner. Feels amazing and revitalizes hearing!',
-      ratingNumber: 9.5,
-      numberOfReviews: 312,
-      price: 29.99,
-      shippingPrice: 9.95
+      availability: info.gift1?.availability === 'is available',
+      image: info.gift1?.image,
+      name: info.gift1?.name,
+      text: info.gift1?.text,
+      ratingNumber: info.gift1?.ratingNumber,
+      numberOfReviews: info.gift1?.numberOfReviews,
+      price: info.gift1?.price,
+      shippingPrice: info.gift1?.shippingPrice
     },
     {
-      availability: false,
-      image: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b28aafe4-042f-4616-85f7-5c658f5f9400/public',
-      name: 'Chewable Oral Probiotic',
-      text: 'This amazing oral probiotic will keep your breath fresh and smelling amazing all day',
-      ratingNumber: 9.5,
-      numberOfReviews: 94,
-      price: 49.95,
-      shippingPrice: 9.95
+      availability: info.gift2?.availability === 'is available',
+      image: info.gift2?.image,
+      name: info.gift2?.name,
+      text: info.gift2?.text,
+      ratingNumber: info.gift2?.ratingNumber,
+      numberOfReviews: info.gift2?.numberOfReviews,
+      price: info.gift2?.price,
+      shippingPrice: info.gift2?.shippingPrice
     },
     {
-      availability: false,
-      image: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b28aafe4-042f-4616-85f7-5c658f5f9400/public',
-      name: 'Dishwasher Cleaner',
-      text: 'Easily clean the dishwasher and never let gross buildup affect your dishes or your health!',
-      ratingNumber: 8,
-      numberOfReviews: 1251,
-      price: 24.94,
-      shippingPrice: 9.95
+      availability: info.gift3?.availability === 'is available',
+      image: info.gift3?.image,
+      name: info.gift3?.name,
+      text: info.gift3?.text,
+      ratingNumber: info.gift3?.ratingNumber,
+      numberOfReviews: info.gift3?.numberOfReviews,
+      price: info.gift3?.price,
+      shippingPrice: info.gift3?.shippingPrice
     },
     {
-      availability: true,
-      image: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b28aafe4-042f-4616-85f7-5c658f5f9400/public',
-      name: 'Personal Safety Alarm',
-      text: 'Just pull the alarm to stop any wrongdoers right in there tracks with this ultra high frequency alarm!',
-      ratingNumber: 8,
-      numberOfReviews: 871,
-      price: 25.95,
-      shippingPrice: 9.95
+      availability: info.gift4?.availability === 'is available',
+      image: info.gift4?.image,
+      name: info.gift4?.name,
+      text: info.gift4?.text,
+      ratingNumber: info.gift4?.ratingNumber,
+      numberOfReviews: info.gift4?.numberOfReviews,
+      price: info.gift4?.price,
+      shippingPrice: info.gift4?.shippingPrice
     },
     {
-      availability: true,
-      image: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b28aafe4-042f-4616-85f7-5c658f5f9400/public',
-      name: 'Wearable Hand Sanitizer',
-      text: 'Never worry about germs again with this on-the-go hand sanitizer!',
-      ratingNumber: 7,
-      numberOfReviews: 312,
-      price: 19.99,
-      shippingPrice: 9.95
+      availability: info.gift5?.availability === 'is available',
+      image: info.gift5?.image,
+      name: info.gift5?.name,
+      text: info.gift5?.text,
+      ratingNumber: info.gift5?.ratingNumber,
+      numberOfReviews: info.gift5?.numberOfReviews,
+      price: info.gift5?.price,
+      shippingPrice: info.gift5?.shippingPrice
     },
     {
-      availability: false,
-      image: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b28aafe4-042f-4616-85f7-5c658f5f9400/public',
-      name: 'Refrigerator Deodorizer',
-      text: 'Something rotten stinking up your kitchen? Keep your fridge clean and smelling great with this product!',
-      ratingNumber: 10,
-      numberOfReviews: 472,
-      price: 49.99,
-      shippingPrice: 9.95
-    }
-  ];
+      availability: info.gift6?.availability === 'is available',
+      image: info.gift6?.image,
+      name: info.gift6?.name,
+      text: info.gift6?.text,
+      ratingNumber: info.gift6?.ratingNumber,
+      numberOfReviews: info.gift6?.numberOfReviews,
+      price: info.gift6?.price,
+      shippingPrice: info.gift6?.shippingPrice
+    },
+  ]), [info])
 
   const getRating = (value: number): ReactNode => {
     switch (true) {
@@ -225,22 +220,22 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
           <h2 className="mb-[25px] text-center text-[5vw] sm:text-[30px] lg:text-[40px] leading-[8vw] sm:leading-[1]">Choose <span className="border-b-[2px] border-[#000]">One FREE Gift</span> To Continue!</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px] md:gap-[20px]">
 
-            {gifts.map((gift) => (
+            {gifts.length ? gifts.map((gift) => (
               <div className={`flex border-[1px] border-[#444] ${!gift.availability && 'grayscale'}`} key={gift.name}>
                 <div className="flex-[0_0_40%]">
                   <Image
-                    src={gift.image}
+                    src={gift.image!}
                     width={400}
                     height={400}
-                    alt={gift.name}
-                    className="w-full h-full object-contain"
+                    alt={gift.name!}
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-[0_0_60%] flex flex-col gap-[5px] p-[5px_10px_5px]">
                   <h3 className="text-[14px] sm:text-[18px] font-bold">{gift.name}</h3>
                   <p className="flex-1 text-[12px] leading-[1.2] sm:text-[14px]">{gift.text}</p>
                   <div className="flex items-center gap-[6px] text-[12px] leading-[1.2] sm:text-[14px]">
-                    <p className="text-[rgba(239,85,95,1)]">{getRating(gift.ratingNumber)}</p>
+                    <p className="text-[rgba(239,85,95,1)]">{getRating(gift.ratingNumber!)}</p>
                     <p>({gift.numberOfReviews}{" "} customer reviews)</p>
                   </div>
                   <div className="flex items-center gap-[6px] text-[12px] leading-[1.2] sm:text-[14px] font-bold">
@@ -255,7 +250,7 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
                     </p>
                     <p className="text-[#f35072] line-through">
                       <PriceDisplay
-                        priceUSD={gift.price}
+                        priceUSD={gift.price!}
                         countryCode={
                           sessionData?.customerInfo?.country || "US"
                         }
@@ -263,27 +258,55 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
                       />
                     </p>
                   </div>
-                  <p className="w-full max-w-[85%] sm:max-w-[180px] p-[3px_5px] border-[1px] border-[#CDCDCD] text-center text-[12px] leading-[1.2] sm:text-[14px]">
+                  <p
+                    className="w-full max-w-[85%] sm:max-w-[180px] p-[3px_5px] border-[1px] border-[#CDCDCD] text-center text-[12px] leading-[1.2] sm:text-[14px]">
                     Expedited Shipping:{" "}
                     <PriceDisplay
-                      priceUSD={gift.shippingPrice}
+                      priceUSD={gift.shippingPrice!}
                       countryCode={
                         sessionData?.customerInfo?.country || "US"
                       }
                       digits={2}
                     />
                   </p>
-                  <button className="w-full p-[10px_2px] bg-[#08d441] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1] text-[#fff] uppercase font-bold cursor-pointer hover:bg-[#39AC6A] active:bg-[#39AC6A]">{gift.availability ? 'Choose gift' : 'Sold out'}</button>
+                  <button
+                    className="w-full p-[10px_2px] bg-[#08d441] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1] text-[#fff] uppercase font-bold cursor-pointer hover:bg-[#39AC6A] active:bg-[#39AC6A]">{gift.availability ? 'Choose gift' : 'Sold out'}</button>
                 </div>
-              </div>
-            ))}
+              </div>)
+            ) : null}
 
           </div>
 
           <button className="flex mx-auto mt-[15vw] sm:mt-[25px] text-[3vw] sm:text-[12px] text-[#999] tracking-[0.5px]" onClick={declineOffer}>
-            {info.skipOfferText2}
+            No thanks, I don't want free gift.
           </button>
         </div>
+      </div>
+    </div>
+  )
+}
+
+const UpsellDeclineGiftsModal = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // TODO: redirect
+    }, 1500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.5)]">
+      <div className="w-full max-w-[300px] flex flex-col items-center p-[5px_10px_10px] bg-[#fff] rounded-[5px] text-center text-[17px] font-arial">
+        <Image
+          src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8de31b2a-2cd1-45ad-6bd2-80d7c07e3d00/public"
+          width={70}
+          height={70}
+          alt="Loading"
+        />
+        <p>Processing, one moment please...</p>
       </div>
     </div>
   )
@@ -293,6 +316,7 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
   const [isQuizModalVisible ,setIsQuizModalVisible] = useState(false);
   const [isQuizCompletedModalVisible ,setIsQuizCompletedModalVisible] = useState(false);
   const [isGiftsModalVisible ,setIsGiftsModalVisible] = useState(false);
+  const [isDeclineGiftsModalVisible, setIsDeclineGiftsModalVisible] = useState(false);
 
   const acceptOffer = async () => {
     // ACCEPT OFFER
@@ -301,13 +325,12 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
 
   const declineOffer = async () => {
     // DECLINE OFFER
+    setIsDeclineGiftsModalVisible(true)
   };
 
-  const onQuizComplete = (answers: UserAnswerType[]) => {
+  const onQuizComplete = () => {
     setIsQuizModalVisible(false);
     setIsQuizCompletedModalVisible(true);
-
-    console.log('answers',answers)
 
     setTimeout(() => {
       setIsQuizCompletedModalVisible(false);
@@ -317,13 +340,17 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
 
   return (
       <div className={`min-h-screen py-[10px] md:py-[40px] bg-[#fff9f8] text-[#212529] ${lato.className}`}>
-        {isQuizModalVisible && <UpsellQuizModal onQuizComplete={onQuizComplete} />}
-        {isQuizCompletedModalVisible && <UpsellQuizCompletedModal />}
+
+        {/*MODALS*/}
+        {isQuizModalVisible && <UpsellQuizModal info={info} onQuizComplete={onQuizComplete} />}
+        {isQuizCompletedModalVisible && <UpsellQuizCompletedModal info={info} />}
         {isGiftsModalVisible && <UpsellGiftsModal info={info} sessionData={sessionData} declineOffer={declineOffer} />}
+        {isDeclineGiftsModalVisible && <UpsellDeclineGiftsModal />}
+
         <div className="w-[95%] max-w-[1000px] m-[0_auto] px-[5vw] md:px-[20px] py-[30px] bg-[#fff] border-[1px] border-[#DDDDDD]">
           <div className="text-center text-[#363636] text-[8vw] sm:text-[34px] leading-[1] italic">
-            <h1 className="mb-[15px] text-[#4AC27E]">{info.title1}</h1>
-            <h2>{info.title2}</h2>
+            <h1 className="mb-[15px] text-[#4AC27E]">Special Offer</h1>
+            <h2>Congratulations You Have Been Selected!</h2>
           </div>
 
           <div className="flex flex-col items-center md:flex-row md:justify-center py-[2vw] md:p-[40px_0_20px]">
@@ -336,18 +363,18 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
               />
             </div>
             <div className="md:flex-[0_0_53%] flex flex-col gap-[20px] mb-[20px] text-[4.8vw] sm:text-[1.2rem] leading-[1.3] font-bold">
-              <p>{info.text1}</p>
-              <p>{info.text2}{" "} <span className="text-[#3763a0]">{info.text3}</span> {" "}{info.text4}</p>
-              <p>{info.text5}{" "} <span className="text-[#3763a0]">{info.text6}</span> {" "}{info.text7}</p>
+              <p>As a valued customer of ours you have been chosen to participate in a short survey!</p>
+              <p>This 3-question survey will only take <span className="text-[#3763a0]">10 seconds</span> and is extremely important to help us provide the best possible improvements for our customers!</p>
+              <p>As a special thank you for taking the time to help us out we are offering a one-time <span className="text-[#3763a0]">exclusive FREE GIFT</span> of your choice!</p>
             </div>
           </div>
 
           <button className="w-full max-w-[500px] h-[70px] flex items-center justify-center mx-auto bg-[#4ac27e] text-[7vw] sm:text-[20px] text-[#fff] tracking-[0.5px] shadow-[0px_1px_5px_rgba(58,84,214,0.4)] uppercase hover:bg-[#17b35b]" onClick={acceptOffer}>
-            {info.ctaText1}
+            Send me my gift!
           </button>
 
           <button className="flex mx-auto mt-[15vw] sm:mt-[25px] text-[3vw] sm:text-[12px] text-[#999] tracking-[0.5px]" onClick={declineOffer}>
-            {info.skipOfferText1}
+            No thank you, I would not like to get a free gift.
           </button>
         </div>
         <footer className="flex flex-col justify-center items-center gap-[15px] p-[40px_0] text-center text-[3vw] sm:text-[12px] leading-[15px] text-[#000]">

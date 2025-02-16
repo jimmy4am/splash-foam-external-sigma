@@ -80,4 +80,24 @@ export type UpsellPageType = {
   stickyoffer8?: string;
   stickyname8?: string;
   stickyprice8?: string;
+  giftsNumber: number;
+  gift1?: Gift;
+  gift2?: Gift;
+  gift3?: Gift;
+  gift4?: Gift;
+  gift5?: Gift;
+  gift6?: Gift;
 };
+
+export type Gift = {
+  availability: AvailabilityType
+  image: string;
+  name: string;
+  text: string;
+  ratingNumber: number;
+  numberOfReviews: number;
+  price: number;
+  shippingPrice: number;
+}
+
+type AvailabilityType = 'is available' | 'not available'
