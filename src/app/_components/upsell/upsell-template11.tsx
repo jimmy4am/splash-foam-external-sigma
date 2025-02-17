@@ -134,6 +134,18 @@ const UpsellTemplate11 = ({ info, nextStep, sessionData }: Props) => {
         />
       )}
 
+      {info.slug === 'barks-exp-processing' ? (
+        <header className="flex justify-center mt-[12px] sm:mt-0 p-[15px_15px_10px] sm:p-[10px_15px_5px] bg-[#fff] border-b-[7px] border-b-[#00B0F0] shadow-[0_-3px_6px_3px_#EEE]">
+          <Image
+            className="max-w-[120px] sm:max-w-[157px]"
+            src={info.logo}
+            width={157}
+            height={48}
+            alt={info.image1}
+          />
+        </header>
+      ) : null}
+
       <div className={`relative flex flex-col items-center w-full min-h-screen p-[10px] md:p-[30px_15px] text-[16px] leading-[1.5] text-[#212529] ${lato.className} overflow-hidden`}>
         <div className="flex flex-col items-center w-full max-w-[772px] p-[4vw_3vw] md:p-[28px_45px] bg-[#fff] border-[2px] border-[#5D778F]">
 

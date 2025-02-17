@@ -210,8 +210,8 @@ const UpsellTemplate9 = ({ info, nextStep, sessionData }: Props) => {
                       </div>
 
                       <div className="mt-[15px] px-[25px]">
-                        <button className="w-full max-w-[450px] p-[18px_10px] md:p-[22px_10px] bg-[#2CB548] rounded-[4px] text-[15px] md:text-[22px] leading-[18px] md:leading-[28px] text-[#fff] shadow-[0_3px_0_0_rgba(1,80,12,1)] hover:opacity-80 transition-all duration-250 ease-in-out" onClick={acceptOffer}>
-                          {info.ctaText1}
+                        <button className="w-full max-w-[450px] p-[18px_10px] md:p-[22px_10px] bg-[#2CB548] rounded-[4px] text-[15px] md:text-[22px] leading-[18px] md:leading-[28px] text-[#fff] uppercase shadow-[0_3px_0_0_rgba(1,80,12,1)] hover:opacity-80 transition-all duration-250 ease-in-out" onClick={acceptOffer}>
+                          {info.ctaText1}{" "}
                           <PriceDisplay
                             priceUSD={parseFloat(info.offerPrice)}
                             countryCode={
@@ -252,7 +252,7 @@ const UpsellTemplate9 = ({ info, nextStep, sessionData }: Props) => {
 
         <div className="sticky left-0 right-0 bottom-0 flex flex-col items-center justify-center p-[20px_15px] bg-[#1D1D1D]">
           <button className="w-full max-w-[450px] p-[18px_10px] md:p-[22px_10px] bg-[#2CB548] rounded-[4px] text-[15px] md:text-[22px] leading-[18px] md:leading-[28px] text-[#fff] uppercase shadow-[0_3px_0_0_rgba(1,80,12,1)] hover:opacity-80 transition-all duration-250 ease-in-out" onClick={acceptOffer}>
-            {info.ctaText1}
+            {info.ctaText1}{" "}
             <PriceDisplay
               priceUSD={parseFloat(info.offerPrice)}
               countryCode={
