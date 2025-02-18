@@ -24,7 +24,98 @@ interface Prices {
   [key: number]: string;
 }
 
-const OneTimePurchaseDescription = ({ data, sessionData }: { data: { amount: string, price: number }[], sessionData: SessionDataType }) => (
+type slug = typeof templatesWithOtpDetails[number];
+
+const templatesWithOtpDetails = ['barks-otp', 'breath-denta-otp', 'wifi-otp', 'denta-otp', 'jet-otp'] as const;
+
+const data: Record<slug, { amount: string, price: number }[]> = {
+  'barks-otp': [
+    {
+      amount: '1',
+      price: 20,
+    },
+    {
+      amount: '2-3',
+      price: 18,
+    },
+    {
+      amount: '4',
+      price: 16,
+    }
+  ],
+  'breath-denta-otp': [
+    {
+      amount: '1',
+      price: 49,
+    },
+    {
+      amount: '2-3',
+      price: 44,
+    },
+    {
+      amount: '4',
+      price: 40,
+    }
+  ],
+  'wifi-otp': [
+    {
+      amount: '1',
+      price: 24,
+    },
+    {
+      amount: '2',
+      price: 21,
+    },
+    {
+      amount: '2',
+      price: 18,
+    },
+    {
+      amount: '4',
+      price: 15,
+    }
+  ],
+  'denta-otp': [
+    {
+      amount: '1',
+      price: 28,
+    },
+    {
+      amount: '2-3',
+      price: 26,
+    },
+    {
+      amount: '4',
+      price: 23,
+    }
+  ],
+  'jet-otp': [
+    {
+      amount: '1',
+      price: 28,
+    },
+    {
+      amount: '2-3',
+      price: 26,
+    },
+    {
+      amount: '4',
+      price: 23,
+    }
+  ]
+}
+
+const productImageWrapperClasses: Record<string, string> = {
+  'barks-otp': 'justify-start md:pr-[50px]',
+  'wifi-otp': 'justify-center md:px-[10px]',
+}
+
+const productImageClasses: Record<string, string> = {
+  'barks-otp': 'max-w-[75%] md:max-w-[100%]',
+  'wifi-otp': 'max-w-[100%] max-h-[none] -mt-[40px] md:-mt-[0] xl:-mt-[30px]',
+}
+
+const OneTimePurchaseDetails = ({ data, sessionData }: { data: { amount: string, price: number }[], sessionData: SessionDataType }) => (
   <div className="flex items-center justify-center gap-[3px] mb-[8px] leading-[26px] text-[#000] font-bold">
     {data.map((item, idx) => (
       <>
@@ -86,21 +177,6 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
     4: info.stickyoffer8 || "",
   };
 
-  const barksOtpData = [
-    {
-      amount: '1',
-      price: 20,
-    },
-    {
-      amount: '2-3',
-      price: 18,
-    },
-    {
-      amount: '4',
-      price: 16,
-    }
-  ]
-
   const acceptOffer = async () => {
     const upsell = {
       offerName: oneTimeNames[productNum],
@@ -134,7 +210,10 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
               </h5>
               <h1 className="mb-[5vw] md:mb-[0] text-[4.0vw] md:text-[23px] leading-[5.9vw] md:leading-[26px] text-[#000] font-black">
                 {info.title1}{" "}
-                <span className="text-[#20A51D]">{info.title2}{" "}{info.savings1}!</span>
+                <span className="text-[#20A51D]">
+                  {info.title2}{" "}
+                  <PriceDisplay priceUSD={Number(info.savings1)} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />!
+                </span>
               </h1>
             </div>
 
@@ -149,9 +228,9 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                 />
                 <Image
                   src={info.logo}
-                  width={232}
-                  height={68}
-                  className="max-h-[50px] md:max-h-[none] w-auto"
+                  width={200}
+                  height={50}
+                  className="max-w-[150px] max-h-[50px] md:max-w-none md:max-h-none md:w-auto md:h-auto"
                   alt="logo"
                 />
               </div>
@@ -169,13 +248,13 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
               />
 
               <div className="md:flex md:items-start">
-                <div className={`relative flex ${info.slug === 'barks-otp' ? 'justify-start md:pr-[50px]' : 'justify-center md:px-[20px]'} w-full md:w-[40%] mb-[20px] md:mb-[0]`}>
+                <div className={`${productImageWrapperClasses[info.slug] || 'justify-center md:px-[20px]'} relative flex w-full md:w-[40%] mb-[20px] md:mb-[0]`}>
                   <Image
                     src={info.image1}
                     width={393}
                     height={382}
                     alt={siteProduct}
-                    className={`${info.slug === 'barks-otp' ? 'max-w-[75%] md:max-w-[100%]' : ''}`}
+                    className={`${productImageClasses[info.slug] || 'max-w-[250px] max-h-[340px]'}`}
                   />
                 </div>
 
@@ -184,10 +263,10 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                     <p className="mb-[20px] md:mb-[12px] text-[22px] leading-[26px] text-[#212529]">
                       {info.title3} <span className="font-bold">{info.product}</span> {info.title4}
                     </p>
-                    <p className="text-[28px] lg:text-[34px] text-[#000] font-extrabold">{info.product}!</p>
+                    <p className="text-[28px] lg:text-[34px] text-[#000] font-extrabold uppercase">{info.product}!</p>
                   </div>
                   <div className="flex gap-[15px] md:gap-[30px] p-[0_10px_20px] md:p-[0_0_20px]">
-                    <div>
+                    <div className="rounded-[50%] overflow-hidden">
                       <Image
                         src={info.image2}
                         width={152}
@@ -195,7 +274,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                         alt="Image 1"
                       />
                     </div>
-                    <div>
+                    <div className="rounded-[50%] overflow-hidden">
                       <Image
                         src={info.image3}
                         width={152}
@@ -203,7 +282,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                         alt="Image 2"
                       />
                     </div>
-                    <div>
+                    <div className="rounded-[50%] overflow-hidden">
                       <Image
                         src={info.image4}
                         width={152}
@@ -217,7 +296,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
             </div>
 
             <div className="mt-[4vw] mb-[4vw] md:mt-[0] md:mb-[25px]">
-              {info.slug === 'barks-otp' && <OneTimePurchaseDescription data={barksOtpData} sessionData={sessionData}/>}
+              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={data[info.slug as slug]} sessionData={sessionData}/>}
 
               <div className="w-full max-w-[255px] md:max-w-[300px] mx-auto">
                 <select
@@ -232,7 +311,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                   <option value="4">4</option>
                 </select>
 
-                {info.slug === 'pee-tablets-otp' && <OneTimePurchaseRadio price={oneTimePrices[productNum]} sessionData={sessionData} />}
+                {(info.slug === 'pee-tablets-otp' || info.slug === 'breath-otp') && <OneTimePurchaseRadio price={oneTimePrices[productNum]} sessionData={sessionData} />}
               </div>
             </div>
 

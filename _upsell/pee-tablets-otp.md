@@ -28,7 +28,7 @@ ctaText1: YES! ADD MORE PEE BUSTER TABLET’S TO MY ORDER
 ctaText2:
 skipOfferText1: No Thank you, I would not like to get this exclusive discount..
 skipOfferText2:
-savings1: 17%
+savings1: '17'
 savings2:
 offerName2: 
 offerPrice2:

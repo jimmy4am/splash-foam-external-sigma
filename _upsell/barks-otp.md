@@ -28,7 +28,7 @@ ctaText1: YES! ADD MORE BARKS-NO-MORE’S TO MY ORDER
 ctaText2:
 skipOfferText1: No Thank you, I would not like to get this exclusive discount..
 skipOfferText2:
-savings1: 16%
+savings1: '16'
 savings2:
 offerName2: 
 offerPrice2:
