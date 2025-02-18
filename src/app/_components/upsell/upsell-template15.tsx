@@ -187,24 +187,30 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                     <p className="text-[28px] lg:text-[34px] text-[#000] font-extrabold">{info.product}!</p>
                   </div>
                   <div className="flex gap-[15px] md:gap-[30px] p-[0_10px_20px] md:p-[0_0_20px]">
-                    <Image
-                      src={info.image2}
-                      width={152}
-                      height={152}
-                      alt="Image 1"
-                    />
-                    <Image
-                      src={info.image3}
-                      width={152}
-                      height={152}
-                      alt="Image 2"
-                    />
-                    <Image
-                      src={info.image4}
-                      width={152}
-                      height={152}
-                      alt="Image 3"
-                    />
+                    <div>
+                      <Image
+                        src={info.image2}
+                        width={152}
+                        height={152}
+                        alt="Image 1"
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={info.image3}
+                        width={152}
+                        height={152}
+                        alt="Image 2"
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src={info.image4}
+                        width={152}
+                        height={152}
+                        alt="Image 3"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
