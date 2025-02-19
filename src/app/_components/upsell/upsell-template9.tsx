@@ -22,6 +22,10 @@ type Props = {
 
 type ListItemType = 'success' | 'error';
 
+const templatesWithPaymentIcons = ['glab-warranty', 'barks-warranty', 'oricle-warranty', 'wifi-warranty', 'denta-warranty', 'jet-warranty'];
+
+const templatesWithHeader = ['glab-warranty', 'denta-warranty', 'jet-warranty'];
+
 const ListItem = ({ type, children }: { type: ListItemType, children: React.ReactNode }) => {
   const urls: Record<ListItemType, { url: string, title: string }> = {
     success: {
@@ -85,15 +89,17 @@ const UpsellTemplate9 = ({ info, nextStep, sessionData }: Props) => {
 
   return (
     <>
-      {info.slug === 'glab-warranty' ? (
+      {templatesWithHeader.includes(info.slug) ? (
         <header className="flex justify-center p-[5px_15px] bg-[#fff] border-b-[7px] border-b-[#F8ABA3]">
-          <Image
-            className="max-w-[195px] md:max-w-[none]"
-            src={info.logo}
-            width={245}
-            height={56}
-            alt={info.product}
-          />
+          <a href="#">
+            <Image
+              className="max-w-[195px] md:max-w-[none] md:w-auto"
+              src={info.logo}
+              width={292}
+              height={41}
+              alt={info.product}
+            />
+          </a>
         </header>
       ) : null}
       <div className={`pt-[35px] bg-[#f6fbfe] text-[20px] leading-[24px] ${lato.className}`}>
@@ -133,7 +139,7 @@ const UpsellTemplate9 = ({ info, nextStep, sessionData }: Props) => {
                   <p>{info.title5}</p>
                   <p>{info.title6}</p>
                   <button className="w-full mt-[30px] p-[18px_10px] md:p-[22px_10px] bg-[#2CB548] rounded-[4px] text-[15px] md:text-[22px] leading-[18px] md:leading-[28px] text-[#fff] uppercase shadow-[0_3px_0_0_rgba(1,80,12,1)] hover:opacity-80 transition-all duration-250 ease-in-out" onClick={acceptOffer}>
-                    {info.ctaText1}
+                    {info.ctaText1}{" "}
                     <PriceDisplay
                       priceUSD={parseFloat(info.offerPrice)}
                       countryCode={
@@ -262,7 +268,7 @@ const UpsellTemplate9 = ({ info, nextStep, sessionData }: Props) => {
             />
           </button>
 
-          {info.slug === 'glab-warranty' ? (
+          {templatesWithPaymentIcons.includes(info.slug) ? (
             <ul className="flex justify-center gap-[15px] mt-[20px]">
               <li>
                 <Image
