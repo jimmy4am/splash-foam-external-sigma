@@ -43,6 +43,8 @@ type DownsellProps = {
   sessionData: any | null;
 };
 
+const templatesWithFooterMenu = ['oricle-exp-processing', 'wifi-exp-processing', 'denta-exp-processing'];
+
 const DownsellPop = ({
   info,
   acceptOffer,
@@ -240,7 +242,7 @@ const UpsellTemplate11 = ({ info, nextStep, sessionData }: Props) => {
           </div>
         </div>
 
-        <div className="flex w-full justify-center items-center mb-[20px] py-[10px]">
+        <div className="flex w-full justify-center items-center py-[10px]">
           <button
             className="bg-transparent border-none text-[3vw] md:text-[15px] text-[#000] tracking-[0.2px] cursor-default underline"
             onClick={declineOffer1}
@@ -249,8 +251,19 @@ const UpsellTemplate11 = ({ info, nextStep, sessionData }: Props) => {
           </button>
         </div>
 
-        <div className="flex flex-col gap-[10px] py-[2vw] md:py-[20px] text-[3vw] md:text-[12px] text-center">
-          <p className="flex items-center md:flex-row">
+        <footer className="flex flex-col items-center gap-[10px] py-[2vw] md:py-[20px] text-[3vw] md:text-[12px] text-center">
+          {templatesWithFooterMenu.includes(info.slug) && (
+            <nav>
+              <ul className="flex flex-wrap justify-center gap-[10px] py-[5px] md:py-[0] text-[13px]">
+                <li><a href="#" className="hover:underline cursor-pointer">Terms and Conditions</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Privacy Policy</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Contact Us</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Shipping and Returns</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Become an Affiliate</a></li>
+              </ul>
+            </nav>
+          )}
+          <p className="flex items-center justify-center text-[12px] leading-[15px] text-[#222]">
             Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
@@ -261,13 +274,13 @@ const UpsellTemplate11 = ({ info, nextStep, sessionData }: Props) => {
             />
             All Rights Reserved
           </p>
-        </div>
-        <Image
-          src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e6c4e39d-5796-4506-8db9-141156085500/public"
-          width={135}
-          height={25}
-          alt="DMCA protected"
-        />
+          <Image
+            src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e6c4e39d-5796-4506-8db9-141156085500/public"
+            width={135}
+            height={25}
+            alt="DMCA protected"
+          />
+        </footer>
       </div>
     </>
   );
