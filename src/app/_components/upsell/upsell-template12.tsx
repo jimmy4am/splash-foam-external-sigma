@@ -39,6 +39,16 @@ type QuizItemType = {
   answers: string[];
 }
 
+const templatesWithHeader = ['oricle-gift-quiz', 'posture-gift-quiz', 'jet-gift-quiz'] as const;
+
+type slug = typeof templatesWithHeader[number];
+
+const headerClasses: Record<slug, string> = {
+  'oricle-gift-quiz': 'border-b-[#93bcf0]',
+  'posture-gift-quiz': 'border-b-[#00B0F0]',
+  'jet-gift-quiz': 'border-b-[#00B0F0]',
+}
+
 const UpsellQuizModal = ({ info, onQuizComplete }: UpsellQuizModalProps) => {
   const questions: QuizItemType[] = [
     {
@@ -339,7 +349,7 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
   }
 
   return (
-      <div className={`min-h-screen py-[10px] md:py-[40px] bg-[#fff9f8] text-[#212529] ${lato.className}`}>
+      <div className={`flex flex-col min-h-screen bg-[#fff9f8] text-[#212529] ${lato.className}`}>
 
         {/*MODALS*/}
         {isQuizModalVisible && <UpsellQuizModal info={info} onQuizComplete={onQuizComplete} />}
@@ -347,7 +357,22 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
         {isGiftsModalVisible && <UpsellGiftsModal info={info} sessionData={sessionData} declineOffer={declineOffer} />}
         {isDeclineGiftsModalVisible && <UpsellDeclineGiftsModal />}
 
-        <div className="w-[95%] max-w-[1000px] m-[0_auto] px-[5vw] md:px-[20px] py-[30px] bg-[#fff] border-[1px] border-[#DDDDDD]">
+        {templatesWithHeader.includes(info.slug as slug) && (
+          <header className={`flex justify-center p-[15px_15px_10px] sm:p-[10px_15px_5px] bg-[#fff] border-b-[7px] ${headerClasses[info.slug as slug]}`}>
+            <a href="#" className="flex w-[130px] sm:w-auto">
+              <Image
+                className="object-contain"
+                src={info.logo}
+                width={200}
+                height={70}
+                alt={info.product}
+              />
+            </a>
+          </header>
+        )}
+
+        <div className="pt-[10px] md:pt-[40px]">
+          <div className="w-[95%] max-w-[1000px] m-[0_auto] px-[5vw] md:px-[20px] py-[30px] bg-[#fff] border-[1px] border-[#DDDDDD]">
           <div className="text-center text-[#363636] text-[8vw] sm:text-[34px] leading-[1] italic">
             <h1 className="mb-[15px] text-[#4AC27E]">Special Offer</h1>
             <h2>Congratulations You Have Been Selected!</h2>
@@ -377,7 +402,8 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
             No thank you, I would not like to get a free gift.
           </button>
         </div>
-        <footer className="flex flex-col justify-center items-center gap-[15px] p-[40px_0] text-center text-[3vw] sm:text-[12px] leading-[15px] text-[#000]">
+        </div>
+        <footer className="flex flex-col justify-center items-center gap-[15px] mt-auto p-[40px_0] text-center text-[3vw] sm:text-[12px] leading-[15px] text-[#000]">
           <p className="flex">
             Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
