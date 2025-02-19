@@ -3,12 +3,12 @@ template: "13"
 metaTitle: "Last Bonus - Discounted Glabrous Skin Brush - One Time Discount"
 metaDescription: "Take advantage of this bonus offer - enjoy a savings when you order additional Glabrous Skin Brush."
 funnelFluxName: "Glabrous Skin Brush - Upsell - Discounted OTP (1-4 brushes)"
-logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/51cc3c3d-63a2-4a6c-c06d-2815136d4b00/public"
+logo: 
 product: Glabrous
 offerName: Glabrous Skin Brush
-offerPrice: 15
-title1: As A Thank You We Are Offering Our Smooth Cleaning Brush For
-title2: OFF
+offerPrice: 
+title1: CONGRATULATIONS! You Are the 100,000th Customer!
+title2: As A Thank You We Are Offering Our Smooth Cleaning Brush For
 title3: 
 title4: 
 title5:
@@ -16,7 +16,7 @@ title6:
 title7: 
 image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ab8c7932-328a-4047-a054-f75d2accbe00/public
 image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d9dc58a3-61a2-4f95-c29c-fd001b3abc00/public
-image3: 
+image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b3602d35-e5e1-405b-307b-44ef651b5c00/public
 image4: 
 image5: 
 text1: Quickly Smooths the appearance of fine lines and wrinkles
@@ -28,7 +28,7 @@ ctaText1: Yes!
 ctaText2: Add the brush to my order!
 skipOfferText1: No Thank you, I would not like to get this exclusive discount.
 skipOfferText2:
-savings1: 50%
+savings1: 50% OFF
 savings2:
 offerName2: 
 offerPrice2:

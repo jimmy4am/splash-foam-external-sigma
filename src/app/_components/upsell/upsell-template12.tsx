@@ -34,6 +34,10 @@ type UpsellGiftsModalProps = {
   declineOffer: () => void;
 }
 
+type UpsellDeclineGiftsModalProps = {
+  declineOffer: () => void;
+}
+
 type QuizItemType = {
   question: string;
   answers: string[];
@@ -94,7 +98,7 @@ const UpsellQuizModal = ({ info, onQuizComplete }: UpsellQuizModalProps) => {
 
           <ul className="w-[66%] max-w-[240px] lg:w-full lg:max-w-[600px] mx-auto flex flex-col gap-[12px] lg:gap-[15px] text-[24px] lg:text-[28px] leading-[1] text-[#fff] font-semibold">
             {
-              currentQuestion?.answers.map((answer, idx) => (
+              currentQuestion?.answers.map((answer) => (
                 <li key={answer} className="">
                   <button
                     className="w-full p-[12px_0] bg-[#4ac27e] shadow-[0px_1px_5px_rgba(58,84,214,0.4)] uppercase hover:bg-[#39AC6A] active:bg-[#39AC6A]"
@@ -296,10 +300,10 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
   )
 }
 
-const UpsellDeclineGiftsModal = () => {
+const UpsellDeclineGiftsModal = ({ declineOffer }: UpsellDeclineGiftsModalProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      // TODO: redirect
+      declineOffer()
     }, 1500);
 
     return () => {
@@ -355,7 +359,7 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
         {isQuizModalVisible && <UpsellQuizModal info={info} onQuizComplete={onQuizComplete} />}
         {isQuizCompletedModalVisible && <UpsellQuizCompletedModal info={info} />}
         {isGiftsModalVisible && <UpsellGiftsModal info={info} sessionData={sessionData} declineOffer={declineOffer} />}
-        {isDeclineGiftsModalVisible && <UpsellDeclineGiftsModal />}
+        {isDeclineGiftsModalVisible && <UpsellDeclineGiftsModal declineOffer={nextStep} />}
 
         {templatesWithHeader.includes(info.slug as slug) && (
           <header className={`flex justify-center p-[15px_15px_10px] sm:p-[10px_15px_5px] bg-[#fff] border-b-[7px] ${headerClasses[info.slug as slug]}`}>

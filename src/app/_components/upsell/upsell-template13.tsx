@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Inter, Lato } from "next/font/google";
+import { Lato } from "next/font/google";
 
 import { siteProduct } from "@/lib/site-info";
 import { UpsellPageType } from "@/interfaces/upsellPage";
@@ -24,14 +24,64 @@ interface Prices {
   [key: number]: string;
 }
 
-const ListItem = ({ children }: { children: React.ReactNode }) => (
+type slug = typeof templatesWithOtpDetails[number];
+
+const templatesWithOtpDetails = ['glab-brush', 'denta-breath-otp'] as const;
+
+const otpDetailsData: Record<slug, { amount: string, price: number }[]> = {
+  'glab-brush': [
+    {
+      amount: '1',
+      price: 15,
+    },
+    {
+      amount: '2-3',
+      price: 13,
+    },
+    {
+      amount: '4',
+      price: 11,
+    }
+  ],
+  'denta-breath-otp': [
+    {
+      amount: '1',
+      price: 17,
+    },
+    {
+      amount: '2-3',
+      price: 15,
+    },
+    {
+      amount: '4',
+      price: 13,
+    }
+  ],
+}
+
+const OneTimePurchaseDetails = ({ data, sessionData }: { data: { amount: string, price: number }[], sessionData: SessionDataType }) => (
+  <div className="flex items-center justify-center gap-[3px] mb-[8px] leading-[26px] text-[#000] font-bold">
+    {data.map((item, idx) => (
+      <>
+        <div className="flex">
+          <span className="mr-[6px] text-[#DC5B5B]">{item.amount}: </span>
+          <PriceDisplay priceUSD={item.price} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />{" "}
+          each
+        </div>
+        {idx + 1 < data.length && '|'}
+      </>
+    ))}
+  </div>
+)
+
+const ListItem = ({ icon, children }: { icon: string, children: React.ReactNode }) => (
   <li className="flex items-start gap-[2vw] md:gap-[10px] md:pr-[3vw] lg:pr-[0] text-[4vw] md:text-[1.6vw] lg:text-[18px] leading-[1.3] md:leading-[1.8vw] lg:leading-[20px] -tracking-[0.05vw] md:tracking-[0] font-bold">
     <Image
       className="flex-[0_0_21px]"
-      src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/b3602d35-e5e1-405b-307b-44ef651b5c00/public"
-      width={21}
-      height={21}
-      alt="Check icon"
+      src={icon}
+      width={25}
+      height={25}
+      alt="List marker"
     />
     {children}
   </li>
@@ -90,24 +140,24 @@ const UpsellTemplate13 = ({ info, nextStep, sessionData }: Props) => {
   };
 
   return (
-    <div className={`p-[2vw] md:p-[40px_0_0] bg-[linear-gradient(0deg,_rgba(246,170,162,0.1),_rgba(246,170,162,0.1))] text-[14px] leading-[1] ${lato.className}`}>
+    <div className={`p-[2vw] md:p-[40px_0_0] text-[14px] leading-[1] ${info.slug === 'denta-breath-otp' ? 'bg-[#f6fbfe]' : 'bg-[linear-gradient(0deg,_rgba(246,170,162,0.1),_rgba(246,170,162,0.1))]'} ${lato.className}`}>
       <div className="md:w-[98%] max-w-[1024px] m-[0_auto]">
         <div className="md:mb-[33px] bg-[#fff] md:border-[1px] md:border-[#5D778F]">
           {/*STEPs*/}
           <ul className="flex border-[0.1vw] border-[#5D778F] md:border-0 text-center text-[2.2vw] md:text-[18px] text-[#A7A7A7] uppercase tracking-[0.5px]">
             <li className="flex-1 p-[3vw_0] md:p-[10px] bg-[#DCDCDC]">Step 1 : Order page</li>
-            <li className="flex-1 p-[3vw_0] md:p-[10px] bg-[#F6AAA2] text-[#fff]">Step 2 : Special offer</li>
+            <li className={`flex-1 p-[3vw_0] md:p-[10px] ${info.slug === 'denta-breath-otp' ? 'bg-[#0083D2]' : 'bg-[#F6AAA2]'} text-[#fff]`}>Step 2 : Special offer</li>
             <li className="flex-1 p-[3vw_0] md:p-[10px] bg-[#DCDCDC]">Step 3 : Confirmation</li>
           </ul>
 
           <div className="flex w-full flex-col items-center">
             <div className="p-[6vw_6vw_0] md:p-[27px_16px_0] text-center font-bold italic">
               <h5 className="mb-[2.5vw] md:mb-[10px] text-[#DC5B5B] text-[4.9vw] md:text-[23px] leading-[6vw] md:leading-[26px]">
-                CONGRATULATIONS! You Are the 100,000th Customer!
+                {info.title1}
               </h5>
               <h1 className="mb-[5vw] md:mb-[0] text-[4.6vw] md:text-[23px] leading-[5.1vw] md:leading-[26px] text-[#606060]">
-                {info.title1}{" "}
-                <span className="text-[#20A51D]">{info.savings1}{" "}{info.title2}!</span>
+                {info.title2}{" "}
+                <span className="text-[#20A51D]">{info.savings1}!</span>
               </h1>
             </div>
 
@@ -128,64 +178,22 @@ const UpsellTemplate13 = ({ info, nextStep, sessionData }: Props) => {
               </div>
 
                 <ul className="relative md:w-[53%] flex flex-col gap-[5vw] md:gap-[2vw] lg:gap-[20px] md:mr-[10px] md:pr-[3%]">
-                  <ListItem>{info.text1}</ListItem>
-                  <ListItem>{info.text2}</ListItem>
-                  <ListItem>{info.text3}</ListItem>
-                  <ListItem>{info.text4}</ListItem>
-                  <ListItem>{info.text5}</ListItem>
+                  <ListItem icon={info.image3}>{info.text1}</ListItem>
+                  <ListItem icon={info.image3}>{info.text2}</ListItem>
+                  <ListItem icon={info.image3}>{info.text3}</ListItem>
+                  <ListItem icon={info.image3}>{info.text4}</ListItem>
+                  <ListItem icon={info.image3}>{info.text5}</ListItem>
                 </ul>
             </div>
 
             <div className="mt-[4vw] mb-[4vw] md:mt-[0] md:mb-[25px]">
-              <div className="flex items-center justify-center gap-[3px] leading-[26px] text-[#000] font-bold">
-                <div className="flex">
-                  <span className="mr-[6px] text-[#DC5B5B]">1: </span>
-                  <span>
-                  <PriceDisplay
-                    priceUSD={15}
-                    countryCode={
-                      sessionData?.customerInfo?.country || "US"
-                    }
-                    digits={2}
-                  />{" "}
-                    each
-                </span>
-                </div>
-                |
-                <div className="flex">
-                  <span className="mr-[6px] text-[#DC5B5B]">2-3: </span>
-                  <span>
-                  <PriceDisplay
-                    priceUSD={13}
-                    countryCode={
-                      sessionData?.customerInfo?.country || "US"
-                    }
-                    digits={2}
-                  />{" "}
-                    each
-                </span>
-                </div>
-                |
-                <div className="flex">
-                  <span className="mr-[6px] text-[#DC5B5B]">4: </span>
-                  <span>
-                  <PriceDisplay
-                    priceUSD={11}
-                    countryCode={
-                      sessionData?.customerInfo?.country || "US"
-                    }
-                    digits={2}
-                  />{" "}
-                    each
-                </span>
-                </div>
-              </div>
+              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={otpDetailsData[info.slug as slug]} sessionData={sessionData}/>}
 
               <select
                 name="productId"
                 value={productNum}
                 onChange={(e) => setProductNum(parseInt(e.target.value))}
-                className="flex w-full max-w-[255px] md:max-w-[300px] h-[45px] m-[5px_auto] md:m-[0_auto] p-[5px] bg-[#E9E9ED] border-[2px] border-[#c5c5c5] text-[16px] md:text-[20px] font-bold"
+                className={`flex w-full m-[5px_auto] md:m-[0_auto] p-[5px] bg-[#E9E9ED] border-[2px] border-[#c5c5c5] text-[16px] leading-[18px] font-bold bg-[url(https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c9b2ee84-d091-4e97-4e97-9a70180eda00/public)] bg-no-repeat bg-[auto_10px] bg-[95%_50%]`}
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -204,7 +212,17 @@ const UpsellTemplate13 = ({ info, nextStep, sessionData }: Props) => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-[15px] py-[20px]">
+        <footer className="flex flex-col items-center gap-[15px] py-[2vw] md:py-[20px] text-[3vw] md:text-[14px] leading-[16px]">
+          {info.slug === 'denta-breath-otp' && (
+            <nav>
+              <ul className="flex flex-wrap justify-center gap-[10px] py-[5px] md:py-[0] text-[13px]">
+                <li><a href="#" className="hover:underline cursor-pointer">Terms and Conditions</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Privacy Policy</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Contact Us</a></li>
+                <li><a href="#" className="hover:underline cursor-pointer">Shipping and Returns</a></li>
+              </ul>
+            </nav>
+          )}
           <p className="flex items-center justify-center text-[12px] leading-[15px] text-[#222]">
             Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
@@ -222,7 +240,7 @@ const UpsellTemplate13 = ({ info, nextStep, sessionData }: Props) => {
             height={28}
             alt="DMCA protected"
           />
-        </div>
+        </footer>
       </div>
     </div>
   );

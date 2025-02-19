@@ -28,7 +28,7 @@ type slug = typeof templatesWithOtpDetails[number];
 
 const templatesWithOtpDetails = ['barks-otp', 'breath-denta-otp', 'wifi-otp', 'denta-otp', 'jet-otp'] as const;
 
-const data: Record<slug, { amount: string, price: number }[]> = {
+const otpDetailsData: Record<slug, { amount: string, price: number }[]> = {
   'barks-otp': [
     {
       amount: '1',
@@ -296,7 +296,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
             </div>
 
             <div className="mt-[4vw] mb-[4vw] md:mt-[0] md:mb-[25px]">
-              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={data[info.slug as slug]} sessionData={sessionData}/>}
+              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={otpDetailsData[info.slug as slug]} sessionData={sessionData}/>}
 
               <div className="w-full max-w-[255px] md:max-w-[300px] mx-auto">
                 <select
