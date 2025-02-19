@@ -3,8 +3,8 @@ template: "10"
 metaTitle: "Extra Bonus - Glabrous skin Discount Offer"
 metaDescription: "Take advantage of this bonus offer - enjoy a discounted Glabrous skin and future savings."
 funnelFluxName: "Glabrous skin - Upsell"
-logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/51cc3c3d-63a2-4a6c-c06d-2815136d4b00/public"
-product: Glabrous Skin
+logo: 
+product: GLABROUS SKIN
 offerName: 
 offerPrice: 
 title1: THIS IS THE LAST CHANCE! GET ANOTHER GLABROUS SKIN FOR
@@ -19,7 +19,7 @@ image3:
 image4:
 image5:
 text1: "120.00"
-text2: One LAST CHANCE to get this exclusive discount for a Glabrous Skin for your Family and Friends!
+text2: Glabrous Skin
 text3: "Get thousands of dollars in estimated savings per year with the power of America’s largest discount network, Horizon Direct. Save every day on 50,000+ restaurants, 150,000+ retailers, and 850,000+ travel providers. You will receive a 30 day trial of Horizon Direct for FREE when you add another Glabrous Skin to your order. Thereafter, you will be enrolled into a monthly Horizon Direct Membership for $39.95 month until you cancel. You may cancel your 30 day Horizon Direct Free Trial or your Monthly Membership anytime before the renewal period by calling 19093895276, emailing support@glabrousskin.com , or by filling out this form. This exclusive offer and free 30 day trial to Horizon Direct is only going to be available for a limited time. So make sure to claim this offer now!"
 text4: "As a special thank you for being our 10,000th Customer we want to offer you a DISCOUNTED Glabrous Skin, We will even Pay for the Shipping!"
 text5:
@@ -34,7 +34,7 @@ savings2:
 stickyid1: "2762"
 stickybilling1: "7"
 stickyoffer1: "234"
-stickyname1: 1 X-All Toilet Cleaner + 1 per Month
+stickyname1: 1 Glabrous skin
 stickyprice1: "15.99"
 stickyid2:
 stickybilling2:
