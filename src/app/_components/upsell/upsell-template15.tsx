@@ -26,7 +26,7 @@ interface Prices {
 
 type slug = typeof templatesWithOtpDetails[number];
 
-const templatesWithOtpDetails = ['barks-otp', 'breath-denta-otp', 'wifi-otp', 'denta-otp', 'jet-otp'] as const;
+const templatesWithOtpDetails = ['barks-otp', 'breath-denta-otp', 'wifi-otp', 'denta-otp', 'jet-otp', 'pee-barks-otp'] as const;
 
 const otpDetailsData: Record<slug, { amount: string, price: number }[]> = {
   'barks-otp': [
@@ -101,6 +101,20 @@ const otpDetailsData: Record<slug, { amount: string, price: number }[]> = {
     {
       amount: '4',
       price: 23,
+    }
+  ],
+  'pee-barks-otp': [
+    {
+      amount: '1',
+      price: 20,
+    },
+    {
+      amount: '2-3',
+      price: 18,
+    },
+    {
+      amount: '4',
+      price: 16,
     }
   ]
 }
@@ -211,9 +225,12 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
               <h1 className="mb-[5vw] md:mb-[0] text-[4.0vw] md:text-[23px] leading-[5.9vw] md:leading-[26px] text-[#000] font-black">
                 {info.title1}{" "}
                 <span className="text-[#20A51D]">
-                  {info.title2}{" "}
-                  <PriceDisplay priceUSD={Number(info.savings1)} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />!
-                </span>
+                  {info.slug === 'pee-barks-otp' ? info.savings1: (
+                    <>
+                      {info.title2}{" "}
+                      <PriceDisplay priceUSD={Number(info.savings1)} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />!
+                    </>
+                  )}</span>
               </h1>
             </div>
 
@@ -261,7 +278,13 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                 <div className="relative md:w-[60%] md:px-[20px]">
                   <div className="p-[20px_30px] md:p-[20px_0] text-center md:text-left">
                     <p className="mb-[20px] md:mb-[12px] text-[22px] leading-[26px] text-[#212529]">
-                      {info.title3} <span className="font-bold">{info.product}</span> {info.title4}
+                      {info.slug === 'pee-barks-otp' ? (
+                          <><span className="font-bold">{info.title3}</span> {info.title4}</>
+                        ) : (
+                        <>
+                          {info.title3} <span className="font-bold">{info.product}</span> {info.title4}
+                        </>
+                      )}
                     </p>
                     <p className="text-[28px] lg:text-[34px] text-[#000] font-extrabold uppercase">{info.product}!</p>
                   </div>
@@ -303,7 +326,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                   name="productId"
                   value={productNum}
                   onChange={(e) => setProductNum(parseInt(e.target.value))}
-                  className="flex w-full m-[5px_auto] md:m-[0_auto] p-[5px] bg-[#E9E9ED] border-[2px] border-[#c5c5c5] text-[16px] leading-[18px] font-bold"
+                  className={`flex w-full m-[5px_auto] md:m-[0_auto] p-[5px] bg-[#E9E9ED] border-[2px] border-[#c5c5c5] text-[16px] leading-[18px] font-bold bg-[url(https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c9b2ee84-d091-4e97-4e97-9a70180eda00/public)] bg-no-repeat bg-[auto_10px] bg-[95%_50%]`}
                 >
                   <option value="1">1</option>
                   <option value="2">2</option>
