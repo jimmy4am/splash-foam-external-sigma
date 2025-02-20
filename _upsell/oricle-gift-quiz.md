@@ -96,5 +96,6 @@ gift6:
   numberOfReviews: 472
   price: 49.99
   shippingPrice: 9.95
+footerDisclaimer: "*Sales tax, processing & handling fees will be applied at the end of the ordering process."
 
 ---

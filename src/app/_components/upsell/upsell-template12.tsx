@@ -407,7 +407,8 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
           </button>
         </div>
         </div>
-        <footer className="flex flex-col justify-center items-center gap-[15px] mt-auto p-[40px_0] text-center text-[3vw] sm:text-[12px] leading-[15px] text-[#000]">
+
+        <footer className="flex flex-col justify-center items-center gap-[15px] w-[95%] max-w-[1000px] mx-[auto] mt-auto px-[5vw] md:px-[20px]  py-[40px] text-center text-[3vw] sm:text-[12px] leading-[15px] text-[#000]">
           <p className="flex">
             Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
@@ -419,12 +420,45 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
             />
             All Rights Reserved
           </p>
-          <Image
-            src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e6c4e39d-5796-4506-8db9-141156085500/public"
-            width={135}
-            height={28}
-            alt="DMCA Protected icon"
-          />
+
+          {info.footerDisclaimer && <p className="text-[14px]">{info.footerDisclaimer}</p>}
+
+          <p className="flex text-[14px] underline">Accepted Payments</p>
+
+          <ul className="flex flex-wrap justify-center gap-[15px]">
+            <li>
+              <Image
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6db9f844-557c-4dd8-ad66-583a1b60d300/public"
+                width={56}
+                height={28}
+                alt="Visa"
+              />
+            </li>
+            <li>
+              <Image
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/656ca63a-96b6-46e4-26ce-b012350c1e00/public"
+                width={56}
+                height={28}
+                alt="Mastercard"
+              />
+            </li>
+            <li>
+              <Image
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/88047a78-c36e-4f46-a982-ffd581cf6b00/public"
+                width={56}
+                height={28}
+                alt="American Express"
+              />
+            </li>
+            <li>
+              <Image
+                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e6c4e39d-5796-4506-8db9-141156085500/public"
+                width={135}
+                height={28}
+                alt="DMCA Protected icon"
+              />
+            </li>
+          </ul>
         </footer>
       </div>
   );

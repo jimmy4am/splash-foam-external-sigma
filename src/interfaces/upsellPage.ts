@@ -87,6 +87,7 @@ export type UpsellPageType = {
   gift4?: Gift;
   gift5?: Gift;
   gift6?: Gift;
+  footerDisclaimer?: string;
 };
 
 export type Gift = {

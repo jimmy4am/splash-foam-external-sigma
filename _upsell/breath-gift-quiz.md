@@ -96,5 +96,5 @@ gift6:
   numberOfReviews: 472
   price: 49.99
   shippingPrice: 9.95
-
+footerDisclaimer: "These statements have not been evaluated by the food and drug administration. This drug is not intended to diagnose, treat, cure, or prevent any disease."
 ---
