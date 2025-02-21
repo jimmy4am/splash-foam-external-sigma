@@ -24,42 +24,43 @@ interface Prices {
   [key: number]: string;
 }
 
+type OtpDetailsType = { amount: string, price: number, priceField: string | string[] };
+
 type slug = typeof templatesWithOtpDetails[number];
 
 const templatesWithOtpDetails = ['glab-brush', 'denta-breath-otp'] as const;
 
-const otpDetailsData: Record<slug, { amount: string, price: number }[]> = {
-  'glab-brush': [
-    {
-      amount: '1',
-      price: 15,
-    },
-    {
-      amount: '2-3',
-      price: 13,
-    },
-    {
-      amount: '4',
-      price: 11,
-    }
-  ],
-  'denta-breath-otp': [
-    {
-      amount: '1',
-      price: 17,
-    },
-    {
-      amount: '2-3',
-      price: 15,
-    },
-    {
-      amount: '4',
-      price: 13,
-    }
-  ],
-}
+const getOtpDetailsData = (info: UpsellPageType): OtpDetailsType[] => ([
+  {
+    amount: '1',
+    price: Number(info.stickyprice5),
+    priceField: 'stickyprice5',
+  },
+  ...(
+    Number(info.stickyprice6)/2 === Number(info.stickyprice7)/3 ?
+      [{
+        amount: '2-3',
+        price: Number(info.stickyprice6)/2,
+        priceField: ['stickyprice6', 'stickyprice7'],
+      }] :
+      [{
+        amount: '2',
+        price: Number(info.stickyprice6)/2,
+        priceField: 'stickyprice6',
+      },{
+        amount: '3',
+        price: Number(info.stickyprice7)/3,
+        priceField: 'stickyprice7',
+      }]
+  ),
+  {
+    amount: '4',
+    price: Number(info.stickyprice8)/4,
+    priceField: 'stickyprice8',
+  },
+]);
 
-const OneTimePurchaseDetails = ({ data, sessionData }: { data: { amount: string, price: number }[], sessionData: SessionDataType }) => (
+const OneTimePurchaseDetails = ({ data, sessionData }: { data: OtpDetailsType[], sessionData: SessionDataType }) => (
   <div className="flex items-center justify-center gap-[3px] mb-[8px] leading-[26px] text-[#000] font-bold">
     {data.map((item, idx) => (
       <>
@@ -74,7 +75,7 @@ const OneTimePurchaseDetails = ({ data, sessionData }: { data: { amount: string,
   </div>
 )
 
-const ListItem = ({ icon, children }: { icon: string, children: React.ReactNode }) => (
+const ListItem = ({ icon, title }: { icon: string, title: string }) => (
   <li className="flex items-start gap-[2vw] md:gap-[10px] md:pr-[3vw] lg:pr-[0] text-[4vw] md:text-[1.6vw] lg:text-[18px] leading-[1.3] md:leading-[1.8vw] lg:leading-[20px] -tracking-[0.05vw] md:tracking-[0] font-bold">
     <Image
       className="flex-[0_0_21px]"
@@ -83,7 +84,7 @@ const ListItem = ({ icon, children }: { icon: string, children: React.ReactNode 
       height={25}
       alt="List marker"
     />
-    {children}
+    {title}
   </li>
 )
 
@@ -178,16 +179,16 @@ const UpsellTemplate13 = ({ info, nextStep, sessionData }: Props) => {
               </div>
 
                 <ul className="relative md:w-[53%] flex flex-col gap-[5vw] md:gap-[2vw] lg:gap-[20px] md:mr-[10px] md:pr-[3%]">
-                  <ListItem icon={info.image3}>{info.text1}</ListItem>
-                  <ListItem icon={info.image3}>{info.text2}</ListItem>
-                  <ListItem icon={info.image3}>{info.text3}</ListItem>
-                  <ListItem icon={info.image3}>{info.text4}</ListItem>
-                  <ListItem icon={info.image3}>{info.text5}</ListItem>
+                  <ListItem icon={info.image3} title={info.text1} />
+                  <ListItem icon={info.image3} title={info.text2} />
+                  <ListItem icon={info.image3} title={info.text3} />
+                  <ListItem icon={info.image3} title={info.text4} />
+                  <ListItem icon={info.image3} title={info.text5} />
                 </ul>
             </div>
 
             <div className="mt-[4vw] mb-[4vw] md:mt-[0] md:mb-[25px]">
-              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={otpDetailsData[info.slug as slug]} sessionData={sessionData}/>}
+              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={getOtpDetailsData(info)} sessionData={sessionData} />}
 
               <select
                 name="productId"

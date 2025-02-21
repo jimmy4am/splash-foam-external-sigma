@@ -6,8 +6,6 @@ import { Lato } from "next/font/google";
 
 import { siteProduct } from "@/lib/site-info";
 import { UpsellPageType } from "@/interfaces/upsellPage";
-import { SessionDataType } from "@/interfaces/sessionData";
-import { PriceDisplay } from "./upsell-price-display";
 import EditImage from "@/app/_components/edit-image";
 
 const lato = Lato({
@@ -18,18 +16,16 @@ const lato = Lato({
 type Props = {
   info: UpsellPageType;
   setCurrentUpsell: (info: UpsellPageType) => void;
-  sessionData: SessionDataType;
 };
 
-type OneTimePurchaseDetailsProps = {
-  info: UpsellPageType;
-  setCurrentUpsell: (info: UpsellPageType) => void;
+type OneTimePurchaseDetailsProps = Props & {
   data: OtpDetailsType[];
 }
 
-type OneTimePurchaseRadioProps = {
+type OneTimePurchaseRadioEditProps = Props &  {
   price: string;
-  sessionData: SessionDataType;
+  priceField: string;
+  productNum: number
 }
 
 interface Prices {
@@ -120,17 +116,27 @@ const OneTimePurchaseDetailsEdit = ({ info, setCurrentUpsell, data }: OneTimePur
   );
 }
 
-const OneTimePurchaseRadio = ({ price, sessionData }: OneTimePurchaseRadioProps ) => (
-  <label className="flex items-center mt-[15px] text-[14px] leading-[1.4] font-bold " htmlFor="price">
-    <input className="w-[16px] h-[16px] mr-[8px]" type="radio" checked={true} />
-    One Time Purchase
-    <span className="ml-[4px] text-[#FFBA00]">
-      <PriceDisplay priceUSD={Number(price)} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />
+const OneTimePurchaseRadioEdit = ({ info, setCurrentUpsell, price, priceField, productNum }: OneTimePurchaseRadioEditProps ) => (
+  <label className="flex items-center mt-[15px] text-[14px] leading-[1.4] font-bold">
+    <span className="flex w-full text-[#FFBA00]">
+      <input
+        className="editable-input flex-1 mr-[5px]"
+        onChange={(e) => {
+          setCurrentUpsell({
+            ...info,
+            [priceField]: e.target.value,
+          });
+        }}
+        value={ Number(price) / productNum }
+        placeholder={priceField}
+      />
+      each
     </span>
   </label>
 )
 
-const UpsellTemplate15Edit = ({ info, setCurrentUpsell, sessionData }: Props) => {
+
+const UpsellTemplate15Edit = ({ info, setCurrentUpsell }: Props) => {
   const [productNum, setProductNum] = useState<number>(1);
 
   const oneTimePrices: Prices = {
@@ -138,6 +144,13 @@ const UpsellTemplate15Edit = ({ info, setCurrentUpsell, sessionData }: Props) =>
     2: Number(info.stickyprice6).toFixed(0).toString(),
     3: Number(info.stickyprice7).toFixed(0).toString(),
     4: Number(info.stickyprice8).toFixed(0).toString(),
+  };
+
+  const oneTimePricesKeys: Prices = {
+    1: "stickyprice5",
+    2: "stickyprice6",
+    3: "stickyprice7",
+    4: "stickyprice8",
   };
 
   return (
@@ -400,7 +413,8 @@ const UpsellTemplate15Edit = ({ info, setCurrentUpsell, sessionData }: Props) =>
                   <option value="4">4</option>
                 </select>
 
-                {(info.slug === 'pee-tablets-otp' || info.slug === 'breath-otp') && <OneTimePurchaseRadio price={oneTimePrices[productNum]} sessionData={sessionData} />}
+                {(info.slug === 'pee-tablets-otp' || info.slug === 'breath-otp') &&
+                    <OneTimePurchaseRadioEdit info={info} setCurrentUpsell={setCurrentUpsell} price={oneTimePrices[productNum]} priceField={oneTimePricesKeys[productNum]} productNum={productNum} />}
               </div>
             </div>
 

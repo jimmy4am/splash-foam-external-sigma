@@ -6,7 +6,6 @@ import { Inter, Lato } from "next/font/google";
 
 import { siteProduct } from "@/lib/site-info";
 import { UpsellPageType } from "@/interfaces/upsellPage";
-import { SessionDataType } from "@/interfaces/sessionData";
 import EditImage from "@/app/_components/edit-image";
 
 const lato = Lato({
