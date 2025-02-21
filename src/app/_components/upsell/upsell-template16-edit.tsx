@@ -18,26 +18,9 @@ const inter = Inter({ subsets: ["latin"] });
 type Props = {
   info: UpsellPageType;
   setCurrentUpsell: (info: UpsellPageType) => void;
-  nextStep: (upsell?: any) => Promise<void>;
-  sessionData: SessionDataType;
 };
 
-const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }: Props) => {
-  const acceptOffer = async () => {
-    const upsell = {
-      offerName: info.stickyname1,
-      offerPrice: parseFloat(info.stickyprice1),
-      offerId: info.stickyid1,
-      offerBilling: info.stickybilling1,
-      offerOfferId: info.stickyoffer1,
-    };
-    await nextStep(upsell);
-  };
-
-  const declineOffer = async () => {
-    await nextStep();
-  };
-
+const UpsellTemplate16Edit = ({ info, setCurrentUpsell }: Props) => {
   return (
     <div className={`pt-[15px] md:pt-[40px] bg-[#f6fbfe] text-[20px] leading-[24px] ${lato.className}`}>
       <div className="max-w-[1112px] m-[0_auto] px-[6px]">
@@ -249,7 +232,6 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
               <div className="flex flex-col w-full items-center md:px-4">
                 <button
                   className="w-full max-w-[747px] p-[26px_40px] md:p-[20px_45px] bg-[#4AC27E] text-[23px] leading-[30px] uppercase text-[#fff] font-bold  hover:bg-[#0ebf52] disabled:opacity-40 disabled:pointer-events-none"
-                  onClick={acceptOffer}
                 >
                   <input
                     className="editable-input w-full"
@@ -265,7 +247,6 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                 </button>
                 <button
                   className="mt-[10px] md:mt-[15px] pb-0 bg-transparent border-none text-[11px] md:text-[12px] text-[rgba(153,153,153,0.5)] cursor-default"
-                  onClick={declineOffer}
                 >
                   <input
                     className="editable-input w-full"
@@ -330,7 +311,6 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
         <div className="flex flex-col w-full items-center md:px-4">
           <button
             className="w-full max-w-[747px] p-[26px_45px] md:p-[20px_45px] bg-[#4AC27E] text-[23px] leading-[30px] uppercase text-[#fff] font-bold  hover:bg-[#0ebf52] disabled:opacity-40 disabled:pointer-events-none"
-            onClick={acceptOffer}
           >
             <input
               className="editable-input w-full"
@@ -346,7 +326,6 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
           </button>
           <button
             className="w-full max-w-[747px] mt-[10px] md:mt-[15px] pb-0 bg-transparent border-none text-[11px] md:text-[12px] text-[rgba(153,153,153,0.5)] cursor-default"
-            onClick={declineOffer}
           >
             <input
               className="editable-input w-full"

@@ -84,14 +84,8 @@ const UpsellTemplate14 = ({ info, nextStep, sessionData }: Props) => {
 
             <div className="flex flex-col lg:flex-row items-center gap-[10px] lg:gap-[30px] py-[10px] lg:px-[30px] bg-[#CFBFB2]">
               <div className="lg:flex-1">
-                <button className="flex w-full">
-                  <Image
-                    className="lg:w-full"
-                    src={info.image2}
-                    width={351}
-                    height={62}
-                    alt="Button"
-                  />
+                <button onClick={acceptOffer} className="w-full py-[18px] md:py-[23px] bg-[linear-gradient(180deg,_#ffc616,_#d5810a)] border-[2px] border-[#fff] text-[24px] md:text-[30px] leading-[1] text-[#fff] font-bold uppercase italic -tracking-[2px] md:-tracking-[2.5px] hover:bg-[linear-gradient(180deg,_#d5810a,_#ffc616)]">
+                  {info.ctaText1}
                 </button>
               </div>
 

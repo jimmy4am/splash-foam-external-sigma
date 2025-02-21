@@ -13,7 +13,7 @@ title3:
 title4:
 title5:
 image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ce9de396-8fd2-4414-e809-5464bb047e00/public
-image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/bd2a31cb-e0db-4eec-ea3f-23ea763cad00/public
+image2: 
 image3: 
 image4: 
 image5:
@@ -22,8 +22,8 @@ text2: Get it quick and start enjoying the benefits as soon as possible!
 text3: For only
 text4: 
 text5: 
-ctaText1: 
-ctaText2: Expedite My Order
+ctaText1: Expedite My Order
+ctaText2: 
 skipOfferText1: No thank you, I would like regular processing of my order.
 skipOfferText2: 
 savings1:

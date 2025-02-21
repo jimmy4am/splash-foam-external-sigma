@@ -18,7 +18,6 @@ const lato = Lato({
 type Props = {
   info: UpsellPageType;
   setCurrentUpsell: (info: UpsellPageType) => void;
-  nextStep: (upsell?: any) => Promise<void>;
   sessionData: SessionDataType;
 };
 
@@ -131,7 +130,7 @@ const OneTimePurchaseRadio = ({ price, sessionData }: OneTimePurchaseRadioProps 
   </label>
 )
 
-const UpsellTemplate15Edit = ({ info, setCurrentUpsell, nextStep, sessionData }: Props) => {
+const UpsellTemplate15Edit = ({ info, setCurrentUpsell, sessionData }: Props) => {
   const [productNum, setProductNum] = useState<number>(1);
 
   const oneTimePrices: Prices = {
@@ -139,48 +138,6 @@ const UpsellTemplate15Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
     2: Number(info.stickyprice6).toFixed(0).toString(),
     3: Number(info.stickyprice7).toFixed(0).toString(),
     4: Number(info.stickyprice8).toFixed(0).toString(),
-  };
-  const oneTimeIds: Prices = {
-    1: info.stickyid5 || "",
-    2: info.stickyid6 || "",
-    3: info.stickyid7 || "",
-    4: info.stickyid8 || "",
-  };
-
-  const oneTimeNames: Prices = {
-    1: info.stickyname5 || "",
-    2: info.stickyname6 || "",
-    3: info.stickyname7 || "",
-    4: info.stickyname8 || "",
-  };
-
-  const oneTimeBillings: Prices = {
-    1: info.stickybilling5 || "",
-    2: info.stickybilling6 || "",
-    3: info.stickybilling7 || "",
-    4: info.stickybilling8 || "",
-  };
-
-  const oneTimeOfferIds: Prices = {
-    1: info.stickyoffer5 || "",
-    2: info.stickyoffer6 || "",
-    3: info.stickyoffer7 || "",
-    4: info.stickyoffer8 || "",
-  };
-
-  const acceptOffer = async () => {
-    const upsell = {
-      offerName: oneTimeNames[productNum],
-      offerPrice: parseFloat(oneTimePrices[6]),
-      offerId: oneTimeIds[productNum],
-      offerBilling: oneTimeBillings[productNum],
-      offerOfferId: oneTimeOfferIds[productNum],
-    };
-    await nextStep(upsell);
-  };
-
-  const declineOffer = async () => {
-    await nextStep();
   };
 
   return (
@@ -448,7 +405,9 @@ const UpsellTemplate15Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
             </div>
 
             <div className="w-full flex flex-col items-center pb-[7vw] md:pb-[50px]">
-              <button onClick={acceptOffer} className="w-full max-w-[95%] md:max-w-[470px] mb-[35px] p-[4vw_1vw] md:p-[20px_13px] bg-[#4AC27E] text-[5vw] md:text-[20px] leading-[6.5vw] md:leading-[26px] text-[#fff] tracking-[0.5px] italic uppercase shadow-[0vw_0.1vw_0.4vw_0.1vw_rgba(58,84,214,0.40)] md:shadow-[0px_1px_4px_1px_rgba(58,84,214,0.40)] hover:bg-[#23814c]">
+              <button
+                className="w-full max-w-[95%] md:max-w-[470px] mb-[35px] p-[4vw_1vw] md:p-[20px_13px] bg-[#4AC27E] text-[5vw] md:text-[20px] leading-[6.5vw] md:leading-[26px] text-[#fff] tracking-[0.5px] italic uppercase shadow-[0vw_0.1vw_0.4vw_0.1vw_rgba(58,84,214,0.40)] md:shadow-[0px_1px_4px_1px_rgba(58,84,214,0.40)] hover:bg-[#23814c]"
+              >
                 <input
                   className="editable-input w-full"
                   onChange={(e) => {
@@ -461,7 +420,9 @@ const UpsellTemplate15Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                   placeholder="ctaText1"
                 />
               </button>
-              <button onClick={declineOffer} className="w-full max-w-[95%] md:max-w-[470px] text-[3vw] md:text-[14px] text-[#999] hover:text-[#0056b3] hover:underline">
+              <button
+                className="w-full max-w-[95%] md:max-w-[470px] text-[3vw] md:text-[14px] text-[#999] hover:text-[#0056b3] hover:underline"
+              >
                 <input
                   className="editable-input w-full"
                   onChange={(e) => {
