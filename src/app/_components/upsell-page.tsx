@@ -19,7 +19,8 @@ import UpsellTemplate12 from "./upsell/upsell-template12";
 import UpsellTemplate13 from "./upsell/upsell-template13";
 import UpsellTemplate14 from "./upsell/upsell-template14";
 import UpsellTemplate15 from "./upsell/upsell-template15";
-import UpsellTemplate16 from "./upsell/upsell-template16";
+// import UpsellTemplate16 from "./upsell/upsell-template16";
+import UpsellTemplate16Edit from "./upsell/upsell-template16edit";
 
 type Props = {
   info: UpsellPageType;
@@ -28,6 +29,8 @@ type Props = {
 const UpsellPage = ({ info }: Props) => {
   const { nextStep, sessionData, loading, showCcPop, setShowCcPop } =
     useUpsellPage();
+
+  const setCurrentUpsell = (info: UpsellPageType) => console.log('info', info);
 
   const renderTemplate = () => {
     switch (info.template) {
@@ -153,11 +156,8 @@ const UpsellPage = ({ info }: Props) => {
         );
       case "16":
         return (
-          <UpsellTemplate16
-            info={info}
-            nextStep={nextStep}
-            sessionData={sessionData}
-          />
+          // <UpsellTemplate16 info={info} nextStep={nextStep} sessionData={sessionData} />
+          <UpsellTemplate16Edit info={info} setCurrentUpsell={setCurrentUpsell} nextStep={nextStep} sessionData={sessionData}  />
         );
       default:
         return null;

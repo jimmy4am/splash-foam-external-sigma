@@ -167,7 +167,7 @@ const EditImage = <T extends Record<string, any>>({
 
   return (
     <div
-      className="relative"
+      className="relative inline-block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
