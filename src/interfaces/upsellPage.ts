@@ -101,4 +101,6 @@ export type Gift = {
   shippingPrice: number;
 }
 
-type AvailabilityType = 'is available' | 'not available'
+export type GiftKey = 'gift1' | 'gift2' | 'gift3' | 'gift4' | 'gift5' | 'gift6';
+
+type AvailabilityType = 0 | 1

@@ -4,37 +4,41 @@ import React, { ReactNode, useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 import { Lato } from "next/font/google";
 
-import { UpsellPageType } from "@/interfaces/upsellPage";
+import { siteProduct } from "@/lib/site-info";
+import { GiftKey, UpsellPageType } from "@/interfaces/upsellPage";
 import { SessionDataType } from "@/interfaces/sessionData";
 import { PriceDisplay } from "@/app/_components/upsell/upsell-price-display";
+import EditImage from "@/app/_components/edit-image";
 
 const lato = Lato({
   weight: ["400", "700", "900"],
   subsets: ["latin"]
 });
 
-type Props = {
+type BaseProps = {
   info: UpsellPageType;
+  setCurrentUpsell: (info: UpsellPageType) => void;
+}
+
+type Props = BaseProps & {
   nextStep: (upsell?: any) => void;
   sessionData: SessionDataType;
 };
 
-type UpsellQuizModalProps = {
-  info: UpsellPageType;
+type UpsellQuizModalEditProps = BaseProps & {
   onQuizComplete: () => void;
 }
 
-type UpsellQuizCompletedModalProps = {
-  info: UpsellPageType;
+type UpsellQuizCompletedModalEditProps = BaseProps & {
+  showGiftsModal: () => void;
 }
 
-type UpsellGiftsModalProps = {
-  info: UpsellPageType;
+type UpsellGiftsModalEditProps = BaseProps & {
   sessionData: SessionDataType;
   declineOffer: () => void;
 }
 
-type UpsellDeclineGiftsModalProps = {
+type UpsellDeclineGiftsModalEditProps = {
   declineOffer: () => void;
 }
 
@@ -53,7 +57,7 @@ const headerClasses: Record<slug, string> = {
   'jet-gift-quiz': 'border-b-[#00B0F0]',
 }
 
-const UpsellQuizModal = ({ info, onQuizComplete }: UpsellQuizModalProps) => {
+const UpsellQuizModalEdit = ({ info, setCurrentUpsell, onQuizComplete }: UpsellQuizModalEditProps) => {
   const questions: QuizItemType[] = [
     {
       question: {firstLine: 'How easy to use was the ', secondLine: info.product, thirdLine: ' Checkout Process?'},
@@ -91,7 +95,19 @@ const UpsellQuizModal = ({ info, onQuizComplete }: UpsellQuizModalProps) => {
           <div className="w-[70px] h-[3px] m-[30px_auto] bg-[#000]"></div>
 
           <p className="w-[90%] sm:w-[70%] m-[0_auto] text-center text-[23px] leading-[27px] lg:text-[40px] lg:leading-[50px] font-bold italic">
-            {currentQuestion?.question.firstLine} {currentQuestion?.question.secondLine} {currentQuestion?.question.thirdLine}
+            {currentQuestion?.question.firstLine}
+            <input
+              className="editable-input"
+              onChange={(e) => {
+                setCurrentUpsell({
+                  ...info,
+                  product: e.target.value,
+                });
+              }}
+              value={info.product}
+              placeholder="product"
+            />
+            {currentQuestion?.question.thirdLine}
           </p>
 
           <div className="w-[70px] h-[3px] m-[30px_auto] bg-[#000]"></div>
@@ -113,7 +129,7 @@ const UpsellQuizModal = ({ info, onQuizComplete }: UpsellQuizModalProps) => {
   )
 };
 
-const UpsellQuizCompletedModal = ({ info }: UpsellQuizCompletedModalProps) => {
+const UpsellQuizCompletedModalEdit = ({ info, setCurrentUpsell, showGiftsModal }: UpsellQuizCompletedModalEditProps) => {
   const [isSubmitting, setIsSubmitting] = useState(true);
 
   useEffect(() => {
@@ -125,7 +141,7 @@ const UpsellQuizCompletedModal = ({ info }: UpsellQuizCompletedModalProps) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center  py-[3vw] sm:py-[15px] bg-[rgba(0,0,0,0.6)]">
+    <div className="fixed inset-0 flex items-center justify-center  py-[3vw] sm:py-[15px] bg-[rgba(0,0,0,0.6)] z-10">
       <div className="max-h-[80%] min-h-[250px] overflow-auto flex flex-col items-center gap-[20px] w-[95%] max-w-[600px] p-[40px_15px] bg-[#2a363f] text-center text-[#fff] leading-[1]">
         {isSubmitting ? (
           <>
@@ -136,7 +152,20 @@ const UpsellQuizCompletedModal = ({ info }: UpsellQuizCompletedModalProps) => {
           </>
           ) : (
             <>
-              <p className="max-w-[450px] mx-auto text-[26px]">Congrats! We have {info.giftsNumber} available gifts for you today!</p>
+              <p className="max-w-[450px] mx-auto text-[26px]">
+                Congrats! We have
+                <input
+                  className="editable-input w-[60px] mx-[5px]"
+                  onChange={(e) => {
+                    setCurrentUpsell({
+                      ...info,
+                      giftsNumber: Number(e.target.value),
+                    });
+                  }}
+                  value={info.giftsNumber}
+                  placeholder="giftsNumber"
+                />
+                available gifts for you today!</p>
               <div className="w-[150px]">
                 <Image
                   src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3059931c-ae40-4161-941c-77290dc1f800/public"
@@ -145,7 +174,11 @@ const UpsellQuizCompletedModal = ({ info }: UpsellQuizCompletedModalProps) => {
                   alt="Check"
                 />
               </div>
-              <p className="text-[20px]">You can now select your FREE GIFT!</p>
+              <button
+                onClick={showGiftsModal}
+                className="p-[10px_20px] bg-[#08d441] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1] text-[#fff] uppercase font-bold cursor-pointer hover:bg-[#39AC6A] active:bg-[#39AC6A]">
+                Go to Gifts modal
+              </button>
             </>
           )}
       </div>
@@ -153,21 +186,25 @@ const UpsellQuizCompletedModal = ({ info }: UpsellQuizCompletedModalProps) => {
   )
 }
 
-const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalProps) => {
+const UpsellGiftsModalEdit = ({ info, setCurrentUpsell, sessionData, declineOffer }: UpsellGiftsModalEditProps) => {
   const gifts = useMemo(() =>([
     {
-      availability: info.gift1?.availability,
+      availability: !!info.gift1?.availability,
+      giftField: 'gift1',
       image: info.gift1?.image,
+      imageField: 'gift1.image',
       name: info.gift1?.name,
       text: info.gift1?.text,
       ratingNumber: info.gift1?.ratingNumber,
       numberOfReviews: info.gift1?.numberOfReviews,
       price: info.gift1?.price,
-      shippingPrice: info.gift1?.shippingPrice
+      shippingPrice: info.gift1?.shippingPrice,
     },
     {
-      availability: info.gift2?.availability,
+      availability: !!info.gift2?.availability,
+      giftField: 'gift2',
       image: info.gift2?.image,
+      imageField: 'gift2.image',
       name: info.gift2?.name,
       text: info.gift2?.text,
       ratingNumber: info.gift2?.ratingNumber,
@@ -176,8 +213,10 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
       shippingPrice: info.gift2?.shippingPrice
     },
     {
-      availability: info.gift3?.availability,
+      availability: !!info.gift3?.availability,
+      giftField: 'gift3',
       image: info.gift3?.image,
+      imageField: 'gift3.image',
       name: info.gift3?.name,
       text: info.gift3?.text,
       ratingNumber: info.gift3?.ratingNumber,
@@ -186,8 +225,10 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
       shippingPrice: info.gift3?.shippingPrice
     },
     {
-      availability: info.gift4?.availability,
+      availability: !!info.gift4?.availability,
+      giftField: 'gift4',
       image: info.gift4?.image,
+      imageField: 'gift4.image',
       name: info.gift4?.name,
       text: info.gift4?.text,
       ratingNumber: info.gift4?.ratingNumber,
@@ -196,8 +237,10 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
       shippingPrice: info.gift4?.shippingPrice
     },
     {
-      availability: info.gift5?.availability,
+      availability: !!info.gift5?.availability,
+      giftField: 'gift5',
       image: info.gift5?.image,
+      imageField: 'gift5.image',
       name: info.gift5?.name,
       text: info.gift5?.text,
       ratingNumber: info.gift5?.ratingNumber,
@@ -206,8 +249,10 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
       shippingPrice: info.gift5?.shippingPrice
     },
     {
-      availability: info.gift6?.availability,
+      availability: !!info.gift6?.availability,
+      giftField: 'gift6',
       image: info.gift6?.image,
+      imageField: 'gift6.image',
       name: info.gift6?.name,
       text: info.gift6?.text,
       ratingNumber: info.gift6?.ratingNumber,
@@ -215,7 +260,7 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
       price: info.gift6?.price,
       shippingPrice: info.gift6?.shippingPrice
     },
-  ]), [info])
+  ]), [info]);
 
   const getRating = (value: number): ReactNode => {
     switch (true) {
@@ -237,20 +282,89 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
             {gifts.length ? gifts.map((gift) => (
               <div className={`flex border-[1px] border-[#444] ${!gift.availability && 'grayscale'}`} key={gift.name}>
                 <div className="flex-[0_0_40%]">
-                  <Image
-                    src={gift.image!}
+                  <EditImage
+                    className="w-full h-full object-cover"
+                    src={gift.image}
+                    alt={siteProduct}
                     width={400}
                     height={400}
-                    alt={gift.name!}
-                    className="w-full h-full object-cover"
+                    post={info}
+                    setPost={setCurrentUpsell}
+                    field={gift.imageField as any || ''}
                   />
                 </div>
                 <div className="flex-[0_0_60%] flex flex-col gap-[5px] p-[5px_10px_5px]">
-                  <h3 className="text-[14px] sm:text-[18px] font-bold">{gift.name}</h3>
-                  <p className="flex-1 text-[12px] leading-[1.2] sm:text-[14px]">{gift.text}</p>
-                  <div className="flex items-center gap-[6px] text-[12px] leading-[1.2] sm:text-[14px]">
-                    <p className="text-[rgba(239,85,95,1)]">{getRating(gift.ratingNumber!)}</p>
-                    <p>({gift.numberOfReviews}{" "} customer reviews)</p>
+                  <h3 className="text-[14px] sm:text-[18px] font-bold">
+                    <input
+                      className="editable-input w-full"
+                      onChange={(e) => {
+                        setCurrentUpsell({
+                          ...info,
+                          [gift.giftField as string]: {
+                            ...info[gift.giftField as GiftKey],
+                            name: e.target.value,
+                          },
+                        });
+                      }}
+                      value={gift.name}
+                      placeholder="Name"
+                    />
+                  </h3>
+                  <p className="flex-1 text-[12px] leading-[1.2] sm:text-[14px]">
+                    <textarea
+                      rows={3}
+                      className="editable-input w-full"
+                      onChange={(e) => {
+                        setCurrentUpsell({
+                          ...info,
+                          [gift.giftField as string]: {
+                            ...info[gift.giftField as GiftKey],
+                            text: e.target.value,
+                          },
+                        });
+                      }}
+                      value={gift.text}
+                      placeholder="Text"
+                    />
+                  </p>
+                  <div className="flex flex-col gap-[6px] text-[12px] leading-[1.2] sm:text-[14px]">
+                    <p className="text-[rgba(239,85,95,1)]">
+                      <p className="flex items-center">
+                        <label htmlFor="rating">Rating: </label>
+                        <input
+                          id="rating"
+                          className="editable-input w-[50px] mx-[5px]"
+                          onChange={(e) => {
+                            setCurrentUpsell({
+                              ...info,
+                              [gift.giftField as string]: {
+                                ...info[gift.giftField as GiftKey],
+                                ratingNumber: e.target.value,
+                              },
+                            });
+                          }}
+                          value={gift.ratingNumber}
+                          placeholder="Rating"
+                        />
+                        {getRating(gift.ratingNumber!)}
+                      </p>
+                    </p>
+                    <p>(
+                      <input
+                        className="editable-input w-[50px]"
+                        onChange={(e) => {
+                          setCurrentUpsell({
+                            ...info,
+                            [gift.giftField as string]: {
+                              ...info[gift.giftField as GiftKey],
+                              numberOfReviews: e.target.value,
+                            },
+                          });
+                        }}
+                        value={gift.numberOfReviews}
+                        placeholder="Number of reviews"
+                      />{" "}
+                      customer reviews)</p>
                   </div>
                   <div className="flex items-center gap-[6px] text-[12px] leading-[1.2] sm:text-[14px] font-bold">
                     <p className="text-[#08d441]">
@@ -263,28 +377,60 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
                       />
                     </p>
                     <p className="text-[#f35072] line-through">
-                      <PriceDisplay
-                        priceUSD={gift.price!}
-                        countryCode={
-                          sessionData?.customerInfo?.country || "US"
-                        }
-                        digits={2}
+                      <input
+                        className="editable-input w-[70px]"
+                        onChange={(e) => {
+                          setCurrentUpsell({
+                            ...info,
+                            [gift.giftField as string]: {
+                              ...info[gift.giftField as GiftKey],
+                              price: e.target.value,
+                            },
+                          });
+                        }}
+                        value={gift.price}
+                        placeholder="Old price"
                       />
                     </p>
                   </div>
                   <p
-                    className="w-full max-w-[85%] sm:max-w-[180px] p-[3px_5px] border-[1px] border-[#CDCDCD] text-center text-[12px] leading-[1.2] sm:text-[14px]">
+                    className="self-start p-[3px_5px] border-[1px] border-[#CDCDCD] text-center text-[12px] leading-[1.2] sm:text-[14px]">
                     Expedited Shipping:{" "}
-                    <PriceDisplay
-                      priceUSD={gift.shippingPrice!}
-                      countryCode={
-                        sessionData?.customerInfo?.country || "US"
-                      }
-                      digits={2}
+                    <input
+                      className="editable-input w-[60px]"
+                      onChange={(e) => {
+                        setCurrentUpsell({
+                          ...info,
+                          [gift.giftField as string]: {
+                            ...info[gift.giftField as GiftKey],
+                            shippingPrice: e.target.value,
+                          },
+                        });
+                      }}
+                      value={gift.shippingPrice}
+                      placeholder="Shipping price"
                     />
                   </p>
-                  <button
-                    className="w-full p-[10px_2px] bg-[#08d441] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1] text-[#fff] uppercase font-bold cursor-pointer hover:bg-[#39AC6A] active:bg-[#39AC6A]">{gift.availability ? 'Choose gift' : 'Sold out'}</button>
+                  <label className="inline-flex self-start relative items-center mr-5 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      className="sr-only peer"
+                      checked={gift.availability}
+                      onChange={(e) => {
+                        setCurrentUpsell({
+                          ...info,
+                          [gift.giftField as string]: {
+                            ...info[gift.giftField as GiftKey],
+                            availability: e.target.checked ? 1 : 0,
+                          },
+                        });
+                      }}
+                    />
+                    <div className="w-11 h-6 bg-gray-200 rounded-full peer  peer-focus:ring-green-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#08d441]"></div>
+                    <span className="ml-2 text-sm font-medium text-gray-900">
+                      {gift.availability ? 'Available' : 'Not available'}
+                    </span>
+                  </label>
                 </div>
               </div>)
             ) : null}
@@ -300,7 +446,7 @@ const UpsellGiftsModal = ({ info, sessionData, declineOffer }: UpsellGiftsModalP
   )
 }
 
-const UpsellDeclineGiftsModal = ({ declineOffer }: UpsellDeclineGiftsModalProps) => {
+const UpsellDeclineGiftsModalEdit = ({ declineOffer }: UpsellDeclineGiftsModalEditProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       declineOffer()
@@ -313,7 +459,8 @@ const UpsellDeclineGiftsModal = ({ declineOffer }: UpsellDeclineGiftsModalProps)
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.5)]">
-      <div className="w-full max-w-[300px] flex flex-col items-center p-[5px_10px_10px] bg-[#fff] rounded-[5px] text-center text-[17px] font-arial">
+      <div
+        className="w-full max-w-[300px] flex flex-col items-center p-[5px_10px_10px] bg-[#fff] rounded-[5px] text-center text-[17px] font-arial">
         <Image
           src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8de31b2a-2cd1-45ad-6bd2-80d7c07e3d00/public"
           width={70}
@@ -326,7 +473,7 @@ const UpsellDeclineGiftsModal = ({ declineOffer }: UpsellDeclineGiftsModalProps)
   )
 }
 
-const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
+const UpsellTemplate12Edit = ({info, setCurrentUpsell, nextStep, sessionData }: Props) => {
   const [isQuizModalVisible ,setIsQuizModalVisible] = useState(false);
   const [isQuizCompletedModalVisible ,setIsQuizCompletedModalVisible] = useState(false);
   const [isGiftsModalVisible ,setIsGiftsModalVisible] = useState(false);
@@ -345,31 +492,34 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
   const onQuizComplete = () => {
     setIsQuizModalVisible(false);
     setIsQuizCompletedModalVisible(true);
+  };
 
-    setTimeout(() => {
-      setIsQuizCompletedModalVisible(false);
-      setIsGiftsModalVisible(true)
-    }, 7000)
+  const showGiftsModal = () => {
+    setIsQuizCompletedModalVisible(false);
+    setIsGiftsModalVisible(true)
   }
 
   return (
       <div className={`flex flex-col min-h-screen bg-[#fff9f8] text-[#212529] ${lato.className}`}>
 
         {/*MODALS*/}
-        {isQuizModalVisible && <UpsellQuizModal info={info} onQuizComplete={onQuizComplete} />}
-        {isQuizCompletedModalVisible && <UpsellQuizCompletedModal info={info} />}
-        {isGiftsModalVisible && <UpsellGiftsModal info={info} sessionData={sessionData} declineOffer={declineOffer} />}
-        {isDeclineGiftsModalVisible && <UpsellDeclineGiftsModal declineOffer={nextStep} />}
+        {isQuizModalVisible && <UpsellQuizModalEdit info={info} setCurrentUpsell={setCurrentUpsell} onQuizComplete={onQuizComplete} />}
+        {isQuizCompletedModalVisible && <UpsellQuizCompletedModalEdit info={info} setCurrentUpsell={setCurrentUpsell} showGiftsModal={showGiftsModal} />}
+        {isGiftsModalVisible && <UpsellGiftsModalEdit info={info} setCurrentUpsell={setCurrentUpsell} sessionData={sessionData} declineOffer={declineOffer} />}
+        {isDeclineGiftsModalVisible && <UpsellDeclineGiftsModalEdit declineOffer={nextStep} />}
 
         {templatesWithHeader.includes(info.slug as slug) && (
           <header className={`flex justify-center p-[15px_15px_10px] sm:p-[10px_15px_5px] bg-[#fff] border-b-[7px] ${headerClasses[info.slug as slug]}`}>
             <a href="#" className="flex w-[130px] sm:w-auto">
-              <Image
+              <EditImage
                 className="object-contain"
                 src={info.logo}
+                alt={info.product}
                 width={200}
                 height={70}
-                alt={info.product}
+                post={info}
+                setPost={setCurrentUpsell}
+                field="logo"
               />
             </a>
           </header>
@@ -410,7 +560,18 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
 
         <footer className="flex flex-col justify-center items-center gap-[15px] w-[95%] max-w-[1000px] mx-[auto] mt-auto px-[5vw] md:px-[20px]  py-[40px] text-center text-[3vw] sm:text-[12px] leading-[15px] text-[#000]">
           <p className="flex">
-            Copyright {new Date().getFullYear()} - {info.product}{" "}
+            Copyright {new Date().getFullYear()} -
+            <input
+              className="editable-input"
+              onChange={(e) => {
+                setCurrentUpsell({
+                  ...info,
+                  product: e.target.value,
+                });
+              }}
+              value={info.product}
+              placeholder="product"
+            />{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
               width={12}
@@ -421,7 +582,19 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
             All Rights Reserved
           </p>
 
-          {info.footerDisclaimer && <p className="text-[14px]">{info.footerDisclaimer}</p>}
+          {info.footerDisclaimer && <p className="w-full text-[14px]">
+            <input
+                className="editable-input w-1/2"
+                onChange={(e) => {
+                  setCurrentUpsell({
+                    ...info,
+                    footerDisclaimer: e.target.value,
+                  });
+                }}
+                value={info.footerDisclaimer}
+                placeholder="footerDisclaimer"
+            />
+          </p>}
 
           <p className="flex text-[14px] underline">Accepted Payments</p>
 
@@ -464,4 +637,4 @@ const UpsellTemplate12 = ({ info, nextStep, sessionData }: Props) => {
   );
 };
 
-export default UpsellTemplate12;
+export default UpsellTemplate12Edit;

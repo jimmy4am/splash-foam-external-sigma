@@ -43,7 +43,7 @@ stickyname2:
 stickyprice2:
 giftsNumber: 6
 gift1:
-    availability: is available
+    availability: 1
     image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/613c7d9d-ef27-4258-b20c-bc18e8517800/public
     name: Ear Wax Cleaner
     text: Clean and massage your ears with the #1 best-selling ear cleaner. Feels amazing and revitalizes hearing!
@@ -52,7 +52,7 @@ gift1:
     price: 29.99
     shippingPrice: 9.95
 gift2:
-  availability: not available
+  availability: 0
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0af521dd-b27e-457e-77f2-39d5085d5300/public
   name: Chewable Oral Probiotic
   text: This amazing oral probiotic will keep your breath fresh and smelling amazing all day
@@ -61,7 +61,7 @@ gift2:
   price: 49.95
   shippingPrice: 9.95
 gift3:
-  availability: not available
+  availability: 0
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c5dbf41a-3aa0-4af0-5916-087358bb7c00/public
   name: Dishwasher Cleaner
   text: Easily clean the dishwasher and never let gross buildup affect your dishes or your health!
@@ -70,7 +70,7 @@ gift3:
   price: 24.94
   shippingPrice: 9.95
 gift4:
-  availability: is available
+  availability: 1
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0e39e9b4-13c7-43bf-f0c6-ca077f2cc300/public
   name: Personal Safety Alarm
   text: Just pull the alarm to stop any wrongdoers right in there tracks with this ultra high frequency alarm!
@@ -79,7 +79,7 @@ gift4:
   price: 25.95
   shippingPrice: 9.95
 gift5:
-  availability: is available
+  availability: 1
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/9934d206-073d-4357-01dc-a5cce1985d00/public
   name: Wearable Hand Sanitizer
   text: Never worry about germs again with this on-the-go hand sanitizer!
@@ -88,7 +88,7 @@ gift5:
   price: 19.99
   shippingPrice: 9.95
 gift6:
-  availability: not available
+  availability: 0
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3b81b664-6ef5-4d35-619c-a3bcac4da200/public
   name: Refrigerator Deodorizer
   text: Something rotten stinking up your kitchen? Keep your fridge clean and smelling great with this product!
