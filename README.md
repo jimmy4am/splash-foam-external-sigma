@@ -1,5 +1,7 @@
 # 4am Media + Sigma
 
+🔴 **Priority Project - New Checkout Template -** https://zenlvy.com/products/etherealguard-revive-spray
+
 The goal for this project is to create all needed upsell templates and markdown files for our currently running sales funnels but in our new dynamic system using typescript, tailwind, and markdown files.
 
 To view a live upsell, go to /chekout/upsell1?show=[upsellName]
