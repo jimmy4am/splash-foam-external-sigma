@@ -61,7 +61,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                     });
                   }}
                   value={info.text5}
-                  placeholder="Text"
+                  placeholder="text5"
                 />
               </h5>
               <h1 className="text-center text-[4.4vw] md:text-[16px] lg:text-[23px] font-bold italic text-[#606060]">
@@ -74,7 +74,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                     });
                   }}
                   value={info.title1}
-                  placeholder="Text"
+                  placeholder="title1"
                 />{" "}
                 <span className="text-[#20A51D]">
                   <input
@@ -86,7 +86,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                       });
                     }}
                     value={info.savings1}
-                    placeholder="Text"
+                    placeholder="savings1"
                   />
                 </span>{" "}
                 <input
@@ -98,7 +98,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                     });
                   }}
                   value={info.title2}
-                  placeholder="Text"
+                  placeholder="title2"
                 />
               </h1>
             </div>
@@ -153,7 +153,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                             });
                           }}
                           value={info.text2}
-                          placeholder="Text"
+                          placeholder="text2"
                         />
                       </span> for 50% OFF!</>) :
                       info.slug === 'denta-sub' ?
@@ -167,7 +167,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                               });
                             }}
                             value={info.text2}
-                            placeholder="Text"
+                            placeholder="text2"
                           />
                         </span> for 50% OFF!</>) :
                         (<>One LAST CHANCE to get this exclusive discount for a <span className="font-bold">
@@ -180,7 +180,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                               });
                             }}
                             value={info.text2}
-                            placeholder="Text"
+                            placeholder="text2"
                           />
                         </span> for your Family and Friends!</>)
                     }
@@ -195,7 +195,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                         });
                       }}
                       value={info.product}
-                      placeholder="Text"
+                      placeholder="product"
                     />!
                   </h2>
                   <h4 className="w-full flex justify-center md:justify-start items-end text-[#10B74A] text-[8.6vw] md:text-[40px] leading-[1] font-bold">
@@ -209,7 +209,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                           });
                         }}
                         value={info.text1}
-                        placeholder="Text"
+                        placeholder="text1"
                       />
                     </span>{" "}
                     <input
@@ -221,7 +221,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                         });
                       }}
                       value={info.stickyprice1}
-                      placeholder="Text"
+                      placeholder="stickyprice1"
                     />
                   </h4>
                 </div>
@@ -240,7 +240,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                     });
                   }}
                   value={info.text3}
-                  placeholder="Text"
+                  placeholder="text3"
                 />
               </p>
             </div>
@@ -260,7 +260,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                       });
                     }}
                     value={info.ctaText1}
-                    placeholder="Text"
+                    placeholder="ctaText1"
                   />
                 </button>
                 <button
@@ -276,7 +276,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                       });
                     }}
                     value={info.skipOfferText1}
-                    placeholder="Text"
+                    placeholder="skipOfferText1"
                   />
                 </button>
               </div>
@@ -294,10 +294,10 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
               <li><a href="#" className="hover:underline cursor-pointer">Become an Affiliate</a></li>
             </ul>
           </nav>
-          <p className="flex flex-wrap items-center justify-center text-[12px] leading-[15px] text-[#222]">
+          <p className="flex items-center justify-center text-[12px] leading-[15px] text-[#222]">
             Copyright {new Date().getFullYear()} -
             <input
-              className="editable-input w-full"
+              className="editable-input"
               onChange={(e) => {
                 setCurrentUpsell({
                   ...info,
@@ -305,7 +305,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                 });
               }}
               value={info.product}
-              placeholder="Text"
+              placeholder="product"
             />
             {" "}
             <Image
@@ -341,7 +341,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                 });
               }}
               value={info.ctaText1}
-              placeholder="Text"
+              placeholder="ctaText1"
             />
           </button>
           <button
@@ -357,7 +357,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell, nextStep, sessionData }:
                 });
               }}
               value={info.skipOfferText1}
-              placeholder="Text"
+              placeholder="skipOfferText1"
             />
           </button>
         </div>

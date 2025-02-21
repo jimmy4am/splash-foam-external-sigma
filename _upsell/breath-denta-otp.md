@@ -71,5 +71,5 @@ stickyid8: "2694"
 stickybilling8: "2"
 stickyoffer8: "233"
 stickyname8: 4x Denta Blast - One Time Bonus
-stickyprice8: "16.00"
+stickyprice8: "160.00"
 ---

@@ -8,6 +8,7 @@ import { siteProduct } from "@/lib/site-info";
 import { UpsellPageType } from "@/interfaces/upsellPage";
 import { SessionDataType } from "@/interfaces/sessionData";
 import { PriceDisplay } from "./upsell-price-display";
+import EditImage from "@/app/_components/edit-image";
 
 const lato = Lato({
   weight: ["400", "700", "900"],
@@ -16,13 +17,15 @@ const lato = Lato({
 
 type Props = {
   info: UpsellPageType;
+  setCurrentUpsell: (info: UpsellPageType) => void;
   nextStep: (upsell?: any) => Promise<void>;
   sessionData: SessionDataType;
 };
 
 type OneTimePurchaseDetailsProps = {
-data: OtpDetailsType[];
-sessionData: SessionDataType;
+  info: UpsellPageType;
+  setCurrentUpsell: (info: UpsellPageType) => void;
+  data: OtpDetailsType[];
 }
 
 type OneTimePurchaseRadioProps = {
@@ -80,22 +83,45 @@ const getOtpDetailsData = (info: UpsellPageType): OtpDetailsType[] => ([
   },
 ]);
 
-const OneTimePurchaseDetails = ({ data, sessionData }: OneTimePurchaseDetailsProps) => (
-  <div className="flex items-center justify-center gap-[3px] mb-[8px] leading-[26px] text-[#000] font-bold">
-    {data.map((item, idx) => (
-      <>
-        <div className="flex">
-          <span className="mr-[6px] text-[#DC5B5B]">{item.amount}: </span>
-          <PriceDisplay priceUSD={item.price} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />{" "}
-          each
-        </div>
-        {idx + 1 < data.length && '|'}
-      </>
-    ))}
-  </div>
-)
+const OneTimePurchaseDetailsEdit = ({ info, setCurrentUpsell, data }: OneTimePurchaseDetailsProps) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, field: string | string[]) => {
+    if (typeof field === 'string') {
+      setCurrentUpsell({
+        ...info,
+        [field]: e.target.value,
+      });
+    } else {
+      field?.forEach(el => {
+        setCurrentUpsell({
+          ...info,
+          [el]: e.target.value,
+        })
+      })
+    }
+  };
 
-const OneTimePurchaseRadio = ({ price, sessionData }: OneTimePurchaseRadioProps) => (
+  return (
+    <div className="flex items-center justify-center gap-[3px] mb-[8px] leading-[26px] text-[#000] font-bold">
+      {data.map((item, idx) => (
+        <>
+          <div className="flex items-center">
+            <span className="mr-[6px] text-[#DC5B5B]">{item.amount}:</span>
+            <input
+              className="editable-input w-[60px] mx-[5px]"
+              onChange={(e) => handleChange(e, item.priceField)}
+              value={item.price}
+              placeholder="price"
+            />
+            each
+          </div>
+          {idx + 1 < data.length && '|'}
+        </>
+      ))}
+    </div>
+  );
+}
+
+const OneTimePurchaseRadio = ({ price, sessionData }: OneTimePurchaseRadioProps ) => (
   <label className="flex items-center mt-[15px] text-[14px] leading-[1.4] font-bold " htmlFor="price">
     <input className="w-[16px] h-[16px] mr-[8px]" type="radio" checked={true} />
     One Time Purchase
@@ -105,7 +131,7 @@ const OneTimePurchaseRadio = ({ price, sessionData }: OneTimePurchaseRadioProps)
   </label>
 )
 
-const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
+const UpsellTemplate15Edit = ({ info, setCurrentUpsell, nextStep, sessionData }: Props) => {
   const [productNum, setProductNum] = useState<number>(1);
 
   const oneTimePrices: Prices = {
@@ -174,12 +200,55 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                 You Can't Leave Without Taking ADVANTAGE of this SPECIAL OFFER!
               </h5>
               <h1 className="mb-[5vw] md:mb-[0] text-[4.0vw] md:text-[23px] leading-[5.9vw] md:leading-[26px] text-[#000] font-black">
-                {info.title1}{" "}
+                <input
+                  className="editable-input"
+                  onChange={(e) => {
+                    setCurrentUpsell({
+                      ...info,
+                      title1: e.target.value,
+                    });
+                  }}
+                  value={info.title1}
+                  placeholder="title1"
+                />
+                {" "}
                 <span className="text-[#20A51D]">
-                  {info.slug === 'pee-barks-otp' ? info.savings1: (
+                  {info.slug === 'pee-barks-otp' ? (
+                    <input
+                      className="editable-input"
+                      onChange={(e) => {
+                        setCurrentUpsell({
+                          ...info,
+                          savings1: e.target.value,
+                        });
+                      }}
+                      value={info.savings1}
+                      placeholder="savings1"
+                    />
+                  ) : (
                     <>
-                      {info.title2}{" "}
-                      <PriceDisplay priceUSD={Number(info.savings1)} countryCode={ sessionData?.customerInfo?.country || "US"} digits={0} />!
+                      <input
+                        className="editable-input"
+                        onChange={(e) => {
+                          setCurrentUpsell({
+                            ...info,
+                            title2: e.target.value,
+                          });
+                        }}
+                        value={info.title2}
+                        placeholder="title2"
+                      />{" "}
+                      <input
+                        className="editable-input"
+                        onChange={(e) => {
+                          setCurrentUpsell({
+                            ...info,
+                            savings1: e.target.value,
+                          });
+                        }}
+                        value={info.savings1}
+                        placeholder="savings1"
+                      />!
                     </>
                   )}</span>
               </h1>
@@ -194,12 +263,15 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                   className="absolute z-10 top-0 w-[134px] md:w-[145px] -left-[8px] md:-left-[18px]"
                   alt="Flash sale icon"
                 />
-                <Image
+                <EditImage
+                  className="max-w-[150px] max-h-[50px] md:max-w-none md:max-h-none md:w-auto md:h-auto"
                   src={info.logo}
+                  alt="logo"
                   width={200}
                   height={50}
-                  className="max-w-[150px] max-h-[50px] md:max-w-none md:max-h-none md:w-auto md:h-auto"
-                  alt="logo"
+                  post={info}
+                  setPost={setCurrentUpsell}
+                  field="logo"
                 />
               </div>
               <Image
@@ -217,12 +289,15 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
 
               <div className="md:flex md:items-start">
                 <div className={`${productImageWrapperClasses[info.slug] || 'justify-center md:px-[20px]'} relative flex w-full md:w-[40%] mb-[20px] md:mb-[0]`}>
-                  <Image
+                  <EditImage
+                    className={`${productImageClasses[info.slug] || 'max-w-[250px] max-h-[340px]'}`}
                     src={info.image1}
+                    alt={siteProduct}
                     width={393}
                     height={382}
-                    alt={siteProduct}
-                    className={`${productImageClasses[info.slug] || 'max-w-[250px] max-h-[340px]'}`}
+                    post={info}
+                    setPost={setCurrentUpsell}
+                    field="image1"
                   />
                 </div>
 
@@ -230,38 +305,121 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
                   <div className="p-[20px_30px] md:p-[20px_0] text-center md:text-left">
                     <p className="mb-[20px] md:mb-[12px] text-[22px] leading-[26px] text-[#212529]">
                       {info.slug === 'pee-barks-otp' ? (
-                          <><span className="font-bold">{info.title3}</span> {info.title4}</>
+                          <>
+                            <span className="font-bold">
+                              <input
+                                className="editable-input"
+                                onChange={(e) => {
+                                  setCurrentUpsell({
+                                    ...info,
+                                    title3: e.target.value,
+                                  });
+                                }}
+                                value={info.title3}
+                                placeholder="title3"
+                              />
+                            </span>
+                            <input
+                              className="editable-input"
+                              onChange={(e) => {
+                                setCurrentUpsell({
+                                  ...info,
+                                  title4: e.target.value,
+                                });
+                              }}
+                              value={info.title4}
+                              placeholder="title4"
+                            />
+                          </>
                         ) : (
                         <>
-                          {info.title3} <span className="font-bold">{info.product}</span> {info.title4}
+                          <input
+                            className="editable-input"
+                            onChange={(e) => {
+                              setCurrentUpsell({
+                                ...info,
+                                title3: e.target.value,
+                              });
+                            }}
+                            value={info.title3}
+                            placeholder="title3"
+                          />
+                          <span className="font-bold">
+                            <input
+                              className="editable-input"
+                              onChange={(e) => {
+                                setCurrentUpsell({
+                                  ...info,
+                                  product: e.target.value,
+                                });
+                              }}
+                              value={info.product}
+                              placeholder="product"
+                            />
+                          </span>
+                          <input
+                            className="editable-input"
+                            onChange={(e) => {
+                              setCurrentUpsell({
+                                ...info,
+                                title4: e.target.value,
+                              });
+                            }}
+                            value={info.title4}
+                            placeholder="title4"
+                          />
                         </>
                       )}
                     </p>
-                    <p className="text-[28px] lg:text-[34px] text-[#000] font-extrabold uppercase">{info.product}!</p>
+                    <p className="text-[28px] lg:text-[34px] text-[#000] font-extrabold uppercase">
+                      <input
+                        className="editable-input"
+                        onChange={(e) => {
+                          setCurrentUpsell({
+                            ...info,
+                            product: e.target.value,
+                          });
+                        }}
+                        value={info.product}
+                        placeholder="product"
+                      />!
+                    </p>
                   </div>
                   <div className="flex gap-[15px] md:gap-[30px] p-[0_10px_20px] md:p-[0_0_20px]">
-                    <div className="rounded-[50%] overflow-hidden">
-                      <Image
+                    <div>
+                      <EditImage
+                        className="rounded-[50%]"
                         src={info.image2}
-                        width={152}
-                        height={152}
                         alt="Image 1"
+                        width={152}
+                        height={152}
+                        post={info}
+                        setPost={setCurrentUpsell}
+                        field="image2"
                       />
                     </div>
-                    <div className="rounded-[50%] overflow-hidden">
-                      <Image
+                    <div>
+                      <EditImage
+                        className="rounded-[50%]"
                         src={info.image3}
+                        alt="Image 2"
                         width={152}
                         height={152}
-                        alt="Image 2"
+                        post={info}
+                        setPost={setCurrentUpsell}
+                        field="image3"
                       />
                     </div>
-                    <div className="rounded-[50%] overflow-hidden">
-                      <Image
+                    <div>
+                      <EditImage
+                        className="rounded-[50%]"
                         src={info.image4}
+                        alt="Image 3"
                         width={152}
                         height={152}
-                        alt="Image 3"
+                        post={info}
+                        setPost={setCurrentUpsell}
+                        field="image4"
                       />
                     </div>
                   </div>
@@ -270,7 +428,7 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
             </div>
 
             <div className="mt-[4vw] mb-[4vw] md:mt-[0] md:mb-[25px]">
-              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetails data={getOtpDetailsData(info)} sessionData={sessionData} />}
+              {templatesWithOtpDetails.includes(info.slug as slug) && <OneTimePurchaseDetailsEdit info={info} setCurrentUpsell={setCurrentUpsell} data={getOtpDetailsData(info)} />}
 
               <div className="w-full max-w-[255px] md:max-w-[300px] mx-auto">
                 <select
@@ -291,10 +449,30 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
 
             <div className="w-full flex flex-col items-center pb-[7vw] md:pb-[50px]">
               <button onClick={acceptOffer} className="w-full max-w-[95%] md:max-w-[470px] mb-[35px] p-[4vw_1vw] md:p-[20px_13px] bg-[#4AC27E] text-[5vw] md:text-[20px] leading-[6.5vw] md:leading-[26px] text-[#fff] tracking-[0.5px] italic uppercase shadow-[0vw_0.1vw_0.4vw_0.1vw_rgba(58,84,214,0.40)] md:shadow-[0px_1px_4px_1px_rgba(58,84,214,0.40)] hover:bg-[#23814c]">
-                {info.ctaText1}
+                <input
+                  className="editable-input w-full"
+                  onChange={(e) => {
+                    setCurrentUpsell({
+                      ...info,
+                      ctaText1: e.target.value,
+                    });
+                  }}
+                  value={info.ctaText1}
+                  placeholder="ctaText1"
+                />
               </button>
-              <button onClick={declineOffer} className="text-[3vw] md:text-[14px] text-[#999] hover:text-[#0056b3] hover:underline">
-                {info.skipOfferText1}
+              <button onClick={declineOffer} className="w-full max-w-[95%] md:max-w-[470px] text-[3vw] md:text-[14px] text-[#999] hover:text-[#0056b3] hover:underline">
+                <input
+                  className="editable-input w-full"
+                  onChange={(e) => {
+                    setCurrentUpsell({
+                      ...info,
+                      skipOfferText1: e.target.value,
+                    });
+                  }}
+                  value={info.skipOfferText1}
+                  placeholder="skipOfferText1"
+                />
               </button>
             </div>
           </div>
@@ -310,7 +488,19 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
             </ul>
           </nav>
           <p className="flex items-center justify-center text-[12px] leading-[15px] text-[#222]">
-            Copyright {new Date().getFullYear()} - {info.product}{" "}
+            Copyright {new Date().getFullYear()} -
+            <input
+              className="editable-input"
+              onChange={(e) => {
+                setCurrentUpsell({
+                  ...info,
+                  product: e.target.value,
+                });
+              }}
+              value={info.product}
+              placeholder="product"
+            />
+            {" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
               width={12}
@@ -332,4 +522,4 @@ const UpsellTemplate15 = ({ info, nextStep, sessionData }: Props) => {
   );
 };
 
-export default UpsellTemplate15;
+export default UpsellTemplate15Edit;

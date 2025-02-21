@@ -187,7 +187,7 @@ const EditImage = <T extends Record<string, any>>({
         </div>
       </div>
 
-      <div className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full h-full min-w-[250px] min-h-[100px] ${isHovered || isDragActive ? "opacity-100 visible" : "invisible  opacity-0"}`}>
+      <div className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full h-full min-w-[250px] min-h-[100px] z-[100] ${isHovered || isDragActive ? "opacity-100 visible" : "invisible  opacity-0"}`}>
 
         {/*Open media library button*/}
         <div
