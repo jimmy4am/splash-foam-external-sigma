@@ -7,16 +7,16 @@ import Image from "next/image";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { ChevronLeftIcon, ChevronRightIcon, MinusIcon, PlusIcon, TagIcon } from "@heroicons/react/24/solid";
 
-import { SalesMouldCleanerType } from "@/interfaces/salesPage";
-import { ProductType } from "@/app/_components/sales/sales-5/sales-product/types";
-import Rating from "@/app/_components/sales/sales-5/_components/rating";
-import SalesProductRadio from "@/app/_components/sales/sales-5/sales-product/sales-product-radio";
-import AppButton from "@/app/_components/sales/sales-5/_components/app-button";
+import { CheckoutPageType } from "@/interfaces/checkoutPage";
+import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
+import Rating from "@/app/_components/checkout/checkout-2/_components/rating";
+import CheckoutProductRadio from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product-radio";
+import AppButton from "@/app/_components/checkout/checkout-2/_components/app-button";
 
 const poppins = Poppins({weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
 type Props = {
-  info: SalesMouldCleanerType;
+  info: CheckoutPageType;
   products: ProductType[];
   chosenProduct: ProductType;
   setChosenProduct: React.Dispatch<React.SetStateAction<ProductType>>;
@@ -25,7 +25,7 @@ type Props = {
   addToCart: () => void;
 };
 
-const SalesProduct = ({
+const CheckoutProduct = ({
   info,
   products,
   chosenProduct,
@@ -97,54 +97,54 @@ const SalesProduct = ({
           {/*
             // @ts-ignore */}
           <Slider className="product-slider-main" {...mainSliderSettings}>
-            <Image src={info.product.product_image_1} width={813} height={813} alt="Image 1"/>
-            <Image src={info.product.product_image_2} width={813} height={813} alt="Image 2"/>
-            <Image src={info.product.product_image_3} width={813} height={813} alt="Image 3"/>
-            <Image src={info.product.product_image_4} width={813} height={813} alt="Image 4"/>
-            <Image src={info.product.product_image_5} width={813} height={813} alt="Image 5"/>
-            <Image src={info.product.product_image_6} width={813} height={813} alt="Image 6"/>
-            <Image src={info.product.product_image_7} width={813} height={813} alt="Image 7"/>
-            <Image src={info.product.product_image_8} width={813} height={813} alt="Image 8"/>
-            <Image src={info.product.product_image_9} width={813} height={813} alt="Image 9"/>
-            <Image src={info.product.product_image_10} width={813} height={813} alt="Image 10"/>
-            <Image src={info.product.product_image_11} width={813} height={813} alt="Image 11"/>
+            <Image src={info.mould_cleaner.product.product_image_1} width={813} height={813} alt="Image 1"/>
+            <Image src={info.mould_cleaner.product.product_image_2} width={813} height={813} alt="Image 2"/>
+            <Image src={info.mould_cleaner.product.product_image_3} width={813} height={813} alt="Image 3"/>
+            <Image src={info.mould_cleaner.product.product_image_4} width={813} height={813} alt="Image 4"/>
+            <Image src={info.mould_cleaner.product.product_image_5} width={813} height={813} alt="Image 5"/>
+            <Image src={info.mould_cleaner.product.product_image_6} width={813} height={813} alt="Image 6"/>
+            <Image src={info.mould_cleaner.product.product_image_7} width={813} height={813} alt="Image 7"/>
+            <Image src={info.mould_cleaner.product.product_image_8} width={813} height={813} alt="Image 8"/>
+            <Image src={info.mould_cleaner.product.product_image_9} width={813} height={813} alt="Image 9"/>
+            <Image src={info.mould_cleaner.product.product_image_10} width={813} height={813} alt="Image 10"/>
+            <Image src={info.mould_cleaner.product.product_image_11} width={813} height={813} alt="Image 11"/>
           </Slider>
           <div className="hidden md:block p-[20px_50px]">
             {/*
               // @ts-ignore */}
             <Slider className="product-slider-thumb" {...thumbSliderSettings}>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_1} width={115} height={115} alt="Image 1"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_1} width={115} height={115} alt="Image 1"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_2} width={115} height={115} alt="Image 2"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_2} width={115} height={115} alt="Image 2"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_3} width={115} height={115} alt="Image 3"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_3} width={115} height={115} alt="Image 3"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_4} width={115} height={115} alt="Image 4"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_4} width={115} height={115} alt="Image 4"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_5} width={115} height={115} alt="Image 5"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_5} width={115} height={115} alt="Image 5"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_6} width={115} height={115} alt="Image 6"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_6} width={115} height={115} alt="Image 6"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_7} width={115} height={115} alt="Image 7"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_7} width={115} height={115} alt="Image 7"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_8} width={115} height={115} alt="Image 8"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_8} width={115} height={115} alt="Image 8"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_9} width={115} height={115} alt="Image 9"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_9} width={115} height={115} alt="Image 9"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_10} width={115} height={115} alt="Image 10"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_10} width={115} height={115} alt="Image 10"/>
               </div>
               <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
-                className="rounded-[12px]" src={info.product.product_image_11} width={115} height={115} alt="Image 11"/>
+                className="rounded-[12px]" src={info.mould_cleaner.product.product_image_11} width={115} height={115} alt="Image 11"/>
               </div>
             </Slider>
           </div>
@@ -152,27 +152,27 @@ const SalesProduct = ({
         <div
           className="md:flex-[0_0_50%] lg:flex-[0_0_45%] md:w-[50%] lg:w-[45%] p-[15px_0] md:p-[0_0_0_20px]  lg:p-[0_0_0_35px] xl:p-[0_0_0_50px]">
           <h1
-            className={`text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] font-bold ${poppins.className}`}>{info.product.title}</h1>
+            className={`text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] font-bold ${poppins.className}`}>{info.mould_cleaner.product.title}</h1>
           <div className="flex items-center gap-[5px] mb-[15px]">
-            <Rating rating={info.product.rating}/>
-            ({info.product.reviews} Reviews)
+            <Rating rating={info.mould_cleaner.product.rating}/>
+            ({info.mould_cleaner.product.reviews} Reviews)
           </div>
           <ul className="mb-[18px] text-[15px] leading-[22px] font-bold tracking-[0.5px]">
             <li className="flex gap-[5px] mb-[15px]">
               <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
-              <span className="flex-1">{info.product.text_1}</span>
+              <span className="flex-1">{info.mould_cleaner.product.text_1}</span>
             </li>
             <li className="flex gap-[5px] mb-[15px]">
               <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
-              <span className="flex-1">{info.product.text_2}</span>
+              <span className="flex-1">{info.mould_cleaner.product.text_2}</span>
             </li>
             <li className="flex gap-[5px] mb-[15px]">
               <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
-              <span className="flex-1">{info.product.text_3}</span>
+              <span className="flex-1">{info.mould_cleaner.product.text_3}</span>
             </li>
             <li className="flex gap-[5px]">
               <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
-              <span className="flex-1">{info.product.text_4}</span>
+              <span className="flex-1">{info.mould_cleaner.product.text_4}</span>
             </li>
           </ul>
           <div className="w-full flex items-end gap-[7px] mb-[18px]">
@@ -197,7 +197,7 @@ const SalesProduct = ({
 
             <div className="flex flex-col gap-[10px]">
               {products.map(item => (
-                <SalesProductRadio
+                <CheckoutProductRadio
                   chosenProduct={chosenProduct}
                   item={item}
                   handleClick={() => setChosenProduct(item)}
@@ -253,4 +253,4 @@ const SalesProduct = ({
   );
 };
 
-export default SalesProduct;
+export default CheckoutProduct;

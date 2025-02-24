@@ -1,12 +1,11 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 
-import AppButton from "@/app/_components/sales/sales-5/_components/app-button";
+import AppButton from "@/app/_components/checkout/checkout-2/_components/app-button";
 
 const poppins = Poppins({weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
-const SalesFooter = () => {
-
+const CheckoutFooter = () => {
   return (
     <footer>
       <div className="relative">
@@ -70,4 +69,4 @@ const SalesFooter = () => {
   )
 };
 
-export default SalesFooter;
+export default CheckoutFooter;

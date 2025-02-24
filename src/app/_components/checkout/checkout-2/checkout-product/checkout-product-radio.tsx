@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProductType } from "@/app/_components/sales/sales-5/sales-product/types";
+import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
 
 type Props = {
   chosenProduct: ProductType;
@@ -9,7 +9,7 @@ type Props = {
   isMostPopular: boolean
 };
 
-const SalesProductRadio = ({ chosenProduct, item, handleClick, isMostPopular }: Props) => {
+const CheckoutProductRadio = ({ chosenProduct, item, handleClick, isMostPopular }: Props) => {
   return (
     <div onClick={() => handleClick(item)} className={`relative flex items-center gap-[12px] p-[18px]  border-[2px]  rounded-[10px] ${item.id === chosenProduct.id ? 'bg-[rgba(255,165,0,.1)] border-[rgba(255,165,1)]' : 'bg-[rgba(255,165,0,.02)] border-[rgba(255,165,0,.3)]'} cursor-pointer hover:bg-[rgba(255,165,0,.1)] hover:border-[rgba(255,165,1)]`}>
       {isMostPopular && <p className="absolute -top-[10px] -right-[10px] rotate-[3deg] px-[10px] bg-[#ffa500] rounded-[4px] text-[15px] leading-[24px] text-[#fff] font-bold">Most Popular</p>}
@@ -26,4 +26,4 @@ const SalesProductRadio = ({ chosenProduct, item, handleClick, isMostPopular }: 
   );
 };
 
-export default SalesProductRadio;
+export default CheckoutProductRadio;

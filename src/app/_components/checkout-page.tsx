@@ -9,6 +9,8 @@ import CheckoutHeader2 from "./checkout/checkout-header-2";
 import CheckoutFooter2 from "./checkout/checkout-footer-2";
 import CheckoutForm2 from "./checkout/checkout-form-2";
 
+import Checkout from "@/app/_components/checkout/checkout-2/checkout";
+
 type Props = {
   info: CheckoutPageType;
 };
@@ -41,6 +43,11 @@ const CheckoutPage = ({ info }: Props) => {
           <CheckoutFooter2 info={info} />
           <FunnelFluxScripts funnelFlux={info.funnelFlux} />
           <CheckoutClickId />
+        </div>
+      )}
+      {info.template === "3" && (
+        <div className="flex flex-col items-center relative">
+          <Checkout info={info}/>
         </div>
       )}
     </>

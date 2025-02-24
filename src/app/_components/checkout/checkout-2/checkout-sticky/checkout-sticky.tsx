@@ -4,19 +4,19 @@ import React from "react";
 import Image from "next/image";
 import {TagIcon} from "@heroicons/react/24/solid";
 
-import { SalesMouldCleanerType } from "@/interfaces/salesPage";
-import { ProductType } from "@/app/_components/sales/sales-5/sales-product/types";
-import AppButton from "@/app/_components/sales/sales-5/_components/app-button";
+import { CheckoutPageType } from "@/interfaces/checkoutPage";
+import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
+import AppButton from "@/app/_components/checkout/checkout-2/_components/app-button";
 
 type Props = {
-  info: SalesMouldCleanerType;
+  info: CheckoutPageType;
   products: ProductType[];
   chosenProduct: ProductType;
   setChosenProduct: React.Dispatch<React.SetStateAction<ProductType>>;
   addToCart: () => void;
 };
 
-const SalesSticky = ({
+const CheckoutSticky = ({
  info,
  products,
  chosenProduct,
@@ -34,9 +34,9 @@ const SalesSticky = ({
     <div className="sticky bottom-0 bg-[#fff] p-[10px_0_15px] md:p-[10px_0] shadow-[0_-1px_10px_rgba(0,0,0,.2)] z-10">
       <div className="w-full max-w-[1330px] mx-auto px-[15px] flex items-center gap-[10px] md:gap-[15px]">
         <div className="flex-1 flex items-center gap-[10px] md:gap-[15px]">
-          <Image className="w-auto h-[42px] md:h-[52px]" src={info.product.product_image_1} width={52} height={52} alt="Image 1" />
+          <Image className="w-auto h-[42px] md:h-[52px]" src={info.mould_cleaner.product.product_image_1} width={52} height={52} alt="Image 1" />
           <div>
-            <p className="hidden lg:block text-[19px] leading-[23px] font-bold">{info.product.title}</p>
+            <p className="hidden lg:block text-[19px] leading-[23px] font-bold">{info.mould_cleaner.product.title}</p>
             <div className="flex items-end gap-[7px]">
               <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-[22px] text-[#ffa500] font-bold">{chosenProduct.newPrice}</span>
               <span className="text-[16px] leading-[24px] md:text-[18px] md:leading-[22px] text-[rgba(18,18,18,.9)] font-bold line-through">{chosenProduct.price}</span>
@@ -74,4 +74,4 @@ const SalesSticky = ({
   )
 };
 
-export default SalesSticky;
+export default CheckoutSticky;

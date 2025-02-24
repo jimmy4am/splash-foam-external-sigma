@@ -72,8 +72,6 @@ import SalesFaqsEdit4 from "./sales/sales-4/sales-faqs/sales-faqs-edit";
 // import SalesFooter4 from "./sales/sales-4/sales-footer/sales-footer";
 import SalesFooterEdit4 from "./sales/sales-4/sales-footer/sales-footer-edit";
 
-import Sales5 from "./sales/sales-5/sales-5";
-
 type Props = {
   info: SalesPageType;
 };
@@ -165,9 +163,6 @@ const SalesPage = ({ info }: Props) => {
           {/*<SalesFooter4 info={info} />*/}
           <SalesFooterEdit4 info={info} setCurrentPost={setCurrentPost} />
         </>
-      )}
-      {info.template === "5" && (
-        <Sales5 info={info.mould_cleaner}/>
       )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>

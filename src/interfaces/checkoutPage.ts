@@ -68,4 +68,46 @@ export type CheckoutPageType = {
   };
   buttonCta: string;
   content: string;
+
+  mould_cleaner: {
+    header: {
+      logo: string;
+      title: string;
+    };
+    product: {
+      product_image_1: string;
+      product_image_2: string;
+      product_image_3: string;
+      product_image_4: string;
+      product_image_5: string;
+      product_image_6: string;
+      product_image_7: string;
+      product_image_8: string;
+      product_image_9: string;
+      product_image_10: string;
+      product_image_11: string;
+      title: string;
+      rating: number;
+      reviews: number;
+      text_1: string;
+      text_2: string;
+      text_3: string;
+      text_4: string;
+      offer_1_id: number;
+      offer_1_text: string;
+      offer_1_price: number;
+      offer_1_new_price: number;
+      offer_1_savings: number;
+      offer_2_id: number;
+      offer_2_text: string;
+      offer_2_price: number;
+      offer_2_new_price: number;
+      offer_2_savings: number;
+      offer_3_id: number;
+      offer_3_text: string;
+      offer_3_price: number;
+      offer_3_new_price: number;
+      offer_3_savings: number;
+    }
+  }
 };
