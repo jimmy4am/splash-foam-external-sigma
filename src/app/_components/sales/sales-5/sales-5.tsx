@@ -7,6 +7,7 @@ import { SalesMouldCleanerType } from "@/interfaces/salesPage";
 import { ProductType } from "@/app/_components/sales/sales-5/sales-product/types";
 import SalesProduct from "@/app/_components/sales/sales-5/sales-product/sales-product";
 import SalesSticky from "@/app/_components/sales/sales-5/sales-sticky/sales-sticky";
+import SalesFooter from "@/app/_components/sales/sales-5/sales-footer/sales-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,6 +60,7 @@ const Sales5 = ({ info }: Props) => {
         setQuantity={setQuantity}
         addToCart={addToCart}
       />
+      <SalesFooter />
       <SalesSticky
         info={info}
         products={products}

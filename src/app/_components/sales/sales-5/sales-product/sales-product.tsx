@@ -97,71 +97,99 @@ const SalesProduct = ({
           {/*
             // @ts-ignore */}
           <Slider className="product-slider-main" {...mainSliderSettings}>
-            <Image src={info.product.product_image_1} width={813} height={813} alt="Image 1" />
-            <Image src={info.product.product_image_2} width={813} height={813} alt="Image 2" />
-            <Image src={info.product.product_image_3} width={813} height={813} alt="Image 3" />
-            <Image src={info.product.product_image_4} width={813} height={813} alt="Image 4" />
-            <Image src={info.product.product_image_5} width={813} height={813} alt="Image 5" />
-            <Image src={info.product.product_image_6} width={813} height={813} alt="Image 6" />
-            <Image src={info.product.product_image_7} width={813} height={813} alt="Image 7" />
-            <Image src={info.product.product_image_8} width={813} height={813} alt="Image 8" />
-            <Image src={info.product.product_image_9} width={813} height={813} alt="Image 9" />
-            <Image src={info.product.product_image_10} width={813} height={813} alt="Image 10" />
-            <Image src={info.product.product_image_11} width={813} height={813} alt="Image 11" />
+            <Image src={info.product.product_image_1} width={813} height={813} alt="Image 1"/>
+            <Image src={info.product.product_image_2} width={813} height={813} alt="Image 2"/>
+            <Image src={info.product.product_image_3} width={813} height={813} alt="Image 3"/>
+            <Image src={info.product.product_image_4} width={813} height={813} alt="Image 4"/>
+            <Image src={info.product.product_image_5} width={813} height={813} alt="Image 5"/>
+            <Image src={info.product.product_image_6} width={813} height={813} alt="Image 6"/>
+            <Image src={info.product.product_image_7} width={813} height={813} alt="Image 7"/>
+            <Image src={info.product.product_image_8} width={813} height={813} alt="Image 8"/>
+            <Image src={info.product.product_image_9} width={813} height={813} alt="Image 9"/>
+            <Image src={info.product.product_image_10} width={813} height={813} alt="Image 10"/>
+            <Image src={info.product.product_image_11} width={813} height={813} alt="Image 11"/>
           </Slider>
           <div className="hidden md:block p-[20px_50px]">
             {/*
               // @ts-ignore */}
             <Slider className="product-slider-thumb" {...thumbSliderSettings}>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_1} width={115} height={115} alt="Image 1" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_2} width={115} height={115} alt="Image 2" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_3} width={115} height={115} alt="Image 3" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_4} width={115} height={115} alt="Image 4" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_5} width={115} height={115} alt="Image 5" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_6} width={115} height={115} alt="Image 6" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_7} width={115} height={115} alt="Image 7" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_8} width={115} height={115} alt="Image 8" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_9} width={115} height={115} alt="Image 9" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_10} width={115} height={115} alt="Image 10" /></div>
-              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image className="rounded-[12px]" src={info.product.product_image_11} width={115} height={115} alt="Image 11" /></div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_1} width={115} height={115} alt="Image 1"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_2} width={115} height={115} alt="Image 2"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_3} width={115} height={115} alt="Image 3"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_4} width={115} height={115} alt="Image 4"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_5} width={115} height={115} alt="Image 5"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_6} width={115} height={115} alt="Image 6"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_7} width={115} height={115} alt="Image 7"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_8} width={115} height={115} alt="Image 8"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_9} width={115} height={115} alt="Image 9"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_10} width={115} height={115} alt="Image 10"/>
+              </div>
+              <div className="slide px-[4px] hover:opacity-70 cursor-pointer overflow-hidden"><Image
+                className="rounded-[12px]" src={info.product.product_image_11} width={115} height={115} alt="Image 11"/>
+              </div>
             </Slider>
           </div>
         </div>
-        <div className="md:flex-[0_0_50%] lg:flex-[0_0_45%] md:w-[50%] lg:w-[45%] p-[15px_0] md:p-[0_0_0_20px]  lg:p-[0_0_0_35px] xl:p-[0_0_0_50px]">
-          <h1 className={`text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] font-bold ${poppins.className}`}>{info.product.title}</h1>
+        <div
+          className="md:flex-[0_0_50%] lg:flex-[0_0_45%] md:w-[50%] lg:w-[45%] p-[15px_0] md:p-[0_0_0_20px]  lg:p-[0_0_0_35px] xl:p-[0_0_0_50px]">
+          <h1
+            className={`text-[26px] md:text-[32px] leading-[32px] md:leading-[40px] font-bold ${poppins.className}`}>{info.product.title}</h1>
           <div className="flex items-center gap-[5px] mb-[15px]">
-            <Rating rating={info.product.rating} />
+            <Rating rating={info.product.rating}/>
             ({info.product.reviews} Reviews)
           </div>
           <ul className="mb-[18px] text-[15px] leading-[22px] font-bold tracking-[0.5px]">
             <li className="flex gap-[5px] mb-[15px]">
-              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]" />
+              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
               <span className="flex-1">{info.product.text_1}</span>
             </li>
             <li className="flex gap-[5px] mb-[15px]">
-              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]" />
+              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
               <span className="flex-1">{info.product.text_2}</span>
             </li>
             <li className="flex gap-[5px] mb-[15px]">
-              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]" />
+              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
               <span className="flex-1">{info.product.text_3}</span>
             </li>
             <li className="flex gap-[5px]">
-              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]" />
+              <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
               <span className="flex-1">{info.product.text_4}</span>
-            </li>         </ul>
+            </li>
+          </ul>
           <div className="w-full flex items-end gap-[7px] mb-[18px]">
             <span className="text-[20px] leading-[25px] text-[#ffa500] font-bold">{chosenProduct.newPrice}</span>
-            <span className="text-[16px] leading-[24px] text-[rgba(18,18,18,.9)] font-bold line-through">{chosenProduct.price}</span>
-            <p className="inline-flex items-center gap-[3px] min-w-[100px] mb-[4px] px-[5px] bg-[#ffa500] rounded-[6px] text-[12px] leading-[24px] uppercase text-[#fff] font-bold tracking-[1px] whitespace-nowrap">
-              <TagIcon className="flex-[0_0_18px] text-[#fff]" />
+            <span
+              className="text-[16px] leading-[24px] text-[rgba(18,18,18,.9)] font-bold line-through">{chosenProduct.price}</span>
+            <p
+              className="inline-flex items-center gap-[3px] min-w-[100px] mb-[4px] px-[5px] bg-[#ffa500] rounded-[6px] text-[12px] leading-[24px] uppercase text-[#fff] font-bold tracking-[1px] whitespace-nowrap">
+              <TagIcon className="flex-[0_0_18px] text-[#fff]"/>
               save
               {" "}{chosenProduct.savings}%{" "}
             </p>
           </div>
-          
+
           <div className="mb-[15px]">
-            <p className="w-full flex items-center gap-[10px] mb-[13px] text-center text-[14px] leading-[1] uppercase font-bold">
+            <p
+              className="w-full flex items-center gap-[10px] mb-[13px] text-center text-[14px] leading-[1] uppercase font-bold">
               <span className="flex-1 h-[2px] min-w-[50px] bg-[#ffa500]"></span>
               Bundle & Save
               <span className="flex-1 h-[2px] min-w-[50px] bg-[#ffa500]"></span>
@@ -186,7 +214,7 @@ const SalesProduct = ({
                 disabled={quantity <= 1}
                 onClick={() => setQuantity(prev => prev - 1)}
                 className="flex items-center justify-center h-full flex-[0_0_45px] max-w-[45px] border-[0] rounded-[6px_0_0_6px] bg-[#fff]">
-                <MinusIcon className="w-[20px] h-[20px]" />
+                <MinusIcon className="w-[20px] h-[20px]"/>
               </button>
               <input
                 value={quantity}
@@ -196,19 +224,20 @@ const SalesProduct = ({
               <button
                 onClick={() => setQuantity(prev => prev + 1)}
                 className="flex items-center justify-center h-full flex-[0_0_45px] max-w-[45px] border-[0] rounded-[0_6px_6px_0] bg-[#fff]">
-                <PlusIcon className="w-[20px] h-[20px]" />
+                <PlusIcon className="w-[20px] h-[20px]"/>
               </button>
             </div>
           </div>
 
           <p className="flex gap-[5px] mb-[15px] text-[14px] leading-[1.3] text-[#121212] font-bold tracking-[0.9px]">
-            <CheckCircleIcon className="flex-[0_0_17px]" />
+            <CheckCircleIcon className="flex-[0_0_17px]"/>
             <span className="flex-1">First 300 Buyers Get a Free Extra ltem!</span>
           </p>
 
           <div className="flex flex-col gap-[10px]">
             <AppButton classes="uppercase" onClick={addToCart}>Add to Cart</AppButton>
-            <button className="flex items-center justify-center gap-[5px] h-[50px] bg-[#ffc439] rounded-[4px] text-[16px] leading-[22px] font-medium font-helvetica">
+            <button
+              className="flex items-center justify-center gap-[5px] h-[50px] bg-[#ffc439] rounded-[4px] text-[16px] leading-[22px] font-medium font-helvetica">
               Pay With
               <Image
                 src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5e892d43-3890-4e61-f7cd-fca13007dc00/public"
