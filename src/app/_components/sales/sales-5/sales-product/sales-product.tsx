@@ -1,6 +1,6 @@
 "use client";
 
-import React, { MutableRefObject, useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 import Slider from "react-slick";
 import Image from "next/image";
@@ -22,6 +22,7 @@ type Props = {
   setChosenProduct: React.Dispatch<React.SetStateAction<ProductType>>;
   quantity: number;
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
+  addToCart: () => void;
 };
 
 const SalesProduct = ({
@@ -31,6 +32,7 @@ const SalesProduct = ({
   setChosenProduct,
   quantity,
   setQuantity,
+  addToCart,
 }: Props) => {
   const [mainNav, setMainNav] = useState<MutableRefObject<Slider> | null>(null);
   const [thumbNav, setThumbNav] = useState<MutableRefObject<Slider> | null>(null);
@@ -39,10 +41,10 @@ const SalesProduct = ({
   const thumbSliderRef = React.useRef<Slider | null>(null);
 
   React.useEffect(() => {
-    if(mainSliderRef.current) {
+    if (mainSliderRef.current) {
       setMainNav(mainSliderRef as MutableRefObject<Slider>)
     }
-    if(thumbSliderRef.current) {
+    if (thumbSliderRef.current) {
       setThumbNav(thumbSliderRef as MutableRefObject<Slider>)
     }
   }, [mainSliderRef, thumbSliderRef]);
@@ -80,13 +82,13 @@ const SalesProduct = ({
     ]
   }
 
-  const handleClick = (item: ProductType) => {
-    setChosenProduct(item);
-    // @ts-ignore
-    mainNav.slickGoTo(item.slideNumber)
-  }
+  useEffect(() => {
+    if (mainNav) {
+      // @ts-ignore
+      mainNav.slickGoTo(chosenProduct.slideNumber)
+    }
 
-  const addToCart = () => {}
+  }, [chosenProduct]);
 
   return (
     <section className="bg-[#fff] py-[36px]">
@@ -167,7 +169,12 @@ const SalesProduct = ({
 
             <div className="flex flex-col gap-[10px]">
               {products.map(item => (
-                <SalesProductRadio chosenProduct={chosenProduct} item={item} handleClick={handleClick} isMostPopular={item.id === 2}/>
+                <SalesProductRadio
+                  chosenProduct={chosenProduct}
+                  item={item}
+                  handleClick={() => setChosenProduct(item)}
+                  isMostPopular={item.id === 2}
+                />
               ))}
             </div>
           </div>
@@ -200,7 +207,7 @@ const SalesProduct = ({
           </p>
 
           <div className="flex flex-col gap-[10px]">
-            <AppButton onClick={addToCart}>Add to Cart</AppButton>
+            <AppButton classes="uppercase" onClick={addToCart}>Add to Cart</AppButton>
             <button className="flex items-center justify-center gap-[5px] h-[50px] bg-[#ffc439] rounded-[4px] text-[16px] leading-[22px] font-medium font-helvetica">
               Pay With
               <Image

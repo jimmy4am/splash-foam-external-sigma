@@ -4,8 +4,9 @@ import React, {useState} from "react";
 import { Inter } from "next/font/google";
 
 import { SalesMouldCleanerType } from "@/interfaces/salesPage";
+import { ProductType } from "@/app/_components/sales/sales-5/sales-product/types";
 import SalesProduct from "@/app/_components/sales/sales-5/sales-product/sales-product";
-import {ProductType} from "@/app/_components/sales/sales-5/sales-product/types";
+import SalesSticky from "@/app/_components/sales/sales-5/sales-sticky/sales-sticky";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,6 +44,10 @@ const Sales5 = ({ info }: Props) => {
   const [chosenProduct, setChosenProduct] = useState<ProductType>(products[0]);
   const [quantity, setQuantity] = useState(1);
 
+  const addToCart = () => {
+    console.log(`Your choice is ${quantity}x of ${chosenProduct.text}`)
+  }
+
   return (
     <div className={`w-full bg-[#fff] ${inter.className}`}>
       <SalesProduct
@@ -52,6 +57,14 @@ const Sales5 = ({ info }: Props) => {
         setChosenProduct={setChosenProduct}
         quantity={quantity}
         setQuantity={setQuantity}
+        addToCart={addToCart}
+      />
+      <SalesSticky
+        info={info}
+        products={products}
+        chosenProduct={chosenProduct}
+        setChosenProduct={setChosenProduct}
+        addToCart={addToCart}
       />
     </div>
   );

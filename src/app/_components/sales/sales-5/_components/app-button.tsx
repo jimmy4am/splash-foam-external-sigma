@@ -6,7 +6,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const AppButton = ({ classes = '', children, ...props}: Props) => {
-  const baseClassName = "group relative flex items-center justify-center h-[50px] p-[0_30px] bg-[#fff] border-[2px] border-[#ffa500] rounded-[8px] text-[19px] leading-[1] text-[#fff] tracking-[1px] uppercase font-bold transition ease-in-out duration-300 hover:text-[#ffa500]";
+  const baseClassName = "group relative flex items-center justify-center h-[50px] p-[0_30px] bg-[#fff] border-[2px] border-[#ffa500] rounded-[8px] text-[19px] leading-[1] text-[#fff] tracking-[1px] font-bold transition ease-in-out duration-300 hover:text-[#ffa500]";
 
   return (
     <button {...props} className={`${baseClassName} ${classes}`}>
