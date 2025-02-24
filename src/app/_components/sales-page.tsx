@@ -72,6 +72,8 @@ import SalesFaqsEdit4 from "./sales/sales-4/sales-faqs/sales-faqs-edit";
 // import SalesFooter4 from "./sales/sales-4/sales-footer/sales-footer";
 import SalesFooterEdit4 from "./sales/sales-4/sales-footer/sales-footer-edit";
 
+import Sales5 from "./sales/sales-5/sales-5";
+
 type Props = {
   info: SalesPageType;
 };
@@ -136,34 +138,37 @@ const SalesPage = ({ info }: Props) => {
           <SalesFooterEdit3 info={info} setCurrentPost={setCurrentPost} />
         </>
       )}
-        {info.template === "4" && (
-          <>
-            {/*<SalesHeader4 info={info} />*/}
-            <SalesHeaderEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesHero4 info={info} />*/}
-            <SalesHeroEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesCharacteristics4 info={info} />*/}
-            <SalesCharacteristicsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesVideoReviews4 info={info} />*/}
-            <SalesVideoReviewsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesInfo4 info={info} />*/}
-            <SalesInfoEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesFeatures4 info={info} />*/}
-            <SalesFeaturesEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesSteps4 info={info} />*/}
-            <SalesStepsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesUsage4 info={info} />*/}
-            <SalesUsageEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesComparison4 info={info} />*/}
-            <SalesComparisonEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesReviews4 info={info} />*/}
-            <SalesReviewsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesFaqs4 info={info} />*/}
-            <SalesFaqsEdit4 info={info} setCurrentPost={setCurrentPost} />
-            {/*<SalesFooter4 info={info} />*/}
-            <SalesFooterEdit4 info={info} setCurrentPost={setCurrentPost} />
-          </>
-        )}
+      {info.template === "4" && (
+        <>
+          {/*<SalesHeader4 info={info} />*/}
+          <SalesHeaderEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesHero4 info={info} />*/}
+          <SalesHeroEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesCharacteristics4 info={info} />*/}
+          <SalesCharacteristicsEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesVideoReviews4 info={info} />*/}
+          <SalesVideoReviewsEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesInfo4 info={info} />*/}
+          <SalesInfoEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesFeatures4 info={info} />*/}
+          <SalesFeaturesEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesSteps4 info={info} />*/}
+          <SalesStepsEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesUsage4 info={info} />*/}
+          <SalesUsageEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesComparison4 info={info} />*/}
+          <SalesComparisonEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesReviews4 info={info} />*/}
+          <SalesReviewsEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesFaqs4 info={info} />*/}
+          <SalesFaqsEdit4 info={info} setCurrentPost={setCurrentPost} />
+          {/*<SalesFooter4 info={info} />*/}
+          <SalesFooterEdit4 info={info} setCurrentPost={setCurrentPost} />
+        </>
+      )}
+      {info.template === "5" && (
+        <Sales5 info={info.mould_cleaner}/>
+      )}
       <FunnelFluxScripts funnelFlux={info.funnelFlux} />
     </div>
   );

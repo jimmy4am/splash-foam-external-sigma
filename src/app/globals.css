@@ -144,6 +144,71 @@
   }
 }
 
+/* Product slider */
+.product-slider-main,
+.product-slider-main .slick-slide {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-slider-main .slick-dots {
+  bottom: 0;
+  padding: 11px 0;
+}
+
+.product-slider-main .slick-dots li {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.product-slider-main .slick-dots li button {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+}
+
+.product-slider-main .slick-dots li button:before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #121212;
+  opacity: .5;
+}
+
+.product-slider-main .slick-dots li.slick-active button:before {
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+}
+
+.product-slider-thumb .slick-prev,
+.product-slider-thumb .slick-next {
+  width: 44px;
+  height: 44px;
+  color: rgba(18,18,18,.9)
+}
+
+.product-slider-thumb .slick-prev {
+  left: -50px;
+}
+
+.product-slider-thumb .slick-next {
+  right: -50px;
+}
+
+.product-slider-thumb .slick-disabled {
+  color: rgba(18,18,18,.3)
+}
+
+.product-slider-thumb .slick-current .slide img {
+  border: 1px solid #000;
+}
+
 .sale-characteristics .rfm-initial-child-container {
   align-items: flex-start ;
 }
@@ -157,6 +222,7 @@
 .spec-grid-shadow {
   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
 }
+
 /* Tailwind CSS does not support keyframes out of the box, so you must define them manually */
 @keyframes grow-shrink {
   0%,

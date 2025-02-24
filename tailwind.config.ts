@@ -38,6 +38,7 @@ const config: Config = {
       },
       fontFamily: {
         arial: ["Arial"],
+        helvetica: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
       }
     },
   },
