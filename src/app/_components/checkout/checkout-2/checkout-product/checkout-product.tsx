@@ -157,7 +157,7 @@ const CheckoutProduct = ({
             <Rating rating={info.mould_cleaner.product.rating}/>
             ({info.mould_cleaner.product.reviews} Reviews)
           </div>
-          <ul className="mb-[18px] text-[15px] leading-[22px] font-bold tracking-[0.5px]">
+          <ul className="mb-[18px] leading-[22px] font-bold">
             <li className="flex gap-[5px] mb-[15px]">
               <CheckCircleIcon className="flex-[0_0_20px] text-[#53af01]"/>
               <span className="flex-1">{info.mould_cleaner.product.text_1}</span>
@@ -189,7 +189,7 @@ const CheckoutProduct = ({
 
           <div className="mb-[15px]">
             <p
-              className="w-full flex items-center gap-[10px] mb-[13px] text-center text-[14px] leading-[1] uppercase font-bold">
+              className={`w-full flex items-center gap-[10px] mb-[13px] text-center text-[14px] leading-[1] uppercase font-bold ${poppins.className}`}>
               <span className="flex-1 h-[2px] min-w-[50px] bg-[#ffa500]"></span>
               Bundle & Save
               <span className="flex-1 h-[2px] min-w-[50px] bg-[#ffa500]"></span>
@@ -229,9 +229,9 @@ const CheckoutProduct = ({
             </div>
           </div>
 
-          <p className="flex gap-[5px] mb-[15px] text-[14px] leading-[1.3] text-[#121212] font-bold tracking-[0.9px]">
-            <CheckCircleIcon className="flex-[0_0_17px]"/>
-            <span className="flex-1">First 300 Buyers Get a Free Extra ltem!</span>
+          <p className="flex gap-[5px] mb-[15px] text-[14px] md:text-[16px] leading-[1.3] font-bold">
+            <CheckCircleIcon className="flex-[0_0_20px]"/>
+            <span className="flex-1">First 300 Buyers Get a Free Extra Item!</span>
           </p>
 
           <div className="flex flex-col gap-[10px]">

@@ -5,8 +5,8 @@ funnelFlux: 'var fluxDefaults = {
   p: "2psk5ffK2Q4T",
   f: "2nKLCwO4hgIO"
 }'
-funnelFluxName: "Splash Foam - Checkout"
-metaTitle: "Secure Checkout - Splash Foam Toilet Cleaner"
+funnelFluxName: "ODEIUN MOULD CLEANER Revive Spray - Checkout"
+metaTitle: "ODEIUN MOULD CLEANER Revive Spray"
 metaDescription: "Ready to purchase Splash Foam Toilet Cleaner? Complete your order securely and select your preferred quantity. Fast and easy checkout!"
 buttonCta: "Complete Purchase"
 logo: "/images/splash-foam/splash-foam-sales-logo.svg"
@@ -105,4 +105,17 @@ mould_cleaner:
     offer_3_price: 183.50
     offer_3_new_price: 54.95
     offer_3_savings: 70
+  faqs: 
+    q1: Is it safe for use around children and pets?
+    a1: Yes, our formula is eco-friendly and safe for homes with children and pets.
+    q2: How long does one application last?
+    a2: One spray lasts up to 5 years, providing long-term protection.
+    q3: Can it be used outdoors?
+    a3: Absolutely! lt's perfect for outdoor furniture and pool areas.
+    q4: Does it have a strong smell?
+    a4: No, it has a mild, pleasant scent and eliminates odors.
+    q5: How quickly does it work?
+    a5: You'l see mold disappear in just 3 seconds after spraying. Sometimes may need more time. The longer the better in general.
+    q6: Do l need to scrub after spraying?
+    a6: No scrubbing needed! Just spray and let it work its magic.
 ---

@@ -5,6 +5,27 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+@layer base {
+  @font-face {
+    font-family: 'Harmonia Sans';
+    src: local('Harmonia Sans Regular'), local('Harmonia-Sans-Regular'),
+    url('../../public/fonts/HarmoniaSansProCyr-Regular.woff2') format('woff2'),
+    url('../../public/fonts/HarmoniaSansProCyr-Regular.woff') format('woff'),
+    url('../../public/fonts/HarmoniaSansProCyr-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Harmonia Sans';
+    src: local('Harmonia Sans Bold'), local('Harmonia-Sans-Bold'),
+    url('../../public/fonts/HarmoniaSansProCyr-Bold.woff2') format('woff2'),
+    url('../../public/fonts/HarmoniaSansProCyr-Bold.woff') format('woff'),
+    url('../../public/fonts/HarmoniaSansProCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
 .editable-input {
   @apply border-2 border-yellow-500 border-dashed px-2 text-[#000]
 }

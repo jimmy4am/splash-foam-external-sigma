@@ -1,15 +1,13 @@
 "use client";
 
 import React, {useState} from "react";
-import { Inter } from "next/font/google";
 
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
 import CheckoutProduct from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product";
-import CheckoutSticky from "@/app/_components/checkout/checkout-2/checkout-sticky/checkout-sticky";
+import CheckoutFaqs from "@/app/_components/checkout/checkout-2/checkout-faqs/checkout-faqs";
 import CheckoutFooter from "@/app/_components/checkout/checkout-2/checkout-footer/checkout-footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import CheckoutSticky from "@/app/_components/checkout/checkout-2/checkout-sticky/checkout-sticky";
 
 type Props = {
   info: CheckoutPageType;
@@ -50,7 +48,7 @@ const Checkout = ({ info }: Props) => {
   }
 
   return (
-    <div className={`w-full bg-[#fff] ${inter.className}`}>
+    <div className="w-full bg-[#fff] text-[15px] md:text-[16px] leading-[27px] tracking-[0.9px] font-harmonia text-[#121212]">
       <CheckoutProduct
         info={info}
         products={products}
@@ -60,6 +58,7 @@ const Checkout = ({ info }: Props) => {
         setQuantity={setQuantity}
         addToCart={addToCart}
       />
+      <CheckoutFaqs info={info} />
       <CheckoutFooter />
       <CheckoutSticky
         info={info}
