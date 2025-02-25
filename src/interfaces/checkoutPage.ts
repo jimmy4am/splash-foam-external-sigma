@@ -109,6 +109,12 @@ export type CheckoutPageType = {
       offer_3_new_price: number;
       offer_3_savings: number;
     };
+    partners: {
+      partner_1_image: string;
+      partner_2_image: string;
+      partner_3_image: string;
+      partner_4_image: string;
+    };
     content: {
       content_1_image: string;
       content_1_title: string;

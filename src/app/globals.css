@@ -523,6 +523,16 @@ button {
   }
 }
 
+.partners-ticker {
+  animation: partnersTicker 25s linear infinite forwards;
+}
+
+@keyframes partnersTicker {
+  100% {
+    transform: translate(-50%);
+  }
+}
+
 .progress-bar {
   animation: expandWidth 3.7s linear 1;
 }

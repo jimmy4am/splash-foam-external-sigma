@@ -105,6 +105,11 @@ mould_cleaner:
     offer_3_price: 183.50
     offer_3_new_price: 54.95
     offer_3_savings: 70
+  partners: 
+    partner_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3df0dbee-20fe-42af-761f-edc63a034300/public
+    partner_2_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/82337ab7-4464-4789-f2e8-7086563aa600/public
+    partner_3_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/667e8ce0-9662-4576-6f8f-37b377f72200/public
+    partner_4_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d73f93ec-f562-4ebd-523f-219d99822700/public
   content:
     content_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5db9fae4-3f8b-46c2-4a6f-7ad89dd3fe00/public
     content_1_title: Tired of Persistent Mold Problems?

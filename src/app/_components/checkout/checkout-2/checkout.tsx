@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
 import CheckoutProduct from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product";
+import CheckoutPartners from "@/app/_components/checkout/checkout-2/checkout-partners/checkout-partners";
 import CheckoutContent from "@/app/_components/checkout/checkout-2/checkout-content/checkout-content";
 import CheckoutAdvantages from "@/app/_components/checkout/checkout-2/checkout-advantages/checkout-advantages";
 import CheckoutReviews from "@/app/_components/checkout/checkout-2/checkout-reviews/checkout-reviews";
@@ -61,6 +62,7 @@ const Checkout = ({ info }: Props) => {
         setQuantity={setQuantity}
         addToCart={addToCart}
       />
+      <CheckoutPartners info={info} />
       <CheckoutContent
         image={info.mould_cleaner.content.content_1_image}
         title={info.mould_cleaner.content.content_1_title}
