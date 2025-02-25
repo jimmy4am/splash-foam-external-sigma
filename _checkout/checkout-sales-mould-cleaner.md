@@ -105,6 +105,19 @@ mould_cleaner:
     offer_3_price: 183.50
     offer_3_new_price: 54.95
     offer_3_savings: 70
+  reviews:
+    review_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/39788442-2f7e-4275-0ae3-0f6c3a106400/public
+    review_1_rating: 5
+    review_1_text: This mold removal spray is amazing! I have a constant mold problem in my bathroom and have used many products with little effect until I tried this. Just spray it on the moldy area and in a few minutes you can see the mold disappear! And there is no pungent smell at all, the bathroom is fresh and pleasant after use. Highly recommend this to anyone with a mold problem!
+    review_1_author: Sarah, FL
+    review_2_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/60258005-3536-4cb6-f055-eef8451a8600/public
+    review_2_rating: 4
+    review_2_text: This mold removal spray has really saved my kitchen! I've always had some mold in the corners of my kitchen lately, and I've had great results with this spray! Simply spray the affected area and in a few minutes the mold is gone, and it's so easy to use and doesn't require a lot of wiping. The best part is that the kitchen has no odor after use and continues to stay clean.
+    review_2_author: James, NY
+    review_3_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c26f208a-ef1c-4ddf-a3b1-aa695e910100/public  
+    review_3_rating: 3.5
+    review_3_text: This mold removal spray is fantastic! I was especially concerned about the safety of the product for kids and pets, so I chose this one. It has no odor at all and is very safe for kids and pets in the house. The results were great, I could see the mold disappearing after a few minutes of spraying on the moldy spots and I didn't have to worry about secondary contamination. Very happy with this choice.
+    review_3_author: Emily， TX
   faqs: 
     q1: Is it safe for use around children and pets?
     a1: Yes, our formula is eco-friendly and safe for homes with children and pets.

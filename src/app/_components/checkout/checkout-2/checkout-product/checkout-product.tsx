@@ -96,7 +96,7 @@ const CheckoutProduct = ({
         <div className="md:flex-[0_0_50%] lg:flex-[0_0_55%] md:w-[50%] lg:w-[55%]">
           {/*
             // @ts-ignore */}
-          <Slider className="product-slider-main" {...mainSliderSettings}>
+          <Slider className="product-slider-main mould-cleaner-slider" {...mainSliderSettings}>
             <Image src={info.mould_cleaner.product.product_image_1} width={813} height={813} alt="Image 1"/>
             <Image src={info.mould_cleaner.product.product_image_2} width={813} height={813} alt="Image 2"/>
             <Image src={info.mould_cleaner.product.product_image_3} width={813} height={813} alt="Image 3"/>

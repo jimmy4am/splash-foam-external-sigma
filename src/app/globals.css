@@ -165,31 +165,25 @@
   }
 }
 
-/* Product slider */
-.product-slider-main,
-.product-slider-main .slick-slide {
-  border-radius: 12px;
-  overflow: hidden;
+/* Mould Cleaner slider */
+.mould-cleaner-slider .slick-dots {
+  display: flex !important;
+  justify-content: center;
 }
 
-.product-slider-main .slick-dots {
-  bottom: 0;
-  padding: 11px 0;
-}
-
-.product-slider-main .slick-dots li {
+.mould-cleaner-slider .slick-dots li {
   width: 18px;
   height: 18px;
   margin: 0;
 }
 
-.product-slider-main .slick-dots li button {
+.mould-cleaner-slider .slick-dots li button {
   width: 18px;
   height: 18px;
   padding: 0;
 }
 
-.product-slider-main .slick-dots li button:before {
+.mould-cleaner-slider .slick-dots li button:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -201,10 +195,22 @@
   opacity: .5;
 }
 
-.product-slider-main .slick-dots li.slick-active button:before {
+.mould-cleaner-slider .slick-dots li.slick-active button:before {
   width: 8px;
   height: 8px;
   opacity: 1;
+}
+
+/* Mould Cleaner Product slider */
+.product-slider-main,
+.product-slider-main .slick-slide {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-slider-main .slick-dots {
+  bottom: 0;
+  padding: 11px 0;
 }
 
 .product-slider-thumb .slick-prev,
@@ -229,6 +235,60 @@
 .product-slider-thumb .slick-current .slide img {
   border: 1px solid #000;
 }
+
+
+/* Mould Cleaner Reviews slider */
+.mould-cleaner-reviews-slider .slick-track {
+  display: flex;
+}
+
+.mould-cleaner-reviews-slider .slick-slide {
+  height: inherit;
+  padding: 0 5px;
+}
+
+.mould-cleaner-reviews-slider .slick-prev,
+.mould-cleaner-reviews-slider .slick-next {
+  top: auto;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  color: #121212;
+}
+
+.mould-cleaner-reviews-slider .slick-prev.slick-disabled,
+.mould-cleaner-reviews-slider .slick-next.slick-disabled {
+  color: rgba(18,18,18,.3);
+}
+
+.mould-cleaner-reviews-slider .slick-prev {
+  left: 50%;
+  transform: translate(-60px, 0px);
+}
+
+.mould-cleaner-reviews-slider .slick-next {
+  right: 50%;
+  transform: translate(60px, 0px);
+}
+
+.mould-cleaner-reviews-slider .slick-dots {
+  position: static;
+  margin-top: 12px;
+  padding: 6px 0;
+}
+
+@media (min-width: 768px) {
+  .mould-cleaner-reviews-slider .slick-slide {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mould-cleaner-reviews-slider .slick-slide {
+    padding: 0 20px;
+  }
+}
+
 
 .sale-characteristics .rfm-initial-child-container {
   align-items: flex-start ;

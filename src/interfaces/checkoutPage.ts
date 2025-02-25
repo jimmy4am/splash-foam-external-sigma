@@ -108,7 +108,21 @@ export type CheckoutPageType = {
       offer_3_price: number;
       offer_3_new_price: number;
       offer_3_savings: number;
-    }
+    };
+    reviews: {
+      review_1_image: string;
+      review_1_rating: number
+      review_1_text: string;
+      review_1_author: string;
+      review_2_image: string;
+      review_2_rating: number
+      review_2_text: string;
+      review_2_author: string;
+      review_3_image: string;
+      review_3_rating: number
+      review_3_text: string;
+      review_3_author: string;
+    };
     faqs: {
       q1: string;
       a1: string;
