@@ -109,6 +109,24 @@ export type CheckoutPageType = {
       offer_3_new_price: number;
       offer_3_savings: number;
     };
+    content: {
+      content_1_image: string;
+      content_1_title: string;
+      content_1_subtitle: string;
+      content_1_text: string;
+      content_2_image: string;
+      content_2_title: string;
+      content_2_subtitle: string;
+      content_2_text: string;
+      content_3_image: string;
+      content_3_title: string;
+      content_3_subtitle: string;
+      content_3_text: string;
+      content_4_image: string;
+      content_4_title: string;
+      content_4_subtitle: string;
+      content_4_text: string;
+    };
     reviews: {
       review_1_image: string;
       review_1_rating: number

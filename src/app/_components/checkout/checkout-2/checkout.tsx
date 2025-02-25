@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
 import CheckoutProduct from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product";
+import CheckoutContent from "@/app/_components/checkout/checkout-2/checkout-content/checkout-content";
 import CheckoutReviews from "@/app/_components/checkout/checkout-2/checkout-reviews/checkout-reviews";
 import CheckoutFaqs from "@/app/_components/checkout/checkout-2/checkout-faqs/checkout-faqs";
 import CheckoutFooter from "@/app/_components/checkout/checkout-2/checkout-footer/checkout-footer";
@@ -58,6 +59,32 @@ const Checkout = ({ info }: Props) => {
         quantity={quantity}
         setQuantity={setQuantity}
         addToCart={addToCart}
+      />
+      <CheckoutContent
+        image={info.mould_cleaner.content.content_1_image}
+        title={info.mould_cleaner.content.content_1_title}
+        text={info.mould_cleaner.content.content_1_text}
+        subtitle={info.mould_cleaner.content.content_1_subtitle}
+        revert
+      />
+      <CheckoutContent
+        image={info.mould_cleaner.content.content_2_image}
+        title={info.mould_cleaner.content.content_2_title}
+        text={info.mould_cleaner.content.content_2_text}
+        subtitle={info.mould_cleaner.content.content_2_subtitle}
+      />
+      <CheckoutContent
+        image={info.mould_cleaner.content.content_3_image}
+        title={info.mould_cleaner.content.content_3_title}
+        text={info.mould_cleaner.content.content_3_text}
+        subtitle={info.mould_cleaner.content.content_3_subtitle}
+        revert
+      />
+      <CheckoutContent
+        image={info.mould_cleaner.content.content_4_image}
+        title={info.mould_cleaner.content.content_4_title}
+        text={info.mould_cleaner.content.content_4_text}
+        subtitle={info.mould_cleaner.content.content_4_subtitle}
       />
       <CheckoutReviews info={info} />
       <CheckoutFaqs info={info} />

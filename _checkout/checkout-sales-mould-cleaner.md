@@ -105,6 +105,28 @@ mould_cleaner:
     offer_3_price: 183.50
     offer_3_new_price: 54.95
     offer_3_savings: 70
+  content:
+    content_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5db9fae4-3f8b-46c2-4a6f-7ad89dd3fe00/public
+    content_1_title: Tired of Persistent Mold Problems?
+    content_1_subtitle: But don’t worry—there’s a solution.
+    content_1_text: "Have you noticed unsightly black spots
+      creeping into your bathroom corners? Does a musty odor seem to linger no matter
+      how much you clean? Mold and mildew can turn your home into a breeding ground
+      for allergens, making it feel less inviting and even unsafe."
+    content_2_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/45549cb6-0f57-4e0d-d113-d994e3827700/public
+    content_2_title: Stay Mold-Free All Summer
+    content_2_subtitle: 
+    content_2_text: "Enjoy a clean, fresh, mold-free home environment. This spray! Keeps your space safe, even in the heat and humidity of summer."
+    content_3_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/43aeefa8-205d-436e-1f2c-1f12e80e1400/public
+    content_3_title: Effortless Mold Elimination
+    content_3_subtitle: 
+    content_3_text: "No more scrubbing or harsh chemicals.Simply spray and watch as tough stains caused by black mold and mildew fade
+      away in seconds. Suitable for both interior and exterior surfaces, ODEIUN ™ brightens
+      and refreshes your home with minimal effort."
+    content_4_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f9ba275b-a9b1-47b3-59b6-c3d0ece14500/public
+    content_4_title: Ultimate Home Protection
+    content_4_subtitle: 
+    content_4_text: "Our spray forms a protective barrier, preventing mold from coming back for up to 5 years."
   reviews:
     review_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/39788442-2f7e-4275-0ae3-0f6c3a106400/public
     review_1_rating: 5

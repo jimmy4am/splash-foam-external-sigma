@@ -92,8 +92,8 @@ const CheckoutProduct = ({
 
   return (
     <section className="bg-[#fff] py-[36px]">
-      <div className="w-full max-w-[1330px] mx-auto px-[15px] md:flex">
-        <div className="md:flex-[0_0_50%] lg:flex-[0_0_55%] md:w-[50%] lg:w-[55%]">
+      <div className="w-full max-w-[1330px] mx-auto px-[15px] md:flex md:items-start">
+        <div className="md:sticky md:top-[36px] md:flex-[0_0_50%] lg:flex-[0_0_55%] md:w-[50%] lg:w-[55%]">
           {/*
             // @ts-ignore */}
           <Slider className="product-slider-main mould-cleaner-slider" {...mainSliderSettings}>
