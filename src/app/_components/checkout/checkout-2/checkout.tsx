@@ -6,6 +6,7 @@ import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
 import CheckoutProduct from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product";
 import CheckoutContent from "@/app/_components/checkout/checkout-2/checkout-content/checkout-content";
+import CheckoutAdvantages from "@/app/_components/checkout/checkout-2/checkout-advantages/checkout-advantages";
 import CheckoutReviews from "@/app/_components/checkout/checkout-2/checkout-reviews/checkout-reviews";
 import CheckoutFaqs from "@/app/_components/checkout/checkout-2/checkout-faqs/checkout-faqs";
 import CheckoutFooter from "@/app/_components/checkout/checkout-2/checkout-footer/checkout-footer";
@@ -73,6 +74,7 @@ const Checkout = ({ info }: Props) => {
         text={info.mould_cleaner.content.content_2_text}
         subtitle={info.mould_cleaner.content.content_2_subtitle}
       />
+      <CheckoutAdvantages info={info} />
       <CheckoutContent
         image={info.mould_cleaner.content.content_3_image}
         title={info.mould_cleaner.content.content_3_title}

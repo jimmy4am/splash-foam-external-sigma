@@ -127,6 +127,14 @@ export type CheckoutPageType = {
       content_4_subtitle: string;
       content_4_text: string;
     };
+    advantages: {
+      adv_1_title: string;
+      adv_1_text: string;
+      adv_2_title: string;
+      adv_2_text: string;
+      adv_3_title: string;
+      adv_3_text: string;
+    };
     reviews: {
       review_1_image: string;
       review_1_rating: number

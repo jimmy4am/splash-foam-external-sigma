@@ -238,17 +238,25 @@
 
 
 /* Mould Cleaner Reviews slider */
-.mould-cleaner-reviews-slider .slick-track {
+.mould-cleaner-simple-slider .slick-track {
   display: flex;
 }
 
-.mould-cleaner-reviews-slider .slick-slide {
+.mould-cleaner-simple-slider .slick-slide {
   height: inherit;
+  display: flex;
+}
+
+.mould-cleaner-simple-slider .slick-slide > div {
+  display: flex;
+}
+
+.mould-cleaner-simple-slider .slick-slide {
   padding: 0 5px;
 }
 
-.mould-cleaner-reviews-slider .slick-prev,
-.mould-cleaner-reviews-slider .slick-next {
+.mould-cleaner-simple-slider .slick-prev,
+.mould-cleaner-simple-slider .slick-next {
   top: auto;
   bottom: 0;
   width: 30px;
@@ -256,35 +264,40 @@
   color: #121212;
 }
 
-.mould-cleaner-reviews-slider .slick-prev.slick-disabled,
-.mould-cleaner-reviews-slider .slick-next.slick-disabled {
+.mould-cleaner-simple-slider .slick-prev:before,
+.mould-cleaner-simple-slider .slick-next:before {
+  color: transparent;
+}
+
+.mould-cleaner-simple-slider .slick-prev.slick-disabled,
+.mould-cleaner-simple-slider .slick-next.slick-disabled {
   color: rgba(18,18,18,.3);
 }
 
-.mould-cleaner-reviews-slider .slick-prev {
+.mould-cleaner-simple-slider .slick-prev {
   left: 50%;
   transform: translate(-60px, 0px);
 }
 
-.mould-cleaner-reviews-slider .slick-next {
+.mould-cleaner-simple-slider .slick-next {
   right: 50%;
   transform: translate(60px, 0px);
 }
 
-.mould-cleaner-reviews-slider .slick-dots {
+.mould-cleaner-simple-slider .slick-dots {
   position: static;
   margin-top: 12px;
   padding: 6px 0;
 }
 
 @media (min-width: 768px) {
-  .mould-cleaner-reviews-slider .slick-slide {
+  .mould-cleaner-simple-slider .slick-slide {
     padding: 0 10px;
   }
 }
 
 @media (min-width: 1024px) {
-  .mould-cleaner-reviews-slider .slick-slide {
+  .mould-cleaner-simple-slider .slick-slide {
     padding: 0 20px;
   }
 }

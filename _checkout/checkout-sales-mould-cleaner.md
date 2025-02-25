@@ -127,6 +127,13 @@ mould_cleaner:
     content_4_title: Ultimate Home Protection
     content_4_subtitle: 
     content_4_text: "Our spray forms a protective barrier, preventing mold from coming back for up to 5 years."
+  advantages:
+    adv_1_title: 🔒 Long-Lasting Protection
+    adv_1_text: Protects your home from mold and mildew for 5 years.
+    adv_2_title: 🌞 Perfect for Summer
+    adv_2_text: Keeps mold away, even in hot and humid weather.
+    adv_3_title: 👶 Safe for Families
+    adv_3_text: Eco-friendly, safe for homes with children and pets.
   reviews:
     review_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/39788442-2f7e-4275-0ae3-0f6c3a106400/public
     review_1_rating: 5

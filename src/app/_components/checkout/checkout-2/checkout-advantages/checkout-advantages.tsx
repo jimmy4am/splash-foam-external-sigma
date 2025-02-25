@@ -1,16 +1,17 @@
 import React from "react";
 import Slider from "react-slick";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import SectionTitle from "@/app/_components/checkout/checkout-2/_components/section-title";
-import CheckoutReviewsSingleItem from "@/app/_components/checkout/checkout-2/checkout-reviews/checkout-reviews-single-item";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import CheckoutAdvantagesSingleItem from "@/app/_components/checkout/checkout-2/checkout-advantages/checkout-advantages-single-item";
+
 
 type Props = {
   info: CheckoutPageType;
 };
 
-const CheckoutReviews = ({ info }: Props) => {
+const CheckoutAdvantages = ({ info }: Props) => {
   const settings = {
     dots: false,
     slidesToShow: 3,
@@ -44,37 +45,22 @@ const CheckoutReviews = ({ info }: Props) => {
   };
 
   return (
-    <section className="py-[27px] md:py-[36px] overflow-hidden">
+    <section className="py-[27px] md:py-[36px] bg-[#ffa500] text-[rgba(253,251,247,1)]">
       <div className="w-full max-w-[1330px] mx-auto px-[15px]">
         <div className="text-center">
-          <SectionTitle>Testimonials</SectionTitle>
+          <SectionTitle>Why Our Customers are in love with this!</SectionTitle>
         </div>
 
         <div className="-mx-[5px] md:-mx-[10px] lg:-mx-[20px]">
           <Slider className="mould-cleaner-simple-slider mould-cleaner-slider" {...settings}>
-            <CheckoutReviewsSingleItem
-              image={info.mould_cleaner.reviews.review_1_image}
-              rating={info.mould_cleaner.reviews.review_1_rating}
-              text={info.mould_cleaner.reviews.review_1_text}
-              author={info.mould_cleaner.reviews.review_1_author}
-            />
-            <CheckoutReviewsSingleItem
-              image={info.mould_cleaner.reviews.review_2_image}
-              rating={info.mould_cleaner.reviews.review_2_rating}
-              text={info.mould_cleaner.reviews.review_2_text}
-              author={info.mould_cleaner.reviews.review_2_author}
-            />
-            <CheckoutReviewsSingleItem
-              image={info.mould_cleaner.reviews.review_3_image}
-              rating={info.mould_cleaner.reviews.review_3_rating}
-              text={info.mould_cleaner.reviews.review_3_text}
-              author={info.mould_cleaner.reviews.review_3_author}
-            />
+            <CheckoutAdvantagesSingleItem title={info.mould_cleaner.advantages.adv_1_title} text={info.mould_cleaner.advantages.adv_1_text} />
+            <CheckoutAdvantagesSingleItem title={info.mould_cleaner.advantages.adv_2_title} text={info.mould_cleaner.advantages.adv_2_text} />
+            <CheckoutAdvantagesSingleItem title={info.mould_cleaner.advantages.adv_3_title} text={info.mould_cleaner.advantages.adv_3_text} />
           </Slider>
         </div>
       </div>
     </section>
-  );
+  )
 };
 
-export default CheckoutReviews;
+export default CheckoutAdvantages;
