@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import useCheckoutForm from "@/app/_components/checkout/hooks/useCheckoutForm";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
+import CheckoutHeader from "@/app/_components/checkout/checkout-2/checkout-header/checkout-header";
 import CheckoutForm from "@/app/_components/checkout/checkout-2/checkout-form/checkout-form";
 import CheckoutProduct from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product";
 import CheckoutPartners from "@/app/_components/checkout/checkout-2/checkout-partners/checkout-partners";
@@ -85,6 +86,7 @@ const Checkout = ({ info }: Props) => {
 
   return (
     <div className="relative w-full bg-[#fff] text-[15px] md:text-[16px] leading-[27px] tracking-[0.9px] font-harmonia text-[#121212]">
+      <CheckoutHeader info={info} />
       <CheckoutForm
         info={info}
         isFormVisible={isFormVisible}

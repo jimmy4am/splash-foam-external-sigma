@@ -9,14 +9,14 @@ funnelFluxName: "ODEIUN MOULD CLEANER Revive Spray - Checkout"
 metaTitle: "ODEIUN MOULD CLEANER Revive Spray"
 metaDescription: "Ready to purchase ODEIUN MOULD CLEANER Revive Spray? Complete your order securely and select your preferred quantity. Fast and easy checkout!"
 buttonCta: "Complete Purchase"
-logo: "/images/splash-foam/splash-foam-sales-logo.svg"
+logo: "https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/079b0d6d-0e9a-475b-df14-4fb5949ac600/public"
 stickyCampaign: "275"
 header:
-  product: /images/splash-foam/foam-info.webp
-  logo: /images/foam/foam-logo.png
-  badge: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8be12a65-34a9-4cfa-bafd-4c9320366700/public
-  background: /images/splash-foam/checkout-head-bkg.jpg
-  safeCheckout: /images/safe-checkout.png
+  product: ODEIUN MOULD CLEANER Revive Spray
+  logo: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/079b0d6d-0e9a-475b-df14-4fb5949ac600/public
+  badge: 
+  background: 
+  safeCheckout: 
 footer:
   card:
 blurbs:
@@ -30,8 +30,7 @@ blurbs:
   final2: 
   final3: 
 product:
-  name: ODEIUN MOULD CLEANER Revive Spray  
-  
+  name: ODEIUN MOULD CLEANER Revive Spray
   image1: 
   text1: Buy 1 Get 1 FREE (2 Bottles)
   price1: "29.95"
@@ -41,7 +40,6 @@ product:
   shippingId1: "70"
   offerId1: "237"
   stickyId1: "37"
-  
   image2: 
   text2: Buy 2 Get 2 FREE (4 Bottles)
   price2: "39.95"
@@ -51,7 +49,6 @@ product:
   offerId2: "237"
   shippingId2: "6"
   stickyId2: "38"  
-  
   image3: 
   text3: Buy 3 Get 3 FREE (6 Bottles)
   price3: "54.95"
@@ -60,8 +57,7 @@ product:
   ship3: "8.95"
   offerId3: "237"
   shippingId3: "7"
-  stickyId3: "39"  
-  
+  stickyId3: "39" 
   image4:
   price4: 
   ogPrice4:
@@ -73,9 +69,6 @@ product:
   couponValue: "5"
   
 mould_cleaner:
-  header:
-    logo: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/fefea067-8128-4d4a-e7d0-8732aedc4900/public
-    title:  🎉Christmas 50% OFF🎉
   product:
     product_image_1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/080bee2b-4715-4785-88ef-a6819369c200/public
     product_image_2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/cbdad88a-129b-4edb-fb19-972c93772900/public
@@ -101,6 +94,7 @@ mould_cleaner:
     partner_2_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/82337ab7-4464-4789-f2e8-7086563aa600/public
     partner_3_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/667e8ce0-9662-4576-6f8f-37b377f72200/public
     partner_4_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d73f93ec-f562-4ebd-523f-219d99822700/public
+    
   content:
     content_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5db9fae4-3f8b-46c2-4a6f-7ad89dd3fe00/public
     content_1_title: Tired of Persistent Mold Problems?
@@ -123,6 +117,7 @@ mould_cleaner:
     content_4_title: Ultimate Home Protection
     content_4_subtitle: 
     content_4_text: "Our spray forms a protective barrier, preventing mold from coming back for up to 5 years."
+    
   advantages:
     adv_1_title: 🔒 Long-Lasting Protection
     adv_1_text: Protects your home from mold and mildew for 5 years.
@@ -130,6 +125,7 @@ mould_cleaner:
     adv_2_text: Keeps mold away, even in hot and humid weather.
     adv_3_title: 👶 Safe for Families
     adv_3_text: Eco-friendly, safe for homes with children and pets.
+    
   reviews:
     review_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/39788442-2f7e-4275-0ae3-0f6c3a106400/public
     review_1_rating: 5
@@ -143,6 +139,7 @@ mould_cleaner:
     review_3_rating: 3.5
     review_3_text: This mold removal spray is fantastic! I was especially concerned about the safety of the product for kids and pets, so I chose this one. It has no odor at all and is very safe for kids and pets in the house. The results were great, I could see the mold disappearing after a few minutes of spraying on the moldy spots and I didn't have to worry about secondary contamination. Very happy with this choice.
     review_3_author: Emily， TX
+    
   faqs: 
     q1: Is it safe for use around children and pets?
     a1: Yes, our formula is eco-friendly and safe for homes with children and pets.

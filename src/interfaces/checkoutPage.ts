@@ -73,10 +73,6 @@ export type CheckoutPageType = {
   content: string;
 
   mould_cleaner: {
-    header: {
-      logo: string;
-      title: string;
-    };
     product: {
       product_image_1: string;
       product_image_2: string;
