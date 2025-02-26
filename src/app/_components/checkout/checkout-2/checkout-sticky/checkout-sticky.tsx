@@ -34,7 +34,7 @@ const CheckoutSticky = ({
     if (item) {
       setProduct({
         product: item.product,
-        productName: `${quantity} ${item.productText}`,
+        productName: `${quantity}x ${item.productText}`,
         productPrice: item.productPrice,
         productShipping: item.productShipping,
         productShippingId: item.productShippingId,

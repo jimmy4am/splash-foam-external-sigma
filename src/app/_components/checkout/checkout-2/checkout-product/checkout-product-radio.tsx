@@ -14,7 +14,7 @@ const CheckoutProductRadio = ({ product, item, setProduct, quantity }: Props) =>
   const handleClick = () => {
     setProduct({
       product: item.product,
-      productName: `${quantity} ${item.productText}`,
+      productName: `${quantity}x ${item.productText}`,
       productPrice: item.productPrice,
       productShipping: item.productShipping,
       productShippingId: item.productShippingId,
