@@ -7,7 +7,7 @@ funnelFlux: 'var fluxDefaults = {
 }'
 funnelFluxName: "ODEIUN MOULD CLEANER Revive Spray - Checkout"
 metaTitle: "ODEIUN MOULD CLEANER Revive Spray"
-metaDescription: "Ready to purchase Splash Foam Toilet Cleaner? Complete your order securely and select your preferred quantity. Fast and easy checkout!"
+metaDescription: "Ready to purchase ODEIUN MOULD CLEANER Revive Spray? Complete your order securely and select your preferred quantity. Fast and easy checkout!"
 buttonCta: "Complete Purchase"
 logo: "/images/splash-foam/splash-foam-sales-logo.svg"
 stickyCampaign: "275"
@@ -18,53 +18,58 @@ header:
   background: /images/splash-foam/checkout-head-bkg.jpg
   safeCheckout: /images/safe-checkout.png
 footer:
-  card: /images/footer-card.png
-
+  card:
 blurbs:
-  icon1: /images/splash-foam/foam-cloud.svg
-  text1: Innovative Foaming Action
-  icon2: /images/splash-foam/check-circle-pie.svg
-  text2: Recommended by Users
-  icon3: /images/splash-foam/toilet-icon.svg
-  text3: Easily Clean Toilets
-  final1: 100% Original
-  final2: Satisfaction Guarantee
-  final3: Easy to Use
-
+  icon1: 
+  text1: 
+  icon2: 
+  text2: 
+  icon3: 
+  text3: 
+  final1: 
+  final2: 
+  final3: 
 product:
-  name: Splash Foaming Toilet Cleaner
-  image1: /images/splash-foam/product-img-1.webp
-  price1: "19.95"
-  ogPrice1: "40"
+  name: ODEIUN MOULD CLEANER Revive Spray  
+  
+  image1: 
+  text1: Buy 1 Get 1 FREE (2 Bottles)
+  price1: "29.95"
+  ogPrice1: "59.95"
   qty1: "1"
   ship1: "4.95"
   shippingId1: "70"
   offerId1: "237"
   stickyId1: "37"
-  image2: /images/splash-foam/product-img-2.webp
-  price2: "34.95"
-  ogPrice2: "80"
+  
+  image2: 
+  text2: Buy 2 Get 2 FREE (4 Bottles)
+  price2: "39.95"
+  ogPrice2: "99.95"
   qty2: "2"
   ship2: "6.95"
   offerId2: "237"
   shippingId2: "6"
-  stickyId2: "38"
-  image3: /images/splash-foam/product-img-3.webp
-  price3: "49.95"
-  ogPrice3: "120"
+  stickyId2: "38"  
+  
+  image3: 
+  text3: Buy 3 Get 3 FREE (6 Bottles)
+  price3: "54.95"
+  ogPrice3: "183.50"
   qty3: "3"
   ship3: "8.95"
   offerId3: "237"
   shippingId3: "7"
-  stickyId3: "39"
-  image4: /images/splash-foam/splash-foam-4-pack.webp
-  price4: "64.95"
-  ogPrice4: "160"
-  qty4: "4"
-  ship4: "10.95"
-  offerId4: "237"
-  shippingId4: "8"
-  stickyId4: "40"
+  stickyId3: "39"  
+  
+  image4:
+  price4: 
+  ogPrice4:
+  qty4: 
+  ship4: 
+  offerId4: 
+  shippingId4: 
+  stickyId4:   
   couponValue: "5"
   
 mould_cleaner:
@@ -90,21 +95,7 @@ mould_cleaner:
     text_2: No Scrubbing Needed
     text_3: Remove Unwanted Odors
     text_4: Lasts up to 5 Years
-    offer_1_id: 1
-    offer_1_text: Buy 1 Get 1 FREE (2 Bottles)
-    offer_1_price: 59.95
-    offer_1_new_price: 29.95
-    offer_1_savings: 50
-    offer_2_id: 2
-    offer_2_text: Buy 2 Get 2 FREE (4 Bottles)
-    offer_2_price: 99.95
-    offer_2_new_price: 39.95
-    offer_2_savings: 60
-    offer_3_id: 3
-    offer_3_text: Buy 3 Get 3 FREE (6 Bottles)
-    offer_3_price: 183.50
-    offer_3_new_price: 54.95
-    offer_3_savings: 70
+    
   partners: 
     partner_1_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3df0dbee-20fe-42af-761f-edc63a034300/public
     partner_2_image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/82337ab7-4464-4789-f2e8-7086563aa600/public

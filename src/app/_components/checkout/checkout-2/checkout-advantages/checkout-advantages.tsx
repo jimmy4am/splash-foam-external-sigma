@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import SectionTitle from "@/app/_components/checkout/checkout-2/_components/section-title";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import CheckoutAdvantagesSingleItem from "@/app/_components/checkout/checkout-2/checkout-advantages/checkout-advantages-single-item";
 
 
@@ -45,7 +45,7 @@ const CheckoutAdvantages = ({ info }: Props) => {
   };
 
   return (
-    <section className="py-[27px] md:py-[36px] bg-[#ffa500] text-[rgba(253,251,247,1)]">
+    <section className="py-[27px] md:py-[36px] bg-[#ffa500] text-[rgba(253,251,247,1)] overflow-hidden">
       <div className="w-full max-w-[1330px] mx-auto px-[15px]">
         <div className="text-center">
           <SectionTitle>Why Our Customers are in love with this!</SectionTitle>

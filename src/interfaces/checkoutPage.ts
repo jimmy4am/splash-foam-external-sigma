@@ -33,6 +33,7 @@ export type CheckoutPageType = {
   product: {
     name: string;
     image1: string;
+    text1: string;
     price1: string;
     ogPrice1: string;
     qty1: string;
@@ -41,6 +42,7 @@ export type CheckoutPageType = {
     offerId1: string;
     stickyId1: string;
     image2: string;
+    text2: string;
     price2: string;
     ogPrice2: string;
     qty2: string;
@@ -49,6 +51,7 @@ export type CheckoutPageType = {
     offerId2: string;
     stickyId2: string;
     image3: string;
+    text3: string;
     price3: string;
     ogPrice3: string;
     qty3: string;
@@ -93,21 +96,6 @@ export type CheckoutPageType = {
       text_2: string;
       text_3: string;
       text_4: string;
-      offer_1_id: number;
-      offer_1_text: string;
-      offer_1_price: number;
-      offer_1_new_price: number;
-      offer_1_savings: number;
-      offer_2_id: number;
-      offer_2_text: string;
-      offer_2_price: number;
-      offer_2_new_price: number;
-      offer_2_savings: number;
-      offer_3_id: number;
-      offer_3_text: string;
-      offer_3_price: number;
-      offer_3_new_price: number;
-      offer_3_savings: number;
     };
     partners: {
       partner_1_image: string;

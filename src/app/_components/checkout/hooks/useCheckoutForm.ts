@@ -60,9 +60,10 @@ const useCheckoutForm = ({ info }: Props) => {
   const [showPop, setShowPop] = useState(false);
   const [showPaypalPop, setShowPaypalPop] = useState(false);
   const [country, setCountry] = useState("US");
+  const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState<ProductInfoType>({
     product: 1,
-    productName: `2x ${info.product.name}`,
+    productName: `${info.slug === 'checkout-sales-mould-cleaner' ? quantity : '2'}x  ${info.product.name}`,
     productPrice: `${info.product.price2}`,
     productShipping: `${info.product.ship2}`,
     productShippingId: `${info.product.shippingId2}`,
@@ -436,6 +437,8 @@ const useCheckoutForm = ({ info }: Props) => {
     showPaypalPop,
     setShowPaypalPop,
     setLoading,
+    quantity,
+    setQuantity
   };
 };
 

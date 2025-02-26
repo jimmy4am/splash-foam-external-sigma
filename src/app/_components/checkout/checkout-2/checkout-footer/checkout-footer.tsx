@@ -53,7 +53,10 @@ const CheckoutFooter = () => {
               <h2 className={`mb-[20px] text-[20px] md:text-[24px] leading-[26px] text=[#fdfbf7] font-bold tracking-[0.8px] ${poppins.className}`}>Subscribe to our emails</h2>
               <p className="mb-[10px] md:mb-[15px] text-[15px] md:text-[16px] leading-[27px]">Stay updated on exclusive offers and latest arrivals – subscribe to our newsletter now for special discounts and insider deals!</p>
               <form>
-                <input type="text" placeholder="Email" className="w-full h-[45px] mb-[10px] p-[15px] border-[1px] bg-[transparent] border-[#fdfbf7] rounded-[6px] text-[16px] text-[#fdfbf7] placeholder-[#fdfbf7]"/>
+                <div className="relative">
+                  <input type="text" name="email" className="[&:focus~label]:text-[10px] [&:focus~label]:top-[6px] [&:focus~label]:tracking-[0.4px] w-full h-[45px] mb-[10px] p-[22px_15px_8px_20px] border-[1px] bg-[transparent] border-[#fdfbf7] rounded-[6px] text-[16px] text-[#fdfbf7] placeholder-[#fdfbf7] focus:outline-0"/>
+                  <label htmlFor="email" className="absolute left-[21px] top-[11px] text-[16px] leading-[1.5] text-[rgba(253,251,247,.9)] tracking-[1px] duration-200 ease-in-out">Email</label>
+                </div>
                 <AppButton classes="w-full" variant="secondary">Sing up</AppButton>
               </form>
             </div>

@@ -8,30 +8,36 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { ChevronLeftIcon, ChevronRightIcon, MinusIcon, PlusIcon, TagIcon } from "@heroicons/react/24/solid";
 
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
+import { ProductInfoType } from "@/interfaces/productInfo";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
 import Rating from "@/app/_components/checkout/checkout-2/_components/rating";
 import CheckoutProductRadio from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product-radio";
 import AppButton from "@/app/_components/checkout/checkout-2/_components/app-button";
+
 
 const poppins = Poppins({weight: ["400", "500", "600", "700"], subsets: ["latin"] });
 
 type Props = {
   info: CheckoutPageType;
   products: ProductType[];
-  chosenProduct: ProductType;
-  setChosenProduct: React.Dispatch<React.SetStateAction<ProductType>>;
+  product: ProductInfoType;
+  setProduct: (product: ProductInfoType) => void;
   quantity: number;
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
+  firePaypal: () => void;
+  loading: string;
   addToCart: () => void;
 };
 
 const CheckoutProduct = ({
   info,
   products,
-  chosenProduct,
-  setChosenProduct,
+  product,
+  setProduct,
   quantity,
   setQuantity,
+  firePaypal,
+  loading,
   addToCart,
 }: Props) => {
   const [mainNav, setMainNav] = useState<MutableRefObject<Slider> | null>(null);
@@ -40,7 +46,9 @@ const CheckoutProduct = ({
   const mainSliderRef = React.useRef<Slider | null>(null);
   const thumbSliderRef = React.useRef<Slider | null>(null);
 
-  React.useEffect(() => {
+  const chosenProduct = products.find(item => item.product === product.product)
+
+  useEffect(() => {
     if (mainSliderRef.current) {
       setMainNav(mainSliderRef as MutableRefObject<Slider>)
     }
@@ -83,12 +91,13 @@ const CheckoutProduct = ({
   }
 
   useEffect(() => {
-    if (mainNav) {
-      // @ts-ignore
-      mainNav.slickGoTo(chosenProduct.slideNumber)
-    }
+    const num = products.find(item => item.product === product.product)?.slideNumber;
 
-  }, [chosenProduct]);
+    if (mainNav && num) {
+      // @ts-ignore
+      mainNav.slickGoTo(num);
+    }
+  }, [product]);
 
   return (
     <section className="bg-[#fff] py-[36px]">
@@ -176,14 +185,13 @@ const CheckoutProduct = ({
             </li>
           </ul>
           <div className="w-full flex items-end gap-[7px] mb-[18px]">
-            <span className="text-[20px] leading-[25px] text-[#ffa500] font-bold">{chosenProduct.newPrice}</span>
+            <span className="text-[20px] leading-[25px] text-[#ffa500] font-bold">{chosenProduct?.productPrice}</span>
             <span
-              className="text-[16px] leading-[24px] text-[rgba(18,18,18,.9)] font-bold line-through">{chosenProduct.price}</span>
+              className="text-[16px] leading-[24px] text-[rgba(18,18,18,.9)] font-bold line-through">{chosenProduct?.productOgPrice}</span>
             <p
-              className="inline-flex items-center gap-[3px] min-w-[100px] mb-[4px] px-[5px] bg-[#ffa500] rounded-[6px] text-[12px] leading-[24px] uppercase text-[#fff] font-bold tracking-[1px] whitespace-nowrap">
-              <TagIcon className="flex-[0_0_18px] text-[#fff]"/>
-              save
-              {" "}{chosenProduct.savings}%{" "}
+              className="flex items-center gap-[3px] min-w-[100px] h-[24px] mb-[4px] px-[5px] bg-[#ffa500] rounded-[6px] text-[12px] leading-[1] uppercase text-[#fff] font-bold tracking-[1px] whitespace-nowrap">
+              <TagIcon className="flex-[0_0_15px] text-[#fff]"/>
+              <span className="mt-[2px]">save {chosenProduct?.discount}%</span>
             </p>
           </div>
 
@@ -198,10 +206,10 @@ const CheckoutProduct = ({
             <div className="flex flex-col gap-[10px]">
               {products.map(item => (
                 <CheckoutProductRadio
-                  chosenProduct={chosenProduct}
+                  product={product}
+                  setProduct={setProduct}
                   item={item}
-                  handleClick={() => setChosenProduct(item)}
-                  isMostPopular={item.id === 2}
+                  quantity={quantity}
                 />
               ))}
             </div>
@@ -237,6 +245,11 @@ const CheckoutProduct = ({
           <div className="flex flex-col gap-[10px]">
             <AppButton classes="uppercase" onClick={addToCart}>Add to Cart</AppButton>
             <button
+              onClick={() => {
+                if (loading === "") {
+                  firePaypal();
+                }
+              }}
               className="flex items-center justify-center gap-[5px] h-[50px] bg-[#ffc439] rounded-[4px] text-[16px] leading-[22px] font-medium font-helvetica">
               Pay With
               <Image

@@ -1,9 +1,11 @@
 "use client";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import { CheckoutPageType } from "@/interfaces/checkoutPage";
+import useCheckoutForm from "@/app/_components/checkout/hooks/useCheckoutForm";
 import { ProductType } from "@/app/_components/checkout/checkout-2/checkout-product/types";
+import CheckoutForm from "@/app/_components/checkout/checkout-2/checkout-form/checkout-form";
 import CheckoutProduct from "@/app/_components/checkout/checkout-2/checkout-product/checkout-product";
 import CheckoutPartners from "@/app/_components/checkout/checkout-2/checkout-partners/checkout-partners";
 import CheckoutContent from "@/app/_components/checkout/checkout-2/checkout-content/checkout-content";
@@ -20,46 +22,88 @@ type Props = {
 const Checkout = ({ info }: Props) => {
   const products: ProductType[] = [
     {
-      id: info.mould_cleaner.product.offer_1_id,
-      text: info.mould_cleaner.product.offer_1_text,
-      price: info.mould_cleaner.product.offer_1_price,
-      newPrice: info.mould_cleaner.product.offer_1_new_price,
-      savings: info.mould_cleaner.product.offer_1_savings,
+      product: 0,
+      productName: info.product.name,
+      productPrice: info.product.price1,
+      productShipping: info.product.ship1,
+      productShippingId: info.product.shippingId1,
+      productOfferId: info.product.offerId1,
+      productStickyId: info.product.stickyId1,
+      productText: info.product.text1,
+      productOgPrice: info.product.ogPrice1,
+      isPopular: false,
+      discount: 50,
       slideNumber: 8,
     },
     {
-      id: info.mould_cleaner.product.offer_2_id,
-      text: info.mould_cleaner.product.offer_2_text,
-      price: info.mould_cleaner.product.offer_2_price,
-      newPrice: info.mould_cleaner.product.offer_2_new_price,
-      savings: info.mould_cleaner.product.offer_2_savings,
+      product: 1,
+      productName: info.product.name,
+      productPrice: info.product.price2,
+      productShipping: info.product.ship2,
+      productShippingId: info.product.shippingId2,
+      productOfferId: info.product.offerId2,
+      productStickyId: info.product.stickyId2,
+      productText: info.product.text2,
+      productOgPrice: info.product.ogPrice2,
+      isPopular: true,
+      discount: 60,
       slideNumber: 9,
     },
     {
-      id: info.mould_cleaner.product.offer_3_id,
-      text: info.mould_cleaner.product.offer_3_text,
-      price: info.mould_cleaner.product.offer_3_price,
-      newPrice: info.mould_cleaner.product.offer_3_new_price,
-      savings: info.mould_cleaner.product.offer_3_savings,
+      product: 2,
+      productName: info.product.name,
+      productPrice: info.product.price3,
+      productShipping: info.product.ship3,
+      productShippingId: info.product.shippingId3,
+      productOfferId: info.product.offerId3,
+      productStickyId: info.product.stickyId3,
+      productText: info.product.text3,
+      productOgPrice: info.product.ogPrice3,
+      isPopular: false,
+      discount: 70,
       slideNumber: 10,
-    }
+    },
   ]
-  const [chosenProduct, setChosenProduct] = useState<ProductType>(products[0]);
-  const [quantity, setQuantity] = useState(1);
+
+  const {
+    product,
+    country,
+    setProduct,
+    firePaypal,
+    loading,
+    formik,
+    setCountry,
+    quantity,
+    setQuantity
+  } = useCheckoutForm({ info });
+  const [isFormVisible, setIsFormVisible] = useState(false)
 
   const addToCart = () => {
-    console.log(`Your choice is ${quantity}x of ${chosenProduct.text}`)
+    setIsFormVisible(true)
+    document.querySelector("body")!.style.overflow = 'hidden';
   }
 
   return (
-    <div className="w-full bg-[#fff] text-[15px] md:text-[16px] leading-[27px] tracking-[0.9px] font-harmonia text-[#121212]">
+    <div className="relative w-full bg-[#fff] text-[15px] md:text-[16px] leading-[27px] tracking-[0.9px] font-harmonia text-[#121212]">
+      <CheckoutForm
+        info={info}
+        isFormVisible={isFormVisible}
+        setIsFormVisible={setIsFormVisible}
+        product={product}
+        country={country}
+        setCountry={setCountry}
+        loading={loading}
+        formik={formik}
+      />
       <CheckoutProduct
         info={info}
         products={products}
-        chosenProduct={chosenProduct}
-        setChosenProduct={setChosenProduct}
+        product={product}
+        setProduct={setProduct}
         quantity={quantity}
         setQuantity={setQuantity}
+        firePaypal={firePaypal}
+        loading={loading}
         addToCart={addToCart}
       />
       <CheckoutPartners info={info} />
@@ -96,8 +140,9 @@ const Checkout = ({ info }: Props) => {
       <CheckoutSticky
         info={info}
         products={products}
-        chosenProduct={chosenProduct}
-        setChosenProduct={setChosenProduct}
+        product={product}
+        setProduct={setProduct}
+        quantity={quantity}
         addToCart={addToCart}
       />
     </div>

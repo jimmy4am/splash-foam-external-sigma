@@ -9,7 +9,7 @@ type Props = {
 
 const CheckoutPartners = ({ info }: Props) => {
   return (
-    <section className="py-[12px] md:py-[16px] bg-[#ffa500]">
+    <section className="py-[12px] md:py-[16px] bg-[#ffa500] overflow-hidden">
       <div className="partners-ticker flex items-center justify-center gap-[60px] md:gap-[100px]">
         <Image
           src={info.mould_cleaner.partners.partner_1_image}
