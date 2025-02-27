@@ -570,7 +570,7 @@ const UpsellTemplate12Edit = ({info, setCurrentUpsell, nextStep, sessionData }: 
                 });
               }}
               value={info.product}
-              placeholder="product"
+              placeholder="Product"
             />{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
@@ -592,7 +592,7 @@ const UpsellTemplate12Edit = ({info, setCurrentUpsell, nextStep, sessionData }: 
                   });
                 }}
                 value={info.footerDisclaimer}
-                placeholder="footerDisclaimer"
+                placeholder="Footer disclaimer"
             />
           </p>}
 

@@ -14,7 +14,8 @@ import UpsellTemplate7 from "./upsell/upsell-template7";
 import UpsellTemplate8 from "./upsell/upsell-template8";
 import UpsellTemplate9 from "./upsell/upsell-template9";
 import UpsellTemplate10 from "./upsell/upsell-template10";
-import UpsellTemplate11 from "./upsell/upsell-template11";
+// import UpsellTemplate11 from "./upsell/upsell-template11";
+import UpsellTemplate11Edit from "./upsell/upsell-template11-edit";
 // import UpsellTemplate12 from "./upsell/upsell-template12";
 import UpsellTemplate12Edit from "./upsell/upsell-template12-edit";
 // import UpsellTemplate13 from "./upsell/upsell-template13";
@@ -120,11 +121,8 @@ const UpsellPage = ({ info }: Props) => {
         );
       case "11":
         return (
-          <UpsellTemplate11
-            info={info}
-            nextStep={nextStep}
-            sessionData={sessionData}
-          />
+          // <UpsellTemplate11 info={info} nextStep={nextStep} sessionData={sessionData} />
+          <UpsellTemplate11Edit info={info} setCurrentUpsell={setCurrentUpsell} />
         );
       case "12":
         return (
