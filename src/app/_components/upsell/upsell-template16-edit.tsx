@@ -275,19 +275,7 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell }: Props) => {
             </ul>
           </nav>
           <p className="flex items-center justify-center text-[12px] leading-[15px] text-[#222]">
-            Copyright {new Date().getFullYear()} -
-            <input
-              className="editable-input"
-              onChange={(e) => {
-                setCurrentUpsell({
-                  ...info,
-                  product: e.target.value,
-                });
-              }}
-              value={info.product}
-              placeholder="product"
-            />
-            {" "}
+            Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
               width={12}
@@ -311,32 +299,12 @@ const UpsellTemplate16Edit = ({ info, setCurrentUpsell }: Props) => {
           <button
             className="w-full max-w-[747px] p-[26px_45px] md:p-[20px_45px] bg-[#4AC27E] text-[23px] leading-[30px] uppercase text-[#fff] font-bold  hover:bg-[#0ebf52] disabled:opacity-40 disabled:pointer-events-none"
           >
-            <input
-              className="editable-input w-full"
-              onChange={(e) => {
-                setCurrentUpsell({
-                  ...info,
-                  ctaText1: e.target.value,
-                });
-              }}
-              value={info.ctaText1}
-              placeholder="ctaText1"
-            />
+            {info.ctaText1}
           </button>
           <button
             className="w-full max-w-[747px] mt-[10px] md:mt-[15px] pb-0 bg-transparent border-none text-[11px] md:text-[12px] text-[rgba(153,153,153,0.5)] cursor-default"
           >
-            <input
-              className="editable-input w-full"
-              onChange={(e) => {
-                setCurrentUpsell({
-                  ...info,
-                  skipOfferText1: e.target.value,
-                });
-              }}
-              value={info.skipOfferText1}
-              placeholder="skipOfferText1"
-            />
+            {info.skipOfferText1}
           </button>
         </div>
       </div>

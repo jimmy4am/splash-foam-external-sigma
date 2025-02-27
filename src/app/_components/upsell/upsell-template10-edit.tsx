@@ -216,19 +216,7 @@ const UpsellTemplate10Edit = ({ info, setCurrentUpsell }: Props) => {
 
         <div className="flex flex-col items-center gap-[15px] py-[20px] md:py-[30px] lg:py-[60px]">
           <p className="flex items-center justify-center text-[12px] leading-[15px] text-[#222]">
-            Copyright {new Date().getFullYear()} -
-            <input
-              className="editable-input"
-              onChange={(e) => {
-                setCurrentUpsell({
-                  ...info,
-                  product: e.target.value,
-                });
-              }}
-              value={info.product}
-              placeholder="Product"
-            />
-            {" "}
+            Copyright {new Date().getFullYear()} - {info.product}{" "}
             <Image
               src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4f72e2bd-5704-418f-080c-92afe34ee900/public"
               width={12}

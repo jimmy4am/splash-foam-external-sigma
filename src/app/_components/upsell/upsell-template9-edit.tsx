@@ -7,6 +7,8 @@ import { Lato } from "next/font/google";
 
 import { UpsellPageType } from "@/interfaces/upsellPage";
 import EditImage from "@/app/_components/edit-image";
+import {PriceDisplay} from "@/app/_components/upsell/upsell-price-display";
+import { SessionDataType } from "@/interfaces/sessionData";
 
 const lato = Lato({
   weight: ["400", "700", "900"],
@@ -16,6 +18,7 @@ const lato = Lato({
 type Props = {
   info: UpsellPageType;
   setCurrentUpsell: (info: UpsellPageType) => void;
+  sessionData: SessionDataType;
 };
 
 type ListItemType = 'success' | 'error';
@@ -50,7 +53,7 @@ const ListItem = ({ type, children }: { type: ListItemType, children: React.Reac
   )
 }
 
-const UpsellTemplate9Edit = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => {
   const settings = {
     dots: false,
     slidesToShow: 2,
@@ -217,16 +220,12 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell }: Props) => {
                       value={info.ctaText1}
                       placeholder="Button text"
                     />{" "}
-                    <input
-                      className="editable-input w-[80px]"
-                      onChange={(e) => {
-                        setCurrentUpsell({
-                          ...info,
-                          offerPrice: e.target.value,
-                        });
-                      }}
-                      value={info.offerPrice}
-                      placeholder="Price"
+                    <PriceDisplay
+                      priceUSD={parseFloat(info.offerPrice)}
+                      countryCode={
+                        sessionData?.customerInfo?.country || "US"
+                      }
+                      digits={2}
                     />
                   </button>
                 </div>
@@ -400,27 +399,13 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell }: Props) => {
 
                       <div className="mt-[15px] px-[25px]">
                         <button className="w-full max-w-[450px] p-[18px_10px] md:p-[22px_10px] bg-[#2CB548] rounded-[4px] text-[15px] md:text-[22px] leading-[18px] md:leading-[28px] text-[#fff] uppercase shadow-[0_3px_0_0_rgba(1,80,12,1)] hover:opacity-80 transition-all duration-250 ease-in-out">
-                          <input
-                            className="editable-input w-[160px]"
-                            onChange={(e) => {
-                              setCurrentUpsell({
-                                ...info,
-                                ctaText1: e.target.value,
-                              });
-                            }}
-                            value={info.ctaText1}
-                            placeholder="Button text"
-                          />{" "}
-                          <input
-                            className="editable-input w-[80px]"
-                            onChange={(e) => {
-                              setCurrentUpsell({
-                                ...info,
-                                offerPrice: e.target.value,
-                              });
-                            }}
-                            value={info.offerPrice}
-                            placeholder="Price"
+                          {info.ctaText1}{" "}
+                          <PriceDisplay
+                            priceUSD={parseFloat(info.offerPrice)}
+                            countryCode={
+                              sessionData?.customerInfo?.country || "US"
+                            }
+                            digits={2}
                           />
                         </button>
                       </div>
@@ -467,27 +452,13 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell }: Props) => {
 
         <div className="sticky left-0 right-0 bottom-0 flex flex-col items-center justify-center p-[20px_15px] bg-[#1D1D1D]">
           <button className="w-full max-w-[450px] p-[18px_10px] md:p-[22px_10px] bg-[#2CB548] rounded-[4px] text-[15px] md:text-[22px] leading-[18px] md:leading-[28px] text-[#fff] uppercase shadow-[0_3px_0_0_rgba(1,80,12,1)] hover:opacity-80 transition-all duration-250 ease-in-out">
-            <input
-              className="editable-input"
-              onChange={(e) => {
-                setCurrentUpsell({
-                  ...info,
-                  ctaText1: e.target.value,
-                });
-              }}
-              value={info.ctaText1}
-              placeholder="Button text"
-            />{" "}
-            <input
-              className="editable-input w-[80px]"
-              onChange={(e) => {
-                setCurrentUpsell({
-                  ...info,
-                  offerPrice: e.target.value,
-                });
-              }}
-              value={info.offerPrice}
-              placeholder="Price"
+            {info.ctaText1}{" "}
+            <PriceDisplay
+              priceUSD={parseFloat(info.offerPrice)}
+              countryCode={
+                sessionData?.customerInfo?.country || "US"
+              }
+              digits={2}
             />
           </button>
 

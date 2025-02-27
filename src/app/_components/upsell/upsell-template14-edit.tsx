@@ -230,7 +230,7 @@ const UpsellTemplate14Edit = ({ info, setCurrentUpsell }: Props) => {
               }}
               value={info.skipOfferText1}
               placeholder="skipOfferText1"
-            />?
+            />
           </button>
         </div>
       </div>

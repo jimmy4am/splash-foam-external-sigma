@@ -186,6 +186,7 @@ const UpsellTemplate13Edit = ({ info, setCurrentUpsell }: Props) => {
             </div>
 
             <div className="relative md:flex md:items-center md:justify-between md:m-[30px] p-[2.35vw] md:p-[10px]">
+              {/*TODO: TBD! issue with z-index on hover  */}
               <Image
                 src={info.image2!}
                 fill
