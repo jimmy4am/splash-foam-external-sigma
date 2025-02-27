@@ -131,7 +131,7 @@ const DownsellPop = ({
   );
 };
 
-const UpsellTemplate11 = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate11Edit = ({ info, setCurrentUpsell }: Props) => {
   const [showDownsell, setShowDownsell] = useState(false);
 
   const declineOffer1 = async () => {
@@ -381,4 +381,4 @@ const UpsellTemplate11 = ({ info, setCurrentUpsell }: Props) => {
   );
 };
 
-export default UpsellTemplate11;
+export default UpsellTemplate11Edit;

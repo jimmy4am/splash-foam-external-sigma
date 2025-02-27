@@ -21,7 +21,7 @@ type Props = {
   setCurrentUpsell: (info: UpsellPageType) => void;
 };
 
-const UpsellTemplate10 = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate10Edit = ({ info, setCurrentUpsell }: Props) => {
   const { mins, setMins, secs } = useCountDown();
 
   return (
@@ -281,4 +281,4 @@ const UpsellTemplate10 = ({ info, setCurrentUpsell }: Props) => {
   );
 };
 
-export default UpsellTemplate10;
+export default UpsellTemplate10Edit;
