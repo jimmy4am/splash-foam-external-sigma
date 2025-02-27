@@ -12,7 +12,7 @@ type Props = {
   sessionData: SessionDataType;
 };
 
-const UpsellTemplate5 = ({ info, nextStep, sessionData }: Props) => {
+const UpsellTemplate8 = ({ info, nextStep, sessionData }: Props) => {
   const [mins, setMins] = useState(3);
   const [secs, setSecs] = useState(0);
 
@@ -239,4 +239,4 @@ const UpsellTemplate5 = ({ info, nextStep, sessionData }: Props) => {
   );
 };
 
-export default UpsellTemplate5;
+export default UpsellTemplate8;

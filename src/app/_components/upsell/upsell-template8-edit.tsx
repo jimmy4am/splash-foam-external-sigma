@@ -4,13 +4,14 @@ import { UpsellPageType } from "@/interfaces/upsellPage";
 import React, { useState } from "react";
 import Image from "next/image";
 import { siteProduct } from "@/lib/site-info";
+import EditImage from "@/app/_components/edit-image";
 
 type Props = {
   info: UpsellPageType;
   setCurrentUpsell: (info: UpsellPageType) => void;
 };
 
-const UpsellTemplate5 = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate8Edit = ({ info, setCurrentUpsell }: Props) => {
   const [mins, setMins] = useState(3);
   const [secs, setSecs] = useState(0);
 
@@ -97,12 +98,15 @@ const UpsellTemplate5 = ({ info, setCurrentUpsell }: Props) => {
                 />
                 <div className="flex w-full z-10 px-4">
                   <div className="hidden md:flex w-1/2 justify-center items-center">
-                    <Image
+                    <EditImage
+                      className="object-scale-down"
                       src={info.image1}
+                      alt={siteProduct}
                       width={350}
                       height={350}
-                      alt={siteProduct}
-                      className="object-scale-down"
+                      post={info}
+                      setPost={setCurrentUpsell}
+                      field="image1"
                     />
                   </div>
                   <div className="flex w-full md:w-1/2 flex-col items-center md:items-start justify-center pr-2 text-center md:text-left">
@@ -300,4 +304,4 @@ const UpsellTemplate5 = ({ info, setCurrentUpsell }: Props) => {
   );
 };
 
-export default UpsellTemplate5;
+export default UpsellTemplate8Edit;
