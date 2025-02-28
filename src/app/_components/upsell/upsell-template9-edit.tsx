@@ -27,7 +27,7 @@ const templatesWithPaymentIcons = ['glab-warranty', 'barks-warranty', 'oricle-wa
 
 const templatesWithHeader = ['glab-warranty', 'denta-warranty', 'jet-warranty'];
 
-const ListItem = ({ type, children }: { type: ListItemType, children: React.ReactNode }) => {
+const ListItemEdit = ({ type, children }: { type: ListItemType, children: React.ReactNode }) => {
   const urls: Record<ListItemType, { url: string, title: string }> = {
     success: {
       url: 'https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/15527918-3004-4ba5-4a57-cbe8badc2e00/public',
@@ -252,16 +252,16 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
 
                     {/*CARD BODY*/}
                     <div className="p-[15px_12px_35px] md:p-[15px_25px_35px]">
-                      <ListItem type="success">{info.text1}</ListItem>
+                      <ListItemEdit type="success">{info.text1}</ListItemEdit>
 
                       <p className="py-[12px] text-center font-black uppercase">{info.title10}:</p>
 
                       <div>
-                        <ListItem type="error">NO {info.text2}</ListItem>
-                        <ListItem type="error">NO {info.text3}</ListItem>
-                        <ListItem type="error">NO {info.text4}</ListItem>
-                        <ListItem type="error">NO {info.text5}</ListItem>
-                        <ListItem type="error">NO {info.text6}</ListItem>
+                        <ListItemEdit type="error">NO {info.text2}</ListItemEdit>
+                        <ListItemEdit type="error">NO {info.text3}</ListItemEdit>
+                        <ListItemEdit type="error">NO {info.text4}</ListItemEdit>
+                        <ListItemEdit type="error">NO {info.text5}</ListItemEdit>
+                        <ListItemEdit type="error">NO {info.text6}</ListItemEdit>
                       </div>
 
                       <div className="mt-[15px] px-[25px]">
@@ -313,7 +313,7 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
 
                     {/*CARD BODY*/}
                     <div className="p-[15px_12px_35px] md:p-[15px_25px_35px]">
-                      <ListItem type="success">
+                      <ListItemEdit type="success">
                         <input
                           className="editable-input w-full"
                           onChange={(e) => {
@@ -325,12 +325,12 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
                           value={info.text1}
                           placeholder="Text 1"
                         />
-                      </ListItem>
+                      </ListItemEdit>
 
                       <p className="py-[12px] text-center font-black uppercase">{info.title9}:</p>
 
                       <div>
-                        <ListItem type="success">
+                        <ListItemEdit type="success">
                           <input
                             className="editable-input w-full"
                             onChange={(e) => {
@@ -342,8 +342,8 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
                             value={info.text2}
                             placeholder="Text 2"
                           />
-                        </ListItem>
-                        <ListItem type="success">
+                        </ListItemEdit>
+                        <ListItemEdit type="success">
                           <input
                             className="editable-input w-full"
                             onChange={(e) => {
@@ -355,8 +355,8 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
                             value={info.text3}
                             placeholder="Text 3"
                           />
-                        </ListItem>
-                        <ListItem type="success">
+                        </ListItemEdit>
+                        <ListItemEdit type="success">
                           <input
                             className="editable-input w-full"
                             onChange={(e) => {
@@ -368,8 +368,8 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
                             value={info.text4}
                             placeholder="Text 4"
                           />
-                        </ListItem>
-                        <ListItem type="success">
+                        </ListItemEdit>
+                        <ListItemEdit type="success">
                           <input
                             className="editable-input w-full"
                             onChange={(e) => {
@@ -381,8 +381,8 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
                             value={info.text5}
                             placeholder="Text 5"
                           />
-                        </ListItem>
-                        <ListItem type="success">
+                        </ListItemEdit>
+                        <ListItemEdit type="success">
                           <input
                             className="editable-input w-full"
                             onChange={(e) => {
@@ -394,7 +394,7 @@ const UpsellTemplate9Edit = ({ info, setCurrentUpsell, sessionData }: Props) => 
                             value={info.text6}
                             placeholder="Text 6"
                           />
-                        </ListItem>
+                        </ListItemEdit>
                       </div>
 
                       <div className="mt-[15px] px-[25px]">

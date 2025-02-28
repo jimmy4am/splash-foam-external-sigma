@@ -14,7 +14,7 @@ type Props = {
   sessionData: SessionDataType;
 };
 
-const UpsellTemplate7 = ({ info, setCurrentUpsell, sessionData }: Props) => {
+const UpsellTemplate7Edit = ({ info, setCurrentUpsell, sessionData }: Props) => {
   const [mins, setMins] = useState(3);
   const [secs, setSecs] = useState(0);
   const [ppTest, setPpTest] = useState<string | null>(null);
@@ -551,4 +551,4 @@ const UpsellTemplate7 = ({ info, setCurrentUpsell, sessionData }: Props) => {
   );
 };
 
-export default UpsellTemplate7;
+export default UpsellTemplate7Edit;

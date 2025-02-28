@@ -17,7 +17,7 @@ type DownsellProps = {
   setCurrentUpsell: (info: UpsellPageType) => void;
 };
 
-const DownsellPop = ({ info, setCurrentUpsell }: DownsellProps) => {
+const DownsellPopEdit = ({ info, setCurrentUpsell }: DownsellProps) => {
   return (
     <>
       {" "}
@@ -103,7 +103,7 @@ const DownsellPop = ({ info, setCurrentUpsell }: DownsellProps) => {
   );
 };
 
-const UpsellTemplate4 = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate4Edit = ({ info, setCurrentUpsell }: Props) => {
   const [showDownsell, setShowDownsell] = useState(false);
 
   const declineOffer1 = async () => {
@@ -113,7 +113,7 @@ const UpsellTemplate4 = ({ info, setCurrentUpsell }: Props) => {
   return (
     <>
       {showDownsell && (
-        <DownsellPop info={info} setCurrentUpsell={setCurrentUpsell}  />
+        <DownsellPopEdit info={info} setCurrentUpsell={setCurrentUpsell}  />
       )}
       <div className="flex w-full min-h-screen bg-[#f6fbfe] relative">
         <Image
@@ -328,4 +328,4 @@ const UpsellTemplate4 = ({ info, setCurrentUpsell }: Props) => {
   );
 };
 
-export default UpsellTemplate4;
+export default UpsellTemplate4Edit;

@@ -12,7 +12,7 @@ type Props = {
   setCurrentUpsell: (info: UpsellPageType) => void;
 };
 
-const UpsellTemplate2 = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate2Edit = ({ info, setCurrentUpsell }: Props) => {
   const [mins, setMins] = useState(3);
   const [secs, setSecs] = useState(0);
 
@@ -285,4 +285,4 @@ const UpsellTemplate2 = ({ info, setCurrentUpsell }: Props) => {
   );
 };
 
-export default UpsellTemplate2;
+export default UpsellTemplate2Edit;

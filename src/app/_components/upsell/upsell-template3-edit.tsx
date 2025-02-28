@@ -13,7 +13,7 @@ type Props = {
   setCurrentUpsell: (info: UpsellPageType) => void;
 };
 
-const UpsellTemplate3 = ({ info, setCurrentUpsell }: Props) => {
+const UpsellTemplate3Edit = ({ info, setCurrentUpsell }: Props) => {
   const [productNum, setProductNum] = useState<number>(1);
   const [showInfo, setShowInfo] = useState(false);
 
@@ -311,7 +311,6 @@ const UpsellTemplate3 = ({ info, setCurrentUpsell }: Props) => {
               <div className="flex w-full text-[10px] mt-4 flex-col items-center text-center max-w-[500px] border-[1px] border-blue-900 p-4 mb-4">
                 <h5 className="font-bold">
                   Save
-                  {/*{info.savings1}*/}
                   <input
                     className="editable-input"
                     onChange={(e) => {
@@ -326,7 +325,6 @@ const UpsellTemplate3 = ({ info, setCurrentUpsell }: Props) => {
                   with auto-deliveries
                 </h5>
                 <p className="text-justify">
-                  {/*{info.text2}*/}
                   <input
                     className="editable-input"
                     onChange={(e) => {
@@ -370,10 +368,8 @@ const UpsellTemplate3 = ({ info, setCurrentUpsell }: Props) => {
           <div className=" flex flex-col w-full items-center md:px-4">
             <button
               className="bg-[#29af5c] text-[23px] uppercase  text-white p-2 md:p-4 flex  green-text-shadow  items-center hover:transform  font-bold md:w-[90%] justify-center max-w-[775px]  hover:bg-[#0ebf52] rounded-md disabled:opacity-40 disabled:pointer-events-none"
-              // onClick={acceptOffer}
               // disabled={mins === 0 && secs === 0}
             >
-              {/*{info.ctaText1}*/}
               <input
                 className="editable-input w-full"
                 onChange={(e) => {
@@ -386,11 +382,7 @@ const UpsellTemplate3 = ({ info, setCurrentUpsell }: Props) => {
                 placeholder="Button text"
               />
             </button>
-            <button
-              className="bg-transparent border-none  mt-4 text-[11px] md:text-[12px] pb-2 max-w-[900px] text-[#a1a1a1] cursor-default"
-              // onClick={declineOffer}
-            >
-              {/*{info.skipOfferText1}*/}
+            <button className="bg-transparent border-none  mt-4 text-[11px] md:text-[12px] pb-2 max-w-[900px] text-[#a1a1a1] cursor-default">
               <input
                 className="editable-input w-full"
                 onChange={(e) => {
@@ -410,4 +402,4 @@ const UpsellTemplate3 = ({ info, setCurrentUpsell }: Props) => {
   );
 };
 
-export default UpsellTemplate3;
+export default UpsellTemplate3Edit;
