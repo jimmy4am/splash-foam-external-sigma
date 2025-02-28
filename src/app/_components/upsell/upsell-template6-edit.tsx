@@ -1,11 +1,9 @@
 "use client";
 
 import { UpsellPageType } from "@/interfaces/upsellPage";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { siteProduct } from "@/lib/site-info";
-import { PriceDisplay } from "./upsell-price-display";
-import { SessionDataType } from "@/interfaces/sessionData";
 import EditImage from "@/app/_components/edit-image";
 
 type Props = {
