@@ -1,5 +1,5 @@
 ---
-template: "5"
+template: "6"
 metaTitle: "Bonus - Try Out X-All Multipurpose Cleaner for Less"
 metaDescription: "Take advantage of this bonus offer - enjoy a discounted X-All Mulitpurpose Cleaner"
 funnelFluxName: "X-All Toilet Cleaner - Upsell - X-All Multipurpose Cleaner Cross Sell"

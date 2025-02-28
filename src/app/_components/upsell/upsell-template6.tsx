@@ -151,7 +151,6 @@ const UpsellTemplate6 = ({ info, nextStep, sessionData }: Props) => {
                 This Exclusive offer is only going to be available for a limited
                 time. So Make sure to claim this GIFT Now!
               </p>
-
               {mins === 0 && secs === 0 ? (
                 <>
                   <p className="text-[18px] md:text-[24px] text-[#FD594D] font-[500] mt-6">

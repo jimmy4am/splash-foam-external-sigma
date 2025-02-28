@@ -8,7 +8,6 @@ import UpsellTemplate1 from "./upsell/upsell-template1";
 import UpsellTemplate2 from "./upsell/upsell-template2";
 import UpsellTemplate3 from "./upsell/upsell-template3";
 import UpsellTemplate4 from "./upsell/upsell-template4";
-import UpsellTemplate5 from "./upsell/upsell-template5";
 // import UpsellTemplate6 from "./upsell/upsell-template6";
 import UpsellTemplate6Edit from "./upsell/upsell-template6-edit";
 // import UpsellTemplate7 from "./upsell/upsell-template7";
@@ -71,14 +70,6 @@ const UpsellPage = ({ info }: Props) => {
       case "4":
         return (
           <UpsellTemplate4
-            info={info}
-            nextStep={nextStep}
-            sessionData={sessionData}
-          />
-        );
-      case "5":
-        return (
-          <UpsellTemplate5
             info={info}
             nextStep={nextStep}
             sessionData={sessionData}
