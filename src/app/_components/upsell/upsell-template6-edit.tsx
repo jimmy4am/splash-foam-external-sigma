@@ -47,7 +47,7 @@ const UpsellTemplate6Edit = ({ info, setCurrentUpsell }: Props) => {
             </h5>
             <h1 className="text-[16px] md:text-[23px] font-[700] italic text-[#111] text-center py-2 md:py-0">
               <input
-                className="editable-input w-full"
+                className="editable-input"
                 onChange={(e) => {
                   setCurrentUpsell({
                     ...info,
@@ -59,7 +59,7 @@ const UpsellTemplate6Edit = ({ info, setCurrentUpsell }: Props) => {
               />{" "}
               <span className="text-[#44b374]">
                 <input
-                  className="editable-input w-full"
+                  className="editable-input"
                   onChange={(e) => {
                     setCurrentUpsell({
                       ...info,
@@ -150,7 +150,7 @@ const UpsellTemplate6Edit = ({ info, setCurrentUpsell }: Props) => {
                     <div className="flex justify-start items-end">
                       <div className="text-[22px] md:text-[30px] text-[#FD4631] line-through font-[500]">
                         <input
-                          className="editable-input w-[60px]"
+                          className="editable-input w-[110px]"
                           onChange={(e) => {
                             setCurrentUpsell({
                               ...info,

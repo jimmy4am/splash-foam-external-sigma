@@ -5,7 +5,8 @@ import { useUpsellPage } from "./upsell/hooks/useUpsellPage";
 import UpsellCreditCardPop from "./upsell/upsell-credit-card-pop";
 import LoadingState from "./upsell/upsell-loading-pop";
 import UpsellTemplate1 from "./upsell/upsell-template1";
-import UpsellTemplate2 from "./upsell/upsell-template2";
+// import UpsellTemplate2 from "./upsell/upsell-template2";
+import UpsellTemplate2Edit from "./upsell/upsell-template2-edit";
 // import UpsellTemplate3 from "./upsell/upsell-template3";
 import UpsellTemplate3Edit from "./upsell/upsell-template3-edit";
 // import UpsellTemplate4 from "./upsell/upsell-template4";
@@ -53,11 +54,8 @@ const UpsellPage = ({ info }: Props) => {
         );
       case "2":
         return (
-          <UpsellTemplate2
-            info={info}
-            nextStep={nextStep}
-            sessionData={sessionData}
-          />
+          // <UpsellTemplate2 info={info} nextStep={nextStep} sessionData={sessionData} />
+          <UpsellTemplate2Edit info={info} setCurrentUpsell={setCurrentUpsell} />
         );
       case "3":
         return (

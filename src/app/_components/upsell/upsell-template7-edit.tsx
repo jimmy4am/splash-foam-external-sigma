@@ -147,7 +147,7 @@ const UpsellTemplate7 = ({ info, setCurrentUpsell, sessionData }: Props) => {
                         <h4 className=" text-[#10B74A] text-[32px] md:text-[40px] font-bold w-full">
                           <span className="text-[#FD4631] line-through mr-[10px] text-[22px] md:text-[30px]">
                             <input
-                              className="editable-input w-full"
+                              className="editable-input w-[100px]"
                               onChange={(e) => {
                                 setCurrentUpsell({
                                   ...info,
@@ -159,7 +159,7 @@ const UpsellTemplate7 = ({ info, setCurrentUpsell, sessionData }: Props) => {
                             />
                           </span>{" "}
                           <input
-                            className="editable-input w-full"
+                            className="editable-input w-[100px]"
                             onChange={(e) => {
                               setCurrentUpsell({
                                 ...info,
@@ -414,7 +414,7 @@ const UpsellTemplate7 = ({ info, setCurrentUpsell, sessionData }: Props) => {
                     <h4 className=" text-[#10B74A] text-[32px] md:text-[40px] font-bold w-full">
                       <span className="text-[#FD4631] line-through mr-[10px] text-[22px] md:text-[30px]">
                         <input
-                          className="editable-input"
+                          className="editable-input w-[100px]"
                           onChange={(e) => {
                             setCurrentUpsell({
                               ...info,
@@ -426,7 +426,7 @@ const UpsellTemplate7 = ({ info, setCurrentUpsell, sessionData }: Props) => {
                         />
                       </span>{" "}
                       <input
-                        className="editable-input"
+                        className="editable-input w-[100px]"
                         onChange={(e) => {
                           setCurrentUpsell({
                             ...info,
