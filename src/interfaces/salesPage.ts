@@ -9,6 +9,7 @@ export type SalesPageType = {
   h1_bot: string;
   customerCount: string;
   logo: string;
+  name: string;
   cta: string;
   header: {
     top_highlight: string;
