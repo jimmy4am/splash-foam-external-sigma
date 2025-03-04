@@ -219,6 +219,24 @@ specgrid:
   text7: The Foaming Cleaner That Restores Your Toilet To Brand New!
   icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/240ec781-504c-402a-23f7-a9830a16bd00/public
 
+packages:
+  image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/46233e46-6b7d-44eb-4f54-5e5c24b21a00/public
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/61a18ce2-7353-4b5e-d474-8791c8580d00/public
+  title1: Flat Brush
+  text1: Lorem quis bibendum auctor nisi ipsumem sagittis sem nibh elit.
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3d6ef984-38cd-4a6b-affa-a0d77cb59600/public
+  title2: Flat Brush
+  text2: Lorem quis bibendum auctor nisi ipsumem sagittis sem nibh elit.
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c182da93-e0fc-4681-011e-4ca6ef14e500/public
+  title3: Cloth Brush
+  text3: Lorem quis bibendum auctor nisi ipsumem sagittis sem nibh elit.
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/a259f5f8-8e8a-495f-b741-593a6c7bf600/public
+  title4: Spong Brush
+  text4: Lorem quis bibendum auctor nisi ipsumem sagittis sem nibh elit.
+  image5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0879e3fe-45cb-4f1b-1cf4-e7441004e100/public
+  title5: Velcro Base
+  text5: Lorem quis bibendum auctor nisi ipsumem sagittis sem nibh elit.
+    
 reviews:
   reviewcount: 
   image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ae3f4d72-59fc-4f84-80ee-215eb5145500/public

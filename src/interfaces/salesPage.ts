@@ -199,6 +199,24 @@ export type SalesPageType = {
     text7: string;
     icon7: string;
   };
+  packages: {
+    image: string;
+    image1: string;
+    title1: string;
+    text1: string;
+    image2: string;
+    title2: string;
+    text2: string;
+    image3: string;
+    title3: string;
+    text3: string;
+    image4: string;
+    title4: string;
+    text4: string;
+    image5: string;
+    title5: string;
+    text5: string;
+  };
   reviews: {
     reviewcount: string;
     image1?: string;

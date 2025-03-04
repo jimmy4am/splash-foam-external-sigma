@@ -16,7 +16,7 @@ type Props = {
 const SalesReviews = ({ info }: Props) => {
 
   return (
-    <AppSection classes="bg-[#f6f6f6]">
+    <AppSection classes="bg-[#fff]">
       <div className="mb-[25px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
           title1="X-All Spin Scrubber"
