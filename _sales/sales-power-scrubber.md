@@ -199,25 +199,25 @@ fiveimagesplit:
   undertext2: Backed by Our Satisfaction Guarantee.
 
 specgrid:
-  heading: Splash
-  headingend: Vs The Rest
-  headingLabel: Compare & See
-  productImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/777e451e-711f-45e6-fce1-611133de4100/public
-  otherImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e0705729-3e39-446d-1218-4f05530f2000/public
-  text1: Scrub-Free Formula
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/fe0c02b7-07f7-4232-f507-9f493ecc4100/public
-  text2: Versatile
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/fad17419-22ae-4bfe-4ad9-87c4cf5d0b00/public
-  text3: 100% Safe For Your Skin
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f8fe6a82-dce4-4bf5-fe1a-2d08537a3b00/public
-  text4: Septic Tank Friendly
-  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/119c6536-9c89-4f7e-e65d-1221b76f1400/public
-  text5: Leaves The Freshest Smell
-  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/9045c6cd-65cf-4979-daba-e5f2fe1aaf00/public
-  text6: Eliminates Tough Stains The 1st Time Around
-  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/70cbde88-d087-4f5a-652f-546769eebe00/public
-  text7: The Foaming Cleaner That Restores Your Toilet To Brand New!
-  icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/240ec781-504c-402a-23f7-a9830a16bd00/public
+  heading: 
+  headingend: 
+  headingLabel: 
+  productImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0721612d-a415-4e67-ca4e-4cee7dbcbb00/public
+  otherImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8be86ee8-55da-44c8-bc98-2792c645b100/public
+  text1: Effortless Cleaning
+  icon1: 
+  text2: Safe for All Surfaces
+  icon2: 
+  text3: Chemical-Free
+  icon3: 
+  text4: All-Day Comfort
+  icon4: 
+  text5: Rechargeable Power
+  icon5: 
+  text6: 
+  icon6: 
+  text7: 
+  icon7: 
 
 packages:
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/46233e46-6b7d-44eb-4f54-5e5c24b21a00/public

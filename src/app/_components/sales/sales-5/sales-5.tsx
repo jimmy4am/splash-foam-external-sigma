@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import { SalesPageType } from "@/interfaces/salesPage";
 
+import SalesComparison from "@/app/_components/sales/sales-5/sales-comparison/sales-comparison";
 import SalesPackages from "@/app/_components/sales/sales-5/sales-packages/sales-packages";
 import SalesReviews from "@/app/_components/sales/sales-5/sales-reviews/sales-reviews";
 import SalesFaqs from "@/app/_components/sales/sales-5/sales-faqs/sales-faqs";
@@ -17,6 +18,7 @@ type Props = {
 const Sales5 = ({ info }: Props) => {
   return (
     <div className={`w-full text-[16px] md:text-[17px] leading-[24px] md:leading-[25px] text-[#1a1a1a] ${inter.className}`}>
+      <SalesComparison info={info} />
       <SalesPackages info={info} />
       <SalesReviews info={info} />
       <SalesFaqs info={info} />
