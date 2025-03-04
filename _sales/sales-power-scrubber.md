@@ -235,16 +235,19 @@ reviews:
   text4: I have very hard water and had to scrub dark brown stains from my toilets every couple of days. I was skeptical about Splash cleaner but decided to try it as a last resort. I thought it would take a few uses to get rid of the stains, but they were gone with the first use...and no scrubbing required. I highly recommend Splash to everyone.
 
 faqs: 
-  q1: What else can I use Splash Foam on?
-  a1: Splash is instantly expandable when it touches water, making it suitable for a variety of situations. It can be used on bathtubs and sinks as well as garbage disposals and tile and countertops.
-  q2: Is it septic tank safe?
-  a2: Yes, Splash is 100% septic tank safe.
-  q3: Is there a scent?
-  a3: Yes. There's an Ocean Fresh scent that leaves your bathroom smelling clean.
-  q4: Does it contain bleach?
-  a4: No. Splash doesn't contain any bleach or any other harmful elements that may be harsh to your health.
-  q5: Is this product really worth it?
-  a5: Over 10 million Splash Foam units have been sold to date. Every time a fresh stock was released, it was quickly sold out even without being offered in stores.
+  q1: What are X-ALL's Power Scrubber specifications?
+  a1: X-ALL's Power Scrubber size is 11.5 by 18 cm. It has a power of 10W. It is very lightweight at only 300g.
+  q2: Is X-ALL Power Scrubber waterproof?
+  a2: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  q3: What is the charge type?
+  a3: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  q4: How long can X-ALL Power Scrubber last on one charge?
+  a4: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  q5: What's included with X-ALL Power Scrubber?
+  a5: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  q6: Is X-ALL Power Scrubber quiet?
+  a6: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
 
 features:
   heading: Advanced Cleaning Action You'll Every Buy
