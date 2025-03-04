@@ -201,18 +201,26 @@ export type SalesPageType = {
   };
   reviews: {
     reviewcount: string;
+    image1?: string;
     name1: string;
     title1: string;
     text1: string;
+    image2?: string;
     name2: string;
     title2: string;
     text2: string;
+    image3?: string;
     name3: string;
     title3: string;
     text3: string;
+    image4?: string;
     name4: string;
     title4: string;
     text4: string;
+    image5?: string;
+    name5?: string;
+    title5?: string;
+    text5?: string;
   };
   faqs: {
     q1: string;

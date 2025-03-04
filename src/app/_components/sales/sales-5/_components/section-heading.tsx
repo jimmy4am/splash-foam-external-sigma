@@ -16,7 +16,7 @@ const SectionHeading = ({ title1, title2, subtitle }: Props) => {
         <span className="bg-[#1b7de5] bg-[linear-gradient(180deg,_#1b7de5,_#47c1ff)] text-[transparent] bg-clip-text">{title1}</span>
         <span className="text-[#000]">{title2}</span>
       </h2>
-      {subtitle && <p className="mt-[15px] lg:mt-[20px] text-center text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px]">{subtitle}</p>}
+      {subtitle && <p className="w-full max-w-[1000px] mx-[auto] mt-[15px] lg:mt-[20px] text-center text-[16px] md:text-[17px] lg:text-[18px] leading-[24px] md:leading-[25px] lg:leading-[26px]">{subtitle}</p>}
     </div>
   )
 };

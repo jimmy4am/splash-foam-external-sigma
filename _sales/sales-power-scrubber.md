@@ -220,20 +220,28 @@ specgrid:
   icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/240ec781-504c-402a-23f7-a9830a16bd00/public
 
 reviews:
-  reviewcount: 250,000
-  name1: Barbara K.
-  title1: '"WOW!"'
-  text1: "I was very pleasantly surprised with this product. I was used to the runny liquid cleaner, but decided to try this cleaner this time. WOW! It foamed up and cleaned the toilet bowl clean as a whistle! The magic words are: TRY ME, YOU WILL LIKE ME!"
-  name2: "Evon L."
-  title2: '“The toilet was sparkling clean as advertised”'
-  text2: The process of using the cleaner is very effective. I forgot to flush one of my toilets after the 1hour waiting period and the solution stayed in the toilet overnight. The bubbles were gone but the toilet was sparkling clean as advertised. I look forward to sharing the good news about your product!!!
-  name3: Ashleyrose A.
-  title3: '“I don’t have to touch that filthy toilet ever again"'
-  text3: It changed a filthy toilet into a sparkling white toilet again. I sprinkled in the blue splash foam cleaner. It started to work the second it hit the water. I waited 30 minutes while I did something else. I came back and flushed it. Vola, No scrubbing. I don't have to touch that filthy toilet ever again.
-  name4: Betty C.
-  title4: '“No Scrubbing Required"'
-  text4: I have very hard water and had to scrub dark brown stains from my toilets every couple of days. I was skeptical about Splash cleaner but decided to try it as a last resort. I thought it would take a few uses to get rid of the stains, but they were gone with the first use...and no scrubbing required. I highly recommend Splash to everyone.
-
+  reviewcount: 
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ae3f4d72-59fc-4f84-80ee-215eb5145500/public
+  name1: Emma L.
+  title1: 
+  text1: "As a mother of four, I need quick, effective solutions. X-ALL Power Scrubber cut my cleaning time in half, and I don’t have to use harmful chemicals around my kids anymore!"
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/a834fe18-05a9-47da-629b-dc14f5893d00/public
+  name2: Emma L.
+  title2: 
+  text2: "I was skeptical at first, but the X-ALL Power Scrubber exceeded my expectations. It makes cleaning stubborn grime incredibly easy, and I no longer have to spend hours scrubbing by hand."
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/52741ca5-67a3-4d0c-139d-9da3127c9000/public
+  name3: Emma L.
+  title3: 
+  text3: "I used to spend hours scrubbing my stove & counters. With X-ALL Power Scrubber, it’s done in minutes!"
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/52741ca5-67a3-4d0c-139d-9da3127c9000/public
+  name4: Emma L.
+  title4: 
+  text4: "I used to spend hours scrubbing my stove and counters. With X-ALL Power Scrubber, it’s done in minutes! My kitchen has never been this clean."
+  image5: 
+  name5: Emma L.
+  title5:
+  text5: "With arthritis, scrubbing was always painful. I tried every tool, but nothing worked—until X-ALL Power Scrubber. Now, the scrubbing is done for me, and my kitchen has never been cleaner!"
+  
 faqs: 
   q1: What are X-ALL's Power Scrubber specifications?
   a1: X-ALL's Power Scrubber size is 11.5 by 18 cm. It has a power of 10W. It is very lightweight at only 300g.
