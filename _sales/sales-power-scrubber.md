@@ -276,21 +276,31 @@ faqs:
 
 
 features:
-  heading: Advanced Cleaning Action You'll Every Buy
-  headingLabel: No Toxic Nasties
-  subheading: Switch to Splash to save yourself time, money, energy & most importantly your toilet!
-  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/71bdea13-8533-4616-5785-4510838d6d00/public
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ef7e0fe-731d-4e3a-5c7a-e83ff2346300/public
-  title1: Tough Cleaning Power
-  text1:
-  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/da4c6214-7737-4324-570a-a39a7ce82500/public
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f8b7857a-449c-4371-7e08-94db29a36300/public
-  title2: Hygienic Clean
-  text2:
-  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7cd4e23a-86de-4311-7f9f-603b80e69700/public
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/57cfc8bc-0a42-4a37-4146-395bf8010700/public
-  title3: Removes Nasty Smells
-  text3:
-
-
+  heading: 
+  headingLabel: 
+  subheading: 
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ea643a38-9b77-4eb4-dae8-1cb0e2062500/public
+  icon1: 
+  title1: Handheld
+  text1: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/18bf866a-77ec-4c6c-0e4d-ae9286001e00/public
+  icon2: 
+  title2: High Speed Rotation
+  text2: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f1ae54dd-e145-435c-6b27-10a0917e6500/public
+  icon3: 
+  title3: Ipx7 Waterproof
+  text3: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/cbaba24d-40d3-47a6-ddfe-056bcd15c700/public
+  icon4:
+  title4: Ipx7 Waterproof
+  text4: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
+  image5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8bb5a7d5-cec6-44f0-11b4-eb68439eb700/public
+  icon5:
+  title5: Ipx7 Waterproof
+  text5: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
+  image6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/57d85c32-b9bd-40b7-0d90-98e43e70a400/public
+  icon6:
+  title6: Ipx7 Waterproof
+  text6: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
 ---
