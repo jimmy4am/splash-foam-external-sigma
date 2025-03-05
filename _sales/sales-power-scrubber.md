@@ -125,25 +125,25 @@ strip_images:
   text3: No Hassle Returns
 
 slideshow: 
-  heading: Still Cleaning Your Toilet The Hard Way?
-  headingLabel: No Toxic Nasties
-  subheading: Switch to Splash to save yourself time, money, energy and most importantly — your toilet!
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6fc208f3-29d7-4f67-1a04-648762b3a900/public
-  title1: 100% Safe
-  text1: 100% safe to use and septic tank-friendly.
-  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/efee7e9e-a611-4a49-c00f-5b73aedf8500/public
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/38a61bf8-35e8-4b5a-9062-7dadd971da00/public
-  title2: Eliminates Bad Odors
-  text2: Eliminates bad odors and tough stains after just one application.
-  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e04f388e-e033-4e4c-3f56-c91b39143400/public
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ba342dbc-3fb6-41e4-53d0-1c19089bde00/public
-  title3: Cleans Drain
-  text3: Not only does it clean the bowl, it actively cleans down into the drain.
-  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ed56217-ce7f-499b-23d1-59086ffa9500/public
-  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2b53d95a-a521-41d1-dee5-62acdd0c5000/public
-  title4: No Fuss
-  text4: No scrubbing, no fuss.
-  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1a3adbc6-42df-4e0c-0461-8ecd22d75900/public
+  heading: 
+  headingLabel: 
+  subheading: 
+  icon1: 
+  title1: Kitchen
+  text1: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e6d48b5a-63e3-4d34-81e0-d44141079700/public
+  icon2: 
+  title2: Mirror
+  text2: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/189ffe03-c26e-4c70-d5ad-62d6b8cfd200/public
+  icon3: https
+  title3: Bathroom
+  text3: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8b9c74c4-295c-46f5-9ab0-08d106ae0200/public
+  icon4: https
+  title4: Floor
+  text4: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5b756c34-0034-4caf-08fd-9b351cbdca00/public
 
 splitcompare: 
   background: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/baad7b34-eda2-4340-9f12-967b9e0e0a00/public 
@@ -280,7 +280,6 @@ faqs:
   a5: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
   q6: Is X-ALL Power Scrubber quiet?
   a6: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
 
 features:
   heading: 

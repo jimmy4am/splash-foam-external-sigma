@@ -46,10 +46,10 @@ const SalesFeaturesOffer = ({ info }: Props) => {
             </>
           ))}
         </div>
-        <p className="flex items-center justify-center gap-[5px] mb-[10px] text-[14px] leading-[1] text-[#000] font-medium">
+        <div className="flex items-center justify-center gap-[5px] mb-[10px] text-[14px] leading-[1] text-[#000] font-medium">
           <AppRating />
           Over 40,000+ Pairs Sold
-        </p>
+        </div>
         <AppButton classes="w-full justify-center !bg-[#000] rounded-[0]" url={info.cta}>Claim Offer Now</AppButton>
       </div>
     </div>

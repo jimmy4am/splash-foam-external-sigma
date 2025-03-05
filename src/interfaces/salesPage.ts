@@ -1,5 +1,3 @@
-import SalesSpecification from "@/app/_components/sales/sales-5/sales-specification/sales-specification";
-
 export type SalesPageType = {
   slug: string;
   template: string;

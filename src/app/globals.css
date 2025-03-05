@@ -30,7 +30,6 @@
   @apply border-2 border-yellow-500 border-dashed px-2 text-[#000]
 }
 
-
 /* Slider */
 /*========dots=======*/
 .slider .slick-dots {
@@ -90,33 +89,8 @@
   right: 10px;
 }
 
-.usage-slider  .slick-list {
+.usage-slider .slick-list {
   padding:0 20% 0 0 !important
-}
-
-@media (min-width: 768px) {
-  .usage-slider .slick-prev,
-  .usage-slider .slick-next {
-    top: 25%;
-  }
-
-  .usage-slider .slick-prev {
-    left: -8px;
-  }
-
-  .usage-slider .slick-next {
-    right: -8px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .usage-slider .slick-prev {
-    left: -45px;
-  }
-
-  .usage-slider .slick-next {
-    right: -45px;
-  }
 }
 
 /* Comparison Highlight Slider */
@@ -157,12 +131,6 @@
 .upsell-slider .slick-track {
   display: flex;
   gap: 15px;
-}
-
-@media (min-width: 768px) {
-  .upsell-slider .slick-track {
-    gap: 30px;
-  }
 }
 
 /* Mould Cleaner slider */
@@ -236,8 +204,7 @@
   border: 1px solid #000;
 }
 
-
-/* Mould Cleaner Reviews slider */
+/* Mould Cleaner Simple slider */
 .mould-cleaner-simple-slider .slick-track {
   display: flex;
 }
@@ -290,21 +257,42 @@
   padding: 6px 0;
 }
 
-@media (min-width: 768px) {
-  .mould-cleaner-simple-slider .slick-slide {
-    padding: 0 10px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mould-cleaner-simple-slider .slick-slide {
-    padding: 0 20px;
-  }
-}
-
-
 .sale-characteristics .rfm-initial-child-container {
   align-items: flex-start ;
+}
+
+/* X-All Power Scrubber Usage slider */
+.power-scrubber-usage-slider .slick-prev,
+.power-scrubber-usage-slider .slick-next  {
+  transform: none;
+  top: 27%;
+}
+
+.power-scrubber-usage-slider ul.slick-dots {
+  margin-top: 25px;
+}
+
+.power-scrubber-usage-slider ul.slick-dots li {
+  width: 50px;
+  margin: 0;
+}
+
+.power-scrubber-usage-slider ul.slick-dots li button {
+  width: 100%;
+  height: 2px;
+  padding: 0;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 0;
+}
+
+.power-scrubber-usage-slider ul.slick-dots li.slick-active button {
+  background: #fff;
+  border: none;
+}
+
+.power-scrubber-usage-slider .slick-list {
+  padding-left: 0 !important;
 }
 
 .green-text-shadow {
@@ -337,6 +325,7 @@
 .hover-grow {
   transition: transform 0.3s ease-in-out;
 }
+
 .hover-grow:hover {
   transform: scale(1.2);
 }
@@ -397,6 +386,7 @@
     background: #22c55e;
   }
 }
+
 @keyframes fillUpRed {
   0% {
     stroke-dashoffset: 100;
@@ -438,6 +428,7 @@
   box-shadow: inset 0 0 0 #fff;
   animation: fillUp 2s ease-in-out forwards;
 }
+
 .checkmark_red {
   width: 24px;
   height: 24px;
@@ -450,6 +441,7 @@
   box-shadow: inset 0 0 0 #fff;
   animation: fillUpRed 2s ease-in-out forwards;
 }
+
 .checkmark__circle_red {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
@@ -502,27 +494,6 @@ button {
   /* Remove default styling on other browsers */
 }
 
-@media (max-width: 767px) {
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  select:focus,
-  textarea {
-    font-size: 16px;
-  }
-}
-
 .partners-ticker {
   animation: partnersTicker 25s linear infinite forwards;
 }
@@ -558,7 +529,6 @@ button {
     width: 100%;
   }
 }
-
 
 .parallax1>use {
   animation: move-forever1 10s linear infinite;
@@ -619,8 +589,98 @@ button {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .waves-animated-1 {
-    --max-height: 6rem;
+
+@media (max-width: 767px) {
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select:focus,
+  textarea {
+    font-size: 16px;
   }
 }
+
+@media (min-width: 768px) {
+  /* Usage Slider */
+  .usage-slider .slick-prev,
+  .usage-slider .slick-next {
+    top: 25%;
+  }
+
+  .usage-slider .slick-prev {
+    left: -8px;
+  }
+
+  .usage-slider .slick-next {
+    right: -8px;
+  }
+
+  /* Upsell page Slider */
+  .upsell-slider .slick-track {
+    gap: 30px;
+  }
+
+  /* Mould Cleaner Simple slider */
+  .mould-cleaner-simple-slider .slick-slide {
+    padding: 0 10px;
+  }
+
+  /* X-All Power Scrubber Usage slider */
+  .power-scrubber-usage-slider ul.slick-dots {
+    margin-top: 30px;
+  }
+
+  .power-scrubber-usage-slider ul.slick-dots li {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Mould Cleaner Simple slider */
+  .mould-cleaner-simple-slider .slick-slide {
+    padding: 0 20px;
+  }
+
+  /* X-All Power Scrubber Usage slider */
+  .power-scrubber-usage-slider ul.slick-dots {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .power-scrubber-usage-slider .slick-prev,
+  .power-scrubber-usage-slider .slick-next  {
+    top: 222px;
+  }
+
+  .power-scrubber-usage-slider .slick-prev  {
+    left: -55px;
+  }
+
+  .power-scrubber-usage-slider .slick-next  {
+    right: -55px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Usage Slider */
+  .usage-slider .slick-prev {
+    left: -45px;
+  }
+
+  .usage-slider .slick-next {
+    right: -45px;
+  }
+}
+

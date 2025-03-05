@@ -8,13 +8,14 @@ import AppButton from "@/app/_components/sales/sales-5/_components/app-button";
 
 type Props = {
   info: SalesPageType,
+  dark?: boolean,
 };
 
-const BuyButton = ({ info }: Props) => {
+const BuyButton = ({ info, dark = false }: Props) => {
   return (
     <div className="text-center">
       <AppButton classes="w-full justify-center" url={info.cta}>Order Now & Save 70%</AppButton>
-      <ul className="w-full flex justify-between mt-[10px] md:mt-[15px] lg:mt-[20px] md:px-[10px] text-[10px] md:text-[11px] leading-[15px] md:leading-[17px] text-[#000] uppercase underline font-medium ">
+      <ul className={`w-full flex justify-between mt-[10px] md:mt-[15px] lg:mt-[20px] md:px-[10px] text-[10px] md:text-[11px] leading-[15px] md:leading-[17px] text-[#000] uppercase underline font-medium ${dark && 'invert'}`}>
         <li className="flex items-start gap-[5px] text-left">
           <Image
             className="flex-[0_0_25px] md:flex-[0_0_29px]"
