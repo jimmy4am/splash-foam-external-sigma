@@ -8,11 +8,11 @@ import SectionHeading from "@/app/_components/sales/sales-5/_components/section-
 import BuyButton from "@/app/_components/sales/sales-5/_components/buy-button";
 import AppSection from "@/app/_components/sales/sales-5/_components/app-section";
 
-type Props2 = {
+type Props = {
   info: SalesPageType;
 };
 
-const SalesFaqs = ({ info }: Props2) => {
+const SalesFaqs = ({ info }: Props) => {
   const [active, setActive] = useState(0);
 
   return (

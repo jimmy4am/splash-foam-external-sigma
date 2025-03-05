@@ -44,21 +44,28 @@ header:
   
 
 characteristics:
-  heading: Splash Foam Characteristics
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8e657ca3-c4dd-49e4-b600-a3a85df97b00/public
-  text1: Eco Friendly
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/70a1a488-02b9-4577-f507-6be8b12d9b00/public
-  text2: Non Toxic
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d967fef8-2682-41ea-37a9-ab326f63e300/public
-  text3: Plant Based Products
-  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/649b397e-25e0-49d5-c465-5499f50ef700/public
-  text4: Recyclable Plastic
-  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/74f7e799-e5ed-4a4a-c9e3-0ced90d83600/public
-  text5: Cruelty Free
-  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/bca86de4-8d46-413a-8d06-d95d8fec3e00/public
-  text6: Dye Free
-  icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/37db93ed-b5b4-4139-252e-cb9a790cbb00/public
-  text7: Formulated HE & Standard
+  heading: 
+  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/df29fe7e-8d0d-47f2-cbab-c3b9e0f5d600/public
+  title1: Long-Lasting
+  text1: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
+  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f89934e7-6ee3-4b8b-1899-24b5b12de100/public
+  title2: Hazardous Chemical-Free
+  text2: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
+  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/39d43fae-212b-482e-374e-8d9b6c826b00/public
+  title3: Makes Cleaning A Breeze
+  text3: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
+  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7c2fa66e-7e43-415b-b59c-cb6f21787300/public
+  title4: Use It Anywhere
+  text4: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
+  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/80271dd7-d08f-4f18-6e9b-bdf9d1344a00/public
+  title5: Grime Out Of Corners
+  text5: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
+  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/514c3279-8224-4304-2bf1-60c6eb22a800/public
+  title6: Makes Cleaning A Breeze
+  text6: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
+  icon7: 
+  title7: 
+  text7: 
 
 highlights:
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/acd5a7af-3f72-45ad-27ba-7f5bcd829f00/public

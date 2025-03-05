@@ -40,18 +40,25 @@ export type SalesPageType = {
   characteristics: {
     heading: string;
     icon1: string;
+    title1: string;
     text1: string;
     icon2: string;
+    title2: string;
     text2: string;
     icon3: string;
+    title3: string;
     text3: string;
     icon4: string;
+    title4: string;
     text4: string;
     icon5: string;
+    title5: string;
     text5: string;
     icon6: string;
+    title6: string;
     text6: string;
     icon7: string;
+    title7: string;
     text7: string;
   };
   highlights: {
