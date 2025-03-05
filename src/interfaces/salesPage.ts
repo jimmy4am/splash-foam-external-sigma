@@ -1,3 +1,5 @@
+import SalesSpecification from "@/app/_components/sales/sales-5/sales-specification/sales-specification";
+
 export type SalesPageType = {
   slug: string;
   template: string;
@@ -291,4 +293,16 @@ export type SalesPageType = {
     title6: string;
     text6: string;
   };
+  specification: {
+    main_image_mob: string;
+    main_image_desktop: string;
+    image1: string;
+    text1: string;
+    image2: string;
+    text2: string;
+    image3: string;
+    text3: string;
+    image4: string;
+    text4: string;
+  }
 };

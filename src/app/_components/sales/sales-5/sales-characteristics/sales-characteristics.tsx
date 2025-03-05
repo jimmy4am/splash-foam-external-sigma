@@ -13,7 +13,7 @@ type Props = {
 
 const SalesCharacteristics = ({ info }: Props) => {
   return (
-    <AppSection classes="bg-[#fff]">
+    <AppSection classes="bg-[#fbfbfb]">
       <div className="mb-[20px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
           title1="Why Every House Needs"

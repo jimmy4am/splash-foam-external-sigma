@@ -35,7 +35,7 @@ const SalesReviewsSingleItem = ({ image, author, text }: Props) => {
             <span className="mr-[10px] text-[17px] font-bold">{author}</span>
             <span className="inline-flex items-center gap-[4px]">
               <Image
-                className="flex-[0_0_12px]"
+                className="flex-[0_0_12px] max-w-[12px]"
                 src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/14b481e5-2f28-4caf-44f9-99a25425c200/public"
                 width={24}
                 height={28}

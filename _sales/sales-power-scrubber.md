@@ -310,4 +310,16 @@ features:
   icon6:
   title6: Ipx7 Waterproof
   text6: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
+
+specification:
+  main_image_mob: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/45dfac72-27ec-481c-05d1-7a83fdfd0800/public
+  main_image_desktop: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/33890fa3-fe85-4342-3b70-606330e61200/public
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ccb006cc-5f2c-45c8-2983-2d2f1fcaff00/public
+  text1: Replaceable Brush Head
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d7792ea5-1d08-40e3-5c62-f3c6ed05c600/public
+  text2: Hide Charging Port
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d8ea0f52-d070-45be-ec67-740a10920700/public
+  text3: One Key Shift
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/65d63d43-70c5-4f1b-14ea-072130068900/public
+  text4: Lorem IpsumDolor Emit
 ---
