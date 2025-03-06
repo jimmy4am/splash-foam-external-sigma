@@ -36,6 +36,14 @@ export type SalesPageType = {
     afterImage3: string;
     beforeImageSm1: string;
     afterImageSm1: string;
+    image1: string;
+    image2: string;
+    image3: string;
+    image4: string;
+    image5: string;
+    image6: string;
+    image7: string;
+    image8: string;
   };
   characteristics: {
     heading: string;

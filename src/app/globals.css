@@ -614,6 +614,59 @@ button {
   }
 }
 
+.breath {
+  animation: breath 1.3s infinite;
+}
+
+@keyframes breath {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.rotate {
+  animation: rotate 2.5s ease-in-out forwards infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.fade {
+  animation: fade 1.2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 767px) {
   input[type="color"],
   input[type="date"],
