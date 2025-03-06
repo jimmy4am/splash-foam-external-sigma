@@ -326,4 +326,22 @@ specification:
   text3: One Key Shift
   image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/65d63d43-70c5-4f1b-14ea-072130068900/public
   text4: Lorem IpsumDolor Emit
+
+reasons: 
+  icon: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0fecf166-6cd9-4d43-4896-d9e744a8c000/public
+  main_image_mob: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/90172b14-8cfd-4166-62da-4eaa4073d600/public
+  main_image_desktop: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6aeef3c9-9543-42ed-9b46-2ae51ed54700/public
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/592f2be6-5430-4efb-62c0-d1b9b6fd1100/public
+  text1: Mobility Issues
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0499746b-49b1-42eb-b71e-62346222ac00/public
+  text2: Rheumatism
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5517ec56-2e26-4b0d-f05e-f578c86ba500/public
+  text3: Parkinson’s
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ee004a74-094a-4701-7f73-d0da158f8c00/public
+  text4: Arthritis
+  image5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e241d9cc-a719-43e1-8b7f-2e94d35b3900/public
+  text5: Osteoporosis
+  image6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/a39ad5d2-5d3e-4f24-dce9-f6df90349600/public
+  text6: Back & Joints Pain
+
 ---

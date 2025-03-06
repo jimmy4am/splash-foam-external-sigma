@@ -309,4 +309,21 @@ export type SalesPageType = {
     image4: string;
     text4: string;
   }
+  reasons: {
+    icon: string;
+    main_image_mob: string;
+    main_image_desktop: string;
+    image1: string;
+    text1: string;
+    image2: string;
+    text2: string;
+    image3: string;
+    text3: string;
+    image4: string;
+    text4: string;
+    image5: string;
+    text5: string;
+    image6: string;
+    text6: string;
+  }
 };
