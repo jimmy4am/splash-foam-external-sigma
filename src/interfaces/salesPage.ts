@@ -326,4 +326,11 @@ export type SalesPageType = {
     image6: string;
     text6: string;
   }
+  sources: {
+    image1: string;
+    image2: string;
+    image3: string;
+    image4: string;
+    image5: string;
+  }
 };

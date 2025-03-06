@@ -344,4 +344,10 @@ reasons:
   image6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/a39ad5d2-5d3e-4f24-dce9-f6df90349600/public
   text6: Back & Joints Pain
 
+sources:
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7286d9b6-a637-4290-a086-bec6e4d14700/public
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ed33a81-9070-4a2f-affe-12ccdee21100/public
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/96ac9047-760a-44e0-c7e4-6a7a4defdf00/public
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/dbc9b70e-e27b-493b-7f6d-f7fee754eb00/public
+  image5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/365f5014-3daf-4c3a-0087-0e6268fafb00/public
 ---
