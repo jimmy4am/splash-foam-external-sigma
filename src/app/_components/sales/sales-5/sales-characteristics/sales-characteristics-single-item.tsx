@@ -18,7 +18,7 @@ const SalesCharacteristicsSingleItem = ({ icon, title, text }: Props) => (
     />
 
     <h3 className="mb-[10px] text-[22px] md:text-[20px] lg:text-[22px] xl:text-[23px] leading-[26px] md:leading-[26px] lg:leading-[30px] xl:leading-[31px] text-[#000] font-bold tracking-[0.3px] lg:tracking-[0]">{title}</h3>
-    <p className="pr-[36px] md:pr-[0] lg:pr-[25px]">{text}</p>
+    <p className="pr-[36px] md:pr-[0]">{text}</p>
   </li>
 )
 

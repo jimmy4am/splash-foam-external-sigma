@@ -109,11 +109,17 @@ export type SalesPageType = {
     img5: string;
     img6: string;
     icon1: string;
+    title1: string;
     text1: string;
     icon2: string;
+    title2: string;
     text2: string;
     icon3: string;
+    title3: string;
     text3: string;
+    icon4: string;
+    title4: string;
+    text4: string;
   };
   slideshow: {
     heading: string;

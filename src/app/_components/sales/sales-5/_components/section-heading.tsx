@@ -7,13 +7,14 @@ type Props = {
   title1: string,
   title2: string,
   subtitle?: string,
+  classes?: string,
   dark?: boolean,
 };
 
-const SectionHeading = ({ title1, title2, subtitle, dark = false }: Props) => {
+const SectionHeading = ({ title1, title2, subtitle, classes, dark = false }: Props) => {
   return (
     <div>
-      <h2 className={`flex flex-col items-center text-[30px] md:text-[33px] lg:text-[45px] leading-[36px] md:leading-[41px] lg:leading-[53px] font-extrabold ${figtree.className}`}>
+      <h2 className={`flex flex-col items-center text-center text-[30px] md:text-[33px] lg:text-[45px] leading-[36px] md:leading-[41px] lg:leading-[53px] font-extrabold ${figtree.className} ${classes}`}>
         <span className="bg-[#1b7de5] bg-[linear-gradient(180deg,_#1b7de5,_#47c1ff)] text-[transparent] bg-clip-text">{title1}</span>
         <span className={`'text-[${dark ? '#fff' : '#000'}]`}>{title2}</span>
       </h2>
