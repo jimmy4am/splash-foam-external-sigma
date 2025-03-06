@@ -17,10 +17,10 @@ const SalesReasons = ({ info }: Props) => {
       <div className="w-full max-w-[1200px] mx-[auto] px-[15px]">
         <div className="hidden md:block mb-[20px] md:mb-[30px] lg:mb-[45px]  text-center text-[#fff]">
           <h2 className={`w-full max-w-[350px] lg:max-w-[450px] mx-auto mb-[15px] lg:mb-[20px] text-[33px] lg:text-[45px] leading-[41px] lg:leading-[53px]  font-extrabold ${figtree.className}`}>
-            Cleaning Can Be A Real <span className="text-[#f00]">“Painful”</span> Chore
+            {info.reasons.heading} <span className="text-[#f00]">“{info.reasons.headingLabel}”</span> {info.reasons.heading2}
           </h2>
           <p className="w-full max-w-[750px] mx-[auto] text-[17px] lg:text-[18px] leading-[25px] lg:leading-[26px] tracking-[0.3px] lg:tracking-[0]">
-            Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh amet nibh vulputate cursus tincidunt auctor a ornare odio mauris vitae erat  sociosqu
+            {info.reasons.subheading}
           </p>
         </div>
 

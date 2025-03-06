@@ -47,6 +47,8 @@ export type SalesPageType = {
   };
   characteristics: {
     heading: string;
+    heading2: string;
+    subheading: string;
     icon1: string;
     title1: string;
     text1: string;
@@ -110,6 +112,9 @@ export type SalesPageType = {
     feature5subtitle: string;
   };
   strip_images: {
+    heading: string;
+    heading2: string;
+    subheading: string;
     img1: string;
     img2: string;
     img3: string;
@@ -131,8 +136,9 @@ export type SalesPageType = {
   };
   slideshow: {
     heading: string;
-    headingLabel: string;
+    heading2: string;
     subheading: string;
+    headingLabel: string;
     icon1: string;
     title1: string;
     text1: string;
@@ -202,6 +208,7 @@ export type SalesPageType = {
   specgrid: {
     heading: string;
     headingend: string;
+    subheading: string;
     headingLabel: string;
     productImg: string;
     otherImg: string;
@@ -221,6 +228,9 @@ export type SalesPageType = {
     icon7: string;
   };
   packages: {
+    heading: string;
+    heading2: string;
+    subheading: string;
     image: string;
     image1: string;
     title1: string;
@@ -239,6 +249,9 @@ export type SalesPageType = {
     text5: string;
   };
   reviews: {
+    heading: string;
+    heading2: string;
+    subheading: string;
     reviewcount: string;
     image1?: string;
     name1: string;
@@ -262,6 +275,8 @@ export type SalesPageType = {
     text5?: string;
   };
   faqs: {
+    heading: string;
+    heading2: string;
     q1: string;
     a1: string;
     q2: string;
@@ -278,6 +293,7 @@ export type SalesPageType = {
   content: string;
   features: {
     heading: string;
+    heading2: string;
     headingLabel: string;
     subheading: string;
     image1: string;
@@ -306,6 +322,9 @@ export type SalesPageType = {
     text6: string;
   };
   specification: {
+    heading: string;
+    heading2: string;
+    subheading: string;
     main_image_mob: string;
     main_image_desktop: string;
     image1: string;
@@ -318,6 +337,10 @@ export type SalesPageType = {
     text4: string;
   }
   reasons: {
+    heading: string;
+    heading2: string;
+    headingLabel: string;
+    subheading: string;
     icon: string;
     main_image_mob: string;
     main_image_desktop: string;
@@ -335,6 +358,7 @@ export type SalesPageType = {
     text6: string;
   }
   sources: {
+    heading: string;
     image1: string;
     image2: string;
     image3: string;

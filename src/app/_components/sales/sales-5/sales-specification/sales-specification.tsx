@@ -15,10 +15,9 @@ const SalesSpecification = ({ info }: Props) => {
     <AppSection classes="bg-[#fff] md:bg-[url(https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/997d4820-148a-4f30-0475-0392ce8e0100/public)] bg-no-repeat bg-[center_top]">
       <div className="mb-[20px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
-          title1="Gravida Aliquet Emet"
-          title2="Bibendum Velit"
-          subtitle="Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh
-            vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero"
+          title1={info.specification.heading}
+          title2={info.specification.heading2}
+          subtitle={info.specification.subheading}
         />
       </div>
 

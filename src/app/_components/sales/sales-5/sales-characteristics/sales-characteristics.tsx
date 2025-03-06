@@ -16,10 +16,9 @@ const SalesCharacteristics = ({ info }: Props) => {
     <AppSection classes="bg-[#fbfbfb]">
       <div className="mb-[20px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
-          title1="Why Every House Needs"
-          title2="XAll Spin Scrubber"
-          subtitle="Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate
-            cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero"
+          title1={info.characteristics.heading}
+          title2={info.characteristics.heading2}
+          subtitle={info.characteristics.subheading}
         />
       </div>
 

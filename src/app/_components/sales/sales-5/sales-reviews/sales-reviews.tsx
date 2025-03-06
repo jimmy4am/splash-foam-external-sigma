@@ -20,10 +20,9 @@ const SalesReviews = ({ info }: Props) => {
     <AppSection classes="bg-[#fff]">
       <div className="mb-[25px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
-          title1="X-All Spin Scrubber"
-          title2="What Our Customers Say"
-          subtitle="Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet
-          nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus."
+          title1={info.reviews.heading}
+          title2={info.reviews.heading2}
+          subtitle={info.reviews.subheading}
         />
       </div>
 

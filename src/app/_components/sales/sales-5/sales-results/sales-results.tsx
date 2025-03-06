@@ -44,8 +44,8 @@ const SalesResults = ({ info }: Props) => {
       </div>
       <div className="relative pr-[115px] md:pr-[0]">
         <SectionHeading
-          title1="Deep Cleaning"
-          title2="& Pain Free Again With Spin Scrubber"
+          title1={info.strip_images.heading}
+          title2={info.strip_images.heading2}
           classes="!text-left md:!text-center !items-start md:!items-center"
         />
         <Image
@@ -58,10 +58,7 @@ const SalesResults = ({ info }: Props) => {
       </div>
 
       <div className="hidden md:block w-full max-w-[1000px] mx-[auto] text-center text-[17px] lg:text-[18px] leading-[25px] lg:leading-[26px]">
-        <p className="mt-[15px] lg:mt-[20px]">Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate
-          cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero</p>
-        <p className="mt-[15px] lg:mt-[20px]">Nam nec tellus a odio tincidunt auctor a ornare odio mauris vitae erat consequat auctor aptent sociosqueget eros
-          faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+        <p className="mt-[15px] lg:mt-[20px]">{info.strip_images.subheading}</p>
       </div>
 
       <div className="mt-[30px] lg:mt-[45px] mb-[25px] md:mb-[30px] lg:mb-[50px]">
@@ -99,10 +96,7 @@ const SalesResults = ({ info }: Props) => {
         </div>
 
         <div className="md:hidden text-[16px] leading-[24px]">
-          <p className="mt-[30px]">Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate
-            cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero</p>
-          <p className="mt-[15px]">Nam nec tellus a odio tincidunt auctor a ornare odio mauris vitae erat consequat auctor aptent sociosqueget eros
-            faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+          <p className="mt-[30px]">{info.strip_images.subheading}</p>
         </div>
 
         <div className="mt-[25px] md:mt-[35px] lg:mt-[40px]">

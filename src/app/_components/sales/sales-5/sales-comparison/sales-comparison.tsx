@@ -16,10 +16,9 @@ const SalesComparison = ({ info }: Props) => {
     <AppSection classes="bg-[#fff]">
       <div className="mb-[20px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
-          title1="Comparison"
-          title2="XAll Spin Scrubber Vs Others"
-          subtitle="Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate
-            cursusMaecenas nec odio et ante tincidunt tempus."
+          title1={info.specgrid.heading}
+          title2={info.specgrid.headingend}
+          subtitle={info.specgrid.subheading}
         />
       </div>
 

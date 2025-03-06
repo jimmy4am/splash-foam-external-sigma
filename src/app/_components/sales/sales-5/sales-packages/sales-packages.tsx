@@ -38,10 +38,9 @@ const SalesPackages = ({ info }: Props) => {
     <AppSection classes="bg-[#fbfbfb]">
       <div className="mb-[20px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
-          title1="Whats Included In"
-          title2="XAll Spin Scrubber"
-          subtitle="Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate
-            cursusMaecenas nec odio et ante tincidunt tempus."
+          title1={info.packages.heading}
+          title2={info.packages.heading2}
+          subtitle={info.packages.subheading}
         />
       </div>
       

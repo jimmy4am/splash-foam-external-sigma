@@ -17,7 +17,7 @@ const SalesFaqs = ({ info }: Props) => {
 
   return (
     <AppSection classes="bg-[#f6f6f6]">
-      <SectionHeading title1="You Asked The Questions" title2="We Give The Answers" />
+      <SectionHeading title1={info.faqs.heading} title2={info.faqs.heading2} />
 
       <ul className="max-w-[770px] mx-[auto] mt-[10px] md:mt-[20px] lg:mt-[25px] mb-[15px] md:mb-[25px]">
         <SalesFaqsSingleItem q={info.faqs.q1} a={info.faqs.a1} index={0} active={active} setActive={setActive} />

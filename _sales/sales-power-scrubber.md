@@ -51,7 +51,9 @@ header:
   image8: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/94beb09c-fec2-4a30-e881-8d94e18bfd00/public
   
 characteristics:
-  heading: 
+  heading: Why Every House Needs
+  heading2: XAll Spin Scrubber
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/df29fe7e-8d0d-47f2-cbab-c3b9e0f5d600/public
   title1: Long-Lasting
   text1: Lorem quis bibendum auctor consequat ipsum, nec sagittis vitae sapieut libero venenatis
@@ -118,6 +120,9 @@ info:
   feature5subtitle: 
 
 strip_images: 
+  heading: Deep Cleaning
+  heading2: "& Pain Free Again With Spin Scrubber"
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
   img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d095be65-908d-4214-893c-454476ec5800/public
   img2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4d408b0c-4ca3-4c92-fbf1-e2526a0ed800/public
   img3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0d923ded-b889-4002-3521-3d276ec5b900/public
@@ -138,9 +143,10 @@ strip_images:
   text4: Lorem quis bibendum auctor nisi ipsum sagittis sem nibh elit.
 
 slideshow: 
-  heading: 
-  headingLabel: 
-  subheading: 
+  heading: One Cleaning Tool
+  heading2: For All Surfaces
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+  headingLabel:
   icon1: 
   title1: Kitchen
   text1: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh
@@ -219,8 +225,9 @@ fiveimagesplit:
   undertext2: Backed by Our Satisfaction Guarantee.
 
 specgrid:
-  heading: 
-  headingend: 
+  heading: Comparison
+  headingend: XAll Spin Scrubber Vs Others
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus.
   headingLabel: 
   productImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0721612d-a415-4e67-ca4e-4cee7dbcbb00/public
   otherImg: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8be86ee8-55da-44c8-bc98-2792c645b100/public
@@ -240,6 +247,9 @@ specgrid:
   icon7: 
 
 packages:
+  heading: Whats Included In
+  heading2: XAll Spin Scrubber
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus.
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/46233e46-6b7d-44eb-4f54-5e5c24b21a00/public
   image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/61a18ce2-7353-4b5e-d474-8791c8580d00/public
   title1: Flat Brush
@@ -258,6 +268,9 @@ packages:
   text5: Lorem quis bibendum auctor nisi ipsumem sagittis sem nibh elit.
     
 reviews:
+  heading: X-All Spin Scrubber
+  heading2: What Our Customers Say
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus.
   reviewcount: 
   image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ae3f4d72-59fc-4f84-80ee-215eb5145500/public
   name1: Emma L.
@@ -280,7 +293,9 @@ reviews:
   title5:
   text5: "With arthritis, scrubbing was always painful. I tried every tool, but nothing worked—until X-ALL Power Scrubber. Now, the scrubbing is done for me, and my kitchen has never been cleaner!"
   
-faqs: 
+faqs:
+  heading: You Asked The Questions
+  heading2: We Give The Answers
   q1: What are X-ALL's Power Scrubber specifications?
   a1: X-ALL's Power Scrubber size is 11.5 by 18 cm. It has a power of 10W. It is very lightweight at only 300g.
   q2: Is X-ALL Power Scrubber waterproof?
@@ -295,9 +310,10 @@ faqs:
   a6: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 
 features:
-  heading: 
-  headingLabel: 
-  subheading: 
+  heading: The Easy Way To Clean 
+  heading2: Everything SMARTLY!
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
+  headingLabel:
   image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ea643a38-9b77-4eb4-dae8-1cb0e2062500/public
   icon1: 
   title1: Handheld
@@ -324,6 +340,9 @@ features:
   text6: Lorem quis bibendum auctor elit coseqer uat ipsum, nec sagittis sem nibh vulputate cursus a sit quam amet
 
 specification:
+  heading: Gravida Aliquet Emet
+  heading2: Bibendum Velit
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
   main_image_mob: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/45dfac72-27ec-481c-05d1-7a83fdfd0800/public
   main_image_desktop: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/33890fa3-fe85-4342-3b70-606330e61200/public
   image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/ccb006cc-5f2c-45c8-2983-2d2f1fcaff00/public
@@ -335,7 +354,11 @@ specification:
   image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/65d63d43-70c5-4f1b-14ea-072130068900/public
   text4: Lorem IpsumDolor Emit
 
-reasons: 
+reasons:
+  heading: Cleaning Can Be A Real
+  heading2: Chore
+  headingLabel: Painful
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh amet nibh vulputate cursus tincidunt auctor a ornare odio mauris vitae erat  sociosqu
   icon: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0fecf166-6cd9-4d43-4896-d9e744a8c000/public
   main_image_mob: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/90172b14-8cfd-4166-62da-4eaa4073d600/public
   main_image_desktop: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6aeef3c9-9543-42ed-9b46-2ae51ed54700/public
@@ -353,6 +376,7 @@ reasons:
   text6: Back & Joints Pain
 
 sources:
+  heading: As seen on
   image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7286d9b6-a637-4290-a086-bec6e4d14700/public
   image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ed33a81-9070-4a2f-affe-12ccdee21100/public
   image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/96ac9047-760a-44e0-c7e4-6a7a4defdf00/public

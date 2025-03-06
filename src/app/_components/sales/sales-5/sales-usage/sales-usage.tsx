@@ -50,10 +50,9 @@ const SalesUsage = ({ info }: Props) => {
     <AppSection classes="bg-[#000] text-[#fff]">
       <div className="mb-[20px] md:mb-[30px] lg:mb-[45px]">
         <SectionHeading
-          title1="One Cleaning Tool"
-          title2="For All Surfaces"
-          subtitle="Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duissed amet nibh
-            vulputate cursusMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero"
+          title1={info.slideshow.heading}
+          title2={info.slideshow.heading2}
+          subtitle={info.slideshow.subheading}
           dark
         />
       </div>
