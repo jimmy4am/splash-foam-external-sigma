@@ -1,5 +1,5 @@
 ---
-slug: "sales-power-scrubber"
+slug: "sales-power-scrubber-5"
 template: "5"
 metaTitle: "X-All - spin power scrubber"
 metaDescription: ""
