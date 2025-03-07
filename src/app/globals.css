@@ -709,6 +709,24 @@ button {
   }
 }
 
+.pulsing {
+  animation: pulsing 1s ease 0s infinite normal none running;
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.034);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 767px) {
   input[type="color"],
   input[type="date"],

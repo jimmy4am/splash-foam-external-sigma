@@ -279,5 +279,9 @@ features:
   title3: Removes Nasty Smells
   text3:
 
+video:
+  heading: See X-ALL In Action
+  subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit amet nibh vulputate cursus a sit amet mauris namnec tellus a
+  image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e82030b-1c69-4238-d8dd-a48a8e7af600/public
 
 ---

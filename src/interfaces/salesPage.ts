@@ -365,4 +365,9 @@ export type SalesPageType = {
     image4: string;
     image5: string;
   }
+  video: {
+    heading: string;
+    subheading: string;
+    image: string;
+  }
 };

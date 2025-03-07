@@ -51,6 +51,7 @@ const SalesVideoReviews = ({ info }: Props) => {
     <>
       <div className=" -mx-[15px] sm:-mx-[10px] mb-[40px]">
         <Slider className="power-scrubber-video-reviews-slider slider" {...settings}>
+          {/*TODO: change source of video files*/}
           <SalesVideoReviewsSingleItem
             image={info.video_reviews.image1}
             title={info.video_reviews.text1}
