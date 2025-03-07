@@ -71,19 +71,19 @@ highlights:
   text3: "Simply pour the foaming powder in your sink or toilet, let it sit for 20 minutes and see the results for yourself."
 
 video_reviews:
-  heading: Over 500,000+ Satisfied Families Trust Splash Everyday
-  headingLabel: Tested & Trusted
-  text1: Shreha J
-  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/980dd4c3-be56-41cf-4eda-a763e33ce000/public
+  heading: 
+  headingLabel: 
+  text1: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/cbdd975b-afa1-43a2-b81c-7976d2649100/public
   video1: /images/template-3/ugc-vdo1.mp4
-  text2: Eleena K
-  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d85b9f42-c60b-47aa-abf2-1d765863ec00/public
+  text2: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7998a6b4-27c3-4cc5-77f1-116f12fab900/public
   video2: /images/template-3/ugc-vdo2.mp4
-  text3: Rachel P
-  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/e4b6d467-4e37-45b8-2409-beb9de567b00/public
+  text3: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f5659667-3807-42bc-0783-6b5cf3c44700/public
   video3: /images/template-3/ugc-vdo3.mp4
-  text4: Suzan E
-  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5c5c07d1-7d47-4547-12be-158cbb5fe400/public
+  text4: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/65e11b22-df9b-420c-145f-5d9dd4831400/public
   video4: /images/template-3/ugc-vdo3.mp4
 
 
@@ -221,20 +221,31 @@ specgrid:
   icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/240ec781-504c-402a-23f7-a9830a16bd00/public
 
 reviews:
-  reviewcount: 250,000
-  name1: Barbara K.
-  title1: '"WOW!"'
-  text1: "I was very pleasantly surprised with this product. I was used to the runny liquid cleaner, but decided to try this cleaner this time. WOW! It foamed up and cleaned the toilet bowl clean as a whistle! The magic words are: TRY ME, YOU WILL LIKE ME!"
-  name2: "Evon L."
-  title2: '“The toilet was sparkling clean as advertised”'
-  text2: The process of using the cleaner is very effective. I forgot to flush one of my toilets after the 1hour waiting period and the solution stayed in the toilet overnight. The bubbles were gone but the toilet was sparkling clean as advertised. I look forward to sharing the good news about your product!!!
-  name3: Ashleyrose A.
-  title3: '“I don’t have to touch that filthy toilet ever again"'
-  text3: It changed a filthy toilet into a sparkling white toilet again. I sprinkled in the blue splash foam cleaner. It started to work the second it hit the water. I waited 30 minutes while I did something else. I came back and flushed it. Vola, No scrubbing. I don't have to touch that filthy toilet ever again.
-  name4: Betty C.
-  title4: '“No Scrubbing Required"'
-  text4: I have very hard water and had to scrub dark brown stains from my toilets every couple of days. I was skeptical about Splash cleaner but decided to try it as a last resort. I thought it would take a few uses to get rid of the stains, but they were gone with the first use...and no scrubbing required. I highly recommend Splash to everyone.
-
+  heading: Customer reviews
+  heading2: 
+  subheading: 
+  reviewcount:
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/02ae64c5-848a-401d-eeb8-0e8349c7e800/public
+  name1: John G
+  title1:
+  text1: "This small, handy device is really well thought-out. It's cordless and is USB-chargeable, which is super handy! And with the various brush heads you can really remove any kind of dirt. I am delighted with it and I for sure recommend this product."
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/47b51bad-89f3-48ca-87a8-c3f58d31e900/public
+  name2: Ask C
+  title2:
+  text2: "Arrived promptly and when I used it for the first time was amazed at how good it cleaned off marks that have hard to remove for two years."
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/c2e19e8a-8daf-42b6-2823-a931d1d17e00/public
+  name3: Oliva W
+  title3:
+  text3: "My XAll is wonderful. No need for scrubbing. I’m usually exhausted after cleaning my 2 showers. I could do both showers within an hour?"
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/3cca7ff6-e65e-4d67-bcb8-d461278f2200/public
+  name4: Jack M
+  title4:
+  text4: "Its a great little cleaner; and we are very pleased with the results. Your response to our purchase was prompt and efficient. No problems whatsoever. we have recommended the XAll to family & friends. Thank You."
+  image5:
+  name5: 
+  title5:
+  text5: 
+    
 faqs:
   heading: Frequently Asked Questions
   heading2: 

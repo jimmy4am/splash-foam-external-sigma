@@ -39,7 +39,7 @@ const SalesHero = ({ info }: Props) => {
         <div className="flex flex-col md:flex-row-reverse md:justify-between md:items-start gap-[20px] md:gap-0">
           <div className="md:flex-[0_0_41%] lg:flex-[0_0_45%] -mx-[15px] md:mx-0">
             <video className="md:h-[410px] lg:h-[430px] xl:h-[470px] md:rounded-[10px] object-cover" playsInline autoPlay loop muted width="100%" height="auto">
-              <source src="/video/hero-vdo.mp4" type="video/mp4"/>
+              <source src="/images/template-5/hero-vdo.mp4" type="video/mp4"/>
             </video>
           </div>
           <div className="md:flex-[0_0_56%] lg:flex-[0_0_52%] xl:flex-[0_0_50%]">
