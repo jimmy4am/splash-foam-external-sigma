@@ -292,23 +292,23 @@ reviews:
   name5: Emma L.
   title5:
   text5: "With arthritis, scrubbing was always painful. I tried every tool, but nothing worked—until X-ALL Power Scrubber. Now, the scrubbing is done for me, and my kitchen has never been cleaner!"
-  
+
 faqs:
-  heading: You Asked The Questions
-  heading2: We Give The Answers
+  heading: Frequently Asked Questions
+  heading2:
   q1: What are X-ALL's Power Scrubber specifications?
   a1: X-ALL's Power Scrubber size is 11.5 by 18 cm. It has a power of 10W. It is very lightweight at only 300g.
   q2: Is X-ALL Power Scrubber waterproof?
-  a2: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  a2: Yes, X-ALL Power Scrubber is waterproof and can be used in a running shower or sink. However, you shouldn't fully submerge the device in water.
   q3: What is the charge type?
-  a3: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  a3: X-ALL Power Scrubber is charged with a USB Type C charger.
   q4: How long can X-ALL Power Scrubber last on one charge?
-  a4: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  a4: X-ALL Power Scrubber has up to 45 minutes of use time so that you can clean the whole home in one charge!
   q5: What's included with X-ALL Power Scrubber?
-  a5: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  a5: 1 device, 1 charging cable, 1 manual, 1 round grey brush, 1 sponge, 1 scouring pad, and 1 attachment head.
   q6: Is X-ALL Power Scrubber quiet?
-  a6: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
+  a6: Yes! Although X-ALL Power Scrubber scrubs very fast, it is extremely quiet and barely vibrates.
+  
 features:
   heading: The Easy Way To Clean 
   heading2: Everything SMARTLY!
