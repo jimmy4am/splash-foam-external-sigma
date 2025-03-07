@@ -284,4 +284,26 @@ video:
   subheading: Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit amet nibh vulputate cursus a sit amet mauris namnec tellus a
   image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e82030b-1c69-4238-d8dd-a48a8e7af600/public
 
+comparison: 
+  heading: Traditional Tools Can’t Compare to X-ALL
+  product1: 
+    title: XALL
+    image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d60808ac-1c27-467b-f5c3-15e7cffbb200/public
+    text1: Effortless cleaning;
+    text2: Takes minutes
+    text3: 1 tool
+    text4: Minimal chemicals needed
+    text5: Perfect results
+    text6: Cleans corners with ease  
+  product2: 
+    title: Traditional
+    image: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/162add1f-dae5-41dd-9fc8-07d28a047700/public
+    text1: Scrubbing done by hand, very tiring
+    text2: Takes hours
+    text3: Several tools
+    text4: Many strong chemicals needed
+    text5: Always miss a spot
+    text6: Hidden spots stay dirty;
+    
+
 ---

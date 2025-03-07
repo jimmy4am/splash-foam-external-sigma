@@ -370,4 +370,27 @@ export type SalesPageType = {
     subheading: string;
     image: string;
   }
+  comparison: {
+    heading: string;
+    product1: {
+      title: string;
+      image: string;
+      text1: string;
+      text2: string;
+      text3: string;
+      text4: string;
+      text5: string;
+      text6: string;
+    }
+    product2: {
+      title: string;
+      image: string;
+      text1: string;
+      text2: string;
+      text3: string;
+      text4: string;
+      text5: string;
+      text6: string;
+    }
+  }
 };
