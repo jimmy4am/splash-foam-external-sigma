@@ -282,21 +282,35 @@ faqs:
   a6: Yes! Although X-ALL Power Scrubber scrubs very fast, it is extremely quiet and barely vibrates.
 
 features:
-  heading: Advanced Cleaning Action You'll Every Buy
-  headingLabel: No Toxic Nasties
-  subheading: Switch to Splash to save yourself time, money, energy & most importantly your toilet!
-  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/71bdea13-8533-4616-5785-4510838d6d00/public
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4ef7e0fe-731d-4e3a-5c7a-e83ff2346300/public
-  title1: Tough Cleaning Power
-  text1:
-  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/da4c6214-7737-4324-570a-a39a7ce82500/public
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f8b7857a-449c-4371-7e08-94db29a36300/public
-  title2: Hygienic Clean
-  text2:
-  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/7cd4e23a-86de-4311-7f9f-603b80e69700/public
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/57cfc8bc-0a42-4a37-4146-395bf8010700/public
-  title3: Removes Nasty Smells
-  text3:
+  heading: Here’s why XAll is the ULTIMATE Accessible Cleaning Tool
+  heading2: 
+  subheading:  
+  headingLabel:
+  image1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/da0ddff8-50f3-435d-5a31-e4785f7b7400/public
+  icon1:
+  title1: Handheld
+  text1: Keep your hands on X-ALL and away from the dirt.
+  image2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/782f0adf-c345-4c14-0eda-b728ce824c00/public
+  icon2:
+  title2: Waterproof
+  text2: IPX5 Waterproof technology
+  image3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8c27c06b-b9cd-4ac8-602c-223ef44a0800/public
+  icon3:
+  title3: Cordless
+  text3: No tangled wires
+  image4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/94680d60-2e4b-4d7f-2d4a-106eabfbf500/public
+  icon4:
+  title4: Multiple brush heads
+  text4: For corners and smooth surfaces
+  image5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/78a77d71-bf8c-4995-c430-4e191b8a4a00/public
+  icon5:
+  title5: Minimal Effort
+  text5: Spend less time cleaning
+  image6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d3b3543a-d322-4940-ed81-c9b3ecf76400/public
+  icon6:
+  title6: Secure
+  text6: No Slip Design
+
     
 reasons:
   heading: "XAll: Transforming Cleaning Into Pain-Free!"
