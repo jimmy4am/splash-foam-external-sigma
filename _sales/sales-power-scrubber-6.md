@@ -113,18 +113,27 @@ info:
   feature5subtitle:
 
 strip_images:
-  img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/2e0e49e1-a5f1-4599-75ac-2698984ab000/public
-  img2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d09a9e55-2e3c-484c-9a9d-169780de1400/public
-  img3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f7c838ab-7da1-4d61-a994-f9970cc8bc00/public
-  img4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/f3c669e1-0be0-4d0d-7860-bd9a4e377c00/public
-  img5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4e4ab17c-e93f-487f-b038-bf674b3ec000/public
-  img6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/bc0cd06d-3e65-4fa7-3cfa-f4fb47aa5900/public
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8fe61b4e-be6d-4075-fec2-66a0f5aa0d00/public
-  text1: Designed in the U.S.A.
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6cf67507-834d-415f-8ac3-0f6723d8bd00/public
-  text2: Satisfaction Guarantee
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/a2e1bd92-b3f4-4c6a-23ae-043f9730fa00/public
-  text3: No Hassle Returns
+  heading: The EASY Way To CLEAN Everything SMARTLY!
+  heading2: 
+  subheading: 
+  img1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d095be65-908d-4214-893c-454476ec5800/public
+  img2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/4d408b0c-4ca3-4c92-fbf1-e2526a0ed800/public
+  img3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0d923ded-b889-4002-3521-3d276ec5b900/public
+  img4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/5c5a5f78-d96d-4e46-c235-fabee551b700/public
+  img5: 
+  img6:
+  icon1: 
+  title1: 
+  text1: 
+  icon2: 
+  title2: 
+  text2: 
+  icon3: 
+  title3: 
+  text3: 
+  icon4: 
+  title4: 
+  text4: 
 
 slideshow:
   heading: One Cleaning Tool For All Surfaces
