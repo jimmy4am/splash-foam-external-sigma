@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import { SalesPageType } from "@/interfaces/salesPage";
 import SalesHeader from "@/app/_components/sales/sales-6/sales-header/sales-header";
+import SalesCharacteristics from "@/app/_components/sales/sales-6/sales-characteristics/sales-characteristics";
 import SalesUsage from "@/app/_components/sales/sales-6/sales-usage/sales-usage";
 import SalesComparison from "@/app/_components/sales/sales-6/sales-comparison/sales-comparison";
 import SalesVideo from "@/app/_components/sales/sales-6/sales-video/sales-video";
@@ -20,6 +21,7 @@ const Sales6 = ({ info }: Props) => {
   return (
     <div className={`w-full text-[16px] md:text-[17px] leading-[24px] md:leading-[25px] text-[#000] ${inter.className} overflow-hidden`}>
       <SalesHeader info={info} />
+      <SalesCharacteristics info={info} />
       <SalesUsage info={info} />
       <SalesComparison info={info} />
       <SalesVideo info={info} />

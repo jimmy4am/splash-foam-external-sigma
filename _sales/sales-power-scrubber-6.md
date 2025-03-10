@@ -43,21 +43,30 @@ header:
   afterImageSm1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/719dea2a-51cc-4f2b-6f22-46376f464400/public
 
 characteristics:
-  heading: Splash Foam Characteristics
-  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/8e657ca3-c4dd-49e4-b600-a3a85df97b00/public
-  text1: Eco Friendly
-  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/70a1a488-02b9-4577-f507-6be8b12d9b00/public
-  text2: Non Toxic
-  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d967fef8-2682-41ea-37a9-ab326f63e300/public
-  text3: Plant Based Products
-  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/649b397e-25e0-49d5-c465-5499f50ef700/public
-  text4: Recyclable Plastic
-  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/74f7e799-e5ed-4a4a-c9e3-0ced90d83600/public
-  text5: Cruelty Free
-  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/bca86de4-8d46-413a-8d06-d95d8fec3e00/public
-  text6: Dye Free
-  icon7: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/37db93ed-b5b4-4139-252e-cb9a790cbb00/public
-  text7: Formulated HE & Standard
+  heading: Why Every House Needs XAll
+  heading2: 
+  subheading: 
+  icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/6faf8f5d-5d27-4262-ca4c-bc8e9604ad00/public
+  title1: XAll Makes Cleaning A Breeze
+  text1: Clean your home faster and easier with the XAll cordless, handheld electric scrubber.
+  icon2: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/0fe3622e-252b-4b5f-f932-218b54187300/public
+  title2: The Only Cleaning Tool You’ll Ever Need!
+  text2: Get rid of all your other cleaning tools. XAll is the only tool you will need to clean every surface in your home.
+  icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/15d92036-a2e0-4f4f-7fd2-33c19427d800/public
+  title3: Get The Grime Out of Corners
+  text3: Dirt and grime can build up in the corners of your home. XAll was designed to get into these places, leaving them sparkling clean.
+  icon4: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/d27b3d1f-4f76-43c4-653f-9b0ea8cfe400/public
+  title4: Use It Anywhere!
+  text4: XAll is an all-in-one solution for your home, car, bike, pans, pots & even footwear!
+  icon5: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/38d313de-a7e5-430d-0cbf-fe3d7dd32700/public
+  title5: Keep Your Money In The Bank Where It Belongs
+  text5: Cleaning your home shouldn’t be expensive. XAll saves you a ton of money on cleaning supplies.
+  icon6: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/85baa8c4-03c9-42d7-498a-2f31f7ad2a00/public 
+  title6: Get The Grime Out of Corners
+  text6: Clean your home faster and easier with the XAll cordless, handheld electric scrubber.
+  icon7:
+  title7:
+  text7:
 
 highlights:
   icon1: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/acd5a7af-3f72-45ad-27ba-7f5bcd829f00/public
