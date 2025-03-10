@@ -297,6 +297,29 @@ features:
   icon3: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/57cfc8bc-0a42-4a37-4146-395bf8010700/public
   title3: Removes Nasty Smells
   text3:
+    
+reasons:
+  heading: "XAll: Transforming Cleaning Into Pain-Free!"
+  heading2: "Cleaning Can Be Way Easier If You’re Facing:"
+  headingLabel: 
+  subheading: Hours of scrubbing are in the past. No more exhausting effort or excessive pressure-just sparkling results in minutes.
+  icon: 
+  main_image_mob: https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/90172b14-8cfd-4166-62da-4eaa4073d600/public
+  main_image_desktop: 
+  image1: 
+  text1: Mobility Issues
+  image2: 
+  text2: Rheumatism
+  image3: 
+  text3: Limited Strength In Arms, Fingers & Wrist
+  image4: 
+  text4: Back, Joints, Shoulder Pain
+  image5: 
+  text5: Parkinson’s
+  image6: 
+  text6: Arthritis
+  image7:
+  text7: PainParkinson’sArthritisOsteoporosis
 
 video:
   heading: See X-ALL In Action
